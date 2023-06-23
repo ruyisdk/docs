@@ -6,7 +6,7 @@
 
 ```
  pip install -U Sphinx
- pip install --user -r requirements-doc.txt
+ pip install --user -r requirements.txt
  ```
 
 #### 编译

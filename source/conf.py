@@ -32,7 +32,9 @@ release = '1.0.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-]
+    'recommonmark',
+    'sphinx_tabs.tabs'
+    ]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -61,3 +63,5 @@ html_static_path = ['_static']
 master_doc= 'index'
 
 html_show_sourcelink = False
+
+sphinx_tabs_valid_builders = ['linkcheck']
