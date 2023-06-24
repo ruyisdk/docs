@@ -152,6 +152,12 @@ QEMU命令举例:
 
    systemd-nspawn -D <path-to-target_fs>
 
+在切换入sysroot环境时也可以指定qemu的-cpu选项,如
+
+.. code-block:: bash
+
+   systemd-nspawn -D <path-to-target_fs>  -a -U -E QEMU_CPU="c910v"
+
 在这之后,就可以在该模拟的native环境下进行相应的开发
 
 根据需要可以将自身需要的static,qemu-riscv64/32程序替换默认的qemu-riscv64/32-static程序,然后禁用后使能binfmt中的qemu-riscv64/32选项来让新程序生效,例如:
