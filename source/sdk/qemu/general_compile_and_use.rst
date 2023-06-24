@@ -71,7 +71,7 @@
 
       yum install -y pixman.x86_64 libepoxy.x86_64 libslirp-devel.x86_64
 
-QEMU提供了两种模式:用户模式或者系统模式, 她们均可以通过-cpu选项来指定模拟的CPU,如 -cpu rv64,x-zcb-true,RUYISDK目前常见的一些cpu选项如下:
+QEMU提供了两种模式:用户模式和系统模式, 这两种模式均可以通过-cpu选项来指定模拟的CPU,如 -cpu rv64,x-zcb-true,RUYISDK目前常见的一些cpu选项如下:
 
 +------------+-----------+-----------------+
 | Extensions | CPU Type  | extra options   |
@@ -104,7 +104,7 @@ QEMU提供了两种模式:用户模式或者系统模式, 她们均可以通过-
 | rvp 0.9.4  | rv32/64   | x-p=true        |
 +------------+-----------+-----------------+
 
-除了CPU选项,QEMU的系统模式还提供-machine选项用于制定模拟的开发版平台,RUYISDK目前提供的常见平台及它们对应的默认CPU类型如下:
+除了CPU选项,QEMU的系统模式还提供-machine选项用于制定模拟的开发板平台,RUYISDK目前提供的常见平台及它们对应的默认CPU类型如下:
 
 +------------+-------------+
 | Machines   | Default CPU |

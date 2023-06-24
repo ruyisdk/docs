@@ -1,4 +1,4 @@
-.. _gcc13-rv64gcb:
+.. _run_by_ruyishell:
 
 使用ruyishell下载测试
 ============================
@@ -6,7 +6,9 @@
 
 .. tabs:: 编写测试用例
 
-    .. code-tab:: 测试用例示例 bitmanip.c
+    .. code-tab:: c demo
+
+        //测试用例示例 bitmanip.c
         unsigned long long foo1(unsigned long long rs1, unsigned long long rs2)
         {
             return rs1 & ~rs2;
@@ -22,11 +24,8 @@
         return rs1 ^ ~rs2;
         }
 
-    .. code-tab:: 使用构建的工具编译测试用例，查看汇编文件中是否使用Bitmanip扩展指令andn，orn,xnor
+    .. code-tab:: bash build
+
+        # 使用构建的工具编译测试用例，查看汇编文件中是否使用Bitmanip扩展指令andn，orn,xnor
         build/bin/riscv64-unknown-linux-gnu-gcc -S bitmanip.c
         cat bitmanip.s
-
-.. toctree::
-   :maxdepth: 2
-
-   _gcc13-rv64gcb/run_by_ruyishell.rst

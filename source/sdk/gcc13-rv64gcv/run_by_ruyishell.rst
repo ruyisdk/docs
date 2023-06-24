@@ -1,4 +1,4 @@
-.. _gcc13-rv64gcv:
+.. _run_by_ruyishell:
 
 使用ruyishell下载测试
 ============================
@@ -6,7 +6,9 @@
 
 .. tabs:: 编写测试用例
 
-    .. code-tab:: 测试用例示例 rvv_strcpy.c
+    .. code-tab:: c demo
+
+        // 测试用例示例 rvv_strcpy.c
         #include <riscv_vector.h>
         #include <string.h>
 
@@ -32,11 +34,8 @@
           return save;
         }
 
-    .. code-tab:: 使用构建的工具编译测试用例，查看汇编文件中是否使用V扩展指令vsetvli,vle8ff.v,vmseq.vi,vmsif.m,vse8.v,vfirst.m
+    .. code-tab:: bash build
+      
+        # 使用构建的工具编译测试用例，查看汇编文件中是否使用V扩展指令vsetvli,vle8ff.v,vmseq.vi,vmsif.m,vse8.v,vfirst.m
         build/bin/riscv64-unknown-linux-gnu-gcc rvv_strcpy.c -O3 -S
         cat rvv_strcpy.s
-
-.. toctree::
-   :maxdepth: 2
-
-   _gcc13-rv64gcv/run_by_ruyishell.rst

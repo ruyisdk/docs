@@ -7,22 +7,24 @@
 
 .. tabs::
 
-   .. code-tab:: Ubuntu环境
+   .. code-tab:: bash Ubuntu环境
 
       apt-get install -y make diffutils autoconf automake autotools-dev curl python3 python3-pip libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev libexpat-dev ninja-build git cmake libglib2.0-dev
 
-   .. code-tab:: OpenEuler/RevyOS环境
+   .. code-tab:: bash OpenEuler/RevyOS环境
 
       dnf install -y make diffutils autoconf automake python3 libmpc-devel mpfr-devel gmp-devel gawk  bison flex texinfo patchutils gcc gcc-c++ zlib-devel expat-devel
 
 下载riscv-gnu-toolchain:
 
 .. code-block:: bash
+
    git clone https://github.com/riscv/riscv-gnu-toolchain
 
 构建准备(以gcc13为例),进入riscv-gnu-toolchain目录，建立build文件夹，用于存放构建生成的工具链:
 
 .. code-block:: bash
+
    cd riscv-gnu-toolchain && mkdir build
 
 配置构建参数，以启用不同扩展
@@ -30,15 +32,18 @@
  支持RV64ILP32特性的构建(rv64-ilp32)
 
  .. code-block:: bash
-    ./configure --prefix=$PWD/build --with-arch=rv64gc --with-abi=ilp32d
+
+   ./configure --prefix=$PWD/build --with-arch=rv64gc --with-abi=ilp32d
 
 配置完成后进行构建
 
 .. code-block:: bash
+
    make linux -j $(nproc)
 
 构建完成后，检查是否构建成功(这里以标准64位工具链为例，32位工具链注意替换工具链名称)
 
 .. code-block:: bash
+   
    build/bin/riscv64-unknown-linux-gnu-gcc -v
 

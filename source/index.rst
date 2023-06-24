@@ -19,4 +19,3 @@ RuyiSDK documentation!
    tools/index.rst
    sdk/index.rst
    plan/index.rst
-   qemu/index.rst
