@@ -32,7 +32,7 @@
 
    git clone -v --branch=ruyi_qemu --progress --depth=1 https://github.com/plctlab/plct-qemu.git <SRC_DIR>
    cd <SRC_DIR>
-   git submodule update --init
+   git submodule update --init --recursive
 
 编译构建:
 
