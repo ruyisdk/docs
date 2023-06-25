@@ -7,6 +7,6 @@ RISC-V的标准gcc工具链rv64gc
    :maxdepth: 1
    :caption: 内容
 
-   build_by_ruyibuild.rst
-   general_compile_and_use.rst
-   run_by_ruyishell.rst
+   rv64gc_compile_and_use.rst
+   rv64gc_ruyibuild.rst
+   rv64gc_ruyishell.rst

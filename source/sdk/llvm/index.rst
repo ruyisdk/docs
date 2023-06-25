@@ -1,12 +1,12 @@
 .. _llvm:
 
-LLVM
+RISC-V的LLVM工具链
 ################################
 
 .. toctree::
    :maxdepth: 1
    :caption: 内容
-   
-   build_by_ruyibuild.rst
-   general_compile_and_use.rst
-   run_by_ruyishell.rst
+
+   llvm_compile_and_use.rst
+   llvm_ruyibuild.rst
+   llvm_ruyishell.rst

@@ -1,6 +1,6 @@
-.. _general_compile_and_use:
+.. _rv64gcv_compile_and_use:
 
-支持Bitmanip扩展RISCV-GNU-Toolchain的编译和使用 
+支持RVV1.0扩展的构建和使用
 ################################################################
 
 安装构建依赖(如有后续构建提示缺失，可根据错误信息全依赖)
@@ -34,9 +34,9 @@
 配置构建参数，以启用不同扩展
 
 .. code-block:: bash
-   
-   #64位支持Bitmanip扩展的构建（rv64gc_zba_zbb_zbc_zbs）
-   ./configure --prefix=$PWD/build --with-arch=rv64gc_zba_zbb_zbc_zbs
+
+   #支持RVV1.0扩展的构建（rv64gcv）
+   ./configure --prefix=$PWD/build --with-arch=rv64gcv
 
 配置完成后进行构建（如果出现报错，请记录错误信息并进行反馈）
 
@@ -47,7 +47,7 @@
 构建完成后，检查是否构建成功(这里以标准64位工具链为例，32位工具链注意替换工具链名称)
 
 .. code-block:: bash
-   
+
    build/bin/riscv64-unknown-linux-gnu-gcc -v
 
 RuyiSDK 是

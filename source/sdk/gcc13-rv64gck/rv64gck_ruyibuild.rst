@@ -1,4 +1,4 @@
-.. _build_by_ruyibuild:
+.. _rv64gck_ruyibuild:
 
 使用ruyibuild构建
 ============================
@@ -21,7 +21,7 @@
 在.bashrc中添加配置
 
 .. code-block:: bash
-   
+
    # 虚拟环境存放目录，.virtualenvs目录可自拟
    export WORKON_HOME=~/.virtualenvs
    # 指定virtualenvwrapper执行的python版本
@@ -66,7 +66,7 @@
    wget https://repo.tarsier-infra.com:8080/ruyisdk/misc/ruyibuild-0.0.2-py3-none-any.whl
    pip3 install ruyibuild-0.0.2-py3-none-any.whl
 
-创建编译配置用于初始化，例如rv64gzc.yaml
+创建编译配置用于初始化，例如rv64gck.yaml
 根据不同的构建目标和构建系统，创建不同的运行配置
 
 .. tabs::
@@ -76,14 +76,14 @@
       config_file:
       repo_url: https://github.com/GeassCore/ruyici.git
       branch: main
-      path: gcc/ubuntu/22.04/rv64gzc/config.yaml
+      path: gcc/ubuntu/22.04/rv64gck/config.yaml
 
    .. code-tab:: bash openEuler
 
       config_file:
       repo_url: https://github.com/GeassCore/ruyici.git
       branch: main
-      path: gcc/openeuler/23.03/rv64gzc/config.yaml
+      path: gcc/openeuler/23.03/rv64gck/config.yaml
 
 
 初始化工作
@@ -91,7 +91,7 @@
 
 .. code-block:: bash
 
-   ruyibuild init -d rv64gzc -f rv64gzc.yaml
+   ruyibuild init -d rv64gcb -f rv64gck.yaml
 
 准备构建环境和代码
 
@@ -104,5 +104,5 @@
 .. code-block:: bash
 
    ruyibuild generate <name>
-   
+
 生成目标toolchain

@@ -1,4 +1,4 @@
-.. _run_by_ruyishell:
+.. _rv64gcb_ruyishell:
 
 使用ruyishell下载测试
 ============================

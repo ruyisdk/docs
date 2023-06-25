@@ -1,4 +1,4 @@
-.. _build_by_ruyibuild:
+.. _llvm_ruyibuild:
 
 使用ruyibuild构建
 ################################
@@ -8,7 +8,7 @@
  更新pip(可选)
 
  .. code-block:: bash
-  
+
   pip3 install --upgrade pip
 
  安装virtualenv和virtualenvwrapper
@@ -37,7 +37,7 @@
  使能.bashrc配置从而可以使用python虚拟环境
 
  .. code-block:: bash
-  
+
   source ~/.bashrc
   # 以下是常用命令
   # 创建虚拟环境
@@ -96,7 +96,7 @@
    ruyibuild update
 
  执行构建
- 
+
  .. code-block:: bash
 
    ruyibuild generate <name>

@@ -1,4 +1,4 @@
-.. _run_by_ruyishell:
+.. _rv64gcv_ruyishell:
 
 使用ruyishell下载测试
 ============================
@@ -35,7 +35,7 @@
         }
 
     .. code-tab:: bash build
-      
+
         # 使用构建的工具编译测试用例，查看汇编文件中是否使用V扩展指令vsetvli,vle8ff.v,vmseq.vi,vmsif.m,vse8.v,vfirst.m
         build/bin/riscv64-unknown-linux-gnu-gcc rvv_strcpy.c -O3 -S
         cat rvv_strcpy.s
