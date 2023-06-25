@@ -42,13 +42,13 @@
    source ~/.bashrc
    # 以下是常用命令
    # 创建虚拟环境
-   mkvirtualenv buildgcc
+   mkvirtualenv buildqemu
    # 切换到某个虚拟环境
-   workon buildgcc
+   workon buildqemu
    # 退出当前虚拟环境
    deactivate
    # 删除某个虚拟环境
-   rmvirtualenv buildgcc
+   rmvirtualenv buildqemu
    # 列出所有虚拟环境
    lsvirtualenv
 
@@ -56,7 +56,7 @@
 
 .. code-block:: bash
 
-   mkvirtualenv buildgcc
+   mkvirtualenv buildqemu
 
 至此，python的虚拟环境配置完成，ruyibuild的安装和使用可在虚拟环境中进行，而不影响host机python环境
 
@@ -75,7 +75,7 @@
 
 .. tabs::
 
-   .. code-tab:: bash yaml Ubuntu 22.04
+   .. code-tab:: bash Ubuntu 22.04
 
       config_file:
         repo_url: https://github.com/ruyisdk/ruyici.git
