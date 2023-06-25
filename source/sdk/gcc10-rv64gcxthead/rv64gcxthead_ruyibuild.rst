@@ -1,4 +1,4 @@
-.. _rv64ilp32_ruyibuild:
+.. _rv64gcxthead_ruyibuild:
 
 使用ruyibuild构建
 ============================
@@ -66,27 +66,24 @@
    wget https://repo.tarsier-infra.com:8080/ruyisdk/misc/ruyibuild-0.0.2-py3-none-any.whl
    pip3 install ruyibuild-0.0.2-py3-none-any.whl
 
-创建编译配置用于初始化，例如rv64ilp32.yaml
+创建编译配置用于初始化，例如rv64gcxthead.yaml
 根据不同的构建目标和构建系统，创建不同的运行配置
 
 .. tabs::
 
-   .. tab:: Ubuntu
-
-      config_file:
-
-      repo_url: https://github.com/ruyisdk/ruyici.git
-
-      branch: main
-
-      path: gcc/ubuntu/22.04/rv64ilp32/config.yaml
-
-   .. tab:: openEuler
+   .. code-tab:: bash Ubuntu
 
       config_file:
       repo_url: https://github.com/ruyisdk/ruyici.git
       branch: main
-      path: gcc/openeuler/23.03/rv64ilp32/config.yaml
+      path: gcc/ubuntu/22.04/rv64gcxthead/config.yaml
+
+   .. code-tab:: bash openEuler
+
+      config_file:
+      repo_url: https://github.com/ruyisdk/ruyici.git
+      branch: main
+      path: gcc/openeuler/23.03/rv64gcxthead/config.yaml
 
 
 初始化工作
@@ -94,8 +91,7 @@
 
 .. code-block:: bash
 
-   ruyibuild init -d rv64ilp32 -f rv64ilp32.yaml
-
+   ruyibuild init -d rv64gcxthead -f rv64gcxthead.yaml
 
 准备构建环境和代码
 

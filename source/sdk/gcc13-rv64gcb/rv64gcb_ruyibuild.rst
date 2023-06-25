@@ -74,14 +74,14 @@
    .. code-tab:: bash Ubuntu
 
       config_file:
-      repo_url: https://github.com/GeassCore/ruyici.git
+      repo_url: https://github.com/ruyisdk/ruyici.git
       branch: main
       path: gcc/ubuntu/22.04/rv64gcb/config.yaml
 
    .. code-tab:: bash openEuler
 
       config_file:
-      repo_url: https://github.com/GeassCore/ruyici.git
+      repo_url: https://github.com/ruyisdk/ruyici.git
       branch: main
       path: gcc/openeuler/23.03/rv64gcb/config.yaml
 
