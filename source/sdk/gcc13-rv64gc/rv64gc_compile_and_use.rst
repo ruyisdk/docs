@@ -1,7 +1,7 @@
-.. _general_compile_and_use:
+.. _rv64gc_compile_and_use:
 
-支持Scalar Crypto扩展RISCV-GNU-Toolchain的编译和使用 
-################################################################
+通用RISCV-GNU-Toolchain的构建和使用
+========================================
 
 安装构建依赖(如有后续构建提示缺失，可根据错误信息全依赖)
 
@@ -35,8 +35,8 @@
 
 .. code-block:: bash
 
-   #支持K扩展的构建（rv64gc_zkn_zkr_zks_zkt）
-   ./configure --prefix=$PWD/build --with-arch=rv64gc_zkn_zkr_zks_zkt
+   #64位标准构建（rv64gc）
+   ./configure --prefix=$PWD/build --with-arch=rv64gc
 
 配置完成后进行构建（如果出现报错，请记录错误信息并进行反馈）
 

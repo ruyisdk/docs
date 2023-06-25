@@ -1,4 +1,4 @@
-.. _run_by_ruyishell:
+.. _rv64gc_ruyishell:
 
 使用ruyishell下载测试
 ============================
@@ -16,7 +16,7 @@
         }
 
     .. code-tab:: bash build
-        
+
         # 使用构建的工具编译测试用例，查看汇编文件中是否使用RISC-V指令
         build/bin/riscv64-unknown-linux-gnu-gcc -S ruiyi.c
         cat ruyi.s

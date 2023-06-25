@@ -9,5 +9,5 @@ RUYI QEMU是RUYISDK项目维护的一个QEMU分支，诣在为RUYISDK项目提�
    :maxdepth: 1
    :caption: 内容
 
-   build_by_ruyibuild.rst
-   general_compile_and_use.rst
+   qemu_compile_and_use.rst
+   qemu_ruyibuild.rst

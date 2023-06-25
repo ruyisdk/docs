@@ -1,6 +1,6 @@
-.. _general_compile_and_use:
+.. _rv64ilp32_compile_and_use:
 
-构建和使用
+支持rv64ilp32扩展构建和使用
 ============================
 
 安装构建依赖(如有后续构建提示缺失，可根据错误信息全依赖)
@@ -31,7 +31,7 @@
 
  支持RV64ILP32特性的构建(rv64-ilp32)
 
- .. code-block:: bash
+.. code-block:: bash
 
    ./configure --prefix=$PWD/build --with-arch=rv64gc --with-abi=ilp32d
 
@@ -44,6 +44,6 @@
 构建完成后，检查是否构建成功(这里以标准64位工具链为例，32位工具链注意替换工具链名称)
 
 .. code-block:: bash
-   
+
    build/bin/riscv64-unknown-linux-gnu-gcc -v
 

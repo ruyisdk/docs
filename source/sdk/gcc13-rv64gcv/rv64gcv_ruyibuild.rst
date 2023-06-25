@@ -1,11 +1,10 @@
-.. _build_by_ruyibuild:
+.. _rv64gcv_ruyibuild:
 
 使用ruyibuild构建
 ============================
 
-创建编译的ruyibuild虚拟环境
------------------------------
-如已配置，可跳过该步骤
+创建编译的虚拟环境(如已配置，可跳过)
+
 更新pip(可选)
 
 .. code-block:: bash
@@ -67,63 +66,32 @@
    wget https://repo.tarsier-infra.com:8080/ruyisdk/misc/ruyibuild-0.0.2-py3-none-any.whl
    pip3 install ruyibuild-0.0.2-py3-none-any.whl
 
-
-编译构建QEMU
--------------------
-创建编译配置用于初始化，例如qemu_ubuntu2204.yaml
+创建编译配置用于初始化，例如rv64gcv.yaml
 根据不同的构建目标和构建系统，创建不同的运行配置
 
 .. tabs::
 
-   .. code-tab:: bash yaml Ubuntu 22.04
+   .. code-tab:: bash Ubuntu
 
       config_file:
-        repo_url: https://github.com/ruyisdk/ruyici.git
-        branch: main
-        path: qemu/qemu_config_ubuntu2204.yaml
+      repo_url: https://github.com/GeassCore/ruyici.git
+      branch: main
+      path: gcc/ubuntu/22.04/rv64gcv/config.yaml
 
-   .. code-tab:: bash Ubuntu 22.04(static)
-
-      config_file:
-        repo_url: https://github.com/ruyisdk/ruyici.git
-        branch: main
-        path: qemu/qemu-user-static_config_ubuntu2204.yaml
-
-   .. code-tab:: bash openEuler 22.03
+   .. code-tab:: bash openEuler
 
       config_file:
-        repo_url: https://github.com/ruyisdk/ruyici.git
-        branch: main
-        path: qemu/qemu_config_oe2203.yaml
+      repo_url: https://github.com/GeassCore/ruyici.git
+      branch: main
+      path: gcc/openeuler/23.03/rv64gcv/config.yaml
 
-   .. code-tab:: bash openEuler 22.03(static)
-
-      config_file:
-        repo_url: https://github.com/ruyisdk/ruyici.git
-        branch: main
-        path: qemu/qemu-user-static_config_oe2203.yaml
-
-   .. code-tab:: bash openEuler 23.03
-
-      config_file:
-        repo_url: https://github.com/ruyisdk/ruyici.git
-        branch: main
-        path: qemu/qemu_config_oe2303.yaml
-
-   .. code-tab:: bash openEuler 23.03(static)
-
-      config_file:
-        repo_url: https://github.com/ruyisdk/ruyici.git
-        branch: main
-        path: qemu/qemu-user-static_config_oe2303.yaml
 
 初始化工作
-执行以下命令创建工作目录, 后续自动下载的源码以及构建生成的软件包都会在此目录下
+   执行以下命令创建工作目录, 后续自动下载的源码以及构建生成的软件包都会在此目录下
 
 .. code-block:: bash
 
-   ruyibuild init -d qemu-ubuntu2204 -f qemu_ubuntu2204.yaml
-
+   ruyibuild init -d rv64gcv -f rv64gcv.yaml
 
 准备构建环境和代码
 
@@ -131,11 +99,10 @@
 
    ruyibuild update
 
-
 执行构建
 
 .. code-block:: bash
 
    ruyibuild generate <name>
 
-生成目标qemu
+生成目标toolchain

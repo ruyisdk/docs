@@ -7,6 +7,6 @@ RISC-V的支持B(位操作)扩展的gcc工具链rv64gcb
    :maxdepth: 1
    :caption: 内容
 
-   build_by_ruyibuild.rst
-   general_compile_and_use.rst
-   run_by_ruyishell.rst
+   rv64gcb_compile_and_use.rst
+   rv64gcb_ruyibuild.rst
+   rv64gcb_ruyishell.rst

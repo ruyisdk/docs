@@ -1,4 +1,4 @@
-.. _run_by_ruyishell:
+.. _rv64gck_ruyishell:
 
 使用ruyishell下载测试
 ============================
@@ -22,7 +22,7 @@
         }
 
     .. code-tab:: bash build
-        
+
         # 使用构建的工具编译测试用例，查看汇编文件中是否使用K扩展指令aes64ds,aes64ks1i
         build/bin/riscv64-unknown-linux-gnu-gcc -S crypto.c
         cat crypto.s
