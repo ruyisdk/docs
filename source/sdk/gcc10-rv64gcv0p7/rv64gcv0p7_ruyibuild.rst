@@ -1,4 +1,4 @@
-.. _rv64gcv_ruyibuild:
+.. _rv64gcv0p7_ruyibuild:
 
 使用ruyibuild构建
 ============================

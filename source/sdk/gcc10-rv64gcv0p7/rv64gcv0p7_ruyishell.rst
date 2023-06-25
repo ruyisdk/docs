@@ -1,4 +1,4 @@
-.. _rv64gcv_ruyishell:
+.. _rv64gcv0p7_ruyishell:
 
 使用ruyishell下载测试
 ============================
