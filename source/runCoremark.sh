@@ -28,5 +28,5 @@ if [ -f coremark.exe ]; then
 fi
 make compile PORT_DIR=rv64 CC=$compiler LD=$compiler XCFLAGS="-march=$arch"
 version=$($compiler --version | grep -Eo "[0-9]+\.[0-9]+\.[0-9]+")
-echo $version
+echo "mv coremark.exe coremark_${version}_${arch}.exe"
 mv coremark.exe coremark_${version}_${arch}.exe
