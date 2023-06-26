@@ -36,7 +36,7 @@
 .. code-block:: bash
 
    #支持ZC扩展的构建（rv64gzc）
-   ./configure --prefix=$PWD/build --with-arch=rv64g_zca_zcb_zcmp
+   ./configure --prefix=$PWD/build --with-arch=rv64g_zca_zcb
 
 配置完成后进行构建（如果出现报错，请记录错误信息并进行反馈）
 
