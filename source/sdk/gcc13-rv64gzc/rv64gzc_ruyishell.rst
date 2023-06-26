@@ -18,5 +18,5 @@
     .. code-tab:: bash build
 
         # 使用构建的工具编译测试用例，查看反汇编文件中是否对lbu指令进行了压缩
-        build/bin/riscv64-unknown-linux-gnu-as zc.s -c -o zc.elf
+        build/bin/riscv64-unknown-linux-gnu-as zc.s -march=rv64g_zca_zcb -c -o zc.elf
         build/bin/riscv64-unknown-linux-gnu-objdump -d -Mno-aliases zc.elf

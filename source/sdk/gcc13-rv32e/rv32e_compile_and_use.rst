@@ -1,6 +1,6 @@
-.. _rv64gcxthead_compile_and_use:
+.. _rv32e_compile_and_use:
 
-支持xthead扩展的构建和使用
+支持EABI构建和使用
 ################################################################
 
 安装构建依赖(如有后续构建提示缺失，可根据错误信息全依赖)
@@ -19,12 +19,11 @@
 
       sudo yum install -y make diffutils autoconf automake python3 libmpc-devel mpfr-devel gmp-devel gawk  bison flex texinfo patchutils gcc gcc-c++ zlib-devel expat-devel
 
-下载riscv-gnu-toolchain,切换至gcc-10分支:
+下载riscv-gnu-toolchain:
 
 .. code-block:: bash
 
    git clone https://github.com/ruyisdk/riscv-gnu-toolchain
-   git checkout origin gcc-10
 
 构建准备——进入riscv-gnu-toolchain目录，建立build文件夹，用于存放构建生成的工具链：
 
@@ -36,19 +35,19 @@
 
 .. code-block:: bash
 
-   #支持xthead扩展的构建（rv64gcxthead）
-   ./configure --prefix=$PWD/build --with-arch=rv64gc_xthead
+   #支持EABI的构建,这里同时启用c,zmmul,zc扩展（rv32e）
+   ./configure --prefix=$PWD/build --with-arch=rv32ec_zmmul_zcb --with-abi=ilp32e
 
 配置完成后进行构建（如果出现报错，请记录错误信息并进行反馈）
 
 .. code-block:: bash
 
-   make linux -j $(nproc)
+   make -j $(nproc)
 
-构建完成后，检查是否构建成功(这里以标准64位工具链为例，32位工具链注意替换工具链名称)
+构建完成后，检查是否构建成功(这里以32位工具链为例)
 
 .. code-block:: bash
 
-   build/bin/riscv64-unknown-linux-gnu-gcc -v
+   build/bin/riscv32-unknown-elf-gcc -v
 
 RuyiSDK 是

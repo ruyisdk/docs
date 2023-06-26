@@ -36,8 +36,8 @@
 
 .. code-block:: bash
 
-   #支持RVV扩展(0.7.1)的构建（rv64gcp）
-   ./configure --prefix=$PWD/build --with-arch=rv64gcp
+   #支持RVV扩展(0.7.1)的构建（rv64gcv）
+   ./configure --prefix=$PWD/build --with-arch=rv64gcv0p7
 
 配置完成后进行构建（如果出现报错，请记录错误信息并进行反馈）
 
