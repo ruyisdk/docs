@@ -45,6 +45,7 @@ Ruyi提供多种编译环境，可以在repo.xml中查看支持的SDK环境，�
     ruyi update
     ruyi install --id=1
     ruyi switch --id=1
+    source ~/.zshrc
 
 这样我们就通过ruyi安装好了riscv64gc的SDK环境。测试一下是否成功：
 
