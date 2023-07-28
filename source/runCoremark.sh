@@ -12,7 +12,7 @@ fi
 compiler=$1
 arch=$2
 if [ ! -d coremark ]; then
-    echo "You don't have coremark in this folder. Please use the command bellow to download:"
+    echo "You don't have coremark in this folder. Please use the command below to download:"
     echo "git clone https://github.com/eembc/coremark.git"
     exit 1
 fi
