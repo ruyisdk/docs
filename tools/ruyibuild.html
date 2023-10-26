@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ruyibuild的背景介绍 &mdash; RuyiSDK 在线文档 1.0.0 文档</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/documentation_options.js?v=34088549"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/translations.js?v=beaddf03"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="ruyishell的背景介绍" href="ruyishell.html" />
+    <link rel="prev" title="RuyiSDK Tools" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            RuyiSDK 在线文档
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">内容</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">介绍</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">RuyiSDK Tools</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ruyibuild的背景介绍</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">ruyibuild功能介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">工作原理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">使用方法</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id5">环境准备</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">安装ruyibuild</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">初始化工作</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">准备构建环境和代码</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">执行构建</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">ruyibuild命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">执行构建脚本</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ruyishell.html">ruyishell的背景介绍</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../sdk/index.html">RuyiSDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../plan/index.html">版本规划路线图</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../benchmark/index.html">运行Benchmarks</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">RuyiSDK 在线文档</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">RuyiSDK Tools</a></li>
+      <li class="breadcrumb-item active">ruyibuild的背景介绍</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ruyibuild">
+<span id="id1"></span><h1>ruyibuild的背景介绍<a class="headerlink" href="#ruyibuild" title="Link to this heading">¶</a></h1>
+<section id="id2">
+<h2>ruyibuild功能介绍<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<p>ruyibuild是一个辅助开发工具，不需要手动搭建复杂的环境和下载代码，只需要几条命令，就可以直接获取所需要的构建好的软件包。</p>
+</section>
+<section id="id3">
+<h2>工作原理<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+<p>ruyibuild根据配置文件自动下载需要编译的源码和构建脚本，启动一个docker容器中，在docker容器中运行构建脚本来完成构建</p>
+</section>
+<section id="id4">
+<h2>使用方法<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h2>
+<p>下面以ubuntu系统为例来进行说明</p>
+<section id="id5">
+<h3>环境准备<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
+<p>ruyibuild是由python编写而成，需要通过pip命令完成安装，</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3<span class="w"> </span>python3-pip
+</pre></div>
+</div>
+<p>由于需要用到docker容器，所以需要安装docker</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>docker<span class="w"> </span>docker.io<span class="w"> </span>-y
+sudo<span class="w"> </span>groupadd<span class="w"> </span>docker
+sudo<span class="w"> </span>usermod<span class="w"> </span>-a<span class="w"> </span>-G<span class="w"> </span>docker<span class="w"> </span><span class="k">$(</span>whoami<span class="k">)</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>docker
+sudo<span class="w"> </span>chmod<span class="w"> </span>o+rw<span class="w"> </span>/var/run/docker.sock
+</pre></div>
+</div>
+<p>确保不用加sudo就可以直接执行docker命令</p>
+</section>
+<section id="id6">
+<h3>安装ruyibuild<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h3>
+<p>下载 ruyibuild.wheel , 执行pip安装</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>&lt;ruyibuild.wheel&gt;
+</pre></div>
+</div>
+</section>
+<section id="id7">
+<h3>初始化工作<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h3>
+<p>执行以下命令创建工作目录, 后续自动下载的源码以及构建生成的软件包都会在此目录下</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ruyibuild<span class="w"> </span>init<span class="w"> </span>-d<span class="w"> </span>&lt;directory&gt;<span class="w"> </span><span class="o">[</span>-f<span class="w"> </span>&lt;ruyicfg_directory&gt;<span class="o">]</span>
+</pre></div>
+</div>
+<p>-d &lt;directory&gt; 表示要创建的工作目录，其中 &lt;directory&gt;可以是绝对路径也可以是相对路径</p>
+<p>-f &lt;ruyicfg_directory&gt; 是可选参数，当需要从git仓库获取构建配置文件 config.yaml 文件而不想通过手动修改时，需要添加这个参数，其中 &lt;ruyicfg_directory&gt; 是 包含 config.yaml 文件所在git仓库的信息的yaml文件所在目录，格式如下：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>config_file:
+<span class="w">    </span>repo_url:<span class="w"> </span>https://gitee.com/jean9823/ruyibuild_script.git
+<span class="w">    </span>branch:<span class="w"> </span>master
+<span class="w">    </span>path:<span class="w"> </span>qemu/config_ubuntu.yaml
+</pre></div>
+</div>
+<p>repo_url: config.yaml 文件所在git仓库地址</p>
+<p>branch: config.yaml 文件所在git仓库分支</p>
+<p>path: config.yaml 文件所在git仓库相对于根目录的位置，如果是存储在根目录，该栏位填写为 path: config_ubuntu.yaml</p>
+<p>例如: 执行</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ruyibuild<span class="w"> </span>init<span class="w"> </span>-d<span class="w"> </span>qemu<span class="w"> </span>-f<span class="w"> </span>/home/ruyicfg.yaml
+</pre></div>
+</div>
+<p>就是在当前目录下创建工作目录 qemu , 并从 /home/ruyicfg.yaml 获取 ruyicfg.yaml 文件</p>
+<p>工作目录下会生成四个目录：</p>
+<p>build: 构建完成的相关文件会存放在该目录下</p>
+<p>script: 存放执行构建的脚本</p>
+<p>src: 存放需要构建的源码</p>
+<p>./ruyibuild: 存放构建配置文件 config.yaml，如果命令设置的 -f 参数，该目录下还会生成一个git目录，用来存放从git仓库获取的构建配置文件config.yaml</p>
+<p>可以根据自己的需求进行修改配置文件，文件内容如下：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker:
+<span class="w">    </span>repo_url:<span class="w"> </span>amd64/ubuntu
+<span class="w">    </span>tag:<span class="w"> </span><span class="s2">&quot;latest&quot;</span>
+basic_repo:
+<span class="w">    </span>repo_url:<span class="w"> </span>https://github.com/qemu/qemu.git
+<span class="w">    </span>branch:<span class="w"> </span>master
+build_script:
+<span class="w">    </span>repo_url:<span class="w"> </span>https://gitee.com/jean9823/ruyibuild_script.git
+<span class="w">    </span>branch:<span class="w"> </span>master
+<span class="w">    </span>path:<span class="w"> </span>qemu/qemu_ubuntu.sh
+</pre></div>
+</div>
+<p>配置文件分为三部分：</p>
+<ol class="upperalpha simple">
+<li><p>docker容器信息</p></li>
+</ol>
+<p>docker: 需要使用的docker容器的镜像信息，包括：</p>
+<p>repo_url: docker容器镜像地址</p>
+<p>tag: docker容器镜像tag</p>
+<ol class="upperalpha simple" start="2">
+<li><p>源码git仓库地址</p></li>
+</ol>
+<p>basic_repo: 需要构建的源码git仓库信息，包括：</p>
+<p>repo_url: git仓库地址</p>
+<p>branch: 源码在仓库中的branch</p>
+<ol class="upperalpha simple" start="3">
+<li><p>build_script: 执行构建的脚本git仓库信息，包括：</p></li>
+</ol>
+<p>repo_url: 脚本git仓库地址</p>
+<p>branch: 脚本在git仓库中的branch</p>
+<p>path: 脚本在git仓库中相对于根目录的位置，如果是存储在根目录，该栏位填写为 path: qemu_ubuntu.sh</p>
+<p>脚本会统一存放在 <a class="reference external" href="https://github.com/ruyisdk/ruyici">https://github.com/ruyisdk/ruyici</a> ，可以根据自己的需求选择合适的文件，或者也可以使用自己的脚本，关于脚本内容的要求后面会介绍</p>
+</section>
+<section id="id8">
+<h3>准备构建环境和代码<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h3>
+<p>在工作目录下执行以下命令下载./ruyibuild/config.yaml配置的docker镜像，需要构建源码和构建脚本</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ruyibuild<span class="w"> </span>update
+</pre></div>
+</div>
+</section>
+<section id="id9">
+<h3>执行构建<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h3>
+<p>在工作目录下执行以下命令运行容器并执行构建</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ruyibuild<span class="w"> </span>generate<span class="w"> </span>&lt;name&gt;
+</pre></div>
+</div>
+<p>&lt;name&gt;表示构建完成后，生成的软件压缩包的包名。</p>
+<p>执行该命令后，先运行容器，然后根据 config.yaml 中的 build_script 设置去工作目录下获取相应的脚本xxx.sh，并执行 sh xxx.sh &lt;name&gt;</p>
+<p>构建完成后，docker容器会自动销毁，生成的软件压缩包会存放在工作目录下的output目录下，即在output/&lt;name&gt;.tar就是构建出的软件压缩包</p>
+</section>
+</section>
+<section id="id10">
+<h2>ruyibuild命令<a class="headerlink" href="#id10" title="Link to this heading">¶</a></h2>
+<p>ruyibuid目前支持的命令如下：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ruyibuild<span class="w"> </span><span class="nb">help</span><span class="w">    </span>//帮助
+ruyibuild<span class="w"> </span>version<span class="w">     </span>//查询版本
+ruyibuild<span class="w"> </span>init<span class="w"> </span>&lt;directory&gt;<span class="w"> </span><span class="o">[</span>-f<span class="w"> </span>&lt;ruyicfg_directory&gt;<span class="o">]</span><span class="w">    </span>//创建工作目录
+ruyibuild<span class="w"> </span>update<span class="w">      </span>//下载镜像和代码
+ruyibuild<span class="w"> </span>generate<span class="w"> </span>&lt;name&gt;<span class="w">    </span>//执行构建
+</pre></div>
+</div>
+</section>
+<section id="id11">
+<h2>执行构建脚本<a class="headerlink" href="#id11" title="Link to this heading">¶</a></h2>
+<p>容器和工作目录映射关系如下:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&lt;workspace&gt;/src:/home/src
+&lt;workspace&gt;/build:/home/build
+&lt;workspace&gt;/script:/home/script
+</pre></div>
+</div>
+<p>从上面的对应关系，以及3.2中介绍的各个目录的作用，可以知道，在容器中:</p>
+<p>构建脚本路径是/home/script</p>
+<p>所要构建的源码路径是/home/src</p>
+<p>构建执行结果路路径是/home/build/&lt;name&gt; , &lt;name&gt;同ruyibuild generate &lt;name&gt;</p>
+<p>构建完成后，程序需要将构建结果从 &lt;workspace&gt;/build 中取出并打包放在 &lt;workspace&gt;/output 目录下</p>
+<p>由于程序对于这些目录的要求，所以编写脚本时一定要注意这些目录，否则会导致构建无法正确执行，例如：</p>
+<p>执行 cd /home/src 确保进入源码目录，再执行编译和构建</p>
+<p>执行 ./configure 时，通过 –prefix=/home/build/1 来确保构建结果存放到容器中的/home/build/&lt;name&gt;下，
+1表示接收执行脚本命令 sh xxx.sh &lt;name&gt; 中的 &lt;name&gt;</p>
+<p>下面是一个在 x86 ubuntu 容器中构建 qemu 的 shell 脚本的例子，供参考</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="nb">set</span><span class="w"> </span>-x
+
+apt<span class="w"> </span>update<span class="w"> </span>-y
+apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>python3<span class="w"> </span>python3-pip<span class="w"> </span>build-essential<span class="w"> </span>git<span class="w"> </span>libglib2.0-dev<span class="w"> </span>libfdt-dev<span class="w"> </span>libpixman-1-dev<span class="w"> </span>zlib1g-dev<span class="w"> </span>ninja-build<span class="w"> </span>libslirp-dev
+pip<span class="w"> </span>install<span class="w"> </span>meson
+<span class="nb">cd</span><span class="w"> </span>/home/src
+./configure<span class="w"> </span>--target-list<span class="o">=</span>riscv64-softmmu,riscv64-linux-user<span class="w"> </span>--prefix<span class="o">=</span>/home/build/<span class="nv">$1</span>
+make<span class="w"> </span>-j<span class="w"> </span><span class="k">$(</span>nproc<span class="k">)</span>
+make<span class="w"> </span>install
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="RuyiSDK Tools" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ruyishell.html" class="btn btn-neutral float-right" title="ruyishell的背景介绍" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, RuyiSDK.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

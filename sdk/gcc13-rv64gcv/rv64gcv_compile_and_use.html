@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>支持RVV1.0扩展的构建和使用 &mdash; RuyiSDK 在线文档 1.0.0 文档</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/documentation_options.js?v=34088549"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../_static/tabs.js?v=3030b3cb"></script>
+        <script src="../../_static/translations.js?v=beaddf03"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="使用ruyibuild构建" href="rv64gcv_ruyibuild.html" />
+    <link rel="prev" title="RISC-V的支持V扩展的gcc工具链rv64gcv" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            RuyiSDK 在线文档
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">内容</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">RuyiSDK Tools</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">RuyiSDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../gcc13-rv64gc/index.html">RISC-V的标准gcc工具链rv64gc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcc13-rv64gcb/index.html">RISC-V的支持B(位操作)扩展的gcc工具链rv64gcb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcc13-rv64gck/index.html">RISC-V的支持K（密码学-标量）扩展的gcc工具链rv64gck</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">RISC-V的支持V扩展的gcc工具链rv64gcv</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">支持RVV1.0扩展的构建和使用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rv64gcv_ruyibuild.html">使用ruyibuild构建</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rv64gcv_ruyishell.html">使用ruyishell下载测试</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../gcc13-rv64gzc/index.html">RISC-V的支持ZC扩展的gcc工具链rv64gzc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcc13-rv32izfinx/index.html">RISC-V的支持Zfinx扩展的gcc工具链rv32izfinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcc10-rv64gcp/index.html">RISC-V的支持P扩展的gcc工具链rv64gcp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcc10-rv64gcv0p7/index.html">RISC-V的支持V扩展(0.7.1)的gcc工具链rv64gcv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcc10-rv64gcxthead/index.html">RISC-V的支持玄铁自定义系列扩展xthead的gcc工具链rv64gcxthead</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../qemu/index.html">RUYI QEMU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../llvm/index.html">RISC-V的LLVM工具链</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../plan/index.html">版本规划路线图</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../benchmark/index.html">运行Benchmarks</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">RuyiSDK 在线文档</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">RuyiSDK</a></li>
+          <li class="breadcrumb-item"><a href="index.html">RISC-V的支持V扩展的gcc工具链rv64gcv</a></li>
+      <li class="breadcrumb-item active">支持RVV1.0扩展的构建和使用</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="rvv1-0">
+<span id="rv64gcv-compile-and-use"></span><h1>支持RVV1.0扩展的构建和使用<a class="headerlink" href="#rvv1-0" title="Link to this heading">¶</a></h1>
+<p>安装构建依赖(如有后续构建提示缺失，可根据错误信息全依赖)</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-VWJ1bnR1546v5aKD" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-VWJ1bnR1546v5aKD" name="VWJ1bnR1546v5aKD" role="tab" tabindex="0">Ubuntu环境</button><button aria-controls="panel-0-T3BlbkV1bGVyL1JldnlPU+eOr+Wigw==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-T3BlbkV1bGVyL1JldnlPU+eOr+Wigw==" name="T3BlbkV1bGVyL1JldnlPU+eOr+Wigw==" role="tab" tabindex="-1">OpenEuler/RevyOS环境</button><button aria-controls="panel-0-RmVkb3JhL0NlbnRPU+eOr+Wigw==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-RmVkb3JhL0NlbnRPU+eOr+Wigw==" name="RmVkb3JhL0NlbnRPU+eOr+Wigw==" role="tab" tabindex="-1">Fedora/CentOS环境</button></div><div aria-labelledby="tab-0-VWJ1bnR1546v5aKD" class="sphinx-tabs-panel code-tab group-tab" id="panel-0-VWJ1bnR1546v5aKD" name="VWJ1bnR1546v5aKD" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>make<span class="w"> </span>diffutils<span class="w"> </span>autoconf<span class="w"> </span>automake<span class="w"> </span>autotools-dev<span class="w"> </span>curl<span class="w"> </span>python3<span class="w"> </span>python3-pip<span class="w"> </span>libmpc-dev<span class="w"> </span>libmpfr-dev<span class="w"> </span>libgmp-dev<span class="w"> </span>gawk<span class="w"> </span>build-essential<span class="w"> </span>bison<span class="w"> </span>flex<span class="w"> </span>texinfo<span class="w"> </span>gperf<span class="w"> </span>libtool<span class="w"> </span>patchutils<span class="w"> </span>bc<span class="w"> </span>zlib1g-dev<span class="w"> </span>libexpat-dev<span class="w"> </span>ninja-build<span class="w"> </span>git<span class="w"> </span>cmake<span class="w"> </span>libglib2.0-dev
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-T3BlbkV1bGVyL1JldnlPU+eOr+Wigw==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-0-T3BlbkV1bGVyL1JldnlPU+eOr+Wigw==" name="T3BlbkV1bGVyL1JldnlPU+eOr+Wigw==" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dnf<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>make<span class="w"> </span>diffutils<span class="w"> </span>autoconf<span class="w"> </span>automake<span class="w"> </span>python3<span class="w"> </span>libmpc-devel<span class="w"> </span>mpfr-devel<span class="w"> </span>gmp-devel<span class="w"> </span>gawk<span class="w">  </span>bison<span class="w"> </span>flex<span class="w"> </span>texinfo<span class="w"> </span>patchutils<span class="w"> </span>gcc<span class="w"> </span>gcc-c++<span class="w"> </span>zlib-devel<span class="w"> </span>expat-devel
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-RmVkb3JhL0NlbnRPU+eOr+Wigw==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-0-RmVkb3JhL0NlbnRPU+eOr+Wigw==" name="RmVkb3JhL0NlbnRPU+eOr+Wigw==" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>make<span class="w"> </span>diffutils<span class="w"> </span>autoconf<span class="w"> </span>automake<span class="w"> </span>python3<span class="w"> </span>libmpc-devel<span class="w"> </span>mpfr-devel<span class="w"> </span>gmp-devel<span class="w"> </span>gawk<span class="w">  </span>bison<span class="w"> </span>flex<span class="w"> </span>texinfo<span class="w"> </span>patchutils<span class="w"> </span>gcc<span class="w"> </span>gcc-c++<span class="w"> </span>zlib-devel<span class="w"> </span>expat-devel
+</pre></div>
+</div>
+</div></div>
+<p>下载riscv-gnu-toolchain:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ruyisdk/riscv-gnu-toolchain
+</pre></div>
+</div>
+<p>构建准备——进入riscv-gnu-toolchain目录，建立build文件夹，用于存放构建生成的工具链：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>riscv-gnu-toolchain<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>mkdir<span class="w"> </span>build
+</pre></div>
+</div>
+<p>配置构建参数，以启用不同扩展</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#支持RVV1.0扩展的构建（rv64gcv）</span>
+./configure<span class="w"> </span>--prefix<span class="o">=</span><span class="nv">$PWD</span>/build<span class="w"> </span>--with-arch<span class="o">=</span>rv64gcv
+</pre></div>
+</div>
+<p>配置完成后进行构建（如果出现报错，请记录错误信息并进行反馈）</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>linux<span class="w"> </span>-j<span class="w"> </span><span class="k">$(</span>nproc<span class="k">)</span>
+</pre></div>
+</div>
+<p>构建完成后，检查是否构建成功(这里以标准64位工具链为例，32位工具链注意替换工具链名称)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>build/bin/riscv64-unknown-linux-gnu-gcc<span class="w"> </span>-v
+</pre></div>
+</div>
+<p>RuyiSDK 是</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="RISC-V的支持V扩展的gcc工具链rv64gcv" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="rv64gcv_ruyibuild.html" class="btn btn-neutral float-right" title="使用ruyibuild构建" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, RuyiSDK.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

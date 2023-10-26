@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>使用ruyibuild构建 &mdash; RuyiSDK 在线文档 1.0.0 文档</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/documentation_options.js?v=34088549"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../_static/tabs.js?v=3030b3cb"></script>
+        <script src="../../_static/translations.js?v=beaddf03"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="使用ruyishell下载测试" href="rv64gcxthead_ruyishell.html" />
+    <link rel="prev" title="支持xthead扩展的构建和使用" href="rv64gcxthead_compile_and_use.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            RuyiSDK 在线文档
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">内容</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tools/index.html">RuyiSDK Tools</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">RuyiSDK</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../gcc13-rv64gc/index.html">RISC-V的标准gcc工具链rv64gc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcc13-rv64gcb/index.html">RISC-V的支持B(位操作)扩展的gcc工具链rv64gcb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcc13-rv64gck/index.html">RISC-V的支持K（密码学-标量）扩展的gcc工具链rv64gck</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcc13-rv64gcv/index.html">RISC-V的支持V扩展的gcc工具链rv64gcv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcc13-rv64gzc/index.html">RISC-V的支持ZC扩展的gcc工具链rv64gzc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcc13-rv32izfinx/index.html">RISC-V的支持Zfinx扩展的gcc工具链rv32izfinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcc10-rv64gcp/index.html">RISC-V的支持P扩展的gcc工具链rv64gcp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcc10-rv64gcv0p7/index.html">RISC-V的支持V扩展(0.7.1)的gcc工具链rv64gcv</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">RISC-V的支持玄铁自定义系列扩展xthead的gcc工具链rv64gcxthead</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="rv64gcxthead_compile_and_use.html">支持xthead扩展的构建和使用</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">使用ruyibuild构建</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rv64gcxthead_ruyishell.html">使用ruyishell下载测试</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../qemu/index.html">RUYI QEMU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../llvm/index.html">RISC-V的LLVM工具链</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../plan/index.html">版本规划路线图</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../benchmark/index.html">运行Benchmarks</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">RuyiSDK 在线文档</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">RuyiSDK</a></li>
+          <li class="breadcrumb-item"><a href="index.html">RISC-V的支持玄铁自定义系列扩展xthead的gcc工具链rv64gcxthead</a></li>
+      <li class="breadcrumb-item active">使用ruyibuild构建</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ruyibuild">
+<span id="rv64gcxthead-ruyibuild"></span><h1>使用ruyibuild构建<a class="headerlink" href="#ruyibuild" title="Link to this heading">¶</a></h1>
+<p>创建编译的虚拟环境(如已配置，可跳过)</p>
+<p>更新pip(可选)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip3<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
+</pre></div>
+</div>
+<p>安装virtualenv和virtualenvwrapper</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip3<span class="w"> </span>install<span class="w"> </span>virtualenv
+pip3<span class="w"> </span>install<span class="w"> </span>virtualenvwrapper
+</pre></div>
+</div>
+<p>在.bashrc中添加配置</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 虚拟环境存放目录，.virtualenvs目录可自拟</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">WORKON_HOME</span><span class="o">=</span>~/.virtualenvs
+<span class="c1"># 指定virtualenvwrapper执行的python版本</span>
+<span class="c1"># which python3 获取路径</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">VIRTUALENVWRAPPER_PYTHON</span><span class="o">=</span>/usr/bin/python3
+<span class="c1"># 指定virtualenv的路径</span>
+<span class="c1"># find -name virtualenv 获取路径</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">VIRTUALENVWRAPPER_VIRTUALENV</span><span class="o">=</span>~/.local/bin/virtualenv
+<span class="c1"># virtualenvwrapper.sh所在目录</span>
+<span class="c1"># find -name virtualenvwrapper.sh</span>
+<span class="nb">source</span><span class="w"> </span>~/.local/bin/virtualenvwrapper.sh
+</pre></div>
+</div>
+<p>使能.bashrc配置从而可以使用python虚拟环境</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>~/.bashrc
+<span class="c1"># 以下是常用命令</span>
+<span class="c1"># 创建虚拟环境</span>
+mkvirtualenv<span class="w"> </span>buildgcc
+<span class="c1"># 切换到某个虚拟环境</span>
+workon<span class="w"> </span>buildgcc
+<span class="c1"># 退出当前虚拟环境</span>
+deactivate
+<span class="c1"># 删除某个虚拟环境</span>
+rmvirtualenv<span class="w"> </span>buildgcc
+<span class="c1"># 列出所有虚拟环境</span>
+lsvirtualenv
+</pre></div>
+</div>
+<p>创建虚拟环境用于编译，例如</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkvirtualenv<span class="w"> </span>buildgcc
+</pre></div>
+</div>
+<p>至此，python的虚拟环境配置完成，ruyibuild的安装和使用可在虚拟环境中进行，而不影响host机python环境</p>
+<p>安装ruyibuild</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget<span class="w"> </span>https://repo.tarsier-infra.com:8080/ruyisdk/misc/ruyibuild-0.0.2-py3-none-any.whl
+pip3<span class="w"> </span>install<span class="w"> </span>ruyibuild-0.0.2-py3-none-any.whl
+</pre></div>
+</div>
+<p>创建编译配置用于初始化，例如rv64gcxthead.yaml
+根据不同的构建目标和构建系统，创建不同的运行配置</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-VWJ1bnR1" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-VWJ1bnR1" name="VWJ1bnR1" role="tab" tabindex="0">Ubuntu</button><button aria-controls="panel-0-b3BlbkV1bGVy" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-b3BlbkV1bGVy" name="b3BlbkV1bGVy" role="tab" tabindex="-1">openEuler</button></div><div aria-labelledby="tab-0-VWJ1bnR1" class="sphinx-tabs-panel code-tab group-tab" id="panel-0-VWJ1bnR1" name="VWJ1bnR1" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>config_file:
+repo_url:<span class="w"> </span>https://github.com/ruyisdk/ruyici.git
+branch:<span class="w"> </span>main
+path:<span class="w"> </span>gcc/ubuntu/22.04/rv64gcxthead/config.yaml
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-b3BlbkV1bGVy" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-0-b3BlbkV1bGVy" name="b3BlbkV1bGVy" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>config_file:
+repo_url:<span class="w"> </span>https://github.com/ruyisdk/ruyici.git
+branch:<span class="w"> </span>main
+path:<span class="w"> </span>gcc/openeuler/23.03/rv64gcxthead/config.yaml
+</pre></div>
+</div>
+</div></div>
+<dl class="simple">
+<dt>初始化工作</dt><dd><p>执行以下命令创建工作目录, 后续自动下载的源码以及构建生成的软件包都会在此目录下</p>
+</dd>
+</dl>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ruyibuild<span class="w"> </span>init<span class="w"> </span>-d<span class="w"> </span>rv64gcxthead<span class="w"> </span>-f<span class="w"> </span>rv64gcxthead.yaml
+</pre></div>
+</div>
+<p>准备构建环境和代码</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ruyibuild<span class="w"> </span>update
+</pre></div>
+</div>
+<p>执行构建</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ruyibuild<span class="w"> </span>generate<span class="w"> </span>&lt;name&gt;
+</pre></div>
+</div>
+<p>生成目标toolchain</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="rv64gcxthead_compile_and_use.html" class="btn btn-neutral float-left" title="支持xthead扩展的构建和使用" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="rv64gcxthead_ruyishell.html" class="btn btn-neutral float-right" title="使用ruyishell下载测试" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, RuyiSDK.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
