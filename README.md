@@ -1,26 +1,11 @@
-# RUYISDK docs
-文档包括RUYISDK的总体介绍，和各个组成部分的详细说明、构建过程和使用方法
+# RuyiSDK 测试仓
 
-### 使用说明
-#### 安装依赖
+RUYISDK 是一个旨在提供给一个一体化集成开发环境的产品计划。从2023年开始筹备，计划用三年时间为RISC-V开发者提 供一个完整的、全家桶式的全功能开发环境。
 
-```
- pip install -U Sphinx
- pip install --user -r requirements.txt
- ```
+## 测试方案
 
-#### 编译
-```
-make html
-```
+本次测试目标在四类设备上进行测试。
 
-#### 运行测试
-
-```
-cd build/html
-本机访问  ip:8000
-python3 -m http.server 8000
-
-允许其他主机访问 ip:8000
-python3 -m http.server --bind 0.0.0.0 8000
-```
+- Ubuntu 22.04.3 LTS x86
+- openEuler 23.09 x86
+- Fedora on 2042
