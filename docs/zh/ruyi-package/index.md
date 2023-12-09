@@ -1,63 +1,192 @@
 # Ruyi 包管理器
 
-Ruyi 包管理器是设计为用于 RuyiSDK 的包管理器，用于管理工具链。
+RUYI 包管理是 RuyiSDK 开发中的包管理器。用于管理工具链、模拟器、源码等各种二进制软件包和源码包。
 
-## 安装包管理器
+## 支持的发行版平台
 
-目前，您可以从 [Ruyi Mirror](https://mirror.iscas.ac.cn/ruyisdk/ruyi/testing/) 下载预编译二进制文件并将其重命名为 `ruyi`。
+当前 RUYI 包管理器 v0.2 版本在以下平台进行了测试
 
-```bash
-wget https://mirror.iscas.ac.cn/ruyisdk/ruyi/testing/ruyi.20231030
-mv ruyi.20231030 ruyi
-chmod +x ruyi
-```
-
-然后将 `ruyi` 可执行文件加入 `$PATH`
-
-```bash
-export PATH="$PATH:/home/ruyi/"
-```
++ x86-64 Fedora 38
++ x86-64 Ubuntu 22.04 LTS
++ x86-64 openEuler 23.09
++ riscv64 RevyOS 20231026
++ riscv64 openEuler 23.09
 
 ## 命令
 
-### Update
+RUYI 目前支持的命令如下：
 
-- 将 RuyiSDK 元数据同步到本地存储
-- 默认情况下，存储库克隆到 `$XDG_CACHE_HOME/ruyi/packages-index`
-- 如果 `$XDG_CACHE_HOME` 未设置，则默认为 `~/.cache`
-
-```bash
-ruyi update
-```
-
-### List
-
-- 列出可用的工具链
-
-```bash
+``` bash
 ruyi list
-```
-
-### Install
-
-安装一个选定的包。
-
-```bash
-ruyi install plct-20231026
-```
-
-### 移除一个包
-
-移除一个选定的包
-
-```bash
-ruyi uninstall plct-20231026
-```
-
-### 列出可用的 Profiles
-
-列出所有可用的 Profiles
-
-```bash
+# 从本地软件包缓存中列出可用软件包
 ruyi list profiles
+# 列出已安装的配置
+ruyi update
+# 从配置的软件源更新本地软件包缓存
+ruyi install
+# 下载并安装指定的软件包
+ruyi venv
+# 由指定的工具链和配置建立 RUYI 虚拟环境
+ruyi extract
+# 下载并解包指定的源码包
+ruyi admin
+# ruyi 镜像搭建工具（完善中）
+ruyi self uninstall
+# 卸载 RUYI 包管理器
 ```
+
+## 依赖软件
+
+RUYI 包管理器依赖一些外部工具，需要手动安装
+
+**Debian/Ubuntu**
+
+```bash
+$ sudo apt-get install wget git tar bzip2 xz-utils zstd
+```
+
+**Fedora/openEuler**
+
+```bash
+$ sudo apt-get install wget git tar bzip2 xz zstd
+```
+
+## 安装 RUYI 包管理器
+
+从发布[镜像](https://mirror.iscas.ac.cn/ruyisdk/ruyi/testing/)中选择合适架构的预编译二进制下载，当前 RUYI 包管理支持 amd64 和 riscv64 架构编译环境。
+
+v0.2 版本的稳定二进制为 20231204 版本。
+
+这里以 amd64 架构环境为例进行安装：
+
+```bash
+$ wget https://mirror.iscas.ac.cn/ruyisdk/ruyi/testing/ruyi.amd64.20231204
+$ chmod +x ./ruyi.amd64.20231204
+$ sudo cp ruyi.amd64.20231204 /usr/local/bin/ruyi
+$ ruyi version
+Ruyi 0.2.0-beta.20231204
+Copyright (C) 2023 Institute of Software, Chinese Academy of Sciences (ISCAS).
+All rights reserved.
+License: Apache-2.0 <https://www.apache.org/licenses/LICENSE-2.0>
+```
+
+``ruyi version`` 应当可以正常打印版本信息。注意二进制的文件名必须为 ``ruyi`` 。
+
+列出帮助信息：
+
+```bash
+$ ruyi --help
+usage: ruyi [-h] [-V] {extract,install,i,list,update,venv,admin,self,version} ...
+
+RuyiSDK Package Manager 0.2.0-beta.20231204
+
+options:
+  -h, --help            show this help message and exit
+  -V, --version         Print version information
+
+subcommands:
+  {extract,install,i,list,update,venv,admin,self,version}
+    extract             Fetch package(s) then extract to current directory
+    install (i)         Install package from configured repository
+    list                List available packages in configured repository
+    update              Update RuyiSDK repo and packages
+    venv                Generate a virtual environment adapted to the chosen toolchain and profile
+    admin               (NOT FOR REGULAR USERS) Subcommands for managing Ruyi repos
+    self                Manage this Ruyi installation
+    version             Print version information
+```
+
+## 刷新软件包缓存
+
+更新软件包缓存，使用默认镜像即可：
+
+```bash
+$ ruyi update
+```
+
+软件包缓存将存放在用户目录中，通常为 ``~/.cache/ruyi`` ；在 ``XDG_CACHE_HOME`` 环境变量被设置时，目录为 ``$XDG_CACHE_HOME/ruyi`` 。
+在本文档中家目录为 ``/home/myon`` 。
+
+查看可用的软件包，该命令将列出所有可用的软件包：
+
+```bash
+$ ruyi list
+List of available packages:
+
+* source/ruyisdk-demo
+  - 0.20231114.0 (latest)
+* source/coremark
+  - 1.0.2-pre.20230125 (prerelease, latest-prerelease)
+  - 1.0.1 (latest)
+* emulator/qemu-user-riscv-xthead
+  - 6.1.0-ruyi.20231207+g03813c9fe8 (latest)
+* emulator/qemu-user-riscv-upstream
+  - 8.1.2-ruyi.20231121 (latest)
+* toolchain/gnu-plct
+  - 0.20231118.0 (latest) slug: gnu-plct-20231118
+* toolchain/gnu-plct-xthead
+  - 0.20231118.0 (latest) slug: gnu-plct-xthead-20231118
+* toolchain/gnu-upstream
+  - 0.20231118.0 (latest) slug: gnu-upstream-20231118
+* toolchain/llvm-upstream
+  - 17.0.5-ruyi.20231121 (latest) slug: llvm-upstream-20231121
+```
+
+从输出可以看到软件包共分为三种，其中 ``source`` 代表了软件源码包， ``toolchain`` 代表了工具链二进制包， ``emulator`` 代表了模拟器二进制包。
+
+如果软件包显示 “no binary for current host” 则该软件包的当前版本不支持本机架构。
+
+列出所有软件包的详细信息：
+
+```bash
+$ ruyi list -v
+```
+
+列出已知编译环境配置：
+
+```bash
+$ ruyi list profiles
+generic
+sipeed-lpi4a (needs flavor(s): {'xthead'})
+milkv-duo
+```
+
+这些预置的配置可以用于编译环境的搭建。
+
+### 卸载 RUYI 包管理器
+
+使用下面的命令卸载 RUYI 包管理器：
+
+```bash
+$ ruyi self uninstall
+```
+
+这个命令将会询问您以二次确认该操作，如果希望 RUYI 包管理不询问而直接执行：
+
+```bash
+$ ruyi self uninstall -y
+```
+
+上面的命令只是删除 RUYI 本身，并不会删除软件包缓存和安装的 RUYI 软件包。
+
+如果希望删除所有缓存和安装了的软件包以实现干净的卸载：
+
+```bash
+$ ruyi self uninstall --purge
+```
+
+同样的这个命令将会询问您以二次确认该操作，如果希望 RUYI 包管理不询问而直接执行：
+
+```bash
+$ ruyi self uninstall --purge -y
+```
+
+实现 RUYI 包管理自身的升级可能会需要超级用户权限，而 RUYI 包管理被设计为避免进行需要超级用户权限的操作。
+故在需要升级 RUYI 包管理时您需要手动进行该操作，即首先卸载 RUYI 包管理器，再执行安装 RUYI 包管理器的过程，
+这个过程中您可以自主选择是否保留旧的软件包缓存和 RUYI 软件包。
+
+注意 RUYI 包管理器也没有实现卸载 RUYI 软件包的功能。这在您强制中断 RUYI 软件包安装进程或做了其他非预期操作时
+可能会导致软件包无法重新安装。此时您可以尝试删除 ``~/.local/share/ruyi/binaries/`` 或
+ ``${XDG_DATA_HOME}/ruyi/binaries/`` 下对应的 RUYI 软件包安装目录后再重试安装。手动执行删除软件包操作时，
+务必提前确认您的操作会得到预期效果。
+
