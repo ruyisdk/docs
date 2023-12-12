@@ -1,41 +1,6 @@
-# Ruyi 包管理器
+# 开始
 
-RUYI 包管理是 RuyiSDK 开发中的包管理器。用于管理工具链、模拟器、源码等各种二进制软件包和源码包。
-
-## 支持的发行版平台
-
-当前 RUYI 包管理器 v0.2 版本在以下平台进行了测试
-
-+ x86-64 Fedora 38
-+ x86-64 Ubuntu 22.04 LTS
-+ x86-64 openEuler 23.09
-+ riscv64 RevyOS 20231026
-+ riscv64 openEuler 23.09
-
-## 命令
-
-RUYI 目前支持的命令如下：
-
-``` bash
-ruyi list
-# 从本地软件包缓存中列出可用软件包
-ruyi list profiles
-# 列出已安装的配置
-ruyi update
-# 从配置的软件源更新本地软件包缓存
-ruyi install
-# 下载并安装指定的软件包
-ruyi venv
-# 由指定的工具链和配置建立 RUYI 虚拟环境
-ruyi extract
-# 下载并解包指定的源码包
-ruyi admin
-# ruyi 镜像搭建工具（完善中）
-ruyi self uninstall
-# 卸载 RUYI 包管理器
-```
-
-## 依赖软件
+## 安装依赖软件
 
 RUYI 包管理器依赖一些外部工具，需要手动安装
 
@@ -142,16 +107,48 @@ List of available packages:
 $ ruyi list -v
 ```
 
-列出已知编译环境配置：
+### 安装软件包
+
+使用 ``install`` 命令安装软件包，如 GNU 上游工具链：
 
 ```bash
-$ ruyi list profiles
-generic
-sipeed-lpi4a (needs flavor(s): {'xthead'})
-milkv-duo
+$ ruyi install gnu-upstream
 ```
 
-这些预置的配置可以用于编译环境的搭建。
+若希望重装一个软件包，则可以加上 ``--reinstall`` 参数：
+
+```bash
+$ ruyi install --reinstall gnu-upstream
+```
+
+### 安装源码包
+
+RUYI 包管理器同时管理一些源码包，使用 ``extract`` 命令下载一个源码包并解包到当前目录：
+
+```bash
+$ ruyi extract ruyisdk-demo
+$ ls
+README.md  rvv-autovec
+```
+
+### 搭建编译环境
+
+已经安装的工具链与模拟器需要在 RUYI 编译环境中使用，这和 python 的虚拟环境十分类似。
+这是由 ``venv`` 命令实现的：
+
+```bash
+$ ruyi venv --toolchain gnu-upstream --emulator qemu-user-riscv-upstream generic ./ruyi_venv
+```
+
+这个命令使用预置的 generic 配置，在 ``./ruyi_venv`` 目录建立包含 gnu-upstream 工具链和
+ qemu-user-riscv-upstream 模拟器的编译环境。
+
+具体使用参见“编译环境”与“具有 QEMU 支持的编译环境”章节。
+
+### 卸载软件包
+
+注意 RUYI 包管理器没有实现卸载 RUYI 软件包的功能。若您强制中断 RUYI 软件包安装进程或做了其他非预期操作
+而会导致软件包功能异常时，请使用 ``install --reinstall`` 以尝试重试安装该软件包。
 
 ### 卸载 RUYI 包管理器
 
@@ -184,9 +181,3 @@ $ ruyi self uninstall --purge -y
 实现 RUYI 包管理自身的升级可能会需要超级用户权限，而 RUYI 包管理被设计为避免进行需要超级用户权限的操作。
 故在需要升级 RUYI 包管理时您需要手动进行该操作，即首先卸载 RUYI 包管理器，再执行安装 RUYI 包管理器的过程，
 这个过程中您可以自主选择是否保留旧的软件包缓存和 RUYI 软件包。
-
-注意 RUYI 包管理器也没有实现卸载 RUYI 软件包的功能。这在您强制中断 RUYI 软件包安装进程或做了其他非预期操作时
-可能会导致软件包无法重新安装。此时您可以尝试删除 ``~/.local/share/ruyi/binaries/`` 或
- ``${XDG_DATA_HOME}/ruyi/binaries/`` 下对应的 RUYI 软件包安装目录后再重试安装。手动执行删除软件包操作时，
-务必提前确认您的操作会得到预期效果。
-

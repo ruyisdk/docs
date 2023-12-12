@@ -14,8 +14,8 @@ RUYISDK 是一个旨在提供给一个一体化集成开发环境的产品计划
 
 ## RuyiSDK 包含的内容
 
-### RuyiSDK 包管理器
+### RUYI 包管理器
 
 [GitHub 项目](https://github.com/ruyisdk/ruyi)。
 
-[文档](../ruyi-package/index.md)
+[文档](../ruyi/index.md)
