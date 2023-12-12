@@ -20,16 +20,16 @@ $ sudo apt-get install wget git tar bzip2 xz zstd
 
 从发布[镜像](https://mirror.iscas.ac.cn/ruyisdk/ruyi/testing/)中选择合适架构的预编译二进制下载，当前 RUYI 包管理支持 amd64 和 riscv64 架构编译环境。
 
-v0.2 版本的稳定二进制为 20231204 版本。
+v0.2 版本的稳定二进制为 0.2.0-beta.20231207 版本。
 
 这里以 amd64 架构环境为例进行安装：
 
 ```bash
-$ wget https://mirror.iscas.ac.cn/ruyisdk/ruyi/testing/ruyi.amd64.20231204
-$ chmod +x ./ruyi.amd64.20231204
-$ sudo cp ruyi.amd64.20231204 /usr/local/bin/ruyi
+$ wget https://mirror.iscas.ac.cn/ruyisdk/ruyi/testing/ruyi.amd64.20231207
+$ chmod +x ./ruyi.amd64.20231207
+$ sudo cp ruyi.amd64.20231207 /usr/local/bin/ruyi
 $ ruyi version
-Ruyi 0.2.0-beta.20231204
+Ruyi 0.2.0-beta.20231207
 Copyright (C) 2023 Institute of Software, Chinese Academy of Sciences (ISCAS).
 All rights reserved.
 License: Apache-2.0 <https://www.apache.org/licenses/LICENSE-2.0>
@@ -43,7 +43,7 @@ License: Apache-2.0 <https://www.apache.org/licenses/LICENSE-2.0>
 $ ruyi --help
 usage: ruyi [-h] [-V] {extract,install,i,list,update,venv,admin,self,version} ...
 
-RuyiSDK Package Manager 0.2.0-beta.20231204
+RuyiSDK Package Manager 0.2.0-beta.20231207
 
 options:
   -h, --help            show this help message and exit
