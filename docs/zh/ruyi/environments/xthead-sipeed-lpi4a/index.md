@@ -128,3 +128,4 @@ a.out: ELF 64-bit LSB executable, UCB RISC-V, RVC, double-float ABI, version 1 (
 $
 ```
 
+注意： 该编译环境构建的二进制，当前并不能在 RevyOS 运行，参见 issue [xthead 工具链构建产物无法在 RevyOS 运行](https://github.com/ruyisdk/ruyi/issues/22)

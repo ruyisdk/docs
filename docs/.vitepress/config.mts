@@ -5,7 +5,33 @@ const sidebarItems = [
   {
     text: '工具',
     items: [
-      { text: 'Ruyi 包管理器', link: '/ruyi-package/index' }
+      { text: 'RUYI 包管理器',
+        items: [
+          { text: '介绍', link: '/ruyi/index' },
+          { text: '开始', link: '/ruyi/getstarted/index' },
+          {
+            text: '编译环境',
+            link: '/ruyi/environments/index',
+            collapsed: true,
+            items: [
+              { text: '使用 GNU 上游工具链配置 RISC-V 编译环境', link: '/ruyi/environments/gnu-generic/index' },
+              { text: '使用 LLVM 上游工具链配置 RISC-V 编译环境', link: '/ruyi/environments/llvm-generic/index' },
+              { text: '使用 PLCT 工具链配置 Milkv-Duo 编译环境', link: '/ruyi/environments/plct-milkv-duo/index' },
+              { text: '使用平头哥工具链配置荔枝派 4A 编译环境', link: '/ruyi/environments/xthead-sipeed-lpi4a/index' },
+            ]
+          },
+          {
+            text: '具有 QEMU 支持的编译环境',
+            collapsed: true,
+            items: [
+              { text: '使用上游 QEMU 模拟器运行交叉编译的 RISC-V 二进制', link: '/ruyi/virtual_machines/qemu-upstream/index' },
+              { text: '使用平头哥 QEMU 模拟器运行交叉编译的 RISC-V 二进制', link: '/ruyi/virtual_machines/qemu-xthead/index' },
+            ]
+          },
+          { text: '源码包构建', link: '/ruyi/sources/coremark/index' },
+          { text: '用户软件源搭建', link: '/ruyi/mirrors/index' },
+        ]
+      }
     ]
   },
   {
@@ -37,12 +63,6 @@ const sidebarItems = [
     text: '版本规划路线图',
     link: '/plan/index',
     items: [
-    ]
-  },
-  {
-    text: 'Benchmarks',
-    items: [
-      { text: 'Coremark', link: '/benchmark/coremark' }
     ]
   }
 ]
