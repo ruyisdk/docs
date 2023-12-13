@@ -16,6 +16,10 @@ RUYISDK 是一个旨在提供给一个一体化集成开发环境的产品计划
 
 ### RUYI 包管理器
 
-[GitHub 项目](https://github.com/ruyisdk/ruyi)。
+* [GitHub 项目](https://github.com/ruyisdk/ruyi)
+* [文档](../ruyi/index.md)
+* [在线软件源 RUYI REPO](https://mirror.iscas.ac.cn/ruyisdk/)
 
-[文档](../ruyi/index.md)
+### RUYI IDE
+
+### 开发者社区

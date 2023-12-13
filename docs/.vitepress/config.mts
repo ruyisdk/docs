@@ -3,6 +3,12 @@ import { defineConfig } from 'vitepress'
 const sidebarItems = [
   { text: '介绍', link: '/introduction/index' },
   {
+    text: '版本规划路线图',
+    link: '/plan/index',
+    items: [
+    ]
+  },
+  {
     text: '工具',
     items: [
       { text: 'RUYI 包管理器',
@@ -57,12 +63,6 @@ const sidebarItems = [
           { text: 'LLVM Upstream', link: '/sdk/llvm/index' },
         ]
       }
-    ]
-  },
-  {
-    text: '版本规划路线图',
-    link: '/plan/index',
-    items: [
     ]
   }
 ]
