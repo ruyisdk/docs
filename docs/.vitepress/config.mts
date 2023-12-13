@@ -15,9 +15,13 @@ export default defineConfig({
           { text: '文档', link: '/zh/introduction/' }
         ],
         sidebar: [
-          { text: '介绍', link: '/zh/introduction/' },
-          {
-            text: '工具',
+          { text: '介绍', 
+            items: [
+              { text: 'RUYISDK 简介', link: '/zh/introduction/' },
+              { text: '版本规划路线图', link: '/zh/plan/' },
+            ]
+          },
+          { text: '工具',
             items: [
               {
                 text: 'RUYI 包管理器',
@@ -49,6 +53,24 @@ export default defineConfig({
               }
             ]
           },
+          { text: 'RuyiSDK',
+            items: [
+              {
+                text: 'GNU',
+                link: '/zh/sdk/gnu/',
+                items: [
+                  { text: 'GNU Upstream', link: '/zh/sdk/gnu/' },
+                ]
+              },
+              {
+                text: 'LLVM',
+                link: '/zh/sdk/llvm/',
+                items: [
+                  { text: 'LLVM Upstream', link: '/zh/sdk/llvm/' },
+                ]
+              }
+            ]
+          }
         ],
       }
     },
