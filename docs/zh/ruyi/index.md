@@ -6,9 +6,9 @@ RUYI 包管理是 RuyiSDK 开发中的包管理器。用于管理工具链、模
 
 当前 RUYI 包管理器 v0.2 版本在以下平台进行了测试
 
-+ x86-64 Fedora 38
-+ x86-64 Ubuntu 22.04 LTS
-+ x86-64 openEuler 23.09
++ x86_64 Fedora 38
++ x86_64 Ubuntu 22.04 LTS
++ x86_64 openEuler 23.09
 + riscv64 RevyOS 20231026
 + riscv64 openEuler 23.09
 
@@ -16,7 +16,7 @@ RUYI 包管理是 RuyiSDK 开发中的包管理器。用于管理工具链、模
 
 RUYI 目前支持的命令如下：
 
-``` bash
+```bash
 ruyi list
 # 从本地软件包缓存中列出可用软件包
 ruyi list profiles
