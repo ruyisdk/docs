@@ -107,4 +107,4 @@ InstalledDir: /home/myon/.local/share/ruyi/binaries/x86_64/llvm-upstream-17.0.5-
 $
 ```
 
-注意：由于 ``clang-cl`` 设计本意是兼容 MSVC ，故在 RUYI 编译环境中，尽管该命令存在，实际上并不被支持。
+注意：由于 ``clang-cl`` 设计本意是兼容 MSVC ，故在 RUYI 编译环境中，尽管该命令存在，实际上并不被支持。该命令将在 0.3 版本移除。
