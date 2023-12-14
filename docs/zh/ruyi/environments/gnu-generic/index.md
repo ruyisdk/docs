@@ -1,21 +1,28 @@
 # 使用 GNU 上游工具链配置 RISC-V 编译环境
 
-GNU 上游工具链软件包名为 gnu-upstream ， v0.2 最新版本二进制为 gnu-upstream-20231118 ：
+GNU 上游工具链软件包名为 gnu-upstream ， v0.2 最新版本 x86-64 架构二进制为 gnu-upstream-20231212 ， riscv64 架构二进制为 gnu-upstream-20231118 ：
+
+在 x86-64 环境：
+
+```bash
+$ ruyi install slug:gnu-upstream-20231212
+info: downloading https://mirror.iscas.ac.cn/ruyisdk/dist/RuyiSDK-20231212-Upstream-Sources-riscv64-unknown-linux-gnu.tar.xz to /home/myon/.cache/ruyi/distfiles/RuyiSDK-20231212-Upstream-Sources-riscv64-unknown-linux-gnu.tar.xz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  232M  100  232M    0     0  4215k      0  0:00:56  0:00:56 --:--:-- 5113k
+info: extracting RuyiSDK-20231212-Upstream-Sources-riscv64-unknown-linux-gnu.tar.xz for package gnu-upstream-0.20231212.0
+info: package gnu-upstream-0.20231212.0 installed to /home/myon/.local/share/ruyi/binaries/x86_64/gnu-upstream-0.20231212.0
+```
+
+slug 可以从 ``ruyi list`` 的输出中获取，且拷贝时应删除 ``slug: gnu-upstream-20231212`` 之间的空格，变为正确的格式 ``slug:gnu-upstream-20231212`` 。
+该命令将调用 ``wget`` 或 ``curl`` 从远端软件源获取软件包 tarball ，解压并安装到用户目录。
+软件包安装目录默认为 ``~/.local/share/ruyi`` ；在 ``XDG_DATA_HOME`` 环境变量被设置时，目录为 ``$XDG_DATA_HOME/ruyi`` 。
+
+在 riscv64 环境：
 
 ```bash
 $ ruyi install slug:gnu-upstream-20231118
-info: downloading https://mirror.iscas.ac.cn/ruyisdk/dist/RuyiSDK-20231118-Upstream-Sources-riscv64-unknown-linux-gnu.tar.xz to
-/home/myon/.cache/ruyi/distfiles/RuyiSDK-20231118-Upstream-Sources-riscv64-unknown-linux-gnu.tar.xz
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100  232M  100  232M    0     0  1936k      0  0:02:02  0:02:02 --:--:-- 1924k
-info: extracting RuyiSDK-20231118-Upstream-Sources-riscv64-unknown-linux-gnu.tar.xz for package gnu-upstream-0.20231118.0
-info: package gnu-upstream-0.20231118.0 installed to /home/myon/.local/share/ruyi/binaries/x86_64/gnu-upstream-0.20231118.0
 ```
-
-slug 可以从 ``ruyi list`` 的输出中获取，且拷贝时应删除 ``slug: gnu-upstream-20231118`` 之间的空格，变为正确的格式 ``slug:gnu-upstream-20231118`` 。
-该命令将调用 ``wget`` 或 ``curl`` 从远端软件源获取软件包 tarball ，解压并安装到用户目录。
-软件包安装目录默认为 ``~/.local/share/ruyi`` ；在 ``XDG_DATA_HOME`` 环境变量被设置时，目录为 ``$XDG_DATA_HOME/ruyi`` 。
 
 也可以使用如下命令让 RUYI 自动选择最新版本安装，注意所安装的版本可能是 v0.2 以后的未测试版本。
 
@@ -26,8 +33,7 @@ $ ruyi install gnu-upstream
 由预置的 generic 配置建立编译环境：
 
 ```bash
-$ ruyi venv -t slug:gnu-upstream-20231118 generic venv
-ruyi venv -t slug:gnu-upstream-20231118 generic venv
+$ ruyi venv -t slug:gnu-upstream-20231212 generic venv
 info: Creating a Ruyi virtual environment at venv...
 info: The virtual environment is now created.
 
@@ -87,7 +93,7 @@ $ source venv/bin/ruyi-activate
 
 ```bash
 «Ruyi venv» $ riscv64-unknown-linux-gnu-gcc --version
-riscv64-unknown-linux-gnu-gcc (RuyiSDK 20231118 Upstream-Sources) 13.2.0
+riscv64-unknown-linux-gnu-gcc (RuyiSDK 20231212 Upstream-Sources) 13.2.0
 Copyright (C) 2023 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.

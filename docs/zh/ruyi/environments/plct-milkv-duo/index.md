@@ -1,22 +1,29 @@
 # 使用 PLCT 工具链配置 Milkv-Duo 编译环境
 
-PLCT 工具链软件包名为 gnu-plct ， v0.2 最新版本二进制为 gnu-plct-20231118 ：
+PLCT 工具链软件包名为 gnu-plct ， v0.2 最新版本 x86-64 架构二进制为 gnu-plct-20231212  ， riscv64 架构二进制为 gnu-plct-20231118 ：
+
+在 x86-64 环境：
+
+```bash
+$ ruyi install slug:gnu-plct-20231212
+info: downloading https://mirror.iscas.ac.cn/ruyisdk/dist/RuyiSDK-20231212-PLCT-Sources-riscv64-plct-linux-gnu.tar.xz to /home/myon/.cache/ruyi/distfiles/RuyiSDK-20231212-PLCT-Sources-riscv64-plct-linux-gnu.tar.xz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  232M  100  232M    0     0  10.4M      0  0:00:22  0:00:22 --:--:-- 11.0M
+info: extracting RuyiSDK-20231212-PLCT-Sources-riscv64-plct-linux-gnu.tar.xz for package gnu-plct-0.20231212.0
+info: package gnu-plct-0.20231212.0 installed to /home/myon/.local/share/ruyi/binaries/x86_64/gnu-plct-0.20231212.0
+```
+
+在 riscv64 环境：
 
 ```bash
 $ ruyi install slug:gnu-plct-20231118
-info: downloading https://mirror.iscas.ac.cn/ruyisdk/dist/RuyiSDK-20231118-PLCT-Sources-riscv64-plct-linux-gnu.tar.xz to
-/home/myon/.cache/ruyi/distfiles/RuyiSDK-20231118-PLCT-Sources-riscv64-plct-linux-gnu.tar.xz
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100  232M  100  232M    0     0  10.6M      0  0:00:21  0:00:21 --:--:-- 10.9M
-info: extracting RuyiSDK-20231118-PLCT-Sources-riscv64-plct-linux-gnu.tar.xz for package gnu-plct-0.20231118.0
-info: package gnu-plct-0.20231118.0 installed to /home/myon/.local/share/ruyi/binaries/x86_64/gnu-plct-0.20231118.0
 ```
 
 由预置的 milkv-duo 配置在 ``./milkv-venv`` 目录建立编译环境：
 
 ```bash
-$ ruyi venv -t slug:gnu-plct-20231118 milkv-duo ./milkv-venv
+$ ruyi venv -t slug:gnu-plct-20231212 milkv-duo ./milkv-venv
 info: Creating a Ruyi virtual environment at milkv-venv...
 info: The virtual environment is now created.
 
@@ -62,7 +69,7 @@ $ . milkv-venv/bin/ruyi-activate
 
 ```bash
 «Ruyi milkv-venv» $ riscv64-plct-linux-gnu-gcc --version
-riscv64-plct-linux-gnu-gcc (RuyiSDK 20231118 PLCT-Sources) 13.1.0
+riscv64-plct-linux-gnu-gcc (RuyiSDK 20231212 PLCT-Sources) 13.1.0
 Copyright (C) 2023 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.

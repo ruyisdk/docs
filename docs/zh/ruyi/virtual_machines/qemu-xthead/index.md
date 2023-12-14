@@ -1,24 +1,21 @@
 # 使用平头哥 QEMU 模拟器运行交叉编译的 RISC-V 二进制
 
-这里使用平头哥工具链配置带 QEMU 支持的荔枝派 4A 编译环境，并使用平头哥 QEMU 运行构建出的 RISC-V 二进制。
+这里在 x86-64 环境下使用平头哥工具链配置带 QEMU 支持的荔枝派 4A 编译环境，并使用平头哥 QEMU 运行构建出的 RISC-V 二进制。
 
 ```bash
-$ ruyi install slug:gnu-plct-xthead-20231118 qemu-user-riscv-xthead
-info: downloading https://mirror.iscas.ac.cn/ruyisdk/dist/qemu-user-riscv-xthead-6.1.0.ruyi-20231207.amd64.tar.zst to
-/home/myon/.cache/ruyi/distfiles/qemu-user-riscv-xthead-6.1.0.ruyi-20231207.amd64.tar.zst
+$ ruyi install slug:gnu-plct-xthead-20231212 qemu-user-riscv-xthead
+info: downloading https://mirror.iscas.ac.cn/ruyisdk/dist/RuyiSDK-20231212-T-Head-Sources-riscv64-plctxthead-linux-gnu.tar.xz to /home/myon/.cache/ruyi/distfiles/RuyiSDK-20231212-T-Head-Sources-riscv64-plctxthead-linux-gnu.tar.xz
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-100 3577k  100 3577k    0     0  6110k      0 --:--:-- --:--:-- --:--:-- 6104k
+100  273M  100  273M    0     0  6462k      0  0:00:43  0:00:43 --:--:-- 6180k
+info: extracting RuyiSDK-20231212-T-Head-Sources-riscv64-plctxthead-linux-gnu.tar.xz for package gnu-plct-xthead-0.20231212.0
+info: package gnu-plct-xthead-0.20231212.0 installed to /home/myon/.local/share/ruyi/binaries/x86_64/gnu-plct-xthead-0.20231212.0
+info: downloading https://mirror.iscas.ac.cn/ruyisdk/dist/qemu-user-riscv-xthead-6.1.0.ruyi-20231207.amd64.tar.zst to /home/myon/.cache/ruyi/distfiles/qemu-user-riscv-xthead-6.1.0.ruyi-20231207.amd64.tar.zst
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 3577k  100 3577k    0     0  5226k      0 --:--:-- --:--:-- --:--:-- 5222k
 info: extracting qemu-user-riscv-xthead-6.1.0.ruyi-20231207.amd64.tar.zst for package qemu-user-riscv-xthead-6.1.0-ruyi.20231207+g03813c9fe8
-info: package qemu-user-riscv-xthead-6.1.0-ruyi.20231207+g03813c9fe8 installed to
-/home/myon/.local/share/ruyi/binaries/x86_64/qemu-user-riscv-xthead-6.1.0-ruyi.20231207+g03813c9fe8
-info: downloading https://mirror.iscas.ac.cn/ruyisdk/dist/RuyiSDK-20231118-T-Head-Sources-riscv64-plctxthead-linux-gnu.tar.xz to
-/home/myon/.cache/ruyi/distfiles/RuyiSDK-20231118-T-Head-Sources-riscv64-plctxthead-linux-gnu.tar.xz
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100  273M  100  273M    0     0  10.2M      0  0:00:26  0:00:26 --:--:-- 10.9M
-info: extracting RuyiSDK-20231118-T-Head-Sources-riscv64-plctxthead-linux-gnu.tar.xz for package gnu-plct-xthead-0.20231118.0
-info: package gnu-plct-xthead-0.20231118.0 installed to /home/myon/.local/share/ruyi/binaries/x86_64/gnu-plct-xthead-0.20231118.0
+info: package qemu-user-riscv-xthead-6.1.0-ruyi.20231207+g03813c9fe8 installed to /home/myon/.local/share/ruyi/binaries/x86_64/qemu-user-riscv-xthead-6.1.0-ruyi.20231207+g03813c9fe8
 ```
 
 建立编译环境：
