@@ -8,21 +8,19 @@ LLVM 上游工具链软件包名为 llvm-upstream ， v0.2 最新版本二进制
 另外尽管 llvm-upstream 在 ``list`` 命令中打印了 slug 信息，但是实际上并不存在该 slug ，故不能指定 slug 安装。
 
 ```bash
-$ ruyi install llvm-upstream slug:gnu-upstream-20231118
-info: downloading https://mirror.iscas.ac.cn/ruyisdk/dist/llvm-17.0.5.ruyi-20231121.amd64.tar.zst to
-/home/myon/.cache/ruyi/distfiles/llvm-17.0.5.ruyi-20231121.amd64.tar.zst
+$ ruyi install llvm-upstream slug:gnu-upstream-20231212
+info: downloading https://mirror.iscas.ac.cn/ruyisdk/dist/RuyiSDK-20231212-Upstream-Sources-riscv64-unknown-linux-gnu.tar.xz to /home/myon/.cache/ruyi/distfiles/RuyiSDK-20231212-Upstream-Sources-riscv64-unknown-linux-gnu.tar.xz
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-100  398M  100  398M    0     0  10.7M      0  0:00:36  0:00:36 --:--:-- 11.0M
+100  232M  100  232M    0     0  7108k      0  0:00:33  0:00:33 --:--:-- 6251k
+info: extracting RuyiSDK-20231212-Upstream-Sources-riscv64-unknown-linux-gnu.tar.xz for package gnu-upstream-0.20231212.0
+info: package gnu-upstream-0.20231212.0 installed to /home/myon/.local/share/ruyi/binaries/x86_64/gnu-upstream-0.20231212.0
+info: downloading https://mirror.iscas.ac.cn/ruyisdk/dist/llvm-17.0.5.ruyi-20231121.amd64.tar.zst to /home/myon/.cache/ruyi/distfiles/llvm-17.0.5.ruyi-20231121.amd64.tar.zst
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  398M  100  398M    0     0  4946k      0  0:01:22  0:01:22 --:--:-- 5737k
 info: extracting llvm-17.0.5.ruyi-20231121.amd64.tar.zst for package llvm-upstream-17.0.5-ruyi.20231121
 info: package llvm-upstream-17.0.5-ruyi.20231121 installed to /home/myon/.local/share/ruyi/binaries/x86_64/llvm-upstream-17.0.5-ruyi.20231121
-info: downloading https://mirror.iscas.ac.cn/ruyisdk/dist/RuyiSDK-20231118-Upstream-Sources-riscv64-unknown-linux-gnu.tar.xz to
-/home/myon/.cache/ruyi/distfiles/RuyiSDK-20231118-Upstream-Sources-riscv64-unknown-linux-gnu.tar.xz
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100  232M  100  232M    0     0  10.0M      0  0:00:23  0:00:23 --:--:-- 10.9M
-info: extracting RuyiSDK-20231118-Upstream-Sources-riscv64-unknown-linux-gnu.tar.xz for package gnu-upstream-0.20231118.0
-info: package gnu-upstream-0.20231118.0 installed to /home/myon/.local/share/ruyi/binaries/x86_64/gnu-upstream-0.20231118.0
 ```
 
 由预置的 generic 配置建立编译环境：
@@ -109,4 +107,4 @@ InstalledDir: /home/myon/.local/share/ruyi/binaries/x86_64/llvm-upstream-17.0.5-
 $
 ```
 
-注意：由于 ``clang-cl`` 设计本意是兼容 MSVC ，故在 RUYI 编译环境中，尽管该命令存在，实际上并不被支持。
+注意：由于 ``clang-cl`` 设计本意是兼容 MSVC ，故在 RUYI 编译环境中，尽管该命令存在，实际上并不被支持。该命令将在 0.3 版本移除。

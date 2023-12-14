@@ -9,7 +9,7 @@ RUYI 包管理是 RuyiSDK 开发中的包管理器。用于管理工具链、模
 + x86_64 Fedora 38
 + x86_64 Ubuntu 22.04 LTS
 + x86_64 openEuler 23.09
-+ riscv64 RevyOS 20231026
++ riscv64 RevyOS 20231210
 + riscv64 openEuler 23.09
 
 ## 命令
@@ -38,6 +38,6 @@ ruyi self uninstall
 ## 外部链接
 
 + [Fedora38 Workstation](https://download.fedoraproject.org/pub/fedora/linux/releases/38/Workstation/x86_64/iso/)
-+ [RevyOS 20231026](https://mirror.iscas.ac.cn/revyos/extra/images/lpi4a/20231026/)
++ [RevyOS 20231210](https://mirror.iscas.ac.cn/revyos/extra/images/lpi4a/20231210/)
 + [Ubuntu 22.04 LTS](https://www.releases.ubuntu.com/jammy/)
 + [openEuler 23.09 Images](https://repo.openeuler.openatom.cn/openEuler-23.09/ISO/)
