@@ -49,6 +49,13 @@ export default defineConfig({
                   },
                   { text: '源码包构建', link: '/zh/ruyi/sources/coremark/' },
                   { text: '用户软件源搭建', link: '/zh/ruyi/mirrors/' },
+                  {
+                    text: '版本更新',
+                    collapsed: true,
+                    items: [
+                      { text: 'v0.3 新增功能', link: '/zh/ruyi/updates/20240116' }
+                    ]
+                  }
                 ]
               }
             ]
