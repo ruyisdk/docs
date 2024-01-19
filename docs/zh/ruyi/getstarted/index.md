@@ -22,6 +22,8 @@ $ sudo apt-get install wget git tar bzip2 xz zstd
 
 v0.2 版本的稳定二进制为 0.2.0-beta.20231211 版本。
 
+注意： v0.3 版本已经发布，查看 [v0.3 版本新增特性](/zh/ruyi/updates/20240116)
+
 这里以 amd64 架构环境为例进行安装：
 
 ```bash
