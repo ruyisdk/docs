@@ -53,7 +53,7 @@ export default defineConfig({
                     text: '版本更新',
                     collapsed: true,
                     items: [
-                      { text: 'v0.3 版本新增特性', link: '/zh/ruyi/updates/20240116' }
+                      { text: 'v0.3.0 版本新增特性', link: '/zh/ruyi/updates/0.3.0' }
                     ]
                   }
                 ]
