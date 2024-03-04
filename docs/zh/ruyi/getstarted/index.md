@@ -22,7 +22,7 @@ $ sudo apt-get install wget git tar bzip2 xz zstd
 
 v0.2 版本的稳定二进制为 0.2.0-beta.20231211 版本。
 
-**注意： v0.4.0 版本已经发布，查看 [v0.4.0 版本新增特性](/zh/ruyi/updates/0.4.0)**
+**注意： v0.5.0 版本已经发布，查看 [v0.5.0 版本新增特性](/zh/ruyi/updates/0.5.0)**
 
 **除了 RuyiSDK mirror 下载，亦可以从 [Github Release](https://github.com/ruyisdk/ruyi/releases) 下载**
 
