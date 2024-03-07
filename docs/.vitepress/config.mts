@@ -18,7 +18,15 @@ export default defineConfig({
           { text: '介绍', 
             items: [
               { text: 'RUYISDK 简介', link: '/zh/introduction/' },
+              { text: '集成的RISC-V设备', link: '/zh/devices/' },
               { text: '版本规划路线图', link: '/zh/plan/' },
+            ]
+          },
+          { text: '开始使用', link: '/zh/usedirection/',
+            items: [
+              { text: '开发环境', link: '/zh/usedirection/developmentside/' },
+              { text: '运行环境', link: '/zh/usedirection/operationside/' },
+              { text: '编译器版本选择', link: '/zh/usedirection/typeselection/' },
             ]
           },
           { text: '工具',
