@@ -26,7 +26,9 @@ export default defineConfig({
               { text: '开发环境',  
                 items: [
                   { text: '准备RISC-V开发环境', link: '/zh/usedirection/developmentside/' },
-                  { text: '编译器版本选择', link: '/zh/usedirection/typeselection/' },
+                  { text: '编译器类型', link: '/zh/usedirection/developmentside/typeselection/' },
+                  { text: '编译环境', link: '/zh/usedirection/developmentside/environments/' },
+                  { text: '源码包构建', link: '/zh/usedirection/developmentside/sources/coremark/' },
                 ]
               },
               { text: '运行环境',  
@@ -34,7 +36,14 @@ export default defineConfig({
                   { text: '准备RISC-V运行环境', link: '/zh/usedirection/operationside/' },
                 ]
               },
-              { text: '使用案例', link: '/zh/usecase/' },
+              { text: '使用案例', 
+                items: [
+                  { text: '简介', link: '/zh/usecase/' },
+                  { text: 'amd上编译并模拟运行', link: '/zh/usecase/x86pc/' },
+                  { text: '为RISC-V开发板安装系统镜像', link: '/zh/usecase/setupos/' },
+                  { text: '在Licheepi4A上编译运行', link: '/zh/usecase/rvbook/' },
+                ]
+              },
             ]
           },
           { text: '工具',
@@ -44,26 +53,6 @@ export default defineConfig({
                 items: [
                   { text: '介绍', link: '/zh/ruyi/' },
                   { text: '开始', link: '/zh/ruyi/getstarted/' },
-                  {
-                    text: '编译环境',
-                    link: '/zh/ruyi/environments/',
-                    collapsed: true,
-                    items: [
-                      { text: '使用 GNU 上游工具链配置 RISC-V 编译环境', link: '/zh/ruyi/environments/gnu-generic/' },
-                      { text: '使用 LLVM 上游工具链配置 RISC-V 编译环境', link: '/zh/ruyi/environments/llvm-generic/' },
-                      { text: '使用 PLCT 工具链配置 Milkv-Duo 编译环境', link: '/zh/ruyi/environments/plct-milkv-duo/' },
-                      { text: '使用平头哥工具链配置荔枝派 4A 编译环境', link: '/zh/ruyi/environments/xthead-sipeed-lpi4a/' },
-                    ]
-                  },
-                  {
-                    text: '具有 QEMU 支持的编译环境',
-                    collapsed: true,
-                    items: [
-                      { text: '使用上游 QEMU 模拟器运行交叉编译的 RISC-V 二进制', link: '/zh/ruyi/virtual_machines/qemu-upstream/' },
-                      { text: '使用平头哥 QEMU 模拟器运行交叉编译的 RISC-V 二进制', link: '/zh/ruyi/virtual_machines/qemu-xthead/' },
-                    ]
-                  },
-                  { text: '源码包构建', link: '/zh/ruyi/sources/coremark/' },
                   { text: '用户软件源搭建', link: '/zh/ruyi/mirrors/' },
                   {
                     text: '版本更新',
