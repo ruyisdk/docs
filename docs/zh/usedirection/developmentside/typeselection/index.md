@@ -11,13 +11,13 @@
 
 如意SDK计划为持有不同RISC-V开发板的开发者们提供支持，让他们在如意SDK这个中心化的工具中便捷的获取使用和开发所需的支持。目前如意SDK已经提供的编译工具链有如下几种：
 
-|            | 编译工具链类型             | 说明                                                                                                                                                                                            |
-| ---------- | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GNU工具链  | gnu-upstream               |                                                                                                                                                                                                 |
-|            | gnu-plct                   |                                                                                                                                                                                                 |
-|            | gnu-plct-xthead            | for xuantie                                                                                                                                                                                     |
-|            | gnu-plct-rv64ilp32-elf     | 非通用工具链，支持 rv64ilp32 的裸机工具链，目标代码格式是elf。`<br>`[[仓库]](https://github.com/ruyisdk/riscv-gnu-toolchain-rv64ilp32) [[文章]](https://mp.weixin.qq.com/s/argIGP4_rUKDm9IRIB-YTg) |
-| LLVM工具链 | llvm-upstream              |                                                                                                                                                                                                 |
-| QEMU模拟器 | qemu-system-riscv-upstream |                                                                                                                                                                                                 |
-|            | qemu-user-riscv-upstream   |                                                                                                                                                                                                 |
-|            | qemu-user-riscv-xthead     |                                                                                                                                                                                                 |
+|            | 编译工具链类型             | 说明                                                                                                                                                                                    |
+| ---------- | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| GNU工具链  | gnu-upstream               |                                                                                                                                                                                         |
+|            | gnu-plct                   |                                                                                                                                                                                         |
+|            | gnu-plct-xthead            | for xuantie                                                                                                                                                                             |
+|            | gnu-plct-rv64ilp32-elf     | 非通用工具链，支持 rv64ilp32 的裸机工具链，目标代码格式是elf。[[仓库]](https://github.com/ruyisdk/riscv-gnu-toolchain-rv64ilp32) [[文章]](https://mp.weixin.qq.com/s/argIGP4_rUKDm9IRIB-YTg) |
+| LLVM工具链 | llvm-upstream              |                                                                                                                                                                                         |
+| QEMU模拟器 | qemu-system-riscv-upstream |                                                                                                                                                                                         |
+|            | qemu-user-riscv-upstream   |                                                                                                                                                                                         |
+|            | qemu-user-riscv-xthead     |                                                                                                                                                                                         |
