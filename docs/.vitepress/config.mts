@@ -36,8 +36,9 @@ export default defineConfig({
                   { text: '准备RISC-V运行环境', link: '/zh/usedirection/operationside/' },
                 ]
               },
-              { text: '使用案例', link: '/zh/usecase/' ,
+              { text: '使用案例', 
                 items: [
+                  { text: '简介', link: '/zh/usecase/' },
                   { text: 'amd上编译并模拟运行', link: '/zh/usecase/x86pc/' },
                   { text: '为RISC-V开发板安装系统镜像', link: '/zh/usecase/setupos/' },
                   { text: '在Licheepi4A上编译运行', link: '/zh/usecase/rvbook/' },
