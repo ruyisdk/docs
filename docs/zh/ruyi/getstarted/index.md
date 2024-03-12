@@ -71,14 +71,16 @@ $ ruyi update
 
 ## 查询包管理器更新内容
 
+查看如意包管理器的更新信息、阅读新闻或将信息设置为已读：
+
 ```bash
 $ ruyi news list -h
 $ ruyi news list
-$ ruyi news list --new		# 仅列出未读新闻
+$ ruyi news list --new		  # 仅列出未读新闻
 
 $ ruyi news read -h
-$ ruyi news read 1 		# 1为要读取的新闻条目的序号或ID
-$ ruyi news read   		# 读取下一条新闻
+$ ruyi news read 1 		      # 1为要读取的新闻条目的序号或ID
+$ ruyi news read   		      # 读取下一条新闻
 $ ruyi news read --quiet  	# 不输出任何东西，只标记为已读
 ```
 
