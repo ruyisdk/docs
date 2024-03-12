@@ -69,7 +69,20 @@ $ ruyi update
 软件包缓存将存放在用户目录中，通常为 ``~/.cache/ruyi`` ；在 ``XDG_CACHE_HOME`` 环境变量被设置时，目录为 ``$XDG_CACHE_HOME/ruyi`` 。
 在本文档中家目录为 ``/home/myon`` 。
 
-### 查询可用软件包
+## 查询包管理器更新内容
+
+```bash
+$ ruyi news list -h
+$ ruyi news list
+$ ruyi news list --new		# 仅列出未读新闻
+
+$ ruyi news read -h
+$ ruyi news read 1 		# 1为要读取的新闻条目的序号或ID
+$ ruyi news read   		# 读取下一条新闻
+$ ruyi news read --quiet  	# 不输出任何东西，只标记为已读
+```
+
+## 查询可用软件包
 
 查看可用的软件包，该命令将列出所有可用的软件包：
 
@@ -109,7 +122,7 @@ List of available packages:
 $ ruyi list -v
 ```
 
-### 查询可用编译环境
+## 查询可用编译环境
 
 与python 的虚拟环境类似，RUYI 包管理器工具使用 ``venv`` 命令应用配置到指定的工具链以建立编译环境。
 
@@ -123,8 +136,7 @@ sipeed-lpi4a (needs flavor(s): {'xthead'})
 milkv-duo
 ```
 
-
-### 安装软件包
+## 安装软件包
 
 使用 ``install`` 命令安装软件包，如 GNU 上游工具链：
 
@@ -141,15 +153,13 @@ $ ruyi install 'gnu-upstream(==0.20231118.0)'
 # match_expr parameter should be in format `<op><ver>`, where `<op>` is one of ['<', '>', '==', '<=', '>=', '!='].
 ```
 
-
-
 若希望重装一个软件包，则可以加上 ``--reinstall`` 参数：
 
 ```bash
 $ ruyi install --reinstall gnu-upstream
 ```
 
-### 安装源码包
+## 安装源码包
 
 RUYI 包管理器同时管理一些源码包，使用 ``extract`` 命令下载一个源码包并解包到当前目录：
 
@@ -159,7 +169,7 @@ $ ls
 README.md  rvv-autovec
 ```
 
-### 搭建编译环境
+## 搭建编译环境
 
 已经安装的工具链与模拟器需要在 RUYI 编译环境中使用，这和 python 的虚拟环境十分类似。
 这是由 ``venv`` 命令实现的：
@@ -173,12 +183,12 @@ $ ruyi venv --toolchain gnu-upstream --emulator qemu-user-riscv-upstream generic
 
 具体使用参见“编译环境”与“具有 QEMU 支持的编译环境”章节。
 
-### 卸载软件包
+## 卸载软件包
 
 注意 RUYI 包管理器没有实现卸载 RUYI 软件包的功能。若您强制中断 RUYI 软件包安装进程或做了其他非预期操作
 而会导致软件包功能异常时，请使用 ``install --reinstall`` 以尝试重试安装该软件包。
 
-### 卸载 RUYI 包管理器
+## 卸载 RUYI 包管理器
 
 使用下面的命令卸载 RUYI 包管理器：
 
@@ -209,3 +219,12 @@ $ ruyi self uninstall --purge -y
 实现 RUYI 包管理自身的升级可能会需要超级用户权限，而 RUYI 包管理被设计为避免进行需要超级用户权限的操作。
 故在需要升级 RUYI 包管理时您需要手动进行该操作，即首先卸载 RUYI 包管理器，再执行安装 RUYI 包管理器的过程，
 这个过程中您可以自主选择是否保留旧的软件包缓存和 RUYI 软件包。
+
+## 镜像信息的维护与下载、开发板系统的安装引导
+
+执行如下命令并按照引导执行即可下载所需系统镜像，为设备安装系统：
+
+```
+bash
+$ ruyi device provision
+```
