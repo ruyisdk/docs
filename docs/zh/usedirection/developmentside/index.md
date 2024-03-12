@@ -17,7 +17,7 @@ ruyi -V
 ruyi update
 ```
 
-> 说明：由于软件包索引信息目前托管的github仓库国内访问的网络不稳定性，因此如果存在ruyi update执行报连接错误，可将仓库切换到[备用仓库](https://mirror.iscas.ac.cn/git/ruyisdk/packages-index.git)，具体操作参考ruyi仓库[文档](https://github.com/ruyisdk/ruyi)在ruyi包管理工具默认的配置目录 `~/.config/ruyi` 下通过config.toml 文件配置(不同linux发行版可能不同，如果无可自己创建)。
+> 说明：由于软件包索引信息目前托管的github仓库国内访问的网络不稳定性，因此如果存在ruyi update执行报连接错误，可将仓库切换到[备用仓库](https://mirror.iscas.ac.cn/git/ruyisdk/packages-index.git)，具体操作参考 ruyi 仓库[文档](https://github.com/ruyisdk/ruyi)在 ruyi 包管理工具默认的配置目录 `~/.config/ruyi` 下通过 config.toml 文件配置(不同linux发行版可能不同，如果无可自己创建)。
 
 ## 安装编译工具链
 
@@ -31,7 +31,7 @@ ruyi list
 ruyi install 或 ruyi i
 ```
 
-编译工具链的版本选择参考[《编译工具链的不同扩展指令集实现与选择》](../typeselection/index)章节；
+编译工具链的版本选择参考[“编译工具链的不同扩展指令集实现与选择”](../typeselection/index)章节。
 
 ## 准备代码
 
@@ -88,4 +88,8 @@ ruyi-deactivate
 
 > TODO
 
-上述结合使用场景简单的介绍了如意包管理器和工具的使用，ruyi 的更多命令和命令具体使用方法详见《RUYI 包管理器》章节介绍。此外，目前也有一些简单的使用[案例]()供参考。
+
+
+
+
+上述结合使用场景简单的介绍了如意包管理器和工具的使用，ruyi 的更多命令和命令具体使用方法详见[“RUYI 包管理器”](../ruyi/index)章节介绍。此外，目前也有一些简单的[使用案例]()供参考。

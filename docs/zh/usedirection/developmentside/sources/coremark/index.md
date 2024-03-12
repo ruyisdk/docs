@@ -1,6 +1,6 @@
 # 使用编译环境进行 Coremark 构建
 
-这里用 “使用 PLCT 工具链配置 Milkv-Duo 编译环境” 一节中的 Milkv-Duo 编译环境，构建 coremark 。
+本文使用 Milkv-Duo 编译环境，构建 coremark 。
 
 首先进入编译环境：
 
@@ -9,7 +9,7 @@ $ . milkv-venv/bin/ruyi-activate
 «Ruyi milkv-venv» $
 ```
 
-coremark 源码可以直接从 RUYI 软件仓库中下载，当前 v0.2 最新的源码版本为 1.0.1 ：
+coremark 源码可以直接从 RUYI 软件仓库中下载：
 
 ```bash
 «Ruyi milkv-venv» $ mkdir coremark
@@ -49,4 +49,3 @@ coremark.exe: ELF 64-bit LSB executable, UCB RISC-V, RVC, double-float ABI, vers
 «Ruyi milkv-venv» $ ruyi-deactivate
 $
 ```
-
