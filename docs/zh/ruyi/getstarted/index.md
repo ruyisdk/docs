@@ -18,13 +18,7 @@ $ sudo apt-get install wget git tar bzip2 xz zstd
 
 ## 安装 RUYI 包管理器
 
-从发布[镜像](https://mirror.iscas.ac.cn/ruyisdk/ruyi/testing/)中选择合适架构的预编译二进制下载，当前 RUYI 包管理支持 amd64 和 riscv64 架构编译环境。
-
-v0.2 版本的稳定二进制为 0.2.0-beta.20231211 版本。
-
-**注意： v0.5.0 版本已经发布，查看 [v0.5.0 版本新增特性](/zh/ruyi/updates/0.5.0)**
-
-**除了 RuyiSDK mirror 下载，亦可以从 [Github Release](https://github.com/ruyisdk/ruyi/releases) 下载**
+从 [GitHub Releases](https://github.com/ruyisdk/ruyi/releases/) 或 [ISCAS 镜像源](https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases)下载最新版本，选择合适架构的预编译二进制下载，当前 RUYI 包管理支持 amd64 、arm64、 riscv64 架构编译环境。
 
 这里以 amd64 架构环境为例进行安装：
 
@@ -39,7 +33,7 @@ All rights reserved.
 License: Apache-2.0 <https://www.apache.org/licenses/LICENSE-2.0>
 ```
 
-``ruyi version`` 应当可以正常打印版本信息。注意二进制的文件名必须为 ``ruyi`` 。
+``ruyi version`` 应当可以正常打印版本信息。**注意二进制的文件名必须为** ``ruyi``。
 
 列出帮助信息：
 
@@ -75,6 +69,8 @@ $ ruyi update
 软件包缓存将存放在用户目录中，通常为 ``~/.cache/ruyi`` ；在 ``XDG_CACHE_HOME`` 环境变量被设置时，目录为 ``$XDG_CACHE_HOME/ruyi`` 。
 在本文档中家目录为 ``/home/myon`` 。
 
+### 查询可用软件包
+
 查看可用的软件包，该命令将列出所有可用的软件包：
 
 ```bash
@@ -103,7 +99,7 @@ List of available packages:
   - 17.0.5-ruyi.20231121 (latest) slug: llvm-upstream-20231121
 ```
 
-从输出可以看到软件包共分为三种，其中 ``source`` 代表了软件源码包， ``toolchain`` 代表了工具链二进制包， ``emulator`` 代表了模拟器二进制包。
+软件包前缀表示分类，其中 ``source`` 代表软件源码包， ``toolchain`` 代表工具链二进制包， ``emulator`` 代表模拟器二进制包，`board-image` 代表开发板镜像，`analyzer` 代表分析工具。
 
 如果软件包显示 “no binary for current host” 则该软件包的当前版本不支持本机架构。
 
@@ -113,6 +109,21 @@ List of available packages:
 $ ruyi list -v
 ```
 
+### 查询可用编译环境
+
+与python 的虚拟环境类似，RUYI 包管理器工具使用 ``venv`` 命令应用配置到指定的工具链以建立编译环境。
+
+RUYI 包管理预置的配置可以使用 ``ruyi list profiles`` 命令查看：
+
+```bash
+$ ruyi list profiles
+generic
+baremetal-rv64ilp32 (needs flavor(s): {'rv64ilp32'})
+sipeed-lpi4a (needs flavor(s): {'xthead'})
+milkv-duo
+```
+
+
 ### 安装软件包
 
 使用 ``install`` 命令安装软件包，如 GNU 上游工具链：
@@ -120,6 +131,17 @@ $ ruyi list -v
 ```bash
 $ ruyi install gnu-upstream
 ```
+
+上述通过指定软件包名安装的方式默认会安装 latest 的 gnu-upstream，如果想安装某个历史版本的gnu-upstream，则可以通过指定版本来安装：
+
+```bash
+$ ruyi install 'gnu-upstream(0.20231118.0)'
+$ ruyi install 'gnu-upstream(==0.20231118.0)'
+
+# match_expr parameter should be in format `<op><ver>`, where `<op>` is one of ['<', '>', '==', '<=', '>=', '!='].
+```
+
+
 
 若希望重装一个软件包，则可以加上 ``--reinstall`` 参数：
 

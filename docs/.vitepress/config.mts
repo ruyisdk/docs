@@ -36,9 +36,8 @@ export default defineConfig({
                   { text: '准备RISC-V运行环境', link: '/zh/usedirection/operationside/' },
                 ]
               },
-              { text: '使用案例', 
+              { text: '使用案例',  link: '/zh/usecase/' ,
                 items: [
-                  { text: '简介', link: '/zh/usecase/' },
                   { text: 'amd上编译并模拟运行', link: '/zh/usecase/x86pc/' },
                   { text: '为RISC-V开发板安装系统镜像', link: '/zh/usecase/setupos/' },
                   { text: '在Licheepi4A上编译运行', link: '/zh/usecase/rvbook/' },
@@ -49,11 +48,9 @@ export default defineConfig({
           { text: '工具',
             items: [
               {
-                text: 'RUYI 包管理器',
+                text: 'RUYI 包管理器', link: '/zh/ruyi/' , 
                 items: [
-                  { text: '介绍', link: '/zh/ruyi/' },
                   { text: '开始', link: '/zh/ruyi/getstarted/' },
-                  { text: '用户软件源搭建', link: '/zh/ruyi/mirrors/' },
                   {
                     text: '版本更新',
                     collapsed: true,
@@ -70,18 +67,10 @@ export default defineConfig({
           { text: 'RuyiSDK',
             items: [
               {
-                text: 'GNU',
-                link: '/zh/sdk/gnu/',
-                items: [
-                  { text: 'GNU Upstream', link: '/zh/sdk/gnu/' },
-                ]
+                text: 'GNU', link: '/zh/sdk/gnu/',
               },
               {
-                text: 'LLVM',
-                link: '/zh/sdk/llvm/',
-                items: [
-                  { text: 'LLVM Upstream', link: '/zh/sdk/llvm/' },
-                ]
+                text: 'LLVM', link: '/zh/sdk/llvm/',
               }
             ]
           }
