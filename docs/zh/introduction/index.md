@@ -10,7 +10,7 @@ RuyiSDK 是一个旨在提供给一个一体化集成开发环境的产品计划
 
 ## RuyiSDK 架构示意图
 
-![image](../../assets/images/RuyiSDK.png)
+![image](../../assets/images/ruyisdk.png)
 
 ## RuyiSDK 的组成
 
