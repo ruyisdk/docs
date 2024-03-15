@@ -53,7 +53,7 @@ subcommands:
     list                List available packages in configured repository
     update              Update RuyiSDK repo and packages
     venv                Generate a virtual environment adapted to the chosen toolchain and profile
-    admin               (NOT FOR REGULAR USERS) Subcommands for managing Ruyi repos
+    admin               (NOT FOR REGULAR USERS) Subcommands for managing Ruyi Repos
     self                Manage this Ruyi installation
     version             Print version information
 ```
