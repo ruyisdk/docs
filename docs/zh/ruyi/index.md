@@ -1,10 +1,10 @@
 # RUYI 包管理器
 
-RUYI 包管理是 RuyiSDK中负责管理RUYISDK各种软件源的工具，用于管理工具链、模拟器、源码等各种二进制软件包和源码包。
+RUYI 包管理是 RuyiSDK中负责管理RuyiSDK各种软件源的工具，用于管理工具链、模拟器、源码等各种二进制软件包和源码包。
 
-- 官方仓库：https://github.com/ruyisdk/ruyi
-- 下载地址：可在 [GitHub Releases](https://github.com/ruyisdk/ruyi/releases/) 或 [ISCAS 镜像源](https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases)下载最新版本体验
-- 需求与问题：如意包管理器的问题和需求可以通过[仓库issue](https://github.com/ruyisdk/ruyi/issues)反馈
+- 官方仓库：https://github.com/RuyiSDK/ruyi
+- 下载地址：可在 [GitHub Releases](https://github.com/RuyiSDK/ruyi/releases/) 或 [ISCAS 镜像源](https://mirror.iscas.ac.cn/RuyiSDK/ruyi/releases)下载最新版本体验
+- 需求与问题：ruyi 包管理器的问题和需求可以通过[仓库issue](https://github.com/RuyiSDK/ruyi/issues)反馈
 
 ## 支持的发行版平台
 
@@ -56,7 +56,6 @@ ruyi self uninstall
 ```
 
 功能持续更新中，可以通过 `ruyi -h` 查看 ruyi 支持的命令。
-
 
 ## 附:外部链接
 

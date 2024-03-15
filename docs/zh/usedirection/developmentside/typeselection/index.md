@@ -1,4 +1,4 @@
-# 如意SDK中编译工具链类型简介
+# RuyiSDK中编译工具链类型简介
 
 编译工具链存在实现了不同扩展指令集而形成不同版本实现的现状。这种现象是由于处理器架构的发展、厂商定制和优化、标准和规范的演进以及特定应用需求等因素相互作用的结果。
 
@@ -9,14 +9,14 @@
 
 上述原因导致了编译工具链版本的多样性，这样的多样性为开发者提供了更多选择，并可以根据具体需求和目标平台选择适合的编译工具链版本。
 
-如意SDK计划为持有不同RISC-V开发板的开发者们提供支持，让他们在如意SDK这个中心化的工具中便捷的获取使用和开发所需的支持。目前如意SDK已经提供的编译工具链有如下几种：
+RuyiSDK计划为持有不同RISC-V开发板的开发者们提供支持，让他们在RuyiSDK这个中心化的工具中便捷的获取使用和开发所需的支持。目前RuyiSDK已经提供的编译工具链有如下几种：
 
 |            | 编译工具链类型             | 说明                                                                                                                                                                                    |
 | ---------- | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | GNU工具链  | gnu-upstream               |                                                                                                                                                                                         |
 |            | gnu-plct                   |                                                                                                                                                                                         |
 |            | gnu-plct-xthead            | for xuantie                                                                                                                                                                             |
-|            | gnu-plct-rv64ilp32-elf     | 非通用工具链，支持 rv64ilp32 的裸机工具链，目标代码格式是elf。[[仓库]](https://github.com/ruyisdk/riscv-gnu-toolchain-rv64ilp32) [[文章]](https://mp.weixin.qq.com/s/argIGP4_rUKDm9IRIB-YTg) |
+|            | gnu-plct-rv64ilp32-elf     | 非通用工具链，支持 rv64ilp32 的裸机工具链，目标代码格式是elf。[[仓库]](https://github.com/RuyiSDK/riscv-gnu-toolchain-rv64ilp32) [[文章]](https://mp.weixin.qq.com/s/argIGP4_rUKDm9IRIB-YTg) |
 | LLVM工具链 | llvm-upstream              |                                                                                                                                                                                         |
 | QEMU模拟器 | qemu-system-riscv-upstream |                                                                                                                                                                                         |
 |            | qemu-user-riscv-upstream   |                                                                                                                                                                                         |

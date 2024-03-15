@@ -12,7 +12,7 @@ hero:
       link: /zh/introduction/index
     - theme: alt
       text: Github
-      link: https://github.com/ruyisdk/ruyi
+      link: https://github.com/RuyiSDK/ruyi
 
 features:
   - title: RISCV-GCC

@@ -17,7 +17,7 @@ export default defineConfig({
         sidebar: [
           { text: '介绍', 
             items: [
-              { text: 'RUYISDK 简介', link: '/zh/introduction/' },
+              { text: 'RuyiSDK 简介', link: '/zh/introduction/' },
               { text: '集成的RISC-V设备', link: '/zh/devices/' },
             ]
           },
@@ -97,7 +97,7 @@ export default defineConfig({
       provider: 'local'
     },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/ruyisdk/' }
+      { icon: 'github', link: 'https://github.com/RuyiSDK/' }
     ]
   }
 })

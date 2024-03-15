@@ -1,6 +1,6 @@
-# RUYISDK GCC 工具链介绍
+# RuyiSDK GCC 工具链介绍
 
-RUYISDK GCC 工具链是专门用于 RISC-V 架构的 GNU 工具链，它包括一系列工具，如编译器、汇编器、链接器等，用于开发和构建 RISC-V 架构的软件。
+RuyiSDK GCC 工具链是专门用于 RISC-V 架构的 GNU 工具链，它包括一系列工具，如编译器、汇编器、链接器等，用于开发和构建 RISC-V 架构的软件。
 
 ## 模块介绍
 
@@ -36,16 +36,16 @@ RUYISDK GCC 工具链是专门用于 RISC-V 架构的 GNU 工具链，它包括�
 
 **功能：** 包含一些与编译**功能：**器紧密相关的支持函数，例如用于浮点数乘除法的模拟运算函数。
 
-目前 RUYISDK 包含三种工具链版本，分别为 GNU upstream 版本，Xuantie 版本以及RUYISDK 版本，不同版本支持的 RISC-V 指令集有所不同。
+目前 RuyiSDK 包含三种工具链版本，分别为 GNU upstream 版本，Xuantie 版本以及RuyiSDK 版本，不同版本支持的 RISC-V 指令集有所不同。
 
-GNU upstream 工具链适合面向最新 RISC-V 特性的开发者，Xuantie 工具链侧重于使用 Xuantie 系列 CPU 芯片的硬件，RUYISDK 工具链侧重于提供稳定的工具链环境，尽可能的继承目前 RISC-V 的各个扩展与新特性。
+GNU upstream 工具链适合面向最新 RISC-V 特性的开发者，Xuantie 工具链侧重于使用 Xuantie 系列 CPU 芯片的硬件，RuyiSDK 工具链侧重于提供稳定的工具链环境，尽可能的继承目前 RISC-V 的各个扩展与新特性。
 
 ## 使用说明
 
 工具链中各个工具的使用方法请参考其使用说明文档，下面重点介绍 RISC-V 架构的一些常见用法：
 
 * -march 选项可以控制工具链开启的 RISC-V 扩展，其默认参数在 64 位工具链中为 `rv64gc`, 32 位工具链中为 `rv32gc`, 若要开启其他扩展，则需利用该选项重新向工具链指定想要开启的扩展，例如打开 V 扩展可以使用-march=rv64gcv，打开 b 扩展可以使用 `-march=rv64gc_zba_zbb_zbc_zbs，`
-  RUYISDK 中不同扩展的工具链已经在-march 中配置了其对应参数，方便用户直接使用，用户可以根据自身需求调整-march 输入，控制不同扩展的使用。
+  RuyiSDK 中不同扩展的工具链已经在-march 中配置了其对应参数，方便用户直接使用，用户可以根据自身需求调整-march 输入，控制不同扩展的使用。
 * -mabi 选项主要控制工具链中所使用的寄存器组，其默认参数在 64 位工具链中为 `lp64d`，32 位工具链中为 `ilp32d`，嵌入式设备中为 `lp64e`, `ilp32e`, 无浮点硬件中为 `lp64`, `ilp32`, 用户可以根据自身硬件和使用场景进行选择。
   使用 RVV 向量扩展时，请务必同时使用 `-O3` 选项，在编译器中开启 RVV 的向量化特性，一些 RVV 使用示例请参考：https://gcc.gnu.org/git/?p=gcc.git;a=tree;f=gcc/testsuite/gcc.target/riscv/rvv
 
@@ -60,4 +60,4 @@ GNU upstream 工具链适合面向最新 RISC-V 特性的开发者，Xuantie 工
 | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Upstream   | i, m, a, f, d, c, v, e(注意指定对应的 eABI） <br>  zicsr, zifencei, zicond, zawrs, zba, zbb, zbc, zbs  <br> zfinx, zdinx, zhinx, zhinxmin(注意指定的 ABI 为 lp64 或 ilp32, 与 f/d 扩展不兼容) <br> zbkb, zbkc, zbkx, zknd, zkne, zknh, zkr, zksed, zksh, zkt  <br> zihintntl, zihintpause, zicboz, zicbom, zicbop  <br> zfh, zfhmin, zvfh, zvfhmin, zvbb, zvbc, zvkg, zvkned, zvknha, zvknhb, zvksed, zvksh  <br> zvknc, zvksc, zvkt, zfa, zmmul, zca, zcb, zce, zcf(仅 RV32) <br> zcd, zcmp(与 zcd 不兼容), zcmt, ztso  <br> svinval, svnapot, <br> xcvmac, xcvalu,  <br> xtheadba, xtheadbb, xtheadbs, xtheadcmo, xtheadcondmov, xtheadfmv,  <br> xtheadint, xtheadmac, xtheadmemidx, xtheadfmemidx,  <br> xtheadmempair, xtheadsync, xventanacondops |
 | Xuantie    | 对 xtheadba, xtheadbb, xtheadbs, xtheadcmo, xtheadcondmov, xtheadfmv, <br> xtheadint, xtheadmac, xtheadmemidx, <br> xtheadfmemidx, xtheadmempair, xtheadsync, xventanacondops  <br> 有特定优化，不支持 Zfinx, K, V, Zc, Xcv 等系列扩展                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| RUYISDK    | 额外支持 RV64-ILP32, Profiles(RV20/22), zpn, zpsfoperand, zbpbo                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| RuyiSDK    | 额外支持 RV64-ILP32, Profiles(RV20/22), zpn, zpsfoperand, zbpbo                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |

@@ -16,11 +16,11 @@
 ruyi self uninstall --purge
 ```
 
-2. 下载 ruyi 工具并为其赋可执行权限并配置到环境变量中：在[ruyi GitHub Releases](https://github.com/ruyisdk/ruyi/releases/) 或 [ISCAS 镜像源](https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/)下载最新的ruyi工具。
+2. 下载 ruyi 工具并为其赋可执行权限并配置到环境变量中：在[ruyi GitHub Releases](https://github.com/RuyiSDK/ruyi/releases/) 或 [ISCAS 镜像源](https://mirror.iscas.ac.cn/RuyiSDK/ruyi/releases/)下载最新的ruyi工具。
 
 ```bash
 # 下载riscv64版本的ruyi，将其放到path路径下，并赋予其可执行权限
-wget https://github.com/ruyisdk/ruyi/releases/download/0.5.0/ruyi-0.5.0.riscv64
+wget https://github.com/RuyiSDK/ruyi/releases/download/0.5.0/ruyi-0.5.0.riscv64
 sudo cp ruyi-0.5.0.riscv64 /usr/local/bin/ruyi
 sudo chmod +x ruyi
 cd
