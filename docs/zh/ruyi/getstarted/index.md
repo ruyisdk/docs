@@ -16,6 +16,8 @@ $ sudo apt-get install wget git tar bzip2 xz-utils zstd
 $ sudo apt-get install wget git tar bzip2 xz zstd
 ```
 
+注意从 v0.6.0 版本开始 RUYI 包管理不再依赖 git，而是使用 pygit2 作为替代方案。
+
 ## 安装 RUYI 包管理器
 
 从 [GitHub Releases](https://github.com/RuyiSDK/ruyi/releases/) 或 [ISCAS 镜像源](https://mirror.iscas.ac.cn/RuyiSDK/ruyi/releases)下载最新版本，选择合适架构的预编译二进制下载，当前 RUYI 包管理支持 amd64 、arm64、 riscv64 架构编译环境。
@@ -226,7 +228,6 @@ $ ruyi self uninstall --purge -y
 
 执行如下命令并按照引导执行即可下载所需系统镜像，为设备安装系统：
 
-```
-bash
+```bash
 $ ruyi device provision
 ```
