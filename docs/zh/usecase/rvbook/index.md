@@ -10,13 +10,13 @@
 
 ## ruyi工具的安装
 
-1. [可选] 清除ruyi缓存
+1. [可选] 清除当前已经安装的 ruyi 工具及其所有数据
 
 ```bash
 ruyi self uninstall --purge
 ```
 
-2. 下载 ruyi 工具并为其赋可执行权限并配置到环境变量中：在[ruyi GitHub Releases](https://github.com/RuyiSDK/ruyi/releases/) 或 [ISCAS 镜像源](https://mirror.iscas.ac.cn/RuyiSDK/ruyi/releases/)下载最新的ruyi工具。
+2. 下载 ruyi 工具并为其赋可执行权限并配置到环境变量中：从[ruyi GitHub Releases](https://github.com/RuyiSDK/ruyi/releases/) 或 [ISCAS 镜像源](https://mirror.iscas.ac.cn/RuyiSDK/ruyi/releases/)下载最新的ruyi工具。
 
 ```bash
 # 下载riscv64版本的ruyi，将其放到path路径下，并赋予其可执行权限
@@ -97,16 +97,16 @@ sed -i 's/\bgcc\b/riscv64-plctxthead-linux-gnu-gcc/g' linux64/core_portme.mak
 
 11. 执行交叉编译和构建，得到可执行程序coremark.exe
 
-    ```bash
-    make PORT_DIR=linux64 link
-    ls -al    #新增可执行程序coremark.exe
-    ```
+```bash
+make PORT_DIR=linux64 link
+ls -al    #新增可执行程序coremark.exe
+```
 12. 查看rv64可执行程序文件属性信息。
 
-    ```bash
-    file coremark.exe
-    # 命令回显信息显示了文件的架构相关信息
-    ```
+```bash
+file coremark.exe
+# 命令回显信息显示了文件的架构相关信息
+```
 
 ## 运行验证
 
@@ -115,3 +115,4 @@ sed -i 's/\bgcc\b/riscv64-plctxthead-linux-gnu-gcc/g' linux64/core_portme.mak
 ```bash
 ./coremark.exe
 ```
+

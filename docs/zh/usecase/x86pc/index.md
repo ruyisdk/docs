@@ -6,17 +6,17 @@
 
 硬件环境：x86_64
 
-软件环境：ubuntu 22.04
+软件环境：Ubuntu 22.04
 
 ## ruyi工具的安装
 
-1. [可选] 清除ruyi缓存
+1. [可选] 清除当前已经安装的 ruyi 工具及其所有数据
 
 ```bash
 ruyi self uninstall --purge
 ```
 
-2. 下载 ruyi 工具并为其赋可执行权限并配置到环境变量中：在[ruyi GitHub Releases](https://github.com/RuyiSDK/ruyi/releases/) 或 [ISCAS 镜像源](https://mirror.iscas.ac.cn/RuyiSDK/ruyi/releases/)下载最新的ruyi工具。
+2. 下载 ruyi 工具并为其赋可执行权限并配置到环境变量中：从[ruyi GitHub Releases](https://github.com/RuyiSDK/ruyi/releases/) 或 [ISCAS 镜像源](https://mirror.iscas.ac.cn/RuyiSDK/ruyi/releases/)下载最新的ruyi工具。
 
 ```bash
 
@@ -55,7 +55,7 @@ ruyi list
 ruyi list -v
 ```
 
-7. 安装gnu：ruyi install `<package-name>`
+7. 安装工具链：ruyi install `<package-name>`
 
 ```bash
 ruyi install  gnu-upstream
@@ -83,13 +83,13 @@ ruyi venv -t gnu-upstream -e qemu-user-riscv-upstream   generic  venv1
 11. 查看虚拟环境bin目录下已安装的工具链、模拟器
 
 ```bash
-ls  venv1/bin
+ls venv1/bin
 ```
 
 12. 激活虚拟环境
 
 ```
-.  venv1/bin/ruyi-activate
+. venv1/bin/ruyi-activate
 ```
 
 13. 检查虚拟环境中编译工具的版本信息
@@ -117,23 +117,23 @@ sed -i 's/\bgcc\b/riscv64-unknown-linux-gnu-gcc/g'  linux64/core_portme.mak
 
 16. 执行交叉编译和构建，得到可执行程序coremark.exe
 
-    ```bash
-    make PORT_DIR=linux64 link
-    ls -al    #新增可执行程序coremark.exe
-    ```
+```bash
+make PORT_DIR=linux64 link
+ls -al    #新增可执行程序coremark.exe
+```
 17. 查看rv64可执行程序文件属性信息。
 
-    ```bash
-    file coremark.exe
-    # 命令回显信息显示了文件的架构相关信息
-    ```
+```bash
+file coremark.exe
+# 命令回显信息显示了文件的架构相关信息
+```
 
 ## qemu-user 模式下运行 riscv64 coremark 可执行程序
 
 18. qemu user模式下执行riscv64 coremark可执行程序
 
 ```bash
-ruyi-qemu   coremark.exe
+ruyi-qemu coremark.exe
 ```
 
 19. 退出虚拟环境

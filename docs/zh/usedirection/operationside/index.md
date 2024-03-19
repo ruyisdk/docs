@@ -4,8 +4,7 @@
 
 可以通过下载安装最新的 ruyi 包管理器工具并执行以下命令为设备安装系统：
 
-```
-bash
+```bash
 $ ruyi device provision
 ```
 

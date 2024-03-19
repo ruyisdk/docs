@@ -60,22 +60,22 @@ options:
 
 ```bash
 # 使用 GNU 上游工具链配置 RISC-V 编译环境：
-$ ruyi venv -t gnu-upstream generic venv1
+$ ruyi venv -t gnu-upstream generic ./generic-venv
 
 # 使用 PLCT 工具链配置 Milkv-Duo 编译环境：
 $ ruyi venv -t gnu-plct milkv-duo ./milkv-venv
 
 # 使用 LLVM 上游工具链配置 RISC-V 编译环境：
-$ ruyi venv -t llvm-upstream --sysroot-from gnu-upstream generic ./llvm_venv
+$ ruyi venv -t llvm-upstream --sysroot-from gnu-upstream generic ./llvm-venv
 
 # 使用平头哥工具链配置荔枝派 4A 编译环境：
 $ ruyi venv -t gnu-plct-xthead-20231212 sipeed-lpi4a ./sipeed-venv
 
 # 使用上游 QEMU 模拟器运行交叉编译的 RISC-V 二进制
-$ ruyi venv -t gnu-plct generic -e qemu-user-riscv-upstream ./qemu_venv
+$ ruyi venv -t gnu-plct generic -e qemu-user-riscv-upstream ./qemu-venv
 
 # 使用平头哥 QEMU 模拟器运行交叉编译的 RISC-V 二进制
-$ ruyi venv -t gnu-plct-xthead sipeed-lpi4a -e qemu-user-riscv-xthead ./qemu_venv
+$ ruyi venv -t gnu-plct-xthead sipeed-lpi4a -e qemu-user-riscv-xthead ./xthead-qemu-venv
 ```
 
 ## 在虚拟环境下编译

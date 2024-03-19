@@ -17,9 +17,6 @@ ruyi device provision
 该命令将会返回工具目前所支持的RISC-V开发板，选择开发板后将返回所有支持指定开发板的操作系统：
 
 ```
-
-
-
 RuyiSDK Device Provisioning Wizard
 
 This is a wizard intended to help you install a system on your device for your
@@ -56,8 +53,6 @@ Choice? (1-9)
 以上，以 Sipeed LicheePi 4A 为例，需要为其安装镜像，只需要输入对应的序号：7
 
 ```
-
-
 Choice? (1-9) 7
 
 The device has the following variants. Please choose the one corresponding to your hardware at hand:
@@ -83,8 +78,6 @@ We are about to download and install the following packages for your device:
 
 Proceed? (y/N) 
 
-
 ```
-
 
 您只需要按照引导提示一步步执行即可。
