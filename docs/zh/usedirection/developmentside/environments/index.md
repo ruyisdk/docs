@@ -23,6 +23,7 @@ RUYI 包管理在建立编译环境之前会检查该环境是否合法，但是
 |      gnu-upstream      |     自带     |       generic       |
 |        gnu-plct        |     自带     |       generic       |
 |        gnu-plct        |     自带     |      milkv-duo      |
+|        gnu-plct        |     自带     |   xiangshan-nanhu   |
 |    gnu-plct-xthead    |     自带     |    sipeed-lpi4a    |
 | gnu-plct-rv64ilp32-elf |      无      | baremetal-rv64ilp32 |
 |     llvm-upstream     | gnu-upstream |       generic       |
@@ -64,6 +65,9 @@ $ ruyi venv -t gnu-upstream generic ./generic-venv
 
 # 使用 PLCT 工具链配置 Milkv-Duo 编译环境：
 $ ruyi venv -t gnu-plct milkv-duo ./milkv-venv
+
+# 使用 PLCT 工具链配置香山南湖编译环境：
+$ ruyi venv -t gnu-plct xiangshan-nanhu ./nanhu-venv
 
 # 使用 LLVM 上游工具链配置 RISC-V 编译环境：
 $ ruyi venv -t llvm-upstream --sysroot-from gnu-upstream generic ./llvm-venv
