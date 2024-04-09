@@ -66,7 +66,7 @@ $ ruyi venv -t gnu-upstream generic ./generic-venv
 # 使用 PLCT 工具链配置 Milkv-Duo 编译环境：
 $ ruyi venv -t gnu-plct milkv-duo ./milkv-venv
 
-# 使用 PLCT 工具链配置 xiangshan-nanhu 编译环境：
+# 使用 PLCT 工具链配置香山南湖编译环境：
 $ ruyi venv -t gnu-plct xiangshan-nanhu ./nanhu-venv
 
 # 使用 LLVM 上游工具链配置 RISC-V 编译环境：
