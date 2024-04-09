@@ -20,12 +20,12 @@ $ sudo apt-get install wget git tar bzip2 xz zstd
 
 ## 安装 RUYI 包管理器
 
-从 [GitHub Releases](https://github.com/RuyiSDK/ruyi/releases/) 或 [ISCAS 镜像源](https://mirror.iscas.ac.cn/RuyiSDK/ruyi/releases)下载最新版本，选择合适架构的预编译二进制下载，当前 RUYI 包管理支持 amd64 、arm64、 riscv64 架构编译环境。
+从 [GitHub Releases](https://github.com/ruyisdk/ruyi/releases/) 或 [ISCAS 镜像源](https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases)下载最新版本，选择合适架构的预编译二进制下载，当前 RUYI 包管理支持 amd64 、arm64、 riscv64 架构编译环境。
 
 这里以 amd64 架构环境为例进行安装：
 
 ```bash
-$ wget https://mirror.iscas.ac.cn/RuyiSDK/ruyi/testing/ruyi.amd64.20231211
+$ wget https://mirror.iscas.ac.cn/ruyisdk/ruyi/testing/ruyi.amd64.20231211
 $ chmod +x ./ruyi.amd64.20231211
 $ sudo cp ruyi.amd64.20231211 /usr/local/bin/ruyi
 $ ruyi version
@@ -94,7 +94,7 @@ $ ruyi news read --quiet  	# 不输出任何东西，只标记为已读
 $ ruyi list
 List of available packages:
 
-* source/RuyiSDK-demo
+* source/ruyisdk-demo
   - 0.20231114.0 (latest)
 * source/coremark
   - 1.0.2-pre.20230125 (prerelease, latest-prerelease)
@@ -168,7 +168,7 @@ $ ruyi install --reinstall gnu-upstream
 RUYI 包管理器同时管理一些源码包，使用 ``extract`` 命令下载一个源码包并解包到当前目录：
 
 ```bash
-$ ruyi extract RuyiSDK-demo
+$ ruyi extract ruyisdk-demo
 $ ls
 README.md  rvv-autovec
 ```
