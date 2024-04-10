@@ -8,17 +8,22 @@ RuyiSDK对RISC-V设备的集成和支持主要包括以下几个方面：
 
 ## 支持的RISC-V设备
 
-目前已经集成的RISC-V设备有：
+目前对硬件设备的集成主要体现在包管理器（设备安装器），可以通过 `ruyi device provision`命令查询，已经集成的RISC-V设备有：
 
 1. Allwinner Nezha D1
 2. Canaan Kendryte K230
 3. Milk-V Duo
-4. Milk-V Pioneer Box
-5. SiFive HiFive Unmatched
-6. Sipeed Lichee RV
-7. Sipeed LicheePi 4A
-8. StarFive VisionFive
-9. StarFive VisionFive2
+4. Milk-V Duo S
+5. Milk-V Mars
+6. Milk-V Mars CM
+7. Milk-V Meles
+8. Milk-V Pioneer Box
+9. Milk-V Vega
+10. SiFive HiFive Unmatched
+11. Sipeed Lichee RV
+12. Sipeed LicheePi 4A
+13. StarFive VisionFive
+14. StarFive VisionFive2
 
 ## 从RuyiSDK开始使用设备
 
