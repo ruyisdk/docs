@@ -2,7 +2,7 @@
 
 ## 安装 ruyi 包管理工具
 
-RuyiSDK包管理工具目前提供了Linux系统 amd64、arm64、riscv64 三种架构平台下的安装程序，可以按需在[ruyi GitHub Releases](https://github.com/RuyiSDK/ruyi/releases/) 或 [ISCAS 镜像源](https://mirror.iscas.ac.cn/RuyiSDK/ruyi/releases/)下载体验。
+RuyiSDK包管理工具目前提供了Linux系统 amd64、arm64、riscv64 三种架构平台下的安装程序，可以按需在[ruyi GitHub Releases](https://github.com/RuyiSDK/ruyi/releases/) 或 [ISCAS 镜像源](https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/)下载体验。
 
 包管理工具的安装非常简单，只需下载ruyi工具预构建的二进制文件，将下载的文件去掉后缀重命名为 `ruyi`，并使其具有可执行权限，最后放入 `$PATH` 路径下就可以开始了。具体的使用可参考ruyi仓库[文档](https://github.com/RuyiSDK/ruyi)。
 
@@ -17,7 +17,7 @@ ruyi -V
 ruyi update
 ```
 
-> 说明：由于软件包索引信息目前托管的github仓库国内访问的网络不稳定性，因此如果存在ruyi update执行报连接错误，可将仓库切换到[备用仓库](https://mirror.iscas.ac.cn/git/RuyiSDK/packages-index.git)，具体操作参考 ruyi 仓库[文档](https://github.com/RuyiSDK/ruyi)在 ruyi 包管理工具默认的配置目录 `~/.config/ruyi` 下通过 config.toml 文件配置(不同linux发行版可能不同，如果无可自己创建)。
+> 说明：由于软件包索引信息目前托管的github仓库国内访问的网络不稳定性，因此如果存在ruyi update执行报连接错误，可将仓库切换到[备用仓库](https://mirror.iscas.ac.cn/git/ruyisdk/packages-index.git)，具体操作参考 ruyi 仓库[文档](https://github.com/RuyiSDK/ruyi)在 ruyi 包管理工具默认的配置目录 `~/.config/ruyi` 下通过 config.toml 文件配置(不同linux发行版可能不同，如果无可自己创建)。
 
 ## 安装编译工具链
 
