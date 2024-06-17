@@ -10,7 +10,7 @@ RuyiSDK 是一个旨在提供给一个一体化集成开发环境的产品计划
 
 ## RuyiSDK 架构示意图
 
-![1703147196780](image/requirement/1703147196780.png)RuyiSDK 的组成
+![[1703147196780.png]]RuyiSDK 的组成
 
 RuyiSDK 主要包含了一个组件管理器（也称为包管理器，Ruyi Repo）、一个集成开发环境（Ruyi IDE）、一个开发者交流社区；
 
