@@ -1,12 +1,12 @@
 ## Hello Ruyi
 
 欢迎来到 [RuyiSDK](https://github.com/ruyisdk) 相关介绍内容，以下是本文相关内容：
-> 1. [什么是 RuyiSDK](## 介绍)
-> 2. [为什么会有 RuyiSDK](## 背景)
-> 3. [RuyiSDK 有什么用](## 功能)
-> 4. [我可以在什么设备上运行](## 支持的设备)
-> 5. [RuyiSDK 的原理是什么](## RuyiSDK 架构示意图)
-> 6. [我该从何开始](## 让我们开始吧！)
+> 1. [什么是 RuyiSDK](##介绍)
+> 2. [为什么会有 RuyiSDK](##背景)
+> 3. [RuyiSDK 有什么用](##功能)
+> 4. [我可以在什么设备上运行](##支持的设备)
+> 5. [RuyiSDK 的原理是什么](##RuyiSDK-架构示意图)
+> 6. [我该从何开始](##让我们开始吧！)
 ## 介绍
 
 RuyiSDK 是一个由中科院软件所（ISCAS）所启动的开源项目，该项目旨在为 RISC-V 开发者提供一个便捷、完善的开发环境。其提供了相关最新的硬件信息、软件支持，例如在[支持的设备](## 支持的设备)中有提供相关支持硬件情况；软件层面提供了镜像（如 [RevyOS](https://github.com/ruyisdk/revyos)）、工具链、包管理器等。
@@ -75,7 +75,7 @@ RuyiSDK 对 RISC-V 设备的集成和支持主要包括以下几个方面：
 
 > 文档可能更新不及时，查看最新支持的设备请通过指令`ruyi device provision`查询。
 
-## RuyiSDK 架构示意图
+## RuyiSDK-架构示意图
 
 ![image](../../assets/images/ruyisdk.png)
 ## 让我们开始吧！
