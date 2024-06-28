@@ -64,7 +64,8 @@ export default defineConfig({
                       { text: 'v0.9.0 版本新增特性', link: '/zh/ruyi/updates/0.9.0' },
                       { text: 'v0.10.0 版本新增特性', link: '/zh/ruyi/updates/0.10.0' },
                       { text: 'v0.11.0 版本新增特性', link: '/zh/ruyi/updates/0.11.0' },
-                      { text: 'v0.12.0 版本新增特性', link: '/zh/ruyi/updates/0.12.0' }
+                      { text: 'v0.12.0 版本新增特性', link: '/zh/ruyi/updates/0.12.0' },
+                      { text: 'v0.13.0 版本新增特性', link: '/zh/ruyi/updates/0.13.0' }
                     ]
                   }
                 ]
