@@ -18,7 +18,7 @@ export default defineConfig({
             {
               text: '欢迎',
               items: [
-                { text: '介绍', link: '/doc/Introduction/index' },
+                { text: '介绍', link: '/zh/Introduction/index' },
               ],
             },
             {
@@ -27,31 +27,31 @@ export default defineConfig({
               {
                 text:'ruyi 包管理器',
                 items:[
-                  {text:'功能介绍',link:'/doc/Package-Manager/index'},
-                  {text:'安装',link:'/doc/Package-Manager/installation'},
-                  {text:'环境',link:'/doc/Package-Manager/Enviroment'},
-                  {text:'编译',link:'/doc/Package-Manager/Complie'},
+                  {text:'功能介绍',link:'/zh/Package-Manager/index'},
+                  {text:'安装',link:'/zh/Package-Manager/installation'},
+                  {text:'环境',link:'/zh/Package-Manager/Enviroment'},
+                  {text:'编译',link:'/zh/Package-Manager/Complie'},
                 ],
               },
               {
                 text:'IDE',
                 items:[
-                  {text:'TODO',link:'/doc/IDE/TODO'},
+                  {text:'TODO',link:'/zh/IDE/TODO'},
                 ]
               },
               {
                 text:'使用案例',
                 items:[
-                  {text:'使用编译环境进行 Coremark 构建',link:'/doc/RuyiSDK/case1'},
-                  {text:'为 RISC-V 开发板安装操作系统',link:'/doc/RuyiSDK/case2'},
-                  {text:'在 Licheepi 4A 上编译运行',link:'/doc/RuyiSDK/case3'},
+                  {text:'使用编译环境进行 Coremark 构建',link:'/zh/RuyiSDK/case1'},
+                  {text:'为 RISC-V 开发板安装操作系统',link:'/zh/RuyiSDK/case2'},
+                  {text:'在 Licheepi 4A 上编译运行',link:'/zh/RuyiSDK/case3'},
                 ]
               },
               {
                 text:'社区',
                 items:[
-                  {text:'关于我们',link:'/doc/Community/About-us'},
-                  {text:'社区守则',link:'/doc/Community/Rules'},
+                  {text:'关于我们',link:'/zh/Community/About-us'},
+                  {text:'社区守则',link:'/zh/Community/Rules'},
                 ]
               },
             ],
@@ -59,7 +59,7 @@ export default defineConfig({
           {
             text:'其他说明',
             items:[
-              {text:'RuyiSDK 编译工具',link:'/doc/Other/GNU-type'}
+              {text:'RuyiSDK 编译工具',link:'/zh/Other/GNU-type'}
             ]
           },
           ],
