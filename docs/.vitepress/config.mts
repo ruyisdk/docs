@@ -18,7 +18,7 @@ export default defineConfig({
             {
               text: '欢迎',
               items: [
-                { text: '介绍', link: '/zh/Introduction/index' },
+                { text: '介绍', link: '/zh/introduction/' },
               ],
             },
             {
