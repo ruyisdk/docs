@@ -15,74 +15,54 @@ export default defineConfig({
           { text: '文档', link: '/zh/introduction/' }
         ],
         sidebar: [
-          { text: '介绍', 
-            items: [
-              { text: 'RuyiSDK 简介', link: '/zh/introduction/' },
-              { text: '集成的RISC-V设备', link: '/zh/devices/' },
-            ]
-          },
-          { text: '开始使用', link: '/zh/usedirection/',
-            items: [
-              { text: '开发环境',  
-                items: [
-                  { text: '准备RISC-V开发环境', link: '/zh/usedirection/developmentside/' },
-                  { text: '编译器类型', link: '/zh/usedirection/developmentside/typeselection/' },
-                  { text: '编译环境', link: '/zh/usedirection/developmentside/environments/' },
-                  { text: '源码包构建', link: '/zh/usedirection/developmentside/sources/coremark/' },
-                ]
-              },
-              { text: '运行环境',  
-                items: [
-                  { text: '准备RISC-V运行环境', link: '/zh/usedirection/operationside/' },
-                ]
-              },
-              { text: '使用案例',  link: '/zh/usecase/' ,
-                items: [
-                  { text: 'amd上编译并模拟运行', link: '/zh/usecase/x86pc/' },
-                  { text: '为RISC-V开发板安装系统镜像', link: '/zh/usecase/setupos/' },
-                  { text: '在Licheepi4A上编译运行', link: '/zh/usecase/rvbook/' },
-                ]
-              },
-            ]
-          },
-          { text: '工具',
-            items: [
+            {
+              text: '欢迎',
+              items: [
+                { text: '介绍', link: '/doc/Introduction/index' },
+              ],
+            },
+            {
+            text: 'RuyiSDK',
+            items:[
               {
-                text: 'RUYI 包管理器', link: '/zh/ruyi/' , 
-                items: [
-                  { text: '开始', link: '/zh/ruyi/getstarted/' },
-                  {
-                    text: '版本更新',
-                    collapsed: true,
-                    items: [
-                      { text: 'v0.3.0 版本新增特性', link: '/zh/ruyi/updates/0.3.0' },
-                      { text: 'v0.4.0 版本新增特性', link: '/zh/ruyi/updates/0.4.0' },
-                      { text: 'v0.5.0 版本新增特性', link: '/zh/ruyi/updates/0.5.0' },
-                      { text: 'v0.6.0 版本新增特性', link: '/zh/ruyi/updates/0.6.0' },
-                      { text: 'v0.7.0 版本新增特性', link: '/zh/ruyi/updates/0.7.0' },
-                      { text: 'v0.8.1 版本新增特性', link: '/zh/ruyi/updates/0.8.1' },
-                      { text: 'v0.9.0 版本新增特性', link: '/zh/ruyi/updates/0.9.0' },
-                      { text: 'v0.10.0 版本新增特性', link: '/zh/ruyi/updates/0.10.0' },
-                      { text: 'v0.11.0 版本新增特性', link: '/zh/ruyi/updates/0.11.0' },
-                      { text: 'v0.12.0 版本新增特性', link: '/zh/ruyi/updates/0.12.0' },
-                      { text: 'v0.13.0 版本新增特性', link: '/zh/ruyi/updates/0.13.0' }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          { text: 'RuyiSDK',
-            items: [
-              {
-                text: 'GNU', link: '/zh/sdk/gnu/',
+                text:'ruyi 包管理器',
+                items:[
+                  {text:'功能介绍',link:'/doc/Package-Manager/index'},
+                  {text:'安装',link:'/doc/Package-Manager/installation'},
+                  {text:'环境',link:'/doc/Package-Manager/Enviroment'},
+                  {text:'编译',link:'/doc/Package-Manager/Complie'},
+                ],
               },
               {
-                text: 'LLVM', link: '/zh/sdk/llvm/',
-              }
+                text:'IDE',
+                items:[
+                  {text:'TODO',link:'/doc/IDE/TODO'},
+                ]
+              },
+              {
+                text:'使用案例',
+                items:[
+                  {text:'使用编译环境进行 Coremark 构建',link:'/doc/RuyiSDK/case1'},
+                  {text:'为 RISC-V 开发板安装操作系统',link:'/doc/RuyiSDK/case2'},
+                  {text:'在 Licheepi 4A 上编译运行',link:'/doc/RuyiSDK/case3'},
+                ]
+              },
+              {
+                text:'社区',
+                items:[
+                  {text:'关于我们',link:'/doc/Community/About-us'},
+                  {text:'社区守则',link:'/doc/Community/Rules'},
+                ]
+              },
+            ],
+          },
+          {
+            text:'其他说明',
+            items:[
+              {text:'RuyiSDK 编译工具',link:'/doc/Other/GNU-type'}
             ]
-          }
-        ],
+          },
+          ],
       }
     },
     en: {
@@ -100,7 +80,6 @@ export default defineConfig({
   base: '/docs/',
   themeConfig: {
     i18nRouting: true,
-    // https://vitepress.dev/reference/default-theme-config
     search: {
       provider: 'local'
     },
