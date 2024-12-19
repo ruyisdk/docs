@@ -29,8 +29,8 @@ export default defineConfig({
                 items:[
                   {text:'功能介绍',link:'/zh/Package-Manager/index'},
                   {text:'安装',link:'/zh/Package-Manager/installation'},
-                  {text:'环境',link:'/zh/Package-Manager/Enviroment'},
-                  {text:'编译',link:'/zh/Package-Manager/Complie'},
+                  {text:'环境',link:'/zh/Package-Manager/Environment'},
+                  {text:'编译',link:'/zh/Package-Manager/Compile'},
                 ],
               },
               {
