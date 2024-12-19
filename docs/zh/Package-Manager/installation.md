@@ -15,7 +15,7 @@
 
 ## ruyi 安装
 
-> 请按照架构信息下载不同的ruyi二进制，下面以amd64架构为例说明具体的步骤。其他架构除了ruyi二进制文件不同，其他步骤是一样的。此外，RuyiSDK目前一直在不断更新，下面例子中的 ruyi 版本也请更换为最新版本。
+> 请按照架构信息下载不同的 ruyi 二进制，下面以 amd64 架构为例说明具体的步骤。其他架构除了 ruyi 二进制文件不同，其他步骤是一样的。此外，RuyiSDK 目前一直在不断更新，下面例子中的 ruyi 版本也请更换为最新版本。
 
 ```bash
 $ wget https://mirror.iscas.ac.cn/ruyisdk/ruyi/testing/ruyi.amd64.20231211
@@ -64,7 +64,7 @@ subcommands:
 操作简述：
 
 1. 在 ruyi 包管理工具默认的配置目录（默认为 `~/.config/ruyi`）下修改 `config.toml` 文件配置。
-不同linux发行版可能不同，当 config.toml 不存在时，可以自行创建。config.toml 配置文档内容默认为：
+不同 Linux 发行版可能不同，当 config.toml 不存在时，可以自行创建。config.toml 配置文档内容默认为：
 
 ```bash
 [packages]
@@ -95,7 +95,7 @@ branch = "main"
 以上场景介绍了 ruyi 包管理器和工具的基本使用，包括：
 
 - 安装 `ruyi`
-- 使用 `ruyi list` `ruyi update` `ruyi install` 功能
+- 使用 `ruyi list` / `ruyi update` / `ruyi install` 功能
 - 若出现网络不稳定的备用方案
 
 ruyi 包管理器相关的更多命令以及命令具体使用方法请参阅[功能介绍](../Package-Manager/index.md)。

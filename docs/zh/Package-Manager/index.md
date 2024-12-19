@@ -23,6 +23,7 @@ ruyi 包管理器提供以下功能。
 | `ruyi install --reinstall gnu-upstream`                                                      | 重新安装 GNU 上游工具链。             |                                     |
 | `ruyi extract ruyisdk-demo`                                                                  | 下载并解包ruyisdk-demo 源码包。      | 解包到当前目录。                            |
 | `ruyi venv --toolchain gnu-upstream --emulator qemu-user-riscv-upstream generic ./ruyi_venv` | 在指定目录建立包含工具链和模拟器的编译环境。      | 使用预置的 generic 配置。                   |
+| `ruyi version`                                                                               | 查看 ruyi 包管理器的版本。              |                                     |
 | `ruyi self uninstall`                                                                        | 卸载 ruyi 包管理器。               | 命令会询问确认操作。                          |
 | `ruyi self uninstall -y`                                                                     | 无需确认直接卸载 ruyi 包管理器。         | 无需确认直接执行。                           |
 | `ruyi self uninstall --purge`                                                                | 彻底卸载 ruyi 包管理器，包括缓存和安装的软件包。 | 包括缓存和已安装的软件包。                       |
@@ -65,24 +66,52 @@ $ ruyi news read --quiet  	# 不输出任何东西，只标记为已读
 $ ruyi list
 List of available packages:
 
-* source/ruyisdk-demo
-  - 0.20231114.0 (latest)
+* emulator/qemu-user-riscv-upstream
+  - 8.2.0-ruyi.20240128 (latest)
+  - 8.1.2-ruyi.20231121 ()
+* emulator/box64-upstream
+  - 0.3.1-pre.ruyi.20240901+git.9178effd (prerelease, latest-prerelease, no binary for current host)
+  - 0.3.0-ruyi.20240718 (latest, no binary for current host)
+  - 0.2.9-pre.ruyi.20240702+git.4b0b3fc9 (prerelease, no binary for current host)
+  - 0.2.8-ruyi.20240702 (no binary for current host)
+* emulator/qemu-user-riscv-xthead
+  - 6.1.0-ruyi.20231207+g03813c9fe8 (latest)
+* emulator/qemu-system-riscv-upstream
+  - 8.2.0-ruyi.20240128 (latest)
+* extra/wps-office
+  - 12.1.0-r.17900 (latest)
+  - 12.1.0-r.17885 ()
+* analyzer/dynamorio-riscv
+  - 10.93.19979-ruyi.20240914 (latest, no binary for current host)
+  - 10.0.19748-ruyi.20240128 (no binary for current host)
 * source/coremark
   - 1.0.2-pre.20230125 (prerelease, latest-prerelease)
   - 1.0.1 (latest)
-* emulator/qemu-user-riscv-xthead
-  - 6.1.0-ruyi.20231207+g03813c9fe8 (latest)
-* emulator/qemu-user-riscv-upstream
-  - 8.1.2-ruyi.20231121 (latest)
-* toolchain/gnu-plct
-  - 0.20231212.0 (latest) slug: gnu-plct-20231212
-  - 0.20231118.0 () slug: gnu-plct-20231118
-* toolchain/gnu-plct-xthead
-  - 0.20231212.0 (latest) slug: gnu-plct-xthead-20231212
-  - 0.20231118.0 () slug: gnu-plct-xthead-20231118
+* source/milkv-duo-examples
+  - 0.20240719.0+git.52ae647a (latest)
+* source/ruyisdk-demo
+  - 0.20231114.0 (latest)
 * toolchain/gnu-upstream
   - 0.20231212.0 (latest) slug: gnu-upstream-20231212
   - 0.20231118.0 () slug: gnu-upstream-20231118
+* toolchain/gnu-milkv-milkv-duo-bin
+  - 0.20240731.0+git.67688c7335e7 (latest)
+* toolchain/gnu-plct-xthead
+  - 2.8.0-ruyi.20240222 (latest)
+  - 0.20231212.0 () slug: gnu-plct-xthead-20231212
+  - 0.20231118.0 () slug: gnu-plct-xthead-20231118
+* toolchain/gnu-milkv-milkv-duo-elf-bin
+  - 0.20240731.0+git.67688c7335e7 (latest)
+* toolchain/gnu-plct
+  - 0.20240324.0 (latest)
+  - 0.20231212.0 () slug: gnu-plct-20231212
+  - 0.20231118.0 () slug: gnu-plct-20231118
+* toolchain/gnu-milkv-milkv-duo-musl-bin
+  - 0.20240731.0+git.67688c7335e7 (latest)
+* toolchain/llvm-plct
+  - 17.0.6-ruyi.20240511 (latest)
+* toolchain/gnu-plct-rv64ilp32-elf
+  - 0.20240906.0-ruyi.20240906+git.df9313313b45 (latest)
 * toolchain/llvm-upstream
   - 17.0.5-ruyi.20231121 (latest) slug: llvm-upstream-20231121
 ```
@@ -99,9 +128,9 @@ $ ruyi list -v
 
 ## 查询可用编译环境
 
-与python 的虚拟环境类似，RUYI 包管理器工具使用 ``venv`` 命令应用配置到指定的工具链以建立编译环境。
+与 Python 的虚拟环境类似，ruyi 包管理器工具使用 ``venv`` 命令应用配置到指定的工具链以建立编译环境。
 
-RUYI 包管理预置的配置可以使用 ``ruyi list profiles`` 命令查看：
+ruyi 包管理预置的配置可以使用 ``ruyi list profiles`` 命令查看：
 
 ```bash
 $ ruyi list profiles
@@ -146,7 +175,7 @@ README.md  rvv-autovec
 
 ## 搭建编译环境
 
-已经安装的工具链与模拟器需要在 ruyi 编译环境中使用，这和 python 的虚拟环境十分类似。
+已经安装的工具链与模拟器需要在 ruyi 编译环境中使用，这和 Python 的虚拟环境十分类似。
 这是由 ``venv`` 命令实现的：
 
 ```bash
@@ -163,21 +192,21 @@ $ ruyi venv --toolchain gnu-upstream --emulator qemu-user-riscv-upstream generic
 注意 ruyi 包管理器没有实现卸载 ruyi 软件包的功能。若您强制中断 ruyi 软件包安装进程或做了其他非预期操作
 而会导致软件包功能异常时，请使用 ``install --reinstall`` 以尝试重试安装该软件包。
 
-## 卸载 RUYI 包管理器
+## 卸载 ruyi 包管理器
 
-使用下面的命令卸载 Ruyi 包管理器：
+使用下面的命令卸载 ruyi 包管理器：
 
 ```bash
 $ ruyi self uninstall
 ```
 
-这个命令将会询问您以二次确认该操作，如果希望 Ruyi 包管理不询问而直接执行：
+这个命令将会询问您以二次确认该操作，如果希望 ruyi 包管理不询问而直接执行：
 
 ```bash
 $ ruyi self uninstall -y
 ```
 
-上面的命令只是删除 Ruyi 本身，并不会删除软件包缓存和安装的 Ruyi 软件包。
+上面的命令只是删除 ruyi 本身，并不会删除软件包缓存和安装的 ruyi 软件包。
 
 如果希望删除所有缓存和安装了的软件包以实现干净的卸载：
 
@@ -185,15 +214,15 @@ $ ruyi self uninstall -y
 $ ruyi self uninstall --purge
 ```
 
-同样的这个命令将会询问您以二次确认该操作，如果希望 Ruyi 包管理不询问而直接执行：
+同样的这个命令将会询问您以二次确认该操作，如果希望 ruyi 包管理不询问而直接执行：
 
 ```bash
 $ ruyi self uninstall --purge -y
 ```
 
-实现 Ruyi 包管理自身的升级可能会需要 `sudo`，而 Ruyi 包管理被设计为避免进行需要超级用户权限的操作。
-故在需要升级 Ruyi 包管理时您需要手动进行该操作，即首先卸载 Ruyi 包管理器，再执行安装 Ruyi 包管理器的过程，
-这个过程中您可以自主选择是否保留旧的软件包缓存和 Ruyi 软件包。
+实现 ruyi 包管理自身的升级可能会需要 `sudo`，而 ruyi 包管理被设计为避免进行需要超级用户权限的操作。
+故在需要升级 ruyi 包管理时您需要手动进行该操作，即首先卸载 ruyi 包管理器，再执行安装 ruyi 包管理器的过程，
+这个过程中您可以自主选择是否保留旧的软件包缓存和 ruyi 软件包。
 
 ## 镜像信息的维护与下载、开发板系统的安装引导
 

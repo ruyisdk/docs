@@ -97,4 +97,18 @@ Proceed? (y/N)
 
 ## 其他说明
 
+刷写工具根据板卡的不同依赖 ``dd`` 和 ``fastboot`` 命令。
+
+在使用普通用户调用 ``dd`` 命令刷写镜像失败时，ruyi 将尝试调用 ``sudo`` 提权。
+
+在使用 ``fastboot`` 工具刷写镜像时， ruyi 则只会使用当前普通用户，故需要用户自行配置 udev 规则。这里提供示例规则仅供参考：
+
+```
+SUBSYSTEM=="usb", ATTR{idVendor}="2345", ATTR{idProduct}=="7654", MODE="0666", GROUP="plugdev"
+SUBSYSTEM=="usb", ATTR{idVendor}="1234", ATTR{idProduct}=="8888", MODE="0666", GROUP="plugdev"
+```
+
+需要注意的是一些镜像的解包需要占用大量的磁盘空间，使用 ruyi 工具刷写镜像前请务必留足磁盘空间；
+一些厂家提供的镜像在刷写后并不会自动扩展分区来充分利用整块磁盘，而需要用户自行扩展磁盘分区大小。
+
 相关的系统刷写问题可以访问对应开发板官网以获取针对性的帮助。

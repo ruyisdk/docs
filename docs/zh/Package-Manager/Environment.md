@@ -1,6 +1,6 @@
 # ruyi 编译环境
 
-与 python 的虚拟环境类似，ruyi 包管理器工具使用 `venv` 命令应用配置到指定的工具链以建立编译环境。
+与 Python 的虚拟环境类似，ruyi 包管理器工具使用 `venv` 命令应用配置到指定的工具链以建立编译环境。
 
 ruyi 包管理预置的配置可以使用 `ruyi list profiles` 命令查看：
 
@@ -8,6 +8,7 @@ ruyi 包管理预置的配置可以使用 `ruyi list profiles` 命令查看：
 $ ruyi list profiles
 generic
 baremetal-rv64ilp32 (needs flavor(s): {'rv64ilp32'})
+xiangshan-nanhu
 sipeed-lpi4a (needs flavor(s): {'xthead'})
 milkv-duo
 ```
@@ -35,8 +36,7 @@ ruyiSDK 包管理器工具可使用 `ruyi venv` 创建虚拟环境，具体的�
 
 ```bash
 $ ruyi venv -h
-usage: ruyi venv [-h] [--name NAME] [--toolchain TOOLCHAIN] [--emulator EMULATOR] [--with-sysroot] [--without-sysroot]
-                 [--sysroot-from SYSROOT_FROM]
+usage: ruyi venv [-h] [--name NAME] [--toolchain TOOLCHAIN] [--emulator EMULATOR] [--with-sysroot] [--without-sysroot] [--sysroot-from SYSROOT_FROM]
                  profile dest
 
 positional arguments:
@@ -47,7 +47,7 @@ options:
   -h, --help            show this help message and exit
   --name NAME, -n NAME  Override the venv's name
   --toolchain TOOLCHAIN, -t TOOLCHAIN
-                        Specifier (atom) of the toolchain package to use
+                        Specifier(s) (atoms) of the toolchain package(s) to use
   --emulator EMULATOR, -e EMULATOR
                         Specifier (atom) of the emulator package to use
   --with-sysroot        Provision a fresh sysroot inside the new virtual environment (default)
@@ -73,13 +73,16 @@ $ ruyi venv -t gnu-plct xiangshan-nanhu ./nanhu-venv
 $ ruyi venv -t llvm-upstream --sysroot-from gnu-upstream generic ./llvm-venv
 
 # 使用平头哥工具链配置荔枝派 4A 编译环境：
-$ ruyi venv -t gnu-plct-xthead-20231212 sipeed-lpi4a ./sipeed-venv
+$ ruyi venv -t gnu-plct-xthead\\(==0.20231212.0\\) sipeed-lpi4a ./sipeed-venv
 
 # 使用上游 QEMU 模拟器运行交叉编译的 RISC-V 二进制
 $ ruyi venv -t gnu-plct generic -e qemu-user-riscv-upstream ./qemu-venv
 
 # 使用平头哥 QEMU 模拟器运行交叉编译的 RISC-V 二进制
 $ ruyi venv -t gnu-plct-xthead sipeed-lpi4a -e qemu-user-riscv-xthead ./xthead-qemu-venv
+
+# 多工具链示例
+$ ruyi venv -t gnu-milkv-milkv-duo-musl-bin -t gnu-milkv-milkv-duo-elf-bin --sysroot-from gnu-milkv-milkv-duo-musl-bin generic ./milkv-venv
 ```
 
 ## 在虚拟环境下编译
@@ -99,7 +102,7 @@ $ ruyi install gnu-upstream
 ```bash
 $ ruyi venv -t gnu-upstream generic venv
 
-# -t gnu-upstream 指定了编译工具链的类型和版本(版本除非指定，默认最新)；generic 表示 generic 类型的 profile；venv是自定义的虚拟环境名(相对路径目录名)
+# -t gnu-upstream 指定了编译工具链的类型和版本（版本除非指定，默认最新）；generic 表示 generic 类型的 profile；venv 是自定义的虚拟环境名（相对路径目录名）
 
 ```
 
@@ -120,7 +123,7 @@ riscv64-unknown-linux-gnu-g++        riscv64-unknown-linux-gnu-gdb-add-index  ri
 
 除了 `ruyi-activate` 为激活编译环境用的脚本，其他均为工具链二进制。
 
-5. 激活构建环境，激活方式与 python 虚拟环境类似，并且改变提示符以提示当前进入编译环境中：
+5. 激活构建环境，激活方式与 Python 虚拟环境类似，并且改变提示符以提示当前进入编译环境中：
 
 ```bash
 $ . venv/bin/ruyi-activate

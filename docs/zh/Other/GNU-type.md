@@ -8,20 +8,21 @@ RuyiSDK 提供了多种类型的编译工具链，适用于不同的 RISC-V 开�
 | -------------------------- | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
 | **GNU 工具链**                |                                        | [仓库](https://github.com/RuyiSDK/riscv-gnu-toolchain)                                                                          |
 | gnu-upstream               | 标准 GNU 工具链                             |                                                                                                                               |
-| gnu-plct                   | 支持香山南湖微架构 'gnu-plct(==0.20240324.0)'   |                                                                                                                               |
+| gnu-plct                   | 支持香山南湖微架构 'gnu-plct(>=0.20240324.0)'   |                                                                                                                               |
 | gnu-plct-xthead            | 适用于玄铁                                  |                                                                                                                               |
 | gnu-plct-rv64ilp32-elf     | 非通用工具链，支持 rv64ilp32 的裸机工具链，目标代码格式是 elf | [仓库](https://github.com/RuyiSDK/riscv-gnu-toolchain-rv64ilp32)<br>[文章](https://mp.weixin.qq.com/s/argIGP4_rUKDm9IRIB-YTg) |
-| **LLVM 工具链**               |                                        |                                                                                                                               |
+| gnu-milkv-milkv-duo-bin    | milkv 相关工具链，此为 glibc，还有 elf 和 musl 两个分支 |                                                                                                                               |
+ **LLVM 工具链**               |                                        |                                                                                                                               |
 | llvm-upstream              |                                        |                                                                                                                               |
 | **QEMU 模拟器**               |                                        | [仓库](https://github.com/ruyisdk/qemu)                                                                                         |
 | qemu-system-riscv-upstream |                                        |                                                                                                                               |
 | qemu-user-riscv-upstream   |                                        |                                                                                                                               |
 | qemu-user-riscv-xthead     |                                        |                                                                                                                               |
-
+| box64-upstream             |                                        |                                                                                                                               |
 
 ### 编译工具链的多样性
 
-如上表， 目前 RuyiSDK 编译工具链由于能够实现不同扩展指令集，进而有了不同版本的情况，这也就使得编译工具链具有多样性。
+如上表，目前 RuyiSDK 编译工具链由于能够实现不同扩展指令集，进而有了不同版本的情况，这也就使得编译工具链具有多样性。
 原因有以下几点：
 
 1. **处理器架构发展**：处理器架构在不断更新迭代的过程中会引进新的指令集扩展以满足不同的需求，为使得这部分新的指令集扩展能够充分运用，编译工具链也会随之进行更新，出现不同的版本。
