@@ -102,7 +102,7 @@ make PORT_DIR=linux64 link
 ls -al    #新增可执行程序coremark.exe
 ```
 
-12. 查看 rv64 可执行程序文件属性信息。
+12. 查看 riscv64 可执行程序文件属性信息。
 
 ```bash
 file coremark.exe

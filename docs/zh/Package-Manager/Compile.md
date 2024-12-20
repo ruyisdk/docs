@@ -47,7 +47,7 @@ sed -i 's/\bgcc\b/riscv64-unknown-linux-gnu-gcc/g'  linux64/core_portme.mak
 #（2）执行交叉编译和构建，得到可执行程序 coremark.exe
 make PORT_DIR=linux64 link
 
-#（3）查看 rv64 可执行程序文件属性信息，初步检验可执行程序是否 RISC-V 架构
+#（3）查看 riscv64 可执行程序文件属性信息，初步检验可执行程序是否 RISC-V 架构
 file coremark.exe
 ```
 
@@ -58,7 +58,7 @@ file coremark.exe
 为确保 RISC-V 目标可执行程序的正确性，通过模拟器工具（如 qemu）模拟运行环境：
 
 ```bash
-#  qemu user 模式下执行 rv64 coremark 可执行程序
+#  qemu user 模式下执行 riscv64 coremark 可执行程序
 ruyi-qemu coremark.exe
 
 # 在编译和运行结束后，退出虚拟环境
