@@ -64,7 +64,7 @@ RuyiSDK 对 RISC-V 设备的集成和支持主要包括以下几个方面：
 | 型号                            |                      |                          |                     |
 | ----------------------------- | -------------------- | ------------------------ | ------------------- |
 | 100ASK-V853-PRO               | AllWinner V853       | BananaPi BPI-F3          | BeagleV-Ahead       |
-| BeagleV-Fire                  | CanMV K230           | Canaan K510-CRB-V1.2 KIT | CH32V103-EVT        |
+| BeagleV-Fire                  | CanMV K230(D)        | Canaan K510-CRB-V1.2 KIT | CH32V103-EVT        |
 | CH32V203-EVT                  | CH32V208-EVT         | CH32V303-EVT             | CH32V305-EVT        |
 | CH32V307-EVT                  | CH573F-EVT           | CH582F-EVT               | CH592X-EVT          |
 | D1s NeZha                     | DongshanPI-Nezha STU | DongShanPI D1s           | HiFive Unmatched    |
