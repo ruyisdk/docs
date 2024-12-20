@@ -73,7 +73,7 @@ $ ruyi venv -t gnu-plct xiangshan-nanhu ./nanhu-venv
 $ ruyi venv -t llvm-upstream --sysroot-from gnu-upstream generic ./llvm-venv
 
 # 使用平头哥工具链配置荔枝派 4A 编译环境：
-$ ruyi venv -t gnu-plct-xthead\\(==0.20231212.0\\) sipeed-lpi4a ./sipeed-venv
+$ ruyi venv -t "gnu-plct-xthead(==0.20231212.0)" sipeed-lpi4a ./sipeed-venv
 
 # 使用上游 QEMU 模拟器运行交叉编译的 RISC-V 二进制
 $ ruyi venv -t gnu-plct generic -e qemu-user-riscv-upstream ./qemu-venv
@@ -103,7 +103,6 @@ $ ruyi install gnu-upstream
 $ ruyi venv -t gnu-upstream generic venv
 
 # -t gnu-upstream 指定了编译工具链的类型和版本（版本除非指定，默认最新）；generic 表示 generic 类型的 profile；venv 是自定义的虚拟环境名（相对路径目录名）
-
 ```
 
 4. 查看可用的工具链二进制
