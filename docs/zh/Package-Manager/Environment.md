@@ -13,6 +13,8 @@ sipeed-lpi4a (needs flavor(s): {'xthead'})
 milkv-duo
 ```
 
+可以看到有一些需要特定的 flavor，这可以在 `ruyi list --verbose` 中查看包是否提供了这种特性
+
 ## 工具链与预置配置组合
 
 ruyi 包管理在建立编译环境之前会检查该环境是否合法，但是并不保证建立成功的环境一定可用于构建。
@@ -69,8 +71,8 @@ $ ruyi venv -t gnu-plct milkv-duo ./milkv-venv
 # 使用 PLCT 工具链配置香山南湖编译环境：
 $ ruyi venv -t gnu-plct xiangshan-nanhu ./nanhu-venv
 
-# 使用 LLVM 上游工具链配置 RISC-V 编译环境：
-$ ruyi venv -t llvm-upstream --sysroot-from gnu-upstream generic ./llvm-venv
+# llvm 通常需要 gcc 的 lib：
+$ ruyi venv -t llvm-upstream --sysroot-from gnu-plct generic ./llvm-venv
 
 # 使用平头哥工具链配置荔枝派 4A 编译环境：
 $ ruyi venv -t "gnu-plct-xthead(==0.20231212.0)" sipeed-lpi4a ./sipeed-venv
@@ -81,8 +83,8 @@ $ ruyi venv -t gnu-plct generic -e qemu-user-riscv-upstream ./qemu-venv
 # 使用平头哥 QEMU 模拟器运行交叉编译的 RISC-V 二进制
 $ ruyi venv -t gnu-plct-xthead sipeed-lpi4a -e qemu-user-riscv-xthead ./xthead-qemu-venv
 
-# 多工具链示例
-$ ruyi venv -t gnu-milkv-milkv-duo-musl-bin -t gnu-milkv-milkv-duo-elf-bin --sysroot-from gnu-milkv-milkv-duo-musl-bin generic ./milkv-venv
+# 多工具链示例，当然也可以配合其他参数指定 sysroot 或者模拟器
+$ ruyi venv -t llvm-upstream -t gnu-plct generic ./venv
 ```
 
 ## 在虚拟环境下编译
