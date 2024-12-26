@@ -271,5 +271,5 @@ $ ruyi device provision
 
 ## 手动从安装目录调用
 
-并不被推荐但是很合理吧？二进制包均被安装在 ~/.local/share/ruyi/ 下，用起来和把工具链解包到 /opt 下是一样的。
+并不被推荐。二进制包均被安装在 ~/.local/share/ruyi/ 下，用起来和把工具链解包到 /opt 下是一样的。
 系统镜像同样可以手动 dd 或使用 fastboot 刷写。
