@@ -18,7 +18,6 @@
 
 ```bash
 # 从软件源下载并解压指定的源码包
-
 ruyi extract
 
 ```
@@ -31,16 +30,12 @@ ruyi extract
 ```bash
 # 开始编译
 # 为隔离化编译创建虚拟环境，使用 ruyi venv -h 查看如何使用
-
 ruyi venv
 
 # 举例：创建一个叫 venv1 的虚拟环境，并指定编译工具链为 gnu-upstream，sysroot 为 generic 类型，使用 qemu-user-riscv-upstream 模拟器
-
-ruyi venv -t gnu-upstream -e qemu-user-riscv-upstream   generic  venv1
-
+ruyi venv -t gnu-upstream -e qemu-user-riscv-upstream generic venv1
 
 # 激活虚拟环境
-
 .  venv1/bin/ruyi-activate  
 
 # 编译需要编译的程序源代码
@@ -52,7 +47,7 @@ sed -i 's/\bgcc\b/riscv64-unknown-linux-gnu-gcc/g'  linux64/core_portme.mak
 #（2）执行交叉编译和构建，得到可执行程序 coremark.exe
 make PORT_DIR=linux64 link
 
-#（3）查看 rv64 可执行程序文件属性信息，初步检验可执行程序是否 RISC-V 架构
+#（3）查看 riscv64 可执行程序文件属性信息，初步检验可执行程序是否 RISC-V 架构
 file coremark.exe
 ```
 
@@ -63,8 +58,8 @@ file coremark.exe
 为确保 RISC-V 目标可执行程序的正确性，通过模拟器工具（如 qemu）模拟运行环境：
 
 ```bash
-#  qemu user 模式下执行 rv64 coremark 可执行程序
-ruyi-qemu   coremark.exe
+#  qemu user 模式下执行 riscv64 coremark 可执行程序
+ruyi-qemu coremark.exe
 
 # 在编译和运行结束后，退出虚拟环境
 ruyi-deactivate

@@ -1,4 +1,4 @@
-# 使用示例
+# 在 Licheepi 4A 上编译运行
 
 以开源基准测试程序 coremark 为例，展示从 ruyi 包管理器安装到使用 ruyi 包管理器搭建 RISC-V 的编译、模拟环境，完成 coremark 源码本地编译并在 Licheepi 4A 开发板上运行的过程。
 
@@ -15,10 +15,10 @@
 ruyi self uninstall --purge
 ```
 
-2. 下载 `ruyi` 工具并为其赋可执行权限并配置到环境变量中：从[ruyi GitHub Releases](https://github.com/RuyiSDK/ruyi/releases/) 或 [ISCAS 镜像源](https://mirror.iscas.ac.cn/RuyiSDK/ruyi/releases/)下载最新的 `ruyi` 工具。
+2. 下载 `ruyi` 工具并为其赋可执行权限并配置到环境变量中：从 [ruyi GitHub Releases](https://github.com/RuyiSDK/ruyi/releases/) 或 [ISCAS 镜像源](https://mirror.iscas.ac.cn/RuyiSDK/ruyi/releases/)下载最新的 `ruyi` 工具。
 
 ```bash
-# 下载 riscv64 版本的 ruyi 包管理器，将其放到 path 路径下，并赋予其可执行权限
+# 下载 riscv64 版本的 ruyi 包管理器，将其放到 PATH 路径下，并赋予其可执行权限
 wget https://github.com/RuyiSDK/ruyi/releases/download/0.5.0/ruyi-0.5.0.riscv64
 sudo cp ruyi-0.5.0.riscv64 /usr/local/bin/ruyi
 sudo chmod +x ruyi
@@ -60,22 +60,23 @@ ruyi install gnu-plct-xthead
 ruyi list profiles
 ```
 
-8. 由指定的工具链、模拟器配置建立 Ruyi 虚拟环境 venv-sipeed。
+8. 由指定的工具链、模拟器配置建立 ruyi 虚拟环境 venv-sipeed。
    > 注意在虚拟环境创建时，需要指定正确的编译器版本和 sysroot 类型。
+   > 在不指定版本号时默认使用的是软件源里的最新版本，而不是本地安装的版本。
 
 ```bash
 ruyi venv -h
 
-##创建虚拟环境 venv-sipeed
+# 创建虚拟环境 venv-sipeed
 ruyi venv -t gnu-plct-xthead sipeed-lpi4a venv-sipeed 
 
-#查看编译环境中得工具
+# 查看编译环境中的工具
 ls venv-sipeed/bin/ 
 
-#激活虚拟环境（虚拟环境可以理解成一个容器，实现运行环境隔离的设计，激活后，在 venv-sipeed 这个环境中，使用的就是 gnu-plct-xthead 版本工具链。不创建虚拟环境也可以为 /home/sipeed/.local/share/ruyi/binaries/riscv64/gnu-plct-xthead-2.8.0-ruyi.20240222/bin 配置环境变量，直接使用环境变量指定的gcc编译）
+# 激活虚拟环境（虚拟环境可以理解成一个容器，实现运行环境隔离的设计，激活后，在 venv-sipeed 这个环境中，使用的就是 gnu-plct-xthead 版本工具链。不创建虚拟环境也可以为 /home/sipeed/.local/share/ruyi/binaries/riscv64/gnu-plct-xthead-2.8.0-ruyi.20240222/bin 配置环境变量，直接使用环境变量指定的gcc编译）
 . venv-sipeed/bin/ruyi-activate 
 
-#查看当前虚拟环境下的 gcc 是否可用
+# 查看当前虚拟环境下的 gcc 是否可用
 «Ruyi venv-sipeed» sipeed@lpi4a1590:~$ riscv64-plctxthead-linux-gnu-gcc --version 
 ```
 
@@ -101,7 +102,8 @@ sed -i 's/\bgcc\b/riscv64-plctxthead-linux-gnu-gcc/g' linux64/core_portme.mak
 make PORT_DIR=linux64 link
 ls -al    #新增可执行程序coremark.exe
 ```
-12. 查看 rv64 可执行程序文件属性信息。
+
+12. 查看 riscv64 可执行程序文件属性信息。
 
 ```bash
 file coremark.exe
