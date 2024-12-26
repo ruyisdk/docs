@@ -62,6 +62,7 @@ ruyi list profiles
 
 8. 由指定的工具链、模拟器配置建立 ruyi 虚拟环境 venv-sipeed。
    > 注意在虚拟环境创建时，需要指定正确的编译器版本和 sysroot 类型。
+   > 在不指定版本号时默认使用的是软件源里的最新版本，而不是本地安装的版本。
 
 ```bash
 ruyi venv -h
