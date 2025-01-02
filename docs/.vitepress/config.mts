@@ -43,8 +43,10 @@ export default defineConfig({
                 text:'使用案例',
                 items:[
                   {text:'使用编译环境进行 Coremark 构建',link:'/zh/RuyiSDK/case1'},
-                  {text:'为 RISC-V 开发板安装操作系统',link:'/zh/RuyiSDK/case2'},
+                  {text:'为 Licheepi 4A 刷写操作系统',link:'/zh/RuyiSDK/case2'},
                   {text:'在 Licheepi 4A 上编译运行',link:'/zh/RuyiSDK/case3'},
+                  {text:'使用 meson/cmake 集成',link:'/zh/RuyiSDK/case4'},
+                  {text:'使用 qemu 和 llvm',link:'/zh/RuyiSDK/case5'},
                 ]
               },
               {
