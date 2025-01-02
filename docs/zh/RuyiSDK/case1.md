@@ -12,7 +12,6 @@ $ ruyi venv -t gnu-milkv-milkv-duo-musl-bin generic milkv-venv
 # 激活虚拟环境
 $ . milkv-venv/bin/ruyi-activate
 «Ruyi milkv-venv» $
-# 注意 gnu-plct 是 glibc 版本的工具链，而 gnu-milkv 是 musl 版本的工具链
 ```
 
 coremark 源码可以直接从 Ruyi 软件仓库中下载：
@@ -66,21 +65,6 @@ $ scp -O ./coremark.exe root@192.168.42.1:~
 
 在 Milkv Duo 上运行
 
-```bash
-[root@milkv-duo]~# ./coremark.exe
--sh: ./coremark.exe: not found
-```
-
-若出现这样的错误，则需要静态链接的二进制。
-
-```bash
-«Ruyi milkv-venv» $ make PORT_DIR=linux64 LFLAGS_END="-static -march=rv64gcv0p7xthead" link
-riscv64-unknown-linux-musl-gcc -O2 -Ilinux64 -I. -DFLAGS_STR=\""-O2   -static -march=rv64gcv0p7xthead"\" -DITERATIONS=0  core_list_join.c core_main.c core_matrix.c core_state.c core_util.c linux64/core_portme.c -o ./coremark.exe -static -march=rv64gcv0p7xthead
-«Ruyi milkv-venv» $ file coremark.exe
-coremark.exe: ELF 64-bit LSB executable, UCB RISC-V, RVC, double-float ABI, version 1 (SYSV), statically linked, with debug_info, not stripped
-```
-
-重新上传后运行
 
 ```bash
 [root@milkv-duo]~# ./coremark.exe
