@@ -5,10 +5,10 @@
 首先进入编译环境：
 
 ```bash
-# 安装编译工具链 gnu-milkv-milkv-duo-bin
-$ ruyi install gnu-milkv-milkv-duo-bin
+# 安装编译工具链 gnu-milkv-milkv-duo-musl-bin
+$ ruyi install gnu-milkv-milkv-duo-musl-bin
 # 以 generic profile 创建虚拟环境 milkv-venv
-$ ruyi venv -t gnu-milkv-milkv-duo-bin generic milkv-venv
+$ ruyi venv -t gnu-milkv-milkv-duo-musl-bin generic milkv-venv
 # 激活虚拟环境
 $ . milkv-venv/bin/ruyi-activate
 «Ruyi milkv-venv» $
@@ -34,17 +34,17 @@ info: package coremark-1.0.1 extracted to current working directory
 由于使用的工具链为 ``gnu-milkv-milkv-duo-bin``，查看 bin 文件夹，需要编辑构建脚本：
 
 ```bash
-«Ruyi milkv-venv» $ sed -i 's/\bgcc\b/riscv64-unknown-linux-gnu-gcc/g' linux64/core_portme.mak
+«Ruyi milkv-venv» $ sed -i 's/\bgcc\b/riscv64-unknown-linux-musl-gcc/g' linux64/core_portme.mak
 ```
 
 构建 coremark：
 
 ```bash
-«Ruyi milkv-venv» $ make PORT_DIR=linux64 link
-riscv64-unknown-linux-gnu-gcc -O2 -Ilinux64 -I. -DFLAGS_STR=\""-O2   -lrt"\" -DITERATIONS=0  core_list_join.c core_main.c core_matrix.c core_state.c core_util.c linux64/core_portme.c -o ./coremark.exe -lrt
+«Ruyi milkv-venv» $ make PORT_DIR=linux64 LFLAGS_END=-march=rv64gcv0p7xthead link
+riscv64-unknown-linux-musl-gcc -O2 -Ilinux64 -I. -DFLAGS_STR=\""-O2   -march=rv64gcv0p7xthead"\" -DITERATIONS=0  core_list_join.c core_main.c core_matrix.c core_state.c core_util.c linux64/core_portme.c -o ./coremark.exe -march=rv64gcv0p7xthead
 Link performed along with compile
 «Ruyi milkv-venv» $ file coremark.exe
-coremark.exe: ELF 64-bit LSB executable, UCB RISC-V, RVC, double-float ABI, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux-riscv64-lp64d.so.1, for GNU/Linux 4.15.0, with debug_info, not stripped
+coremark.exe: ELF 64-bit LSB executable, UCB RISC-V, RVC, double-float ABI, version 1 (SYSV), dynamically linked, interpreter /lib/ld-musl-riscv64v0p7_xthead.so.1, with debug_info, not stripped
 ```
 
 可以看到成功构建 RISC-V 架构的二进制。注意这整个过程如果在 riscv64 环境则不是交叉编译。
@@ -74,10 +74,10 @@ $ scp -O ./coremark.exe root@192.168.42.1:~
 若出现这样的错误，则需要静态链接的二进制。
 
 ```bash
-«Ruyi milkv-venv» $ make PORT_DIR=linux64 LFLAGS_END=-static link
-riscv64-unknown-linux-gnu-gcc -O2 -Ilinux64 -I. -DFLAGS_STR=\""-O2   -static"\" -DITERATIONS=0  core_list_join.c core_main.c core_matrix.c core_state.c core_util.c linux64/core_portme.c -o ./coremark.exe -static
+«Ruyi milkv-venv» $ make PORT_DIR=linux64 LFLAGS_END="-static -march=rv64gcv0p7xthead" link
+riscv64-unknown-linux-musl-gcc -O2 -Ilinux64 -I. -DFLAGS_STR=\""-O2   -static -march=rv64gcv0p7xthead"\" -DITERATIONS=0  core_list_join.c core_main.c core_matrix.c core_state.c core_util.c linux64/core_portme.c -o ./coremark.exe -static -march=rv64gcv0p7xthead
 «Ruyi milkv-venv» $ file coremark.exe
-coremark.exe: ELF 64-bit LSB executable, UCB RISC-V, RVC, double-float ABI, version 1 (SYSV), statically linked, for GNU/Linux 4.15.0, with debug_info, not stripped
+coremark.exe: ELF 64-bit LSB executable, UCB RISC-V, RVC, double-float ABI, version 1 (SYSV), statically linked, with debug_info, not stripped
 ```
 
 重新上传后运行
