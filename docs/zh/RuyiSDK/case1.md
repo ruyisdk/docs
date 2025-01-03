@@ -1,10 +1,15 @@
-# 使用编译环境进行 Coremark 构建
+# 使用 gcc 编译 coremark
 
 本文使用 Milkv-Duo 编译环境，构建 coremark 。
 
 首先进入编译环境：
 
 ```bash
+# 安装编译工具链 gnu-milkv-milkv-duo-musl-bin
+$ ruyi install gnu-milkv-milkv-duo-musl-bin
+# 以 generic profile 创建虚拟环境 milkv-venv
+$ ruyi venv -t gnu-milkv-milkv-duo-musl-bin generic milkv-venv
+# 激活虚拟环境
 $ . milkv-venv/bin/ruyi-activate
 «Ruyi milkv-venv» $
 ```
@@ -25,20 +30,20 @@ info: package coremark-1.0.1 extracted to current working directory
 
 这个操作将从 Ruyi 软件源中下载 coremark 源码并解包到**当前目录**。
 
-由于使用的工具链为 ``riscv64-plct-linux-gnu-gcc`` ，需要编辑构建脚本：
+由于使用的工具链为 ``gnu-milkv-milkv-duo-bin``，查看 bin 文件夹，需要编辑构建脚本：
 
 ```bash
-«Ruyi milkv-venv» $ sed -i 's/\bgcc\b/riscv64-plct-linux-gnu-gcc/g' linux64/core_portme.mak
+«Ruyi milkv-venv» $ sed -i 's/\bgcc\b/riscv64-unknown-linux-musl-gcc/g' linux64/core_portme.mak
 ```
 
 构建 coremark：
 
 ```bash
-«Ruyi milkv-venv» $ make PORT_DIR=linux64 link
-riscv64-plct-linux-gnu-gcc -O2 -Ilinux64 -I. -DFLAGS_STR=\""-O2   -lrt"\" -DITERATIONS=0  core_list_join.c core_main.c core_matrix.c core_state.c core_util.c linux64/core_portme.c -o ./coremark.exe -lrt
+«Ruyi milkv-venv» $ make PORT_DIR=linux64 LFLAGS_END=-march=rv64gcv0p7xthead link
+riscv64-unknown-linux-musl-gcc -O2 -Ilinux64 -I. -DFLAGS_STR=\""-O2   -march=rv64gcv0p7xthead"\" -DITERATIONS=0  core_list_join.c core_main.c core_matrix.c core_state.c core_util.c linux64/core_portme.c -o ./coremark.exe -march=rv64gcv0p7xthead
 Link performed along with compile
 «Ruyi milkv-venv» $ file coremark.exe
-coremark.exe: ELF 64-bit LSB executable, UCB RISC-V, RVC, double-float ABI, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux-riscv64-lp64d.so.1, BuildID[sha1]=d9dbc7115d07d1953087dd2c1e5d46adc2ab0d4f, for GNU/Linux 4.15.0, with debug_info, not stripped
+coremark.exe: ELF 64-bit LSB executable, UCB RISC-V, RVC, double-float ABI, version 1 (SYSV), dynamically linked, interpreter /lib/ld-musl-riscv64v0p7_xthead.so.1, with debug_info, not stripped
 ```
 
 可以看到成功构建 RISC-V 架构的二进制。注意这整个过程如果在 riscv64 环境则不是交叉编译。
@@ -60,22 +65,6 @@ $ scp -O ./coremark.exe root@192.168.42.1:~
 
 在 Milkv Duo 上运行
 
-```bash
-[root@milkv-duo]~# ./coremark.exe
--sh: ./coremark.exe: not found
-```
-
-若出现这样的错误，则需要静态链接的二进制。
-
-```bash
-«Ruyi milkv-venv» $ make PORT_DIR=linux64 LFLAGS_END=-static link
-riscv64-plct-linux-gnu-gcc -O2 -Ilinux64 -I. -DFLAGS_STR=\""-O2   -static"\" -DITERATIONS=0  core_list_join.c core_main.c core_matrix.c core_state.c core_util.c linux64/core_portme.c -o ./coremark.exe -static
-Link performed along with compile
-«Ruyi milkv-venv» $ file coremark.exe
-coremark.exe: ELF 64-bit LSB executable, UCB RISC-V, RVC, double-float ABI, version 1 (SYSV), statically linked, BuildID[sha1]=1548f6b30560e1ca6f3fa8ba3ef6aea4188feacf, for GNU/Linux 4.15.0, with debug_info, not stripped
-```
-
-重新上传后运行
 
 ```bash
 [root@milkv-duo]~# ./coremark.exe
