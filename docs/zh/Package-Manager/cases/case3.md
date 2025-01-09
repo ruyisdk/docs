@@ -37,8 +37,6 @@ ruyi --version
 ruyi update
 ```
 
-详细请见[此处](../Package-Manager/installation.md)
-
 ## 使用 ruyi 包管理器部署开发环境：
 
 5. 查看软件仓软件包索引信息
