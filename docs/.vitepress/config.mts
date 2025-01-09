@@ -47,7 +47,7 @@ export default defineConfig({
               {
                 text:'IDE',
                 items:[
-                  {text:'TODO',link:'/zh/IDE/TODO'},
+                  {text:'IDE 尝鲜',link:'/zh/IDE/index'},
                 ]
               },
               {
