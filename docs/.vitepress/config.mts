@@ -33,6 +33,7 @@ export default defineConfig({
                   {text:'使用集成功能',link:'/zh/Package-Manager/intergration'},
                   {
                     text:'使用案例',
+                    collapsed: true,
                     items:[
                       {text:'使用编译环境进行 Coremark 构建',link:'/zh/Package-Manager/cases/case1'},
                       {text:'为 Licheepi 4A 刷写操作系统',link:'/zh/Package-Manager/cases/case2'},
