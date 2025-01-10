@@ -1,89 +1,107 @@
-# 使用 meson/cmake 集成
+# 为 Licheepi 4A 刷写操作系统
 
-## cmake
+目前 ruyi 包管理器提供了更为简便的操作系统安装方式，通过以下步骤以及相关引导即可完成安装。
 
-首先确保你有安装 cmake 和 ninja，如果没有安装，可以使用以下命令安装：
+## 环境
 
-```shell
-# Ubuntu/Debian
-sudo apt-get install cmake ninja-build
-# Fedora
-sudo dnf install cmake ninja-build
+本文基于以下环境进行操作：
+- 硬件：x86_64 PC
+- 软件：Ubuntu 22.04
+
+#### 其他说明
+
+Licheepi 4A 支持从板载 emmc 或 SD 卡启动，刷写具有两种不同的连接方式：
+
+1. RISC-V 开发板以 USB 连接线接入 PC
+2. 将 RISC-V 开发板 SD 卡通过读卡器接入 PC
+
+本例使用了第一种方式。该刷写方式同样适用于向 MilkV Meles 的板载 emmc 刷写镜像。
+
+在使用普通用户刷写镜像失败时，ruyi 会尝试调用 ``sudo`` 提权。
+
+Licheepi 4A 使用 USB 线与 PC 连接，通过 fastboot 刷写。如果只希望使用普通用户完成刷写过程，可能需要配置 udev 规则。这里提供示例规则仅供参考：
+
+```
+SUBSYSTEM=="usb", ATTR{idVendor}="2345", ATTR{idProduct}=="7654", MODE="0666", GROUP="plugdev"
+SUBSYSTEM=="usb", ATTR{idVendor}="1234", ATTR{idProduct}=="8888", MODE="0666", GROUP="plugdev"
 ```
 
-下载 zlib：
+## 安装操作系统
 
-```shell
-wget https://github.com/zlib-ng/zlib-ng/archive/refs/tags/2.2.2.tar.gz
-mkdir zlib-ng
-cd zlib-ng
+在确保已安装 ruyi 包管理器，并且测试 `ruyi -V` 正常输出版本相关信息后，请继续以下操作。
+
+ruyi 包管理器提供了为 RISC-V 开发板安装操作系统的功能，为任一型号的 RISC-V 开发板安装镜像都只需要执行：
+
+```bash
+ruyi device provision
 ```
 
-安装并激活 gnu-plct 工具链编译：
+该命令将会返回工具目前所支持的 RISC-V 开发板，选择开发板后将返回所有支持指定开发板的操作系统：
 
-```shell
-ruyi install gnu-plct
-ruyi venv -t gnu-plct generic venv
-. venv/bin/ruyi-activate
+```
+RuyiSDK Device Provisioning Wizard
+
+This is a wizard intended to help you install a system on your device for your
+development pleasure, all with ease.
+
+You will be asked some questions that help RuyiSDK understand your device and
+your intended configuration, then packages will be downloaded and flashed onto
+the device's storage, that you should somehow make available on this host
+system beforehand.
+
+Note that, as Ruyi does not run as root, but raw disk access is most likely
+required to flash images, you should arrange to allow your user account sudo
+access to necessary commands such as dd. Flashing will fail if the sudo
+configuration does not allow so.
+
+Continue? (y/N) y
+
+The following devices are currently supported by the wizard. Please pick your device:
+
+1. Allwinner Nezha D1
+2. Canaan Kendryte K230
+3. Milk-V Duo
+4. Milk-V Pioneer Box
+5. SiFive HiFive Unmatched
+6. Sipeed Lichee RV
+7. Sipeed LicheePi 4A
+8. StarFive VisionFive
+9. StarFive VisionFive2
+
+Choice? (1-9)
+
 ```
 
-解压 zlib：
+以上，以 Sipeed LicheePi 4A 为例，需要为其安装镜像，只需要输入对应的序号：`7`
 
-```shell
-tar -xf ./zlib-ng-2.2.2.tar.gz
-cd zlib-ng-2.2.2
+
+```
+Choice? (1-9) 7
+
+The device has the following variants. Please choose the one corresponding to your hardware at hand:
+
+  1. Sipeed LicheePi 4A (8G RAM)
+  2. Sipeed LicheePi 4A (16G RAM)
+
+Choice? (1-2) 2
+
+The following system configurations are supported by the device variant you have chosen. Please pick the one you want 
+to put on the device:
+
+  1. openEuler RISC-V (headless) for Sipeed LicheePi 4A (16G RAM)
+  2. openEuler RISC-V (XFCE) for Sipeed LicheePi 4A (16G RAM)
+  3. RevyOS for Sipeed LicheePi 4A (16G RAM)
+
+Choice? (1-3) 3
+
+We are about to download and install the following packages for your device:
+
+ * board-image/revyos-sipeed-lpi4a
+ * board-image/uboot-revyos-sipeed-lpi4a-16g
+
+Proceed? (y/N) 
+
 ```
 
-使用 cmake 构建 zlib：
-为什么要用这样的参数可以参考 venv 里的 toolchain.riscv64-plct-linux-gnu.cmake 文件
+您只需要按照引导提示一步步执行即可。
 
-```shell
-cmake . -G Ninja -DCMAKE_C_COMPILER=riscv64-plct-linux-gnu-gcc -DZLIB_COMPAT=ON -DWITH_GTEST=OFF
-ninja
-```
-
-检查编译出的文件：
-```shell
-$ file libz.so.1.3.1.zlib-ng 
-libz.so.1.3.1.zlib-ng: ELF 64-bit LSB shared object, UCB RISC-V, RVC, double-float ABI, version 1 (SYSV), dynamically linked, BuildID[sha1]=bb6bdf59fa0fd746b3a6d3586ff1cfabcbe4a6e9, with debug_info, not stripped
-```
-
-## meson
-
-安装 meson：
-
-```shell
-# Ubuntu/Debian
-sudo apt-get install meson
-# Fedora
-sudo dnf install meson
-```
-
-和上文一样，首先安装并激活 gnu-plct 工具链编译：
-
-```shell
-ruyi install gnu-plct
-ruyi venv -t gnu-plct generic venv
-. venv/bin/ruyi-activate
-```
-
-下载 taisei：
-
-```shell
-git clone --recurse-submodules --depth=1 https://github.com/taisei-project/taisei
-cd taisei
-```
-
-根据 venv/meson-cross.ini，meson 的交叉编译配置及编译如下：
-
-```shell
-meson setup --cross-file /home/cyan/zlib-ng/venv/meson-cross.ini build/
-meson compile -C build/
-```
-
-检查编译出的文件：
-
-```shell
-$ file build/src/taisei
-taisei: ELF 64-bit LSB executable, UCB RISC-V, RVC, double-float ABI, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux-riscv64-lp64d.so.1, BuildID[sha1]=8fb80413e4a41ffeb75450b80a4b068c504b152e, for GNU/Linux 4.15.0, with debug_info, not stripped
-```

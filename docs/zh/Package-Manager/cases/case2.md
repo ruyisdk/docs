@@ -1,4 +1,4 @@
-# 为 Licheepi 4A 刷写操作系统
+# 为 MilkV Duo 刷写操作系统
 
 目前 ruyi 包管理器提供了更为简便的操作系统安装方式，通过以下步骤以及相关引导即可完成安装。
 
@@ -10,11 +10,11 @@
 
 #### 其他说明
 
-- 在任意 Linux 系统下皆可完成下文操作
+大部分 RISC-V 开发板都支持从 Micro SD 卡或 NVME SSD 启动，通常使用 ``dd`` 工具向磁盘直接写入镜像。 ``ruyi device provision`` 支持了这种写入方式。
 
-连接方式，以下任选：
-1. RISC-V 开发板以 USB 连接线接入 PC（若可以连接，推荐该方式）
-2. 将 RISC-V 开发板 SD 卡通过读卡器接入 PC
+尽管 Ruyi 包管理器被设计为不执行需要超级用户权限执行的操作， ``dd`` 写入磁盘往往是需要超级用户权限的。故在尝试使用普通用户调用 ``dd`` 命令刷写镜像失败时，Ruyi 包管理器将尝试调用 ``sudo`` 提权。此时可能需要用户键入密码，键入的密码是直接由 ``sudo`` 读取的，对 Ruyi 包管理器来说是透明的。
+
+磁盘镜像在解包后往往会占用大量的磁盘空间，使用 Ruyi 包管理器刷写镜像前请务必留足磁盘空间；一些厂家提供的镜像在刷写后并不会自动扩展分区来充分利用整块磁盘，可能需要用户自行扩展磁盘分区大小。
 
 ## 安装操作系统
 
@@ -23,7 +23,7 @@
 ruyi 包管理器提供了为 RISC-V 开发板安装操作系统的功能，为任一型号的 RISC-V 开发板安装镜像都只需要执行：
 
 ```bash
-ruyi device provision
+$ ruyi device provision
 ```
 
 该命令将会返回工具目前所支持的 RISC-V 开发板，选择开发板后将返回所有支持指定开发板的操作系统：
@@ -48,67 +48,93 @@ Continue? (y/N) y
 
 The following devices are currently supported by the wizard. Please pick your device:
 
-1. Allwinner Nezha D1
-2. Canaan Kendryte K230
-3. Milk-V Duo
-4. Milk-V Pioneer Box
-5. SiFive HiFive Unmatched
-6. Sipeed Lichee RV
-7. Sipeed LicheePi 4A
-8. StarFive VisionFive
-9. StarFive VisionFive2
+  1. Allwinner Nezha D1
+  2. Canaan Kendryte K230
+  3. Canaan Kendryte K230D
+  4. Canaan Kendryte K510
+  5. Milk-V Duo
+  6. Milk-V Duo S
+  7. Milk-V Mars
+  8. Milk-V Mars CM
+  9. Milk-V Meles
+  10. Milk-V Pioneer Box
+  11. Milk-V Vega
+  12. Pine64 Star64
+  13. SiFive HiFive Unmatched
+  14. Sipeed Lichee Cluster 4A
+  15. Sipeed Lichee Console 4A
+  16. Sipeed LicheePi 4A
+  17. Sipeed Lichee RV
+  18. Sipeed LicheeRV Nano
+  19. Sipeed Maix-I
+  20. Sipeed Tang Mega 138K Pro
+  21. StarFive VisionFive
+  22. StarFive VisionFive2
+  23. WCH CH32V103 EVB
+  24. WCH CH32V203 EVB
+  25. WCH CH32V208 EVB
+  26. WCH CH32V303 EVB
+  27. WCH CH32V305 EVB
+  28. WCH CH32V307 EVB
+  29. WCH CH582F EVB
+  30. WCH CH592X EVB
 
-Choice? (1-9)
-
+Choice? (1-30) 
 ```
 
-以上，以 Sipeed LicheePi 4A 为例，需要为其安装镜像，只需要输入对应的序号：`7`
-
+输出请以实际为准，在示例中 MilkV Duo 所在序号为 5。
 
 ```
-Choice? (1-9) 7
+Choice? (1-30) 5
 
 The device has the following variants. Please choose the one corresponding to your hardware at hand:
 
-  1. Sipeed LicheePi 4A (8G RAM)
-  2. Sipeed LicheePi 4A (16G RAM)
+  1. Milk-V Duo (64M RAM)
+  2. Milk-V Duo (256M RAM)
 
-Choice? (1-2) 2
+Choice? (1-2)
+```
 
-The following system configurations are supported by the device variant you have chosen. Please pick the one you want 
-to put on the device:
+注意 MilkV Duo 具有两个版本，分别使用了 CV1800B 和 SG2002 两种 SOC，其中 SG2002 的版本还被称为 Duo 256M。
 
-  1. openEuler RISC-V (headless) for Sipeed LicheePi 4A (16G RAM)
-  2. openEuler RISC-V (XFCE) for Sipeed LicheePi 4A (16G RAM)
-  3. RevyOS for Sipeed LicheePi 4A (16G RAM)
+这里作为示例选择 64M RAM 的版本，也就是 CV1800B SOC 的版本。
 
-Choice? (1-3) 3
+```
+Choice? (1-2) 1
+
+The following system configurations are supported by the device variant you have chosen. Please pick the one you want to put on the device:
+
+  1. Milk-V Duo Official Arduino SDK (64M RAM, SD card)
+  2. Milk-V Duo Official buildroot SDK (64M RAM, SD card)
+  3. Milk-V Duo Official buildroot SDK (64M RAM, Lite, SD card)
+```
+
+此处根据需要选择，这里作为示例选择 ``2``。
+
+```
+Choice? (1-3) 2
 
 We are about to download and install the following packages for your device:
 
- * board-image/revyos-sipeed-lpi4a
- * board-image/uboot-revyos-sipeed-lpi4a-16g
+ * board-image/buildroot-sdk-milkv-duo
 
-Proceed? (y/N) 
-
+Proceed? (y/N)
 ```
 
-您只需要按照引导提示一步步执行即可。
+Ruyi 将提示具体会被下载的 board-image 分区下的 Ruyi 软件包，并且询问是否继续，填写 ``y`` 即可。
 
-## 其他说明
-
-刷写工具根据板卡的不同依赖 ``dd`` 和 ``fastboot`` 命令。
-
-在使用普通用户调用 ``dd`` 命令刷写镜像失败时，ruyi 将尝试调用 ``sudo`` 提权。
-
-在使用 ``fastboot`` 工具刷写镜像时， ruyi 则只会使用当前普通用户，故需要用户自行配置 udev 规则。这里提供示例规则仅供参考：
+在下载和解包完成后会提示键入磁盘的路径：
 
 ```
-SUBSYSTEM=="usb", ATTR{idVendor}="2345", ATTR{idProduct}=="7654", MODE="0666", GROUP="plugdev"
-SUBSYSTEM=="usb", ATTR{idVendor}="1234", ATTR{idProduct}=="8888", MODE="0666", GROUP="plugdev"
+For initializing this target device, you should plug into this host system the
+device's storage (e.g. SD card or NVMe SSD), or a removable disk to be
+reformatted as a live medium, and note down the corresponding device file
+path(s), e.g. /dev/sdX, /dev/nvmeXnY for whole disks; /dev/sdXY, /dev/nvmeXnYpZ
+for partitions. You may consult e.g. sudo blkid output for the
+information you will need later.
+
+Please give the path for the target's whole disk:
 ```
 
-需要注意的是一些镜像的解包需要占用大量的磁盘空间，使用 ruyi 工具刷写镜像前请务必留足磁盘空间；
-一些厂家提供的镜像在刷写后并不会自动扩展分区来充分利用整块磁盘，而需要用户自行扩展磁盘分区大小。
+此时可以接入希望刷写的磁盘设备，输入设备的绝对路径，等待写入完成。
 
-相关的系统刷写问题可以访问对应开发板官网以获取针对性的帮助。

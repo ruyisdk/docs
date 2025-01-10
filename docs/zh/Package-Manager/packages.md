@@ -16,7 +16,7 @@ $ ruyi update
 
 Ruyi 包管理器的配置文件默认存放在 ``~/.config/ruyi/config.toml``，在 ``XDG_CONFIG_HOME`` 被配置的时候为 ``$XDG_CONFIG_HOME/ruyi/config.toml``。文件不存在可以自行建立。
 
-```bash
+```
 [repo]
 local = ""
 remote = "https://mirror.iscas.ac.cn/git/ruyisdk/packages-index.git"

@@ -1,4 +1,4 @@
-# 使用 gcc 编译 coremark
+# 为 MilkV Duo 构建 Coremark
 
 本文使用 Milkv-Duo 编译环境，构建 coremark 。
 
