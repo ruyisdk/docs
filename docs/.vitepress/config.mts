@@ -63,6 +63,19 @@ export default defineConfig({
             text:'其他说明',
             items:[
               {text:'RuyiSDK 编译工具',link:'/zh/Other/GNU-type'},
+              {text:'RuyiSDK 的平台支持情况',link:'/zh/Other/platform-support'},
+            ]
+          },
+          {
+            text:'K230D',
+            items:[
+              {text:'Canaan K230D 使用说明',link:'/zh/k230d/intro'},
+            ]
+          },
+          {
+            text:'法律信息',
+            items:[
+              {text:'隐私政策',link:'/zh/legal/privacyPolicy'},
             ]
           },
           ],
