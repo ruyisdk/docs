@@ -25,35 +25,31 @@ export default defineConfig({
             text: 'RuyiSDK',
             items:[
               {
-                text:'ruyi 包管理器',
+                text:'Ruyi 包管理器',
                 items:[
-                  {text:'功能介绍',link:'/zh/Package-Manager/index'},
+                  {text:'功能概览',link:'/zh/Package-Manager/index'},
                   {text:'安装',link:'/zh/Package-Manager/installation'},
-                  {text:'环境',link:'/zh/Package-Manager/Environment'},
-                  {text:'编译',link:'/zh/Package-Manager/Compile'},
+                  {text:'管理 Ruyi 软件包',link:'/zh/Package-Manager/packages'},
+                  {text:'使用集成功能',link:'/zh/Package-Manager/intergration'},
+                  {
+                    text:'使用案例',
+                    collapsed: true,
+                    items:[
+                      {text:'使用 Ruyi 编译环境构建（以 Licheepi 4A 为例）',link:'/zh/Package-Manager/cases/case1'},
+                      {text:'使用厂商发布的二进制工具链构建（以 MilkV Duo 为例）',link:'/zh/Package-Manager/cases/case2'},
+                      {text:'dd 方式刷写开发板（以 MilkV Duo 为例）',link:'/zh/Package-Manager/cases/case3'},
+                      {text:'fastboot 方式刷写开发板（以 Licheepi 4A 为例）',link:'/zh/Package-Manager/cases/case4'},
+                      {text:'使用 CMake 和 Meson 集成',link:'/zh/Package-Manager/cases/case5'},
+                      {text:'使用 QEMU 和 LLVM 构建',link:'/zh/Package-Manager/cases/case6'},
+                    ]
+                  },
+                  {text:'更多信息',link:'/zh/Package-Manager/misc'},
                 ],
               },
               {
-                text:'IDE',
+                text:'Ruyi IDE',
                 items:[
-                  {text:'TODO',link:'/zh/IDE/TODO'},
-                ]
-              },
-              {
-                text:'使用案例',
-                items:[
-                  {text:'使用编译环境进行 Coremark 构建',link:'/zh/RuyiSDK/case1'},
-                  {text:'为 Licheepi 4A 刷写操作系统',link:'/zh/RuyiSDK/case2'},
-                  {text:'在 Licheepi 4A 上编译运行',link:'/zh/RuyiSDK/case3'},
-                  {text:'使用 meson/cmake 集成',link:'/zh/RuyiSDK/case4'},
-                  {text:'使用 qemu 和 llvm',link:'/zh/RuyiSDK/case5'},
-                ]
-              },
-              {
-                text:'社区',
-                items:[
-                  {text:'关于我们',link:'/zh/Community/About-us'},
-                  {text:'社区守则',link:'/zh/Community/Rules'},
+                  {text:'IDE 尝鲜',link:'/zh/IDE/index'},
                 ]
               },
             ],
@@ -62,7 +58,19 @@ export default defineConfig({
             text:'其他说明',
             items:[
               {text:'RuyiSDK 编译工具',link:'/zh/Other/GNU-type'},
-              {text:'RuyiSDK 遥测',link:'/zh/Other/Telemetry'},
+              {text:'RuyiSDK 的平台支持情况',link:'/zh/Other/platform-support'},
+            ]
+          },
+          {
+            text:'K230D',
+            items:[
+              {text:'Canaan K230D 使用说明',link:'/zh/k230d/intro'},
+            ]
+          },
+          {
+            text:'法律信息',
+            items:[
+              {text:'隐私政策',link:'/zh/legal/privacyPolicy'},
             ]
           },
           ],

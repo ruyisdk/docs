@@ -1,4 +1,4 @@
-# 使用 gcc 编译 coremark
+# 使用厂商发布的二进制工具链构建（以 MilkV Duo 为例）
 
 本文使用 Milkv-Duo 编译环境，构建 coremark 。
 

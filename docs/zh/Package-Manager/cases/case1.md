@@ -1,4 +1,4 @@
-# 在 Licheepi 4A 上编译运行
+# 使用 Ruyi 编译环境构建（以 Licheepi 4A 为例）
 
 以开源基准测试程序 coremark 为例，展示从 ruyi 包管理器安装到使用 ruyi 包管理器搭建 RISC-V 的编译、模拟环境，完成 coremark 源码本地编译并在 Licheepi 4A 开发板上运行的过程。
 
@@ -19,8 +19,8 @@ ruyi self uninstall --purge
 
 ```bash
 # 下载 riscv64 版本的 ruyi 包管理器，将其放到 PATH 路径下，并赋予其可执行权限
-wget https://github.com/RuyiSDK/ruyi/releases/download/0.5.0/ruyi-0.5.0.riscv64
-sudo cp ruyi-0.5.0.riscv64 /usr/local/bin/ruyi
+wget https://github.com/ruyisdk/ruyi/releases/download/0.25.0/ruyi-0.25.0.riscv64
+sudo cp ruyi-0.25.0.riscv64 /usr/local/bin/ruyi
 sudo chmod +x ruyi
 cd
 ```
@@ -36,8 +36,6 @@ ruyi --version
 ```bash
 ruyi update
 ```
-
-详细请见[此处](../Package-Manager/installation.md)
 
 ## 使用 ruyi 包管理器部署开发环境：
 

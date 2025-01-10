@@ -1,4 +1,4 @@
-# 使用 meson/cmake 集成
+# 使用 CMake 和 Meson 集成
 
 ## cmake
 

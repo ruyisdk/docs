@@ -1,4 +1,4 @@
-# 为 Licheepi 4A 刷写操作系统
+# fastboot 方式刷写开发板（以 Licheepi 4A 为例）
 
 目前 ruyi 包管理器提供了更为简便的操作系统安装方式，通过以下步骤以及相关引导即可完成安装。
 
@@ -10,11 +10,21 @@
 
 #### 其他说明
 
-- 在任意 Linux 系统下皆可完成下文操作
+Licheepi 4A 支持从板载 emmc 或 SD 卡启动，刷写具有两种不同的连接方式：
 
-连接方式，以下任选：
-1. RISC-V 开发板以 USB 连接线接入 PC（若可以连接，推荐该方式）
+1. RISC-V 开发板以 USB 连接线接入 PC
 2. 将 RISC-V 开发板 SD 卡通过读卡器接入 PC
+
+本例使用了第一种方式。该刷写方式同样适用于向 MilkV Meles 的板载 emmc 刷写镜像。
+
+在使用普通用户刷写镜像失败时，ruyi 会尝试调用 ``sudo`` 提权。
+
+Licheepi 4A 使用 USB 线与 PC 连接，通过 fastboot 刷写。如果只希望使用普通用户完成刷写过程，可能需要配置 udev 规则。这里提供示例规则仅供参考：
+
+```
+SUBSYSTEM=="usb", ATTR{idVendor}="2345", ATTR{idProduct}=="7654", MODE="0666", GROUP="plugdev"
+SUBSYSTEM=="usb", ATTR{idVendor}="1234", ATTR{idProduct}=="8888", MODE="0666", GROUP="plugdev"
+```
 
 ## 安装操作系统
 
@@ -95,20 +105,3 @@ Proceed? (y/N)
 
 您只需要按照引导提示一步步执行即可。
 
-## 其他说明
-
-刷写工具根据板卡的不同依赖 ``dd`` 和 ``fastboot`` 命令。
-
-在使用普通用户调用 ``dd`` 命令刷写镜像失败时，ruyi 将尝试调用 ``sudo`` 提权。
-
-在使用 ``fastboot`` 工具刷写镜像时， ruyi 则只会使用当前普通用户，故需要用户自行配置 udev 规则。这里提供示例规则仅供参考：
-
-```
-SUBSYSTEM=="usb", ATTR{idVendor}="2345", ATTR{idProduct}=="7654", MODE="0666", GROUP="plugdev"
-SUBSYSTEM=="usb", ATTR{idVendor}="1234", ATTR{idProduct}=="8888", MODE="0666", GROUP="plugdev"
-```
-
-需要注意的是一些镜像的解包需要占用大量的磁盘空间，使用 ruyi 工具刷写镜像前请务必留足磁盘空间；
-一些厂家提供的镜像在刷写后并不会自动扩展分区来充分利用整块磁盘，而需要用户自行扩展磁盘分区大小。
-
-相关的系统刷写问题可以访问对应开发板官网以获取针对性的帮助。

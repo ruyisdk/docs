@@ -40,12 +40,12 @@ RuyiSDK 分为以下三个部分：
 8. GUI（TODO）
 ```
 
-### [Ruyi IDE](../IDE/TODO.md)
+### [Ruyi IDE](../IDE/index.md)
 
 该 IDE 是一个为 RISC-V 架构设计的开发工具箱，开发者可以轻松的通过 ruyi 包管理器获取，可以对于实际的开发场景对于代码的编写以及调试。
 使用包管理器开发者可以获取该工具箱中的编译工具链、调试工具和模拟器，开发者可以使用模拟器或者在 RISC-V 开发板上对自身的程序进行编写以及调试。
 
-### [Community](../Community/About-us.md)
+### [Community](https://ruyisdk.org/contact)
 
 在我们的社区当中，提供了大量的相关技术文章、代码、教程视频，以及我们会举办一定的线下活动获得来自用户的反馈，在线上也会有相应的论坛提供给开发者进行技术交流。
 
@@ -102,4 +102,4 @@ $ ruyi device provision
 
 > 该指令会识别硬件信息，并且开始自动执行对应程序为用户自动部署 RISC-V 开发环境，按照引导信息一步步执行即可。
 
-具体请参考这里[这里](../RuyiSDK/case2.md)
+具体请参考 [dd 方式刷写开发板（以 MilkV Duo 为例）](../Package-Manager/cases/case3.md) 和 [fastboot 方式刷写开发板（以 Licheepi 4A 为例）](../Package-Manager/cases/case4.md)。
