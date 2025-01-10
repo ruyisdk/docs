@@ -1,89 +1,118 @@
-# 为 MilkV Duo 构建 Coremark
+# 使用 Ruyi 编译环境构建（以 Licheepi 4A 为例）
 
-本文使用 Milkv-Duo 编译环境，构建 coremark 。
+以开源基准测试程序 coremark 为例，展示从 ruyi 包管理器安装到使用 ruyi 包管理器搭建 RISC-V 的编译、模拟环境，完成 coremark 源码本地编译并在 Licheepi 4A 开发板上运行的过程。
 
-首先进入编译环境：
+## 环境说明
+
+- 硬件环境：Licheepi 4A 开发板（th1520）
+- 软件环境：Debian/openEuler for RISC-V
+
+## ruyi 包管理器的安装
+
+1. [可选] 清除当前已经安装的 ruyi 包管理器及其所有数据。
 
 ```bash
-# 安装编译工具链 gnu-milkv-milkv-duo-musl-bin
-$ ruyi install gnu-milkv-milkv-duo-musl-bin
-# 以 generic profile 创建虚拟环境 milkv-venv
-$ ruyi venv -t gnu-milkv-milkv-duo-musl-bin generic milkv-venv
-# 激活虚拟环境
-$ . milkv-venv/bin/ruyi-activate
-«Ruyi milkv-venv» $
+ruyi self uninstall --purge
 ```
 
-coremark 源码可以直接从 Ruyi 软件仓库中下载：
+2. 下载 `ruyi` 工具并为其赋可执行权限并配置到环境变量中：从 [ruyi GitHub Releases](https://github.com/RuyiSDK/ruyi/releases/) 或 [ISCAS 镜像源](https://mirror.iscas.ac.cn/RuyiSDK/ruyi/releases/)下载最新的 `ruyi` 工具。
 
 ```bash
-«Ruyi milkv-venv» $ mkdir coremark
-«Ruyi milkv-venv» $ cd coremark
-«Ruyi milkv-venv» $ ruyi extract coremark
-info: downloading https://mirror.iscas.ac.cn/RuyiSDK/dist/coremark-1.01.tar.gz to /home/myon/.cache/ruyi/distfiles/coremark-1.01.tar.gz
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100  391k  100  391k    0     0  1400k      0 --:--:-- --:--:-- --:--:-- 1404k
-info: extracting coremark-1.01.tar.gz for package coremark-1.0.1
-info: package coremark-1.0.1 extracted to current working directory
+# 下载 riscv64 版本的 ruyi 包管理器，将其放到 PATH 路径下，并赋予其可执行权限
+wget https://github.com/ruyisdk/ruyi/releases/download/0.25.0/ruyi-0.25.0.riscv64
+sudo cp ruyi-0.25.0.riscv64 /usr/local/bin/ruyi
+sudo chmod +x ruyi
+cd
 ```
 
-这个操作将从 Ruyi 软件源中下载 coremark 源码并解包到**当前目录**。
-
-由于使用的工具链为 ``gnu-milkv-milkv-duo-bin``，查看 bin 文件夹，需要编辑构建脚本：
+3. 验证 ruyi 包管理器可否使用
 
 ```bash
-«Ruyi milkv-venv» $ sed -i 's/\bgcc\b/riscv64-unknown-linux-musl-gcc/g' linux64/core_portme.mak
+ruyi --version
 ```
 
-构建 coremark：
+4. 更新最新的软件源索引
 
 ```bash
-«Ruyi milkv-venv» $ make PORT_DIR=linux64 LFLAGS_END=-march=rv64gcv0p7xthead link
-riscv64-unknown-linux-musl-gcc -O2 -Ilinux64 -I. -DFLAGS_STR=\""-O2   -march=rv64gcv0p7xthead"\" -DITERATIONS=0  core_list_join.c core_main.c core_matrix.c core_state.c core_util.c linux64/core_portme.c -o ./coremark.exe -march=rv64gcv0p7xthead
-Link performed along with compile
-«Ruyi milkv-venv» $ file coremark.exe
-coremark.exe: ELF 64-bit LSB executable, UCB RISC-V, RVC, double-float ABI, version 1 (SYSV), dynamically linked, interpreter /lib/ld-musl-riscv64v0p7_xthead.so.1, with debug_info, not stripped
+ruyi update
 ```
 
-可以看到成功构建 RISC-V 架构的二进制。注意这整个过程如果在 riscv64 环境则不是交叉编译。
+## 使用 ruyi 包管理器部署开发环境：
 
-退出虚拟环境
+5. 查看软件仓软件包索引信息
 
 ```bash
-«Ruyi milkv-venv» $ ruyi-deactivate
-$
+ruyi list
 ```
 
-## 在最新的 Milkv Duo 镜像上运行
-
-传送 coremark 二进制的 Milkv Duo， Milkv Duo 的 IP 地址请按实际情况更改。
+6. 安装 gnu：ruyi install `<package-name>`
 
 ```bash
-$ scp -O ./coremark.exe root@192.168.42.1:~
+#安装适用于 Licheepi 4A 的编译工具链 gnu-plct-xthead 
+ruyi install gnu-plct-xthead 
 ```
 
-在 Milkv Duo 上运行
-
+7. 查看预置编译环境
 
 ```bash
-[root@milkv-duo]~# ./coremark.exe
-2K performance run parameters for coremark.
-CoreMark Size    : 666
-Total ticks      : 14911
-Total time (secs): 14.911000
-Iterations/Sec   : 2011.937496
-Iterations       : 30000
-Compiler version : GCC13.1.0
-Compiler flags   : -O2   -static
-Memory location  : Please put data memory location here
-                        (e.g. code in flash, data on heap etc)
-seedcrc          : 0xe9f5
-[0]crclist       : 0xe714
-[0]crcmatrix     : 0x1fd7
-[0]crcstate      : 0x8e3a
-[0]crcfinal      : 0x5275
-Correct operation validated. See readme.txt for run and reporting rules.
-CoreMark 1.0 : 2011.937496 / GCC13.1.0 -O2   -static / Heap
+ruyi list profiles
+```
+
+8. 由指定的工具链、模拟器配置建立 ruyi 虚拟环境 venv-sipeed。
+   > 注意在虚拟环境创建时，需要指定正确的编译器版本和 sysroot 类型。
+   > 在不指定版本号时默认使用的是软件源里的最新版本，而不是本地安装的版本。
+
+```bash
+ruyi venv -h
+
+# 创建虚拟环境 venv-sipeed
+ruyi venv -t gnu-plct-xthead sipeed-lpi4a venv-sipeed 
+
+# 查看编译环境中的工具
+ls venv-sipeed/bin/ 
+
+# 激活虚拟环境（虚拟环境可以理解成一个容器，实现运行环境隔离的设计，激活后，在 venv-sipeed 这个环境中，使用的就是 gnu-plct-xthead 版本工具链。不创建虚拟环境也可以为 /home/sipeed/.local/share/ruyi/binaries/riscv64/gnu-plct-xthead-2.8.0-ruyi.20240222/bin 配置环境变量，直接使用环境变量指定的gcc编译）
+. venv-sipeed/bin/ruyi-activate 
+
+# 查看当前虚拟环境下的 gcc 是否可用
+«Ruyi venv-sipeed» sipeed@lpi4a1590:~$ riscv64-plctxthead-linux-gnu-gcc --version 
+```
+
+9. 下载解压 coremark 源码作为编译对象
+
+```bash
+mkdir coremark && cd coremark
+ruyi extract coremark
+ls -al
+```
+
+## 交叉编译 coremark
+
+10. 设置 coremark 源码中的编译配置信息(参考 coremark 仓库自述文档)
+
+```bash
+sed -i 's/\bgcc\b/riscv64-plctxthead-linux-gnu-gcc/g' linux64/core_portme.mak
+```
+
+11. 执行交叉编译和构建，得到可执行程序 coremark.exe
+
+```bash
+make PORT_DIR=linux64 link
+ls -al    #新增可执行程序coremark.exe
+```
+
+12. 查看 riscv64 可执行程序文件属性信息。
+
+```bash
+file coremark.exe
+# 命令回显信息显示了文件的架构相关信息
+```
+
+## 运行验证
+
+13. 直接运行 riscv64 coremark 可执行程序
+
+```bash
+./coremark.exe
 ```
 

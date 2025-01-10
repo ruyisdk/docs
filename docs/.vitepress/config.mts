@@ -35,12 +35,12 @@ export default defineConfig({
                     text:'使用案例',
                     collapsed: true,
                     items:[
-                      {text:'为 MilkV Duo 构建 Coremark',link:'/zh/Package-Manager/cases/case1'},
-                      {text:'为 MilkV Duo 刷写操作系统',link:'/zh/Package-Manager/cases/case2'},
-                      {text:'为 Licheepi 4A 构建 Coremark',link:'/zh/Package-Manager/cases/case3'},
-                      {text:'为 Licheepi 4A 刷写操作系统',link:'/zh/Package-Manager/cases/case4'},
+                      {text:'使用 Ruyi 编译环境构建（以 Licheepi 4A 为例）',link:'/zh/Package-Manager/cases/case1'},
+                      {text:'使用厂商发布的二进制工具链构建（以 MilkV Duo 为例）',link:'/zh/Package-Manager/cases/case2'},
+                      {text:'dd 方式刷写开发板（以 MilkV Duo 为例）',link:'/zh/Package-Manager/cases/case3'},
+                      {text:'fastboot 方式刷写开发板（以 Licheepi 4A 为例）',link:'/zh/Package-Manager/cases/case4'},
                       {text:'使用 CMake 和 Meson 集成',link:'/zh/Package-Manager/cases/case5'},
-                      {text:'使用 QEMU 和 LLVM',link:'/zh/Package-Manager/cases/case6'},
+                      {text:'使用 QEMU 和 LLVM 构建',link:'/zh/Package-Manager/cases/case6'},
                     ]
                   },
                   {text:'更多信息',link:'/zh/Package-Manager/misc'},

@@ -1,6 +1,6 @@
 # 使用 QEMU 和 LLVM
 
-本案例基于 [为 MilkV Duo 构建 Coremark](case1.md)
+本案例基于 [为 MilkV Duo 构建 Coremark](case2.md)
 
 首先安装必要的依赖：
 ```shell

@@ -102,4 +102,4 @@ $ ruyi device provision
 
 > 该指令会识别硬件信息，并且开始自动执行对应程序为用户自动部署 RISC-V 开发环境，按照引导信息一步步执行即可。
 
-具体请参考这里[这里](../Package-Manager/cases/case4.md)
+具体请参考 [dd 方式刷写开发板（以 MilkV Duo 为例）](../Package-Manager/cases/case3.md) 和 [fastboot 方式刷写开发板（以 Licheepi 4A 为例）](../Package-Manager/cases/case4.md)。
