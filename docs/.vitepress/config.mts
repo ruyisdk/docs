@@ -25,7 +25,7 @@ export default defineConfig({
             text: 'RuyiSDK',
             items:[
               {
-                text:'ruyi 包管理器',
+                text:'Ruyi 包管理器',
                 items:[
                   {text:'功能概览',link:'/zh/Package-Manager/index'},
                   {text:'安装',link:'/zh/Package-Manager/installation'},
@@ -45,7 +45,7 @@ export default defineConfig({
                 ],
               },
               {
-                text:'IDE',
+                text:'Ruyi IDE',
                 items:[
                   {text:'IDE 尝鲜',link:'/zh/IDE/index'},
                 ]

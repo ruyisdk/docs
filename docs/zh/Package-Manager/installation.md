@@ -29,7 +29,7 @@ $ wget https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.25.0/ruyi.arm64
 
 如果输出为 ``riscv64``：
 
-```
+```bash
 $ wget https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.25.0/ruyi.riscv64
 ```
 
