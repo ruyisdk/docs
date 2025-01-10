@@ -51,13 +51,6 @@ export default defineConfig({
                   {text:'IDE 尝鲜',link:'/zh/IDE/index'},
                 ]
               },
-              {
-                text:'社区',
-                items:[
-                  {text:'关于我们',link:'/zh/Community/About-us'},
-                  {text:'社区守则',link:'/zh/Community/Rules'},
-                ]
-              },
             ],
           },
           {
