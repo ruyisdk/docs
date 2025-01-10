@@ -16,13 +16,13 @@ ruyi 包管理器主要提供以下功能。
 | `ruyi news read --quiet`                                                                     | 标记新闻为已读，不输出任何信息。            | 不输出任何东西，只标记为已读。                     |
 | `ruyi list`                                                                                  | 列出所有可用软件包。                  |                                     |
 | `ruyi list -v`                                                                               | 列出所有软件包的详细信息。               |                                     |
-| `ruyi list profiles`                                                                         | 查看预置的编译环境配置。                | 与 Python 虚拟环境类似。                    |
+| `ruyi list profiles`                                                                         | 查看预置的虚拟环境配置。                |                     |
 | `ruyi install gnu-upstream`                                                                  | 安装最新的 GNU 上游工具链。            | 默认安装最新版本的 gnu-upstream。             |
 | `ruyi install 'gnu-upstream(0.20231118.0)'`                                                  | 安装指定版本的 GNU 上游工具链。          | 通过指定版本号安装历史版本。                      |
 | `ruyi install 'gnu-upstream(==0.20231118.0)'`                                                | 安装特定版本的 GNU 上游工具链。          | 版本匹配格式应为 `<op><ver>`。               |
 | `ruyi install --reinstall gnu-upstream`                                                      | 重新安装 GNU 上游工具链。             |                                     |
 | `ruyi extract ruyisdk-demo`                                                                  | 下载并解包ruyisdk-demo 源码包。      | 解包到当前目录。                            |
-| `ruyi venv --toolchain gnu-upstream --emulator qemu-user-riscv-upstream generic ./ruyi_venv` | 在指定目录建立包含工具链和模拟器的编译环境。      | 使用预置的 generic 配置。                   |
+| `ruyi venv --toolchain gnu-upstream --emulator qemu-user-riscv-upstream generic ./ruyi_venv` | 在指定目录建立包含工具链和模拟器的虚拟环境。      | 使用预置的 generic 配置。                   |
 | `ruyi version`                                                                               | 查看 ruyi 包管理器的版本。              |                                     |
 | `ruyi self uninstall`                                                                        | 卸载 ruyi 包管理器。               | 命令会询问确认操作。                          |
 | `ruyi self uninstall -y`                                                                     | 无需确认直接卸载 ruyi 包管理器。         | 无需确认直接执行。                           |
