@@ -1,0 +1,77 @@
+import{_ as a,c as n,a2 as p,o as e}from"./chunks/framework.oYgP5hCw.js";const u=JSON.parse('{"title":"dd 方式刷写开发板（以 MilkV Duo 为例）","description":"","frontmatter":{},"headers":[],"relativePath":"zh/Package-Manager/cases/case3.md","filePath":"zh/Package-Manager/cases/case3.md","lastUpdated":1736837027000}'),i={name:"zh/Package-Manager/cases/case3.md"};function l(o,s,c,t,d,r){return e(),n("div",null,s[0]||(s[0]=[p(`<h1 id="dd-方式刷写开发板-以-milkv-duo-为例" tabindex="-1">dd 方式刷写开发板（以 MilkV Duo 为例） <a class="header-anchor" href="#dd-方式刷写开发板-以-milkv-duo-为例" aria-label="Permalink to &quot;dd 方式刷写开发板（以 MilkV Duo 为例）&quot;">​</a></h1><p>目前 ruyi 包管理器提供了更为简便的操作系统安装方式，通过以下步骤以及相关引导即可完成安装。</p><h2 id="环境" tabindex="-1">环境 <a class="header-anchor" href="#环境" aria-label="Permalink to &quot;环境&quot;">​</a></h2><p>本文基于以下环境进行操作：</p><ul><li>硬件：x86_64 PC</li><li>软件：Ubuntu 22.04</li></ul><h4 id="其他说明" tabindex="-1">其他说明 <a class="header-anchor" href="#其他说明" aria-label="Permalink to &quot;其他说明&quot;">​</a></h4><p>大部分 RISC-V 开发板都支持从 Micro SD 卡或 NVME SSD 启动，通常使用 <code>dd</code> 工具向磁盘直接写入镜像。 <code>ruyi device provision</code> 支持了这种写入方式。</p><p>尽管 Ruyi 包管理器被设计为不执行需要超级用户权限执行的操作， <code>dd</code> 写入磁盘往往是需要超级用户权限的。故在尝试使用普通用户调用 <code>dd</code> 命令刷写镜像失败时，Ruyi 包管理器将尝试调用 <code>sudo</code> 提权。此时可能需要用户键入密码，键入的密码是直接由 <code>sudo</code> 读取的，对 Ruyi 包管理器来说是透明的。</p><p>磁盘镜像在解包后往往会占用大量的磁盘空间，使用 Ruyi 包管理器刷写镜像前请务必留足磁盘空间；一些厂家提供的镜像在刷写后并不会自动扩展分区来充分利用整块磁盘，可能需要用户自行扩展磁盘分区大小。</p><h2 id="安装操作系统" tabindex="-1">安装操作系统 <a class="header-anchor" href="#安装操作系统" aria-label="Permalink to &quot;安装操作系统&quot;">​</a></h2><p>在确保已安装 ruyi 包管理器，并且测试 <code>ruyi -V</code> 正常输出版本相关信息后，请继续以下操作。</p><p>ruyi 包管理器提供了为 RISC-V 开发板安装操作系统的功能，为任一型号的 RISC-V 开发板安装镜像都只需要执行：</p><div class="language-bash vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">bash</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">$</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> ruyi</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> device</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> provision</span></span></code></pre></div><p>该命令将会返回工具目前所支持的 RISC-V 开发板，选择开发板后将返回所有支持指定开发板的操作系统：</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>RuyiSDK Device Provisioning Wizard</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>This is a wizard intended to help you install a system on your device for your</span></span>
+<span class="line"><span>development pleasure, all with ease.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>You will be asked some questions that help RuyiSDK understand your device and</span></span>
+<span class="line"><span>your intended configuration, then packages will be downloaded and flashed onto</span></span>
+<span class="line"><span>the device&#39;s storage, that you should somehow make available on this host</span></span>
+<span class="line"><span>system beforehand.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Note that, as Ruyi does not run as root, but raw disk access is most likely</span></span>
+<span class="line"><span>required to flash images, you should arrange to allow your user account sudo</span></span>
+<span class="line"><span>access to necessary commands such as dd. Flashing will fail if the sudo</span></span>
+<span class="line"><span>configuration does not allow so.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Continue? (y/N) y</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>The following devices are currently supported by the wizard. Please pick your device:</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  1. Allwinner Nezha D1</span></span>
+<span class="line"><span>  2. Canaan Kendryte K230</span></span>
+<span class="line"><span>  3. Canaan Kendryte K230D</span></span>
+<span class="line"><span>  4. Canaan Kendryte K510</span></span>
+<span class="line"><span>  5. Milk-V Duo</span></span>
+<span class="line"><span>  6. Milk-V Duo S</span></span>
+<span class="line"><span>  7. Milk-V Mars</span></span>
+<span class="line"><span>  8. Milk-V Mars CM</span></span>
+<span class="line"><span>  9. Milk-V Meles</span></span>
+<span class="line"><span>  10. Milk-V Pioneer Box</span></span>
+<span class="line"><span>  11. Milk-V Vega</span></span>
+<span class="line"><span>  12. Pine64 Star64</span></span>
+<span class="line"><span>  13. SiFive HiFive Unmatched</span></span>
+<span class="line"><span>  14. Sipeed Lichee Cluster 4A</span></span>
+<span class="line"><span>  15. Sipeed Lichee Console 4A</span></span>
+<span class="line"><span>  16. Sipeed LicheePi 4A</span></span>
+<span class="line"><span>  17. Sipeed Lichee RV</span></span>
+<span class="line"><span>  18. Sipeed LicheeRV Nano</span></span>
+<span class="line"><span>  19. Sipeed Maix-I</span></span>
+<span class="line"><span>  20. Sipeed Tang Mega 138K Pro</span></span>
+<span class="line"><span>  21. StarFive VisionFive</span></span>
+<span class="line"><span>  22. StarFive VisionFive2</span></span>
+<span class="line"><span>  23. WCH CH32V103 EVB</span></span>
+<span class="line"><span>  24. WCH CH32V203 EVB</span></span>
+<span class="line"><span>  25. WCH CH32V208 EVB</span></span>
+<span class="line"><span>  26. WCH CH32V303 EVB</span></span>
+<span class="line"><span>  27. WCH CH32V305 EVB</span></span>
+<span class="line"><span>  28. WCH CH32V307 EVB</span></span>
+<span class="line"><span>  29. WCH CH582F EVB</span></span>
+<span class="line"><span>  30. WCH CH592X EVB</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Choice? (1-30)</span></span></code></pre></div><p>输出请以实际为准，在示例中 MilkV Duo 所在序号为 5。</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>Choice? (1-30) 5</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>The device has the following variants. Please choose the one corresponding to your hardware at hand:</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  1. Milk-V Duo (64M RAM)</span></span>
+<span class="line"><span>  2. Milk-V Duo (256M RAM)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Choice? (1-2)</span></span></code></pre></div><p>注意 MilkV Duo 具有两个版本，分别使用了 CV1800B 和 SG2002 两种 SOC，其中 SG2002 的版本还被称为 Duo 256M。</p><p>这里作为示例选择 64M RAM 的版本，也就是 CV1800B SOC 的版本。</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>Choice? (1-2) 1</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>The following system configurations are supported by the device variant you have chosen. Please pick the one you want to put on the device:</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>  1. Milk-V Duo Official Arduino SDK (64M RAM, SD card)</span></span>
+<span class="line"><span>  2. Milk-V Duo Official buildroot SDK (64M RAM, SD card)</span></span>
+<span class="line"><span>  3. Milk-V Duo Official buildroot SDK (64M RAM, Lite, SD card)</span></span></code></pre></div><p>此处根据需要选择，这里作为示例选择 <code>2</code>。</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>Choice? (1-3) 2</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>We are about to download and install the following packages for your device:</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span> * board-image/buildroot-sdk-milkv-duo</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Proceed? (y/N)</span></span></code></pre></div><p>Ruyi 将提示具体会被下载的 board-image 分区下的 Ruyi 软件包，并且询问是否继续，填写 <code>y</code> 即可。</p><p>在下载和解包完成后会提示键入磁盘的路径：</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>For initializing this target device, you should plug into this host system the</span></span>
+<span class="line"><span>device&#39;s storage (e.g. SD card or NVMe SSD), or a removable disk to be</span></span>
+<span class="line"><span>reformatted as a live medium, and note down the corresponding device file</span></span>
+<span class="line"><span>path(s), e.g. /dev/sdX, /dev/nvmeXnY for whole disks; /dev/sdXY, /dev/nvmeXnYpZ</span></span>
+<span class="line"><span>for partitions. You may consult e.g. sudo blkid output for the</span></span>
+<span class="line"><span>information you will need later.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Please give the path for the target&#39;s whole disk:</span></span></code></pre></div><p>此时可以接入希望刷写的磁盘设备，输入设备的绝对路径，等待写入完成。</p>`,26)]))}const g=a(i,[["render",l]]);export{u as __pageData,g as default};
