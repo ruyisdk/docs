@@ -47,9 +47,16 @@ export default defineConfig({
                 ],
               },
               {
-                text:'Ruyi IDE',
+                text:'RuyiSDK IDE',
                 items:[
-                  {text:'IDE 尝鲜',link:'/zh/IDE/index'},
+                  {text:'RuyiSDK 下载使用',link:'/zh/IDE/index'},
+                  {
+                    text:'使用案例',
+                    collapsed: true,
+                    items:[
+                      {text:'Milkv Duo ：使用 riscv64-unknown-linux-musl-bin 工具链编译、运行、调试',link:'/zh/IDE/milkv-duo-ide'},
+                    ]
+                  },
                 ]
               },
             ],
