@@ -2,7 +2,7 @@
 
 ## 编译环境搭建
 
-1. 安装 RuyiSDK 包管理器 [参考](../Package-Manager/installation.md)
+1. 安装 RuyiSDK 包管理器 [参考](/docs/Package-Manager/installation)
 2. 安装 gnu-milkv-milkv-duo-musl 编译器
 
    ```bash
