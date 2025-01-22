@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkruyisdk=self.webpackChunkruyisdk||[]).push([[3440],{9939:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/docs/en/blog/page/2","page":2,"postsPerPage":10,"totalPages":2,"totalCount":15,"previousPage":"/docs/en/blog","blogDescription":"Blog","blogTitle":"RuyiSDK Blog"}}')}}]);
