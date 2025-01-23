@@ -4,24 +4,20 @@
 
 ## 关于docs仓库
 
-### 技术
+仓库分支介绍：
 
-docs仓库采用vitepress技术将Markdown格式的文档自动生成为web页面，结合github-pages 设置，能够自动将文档更新进行发布。
-
-### 仓库目录介绍
-
-- docs ： Markdown文档；采用分级管理。
-- .vitepress/config.mts : 目录索引定义。
+- main分支：用于提交开发中文档。
+- zh分支：该分支接收相对成熟的文档，文档内容会在 [RuyiSDK 官网的文档板块](https://ruyisdk.org/docs)展示。
+- gh-pages 分支：用于存放构建后的静态页面。
 
 ### 贡献文档
 
 欢迎大家一起参与RuyiSDK文档贡献。贡献方法：
 
 1. fork 本仓库；
-2. 在docs/docs/zh 目录下按需新建目录和markdown文档，或者修改已有的markdown文档；
-3. 修改docs/docs/.vitepress/config.mts 文档调整目录；
+2. 参考分支定位切换到合适的分支；
+3. 贡献文档；
 4. 提交修改并创建pull request将文档贡献提交到docs仓库，等待仓库管理员审核合入；
-5. pr被合入后大约几十秒或几分钟后，访问 https://ruyisdk.github.io/docs 检查网页是否更新。
 
 ## 访问docs网站
 
