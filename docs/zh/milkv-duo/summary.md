@@ -17,19 +17,16 @@
 
 而且目前只针对 milkv duo helloworld 这种最简单的demo进行了验证，更多milkv duo demo 需要进一步验证和集成到ide中；
 
-
 至少在ide中，demo/template + 头文件+库文件+sysroot等链接所需的环境都必须打包到 ruyisdk中。这样的sdk才能算是一整套的开发sdk；需要继续优化的事情有：
 
 ## TODO
 
 ### 其它ruyisdk外部输入（其它团队）需要改进的事情：
 
-1. milkv 镜像：最好加上gdbserver、sftp-server功能
+1. milkv 镜像：最好加上gdbserver、[sftp-server](https://github.com/milkv-duo/duo-buildroot-sdk/issues/167)功能
 2. plct-gnu ：暂时不支持 musl 库，milkv duo 目前还需要使用硬件厂商提供的工具链版本。plct-gnu后续有支持 musl 计划。
 3. qemu：qemu 目前无法运行 musl 工具链编译的目标程序。（可能需要适配运行环境？）
 4. milkv duo 的 demo仓库：目前似乎在目录组织方便还有改进的空间。工具链、头文件、库文件都集合在这个文件夹中。ruyisdk如果想要在ide中按照统一模版集成不同开发板的demo，则需要建立统一的demo目录标准。
-
-
 
 ### 不受其它外部输入限制，可以做的事情：
 
