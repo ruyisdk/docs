@@ -16,14 +16,14 @@ $ ruyi update
 
 ### ``ruyi update`` 拉取失败
 
-由于目前软件包索引信息托管于 GitHub 仓库，若出现仓库访问不稳定的情况，可在配置文件中配置使用 [备用仓库](https://mirror.iscas.ac.cn/git/ruyisdk/packages-index.git)。
+由于目前软件包索引信息托管于 GitHub 仓库，若出现仓库访问不稳定的情况，可在配置文件中配置使用镜像仓库（如有）。
 
 Ruyi 包管理器的配置文件默认存放在 ``~/.config/ruyi/config.toml``，在 ``XDG_CONFIG_HOME`` 被配置的时候为 ``$XDG_CONFIG_HOME/ruyi/config.toml``。文件不存在可以自行建立。
 
 ```
 [repo]
 local = ""
-remote = "https://mirror.iscas.ac.cn/git/ruyisdk/packages-index.git"
+remote = "https://gitee.com/ruyisdk/packages-index.git"
 branch = "main"
 ```
 
