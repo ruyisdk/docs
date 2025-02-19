@@ -2,15 +2,15 @@
 
 ## 简介
 
-RuyiSDK IDE 是一款基于开源软件 Eclipse 开发的、图形化的、主要面向 RISC-V 开发者的集成开发环境。该工具在继承 Eclipse 对嵌入式开发支持的基础上，计划逐步集成多款主流RISC-V开发板的 SDK，使得 RISC-V 开发更加便捷。
+RuyiSDK IDE 是一款基于开源软件 Eclipse 开发的、图形化的、主要面向 RISC-V 开发者的集成开发环境。该工具在继承 Eclipse 对嵌入式开发支持的基础上，计划逐步集成多款主流 RISC-V 开发板的 SDK，使得 RISC-V 开发更加便捷。
 
 ## 安装和启动
 
 ### 下载 IDE
 
-RuyiSDK IDE 下载地址：https://mirror.iscas.ac.cn/ruyisdk/ide
+RuyiSDK IDE 下载地址：<https://mirror.iscas.ac.cn/ruyisdk/ide>
 
-从上述下载地址下载最新版本的 ide ，注意需要选择匹配架构的安装包，如果您想在 x86_64 环境下开发，需下载最新版本的 `linux.gtk.x86_64.tar.gz` 包；如果您想在 ARM 设备上开发，则需要下载 `linux.gtk.aarch64.tar.gz` 包；如果您希望在 RISC-V 设备上运行，则下载 `linux.gtk.riscv64.tar.gz` 包。
+从上述下载地址下载最新版本的 IDE ，注意需要选择匹配架构的安装包，如果您想在 x86_64 环境下开发，需下载最新版本的 `linux.gtk.x86_64.tar.gz` 包；如果您想在 ARM 设备上开发，则需要下载 `linux.gtk.aarch64.tar.gz` 包；如果您希望在 RISC-V 设备上运行，则下载 `linux.gtk.riscv64.tar.gz` 包。
 
 ### 启动 IDE
 
@@ -21,7 +21,7 @@ RuyiSDK IDE 下载地址：https://mirror.iscas.ac.cn/ruyisdk/ide
 3. 接着点击 `Launch` 按钮就可以运行 IDE 了。
 4. 启动成功后，将进入 IDE ，这样就可以开始使用了。
 
-> 说明：RuyiSDK IDE 已经集成了openJDK（openJDK 21）供程序自身的运行，可以不用额外安装JDK。这个openJDK 21主要供 RuyiSDK IDE自身运行使用，您创建的Java 相关工程，可以设定所需的 Java 环境。
+> 说明：RuyiSDK IDE 已经集成了 OpenJDK（OpenJDK 21）供程序自身的运行，可以不用额外安装 JDK。此 OpenJDK 21 主要供 RuyiSDK IDE 自身运行使用，你创建的Java 相关工程，可以设定所需的 Java 环境。
 
 ## 更新
 
