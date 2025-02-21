@@ -22,19 +22,19 @@ sidebar_position: 2
 如果输出为 ``x86_64``：
 
 ```bash
-$ wget https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.26.0/ruyi.amd64
+$ wget https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.27.0/ruyi.amd64
 ```
 
 如果输出为 ``aarch64``：
 
 ```bash
-$ wget https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.26.0/ruyi.arm64
+$ wget https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.27.0/ruyi.arm64
 ```
 
 如果输出为 ``riscv64``：
 
 ```bash
-$ wget https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.26.0/ruyi.riscv64
+$ wget https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.27.0/ruyi.riscv64
 ```
 
 下面以 ``x86_64`` 架构为例，给下载的二进制添加执行权限：
