@@ -7,7 +7,7 @@
 
    ```bash
    #查看软件源的资源
-   ruyi list
+   ruyi list --name-contains milkv --category-is toolchain
 
    #安装指定的工具链
    ruyi install gnu-milkv-milkv-duo-bin
