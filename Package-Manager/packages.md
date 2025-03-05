@@ -78,7 +78,7 @@ Ruyi 软件包大致分为几个分区：
 这是在 ``x86_64`` 机器上的一个示例，实际的列表会更长：
 
 ```bash
-$ ruyi list
+$ ruyi list --name-contains ''
 List of available packages:
 
 * source/milkv-duo-examples
@@ -119,7 +119,7 @@ List of available packages:
   - 12.1.0-r.17885 ()
 ```
 
-``list`` 命令还提供了 ``--verbose`` 或 ``-v`` 参数来输出更详细的信息，这将会打印软件源中几乎所有信息。由于输出将会很长，建议将输出重定向到文件或 ``less`` 等工具。
+``list`` 命令还提供了 ``--verbose`` 或 ``-v`` 参数来输出更详细的信息，这将会打印软件源中几乎所有信息。由于全部输出将会很长，建议给 ``--name-contains`` 传入非空的查找字段，或添加其他限定参数，或将完整输出重定向到文件或 ``less`` 等工具。
 
 类似于 ``toolchain/llvm-plct`` 的行表示了一个软件包名，这在使用 ``install`` 命令安装时需要指定该名称。大多数情况下仅仅指定 ``/`` 后的名称也是可以的，在该示例中就是 ``llvm-plct``。
 

@@ -46,7 +46,7 @@ ruyi update
 5. 查看软件仓软件包索引信息
 
 ```bash
-ruyi list
+ruyi list --name-contains gnu-plct --category-is toolchain
 ```
 
 6. 安装 gnu：ruyi install `<package-name>`

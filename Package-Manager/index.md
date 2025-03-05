@@ -18,8 +18,8 @@ ruyi 包管理器主要提供以下功能。
 | `ruyi news read 1`                                                                           | 读取特定序号的新闻。                  | 1 为要读取的新闻条目的序号或 ID。                 |
 | `ruyi news read`                                                                             | 读取下一条新闻。                    |                                     |
 | `ruyi news read --quiet`                                                                     | 标记新闻为已读，不输出任何信息。            | 不输出任何东西，只标记为已读。                     |
-| `ruyi list`                                                                                  | 列出所有可用软件包。                  |                                     |
-| `ruyi list -v`                                                                               | 列出所有软件包的详细信息。               |                                     |
+| `ruyi list --name-contains`                                                                  | 列出可用软件包。                  |                                     |
+| `ruyi list --verbose --name-contains`                                                        | 列出可用软件包的详细信息。               |                                     |
 | `ruyi list profiles`                                                                         | 查看预置的虚拟环境配置。                |                     |
 | `ruyi install gnu-upstream`                                                                  | 安装最新的 GNU 上游工具链。            | 默认安装最新版本的 gnu-upstream。             |
 | `ruyi install 'gnu-upstream(0.20231118.0)'`                                                  | 安装指定版本的 GNU 上游工具链。          | 通过指定版本号安装历史版本。                      |
