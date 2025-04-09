@@ -80,7 +80,7 @@ RuyiSDK 的操作系统支持程度也分为三级。
 * openEuler: 最近 1 个长期支持（LTS）版本。
     * openEuler 24.03 LTS
 * RevyOS: 与 LicheePi 4A 及 Pioneer Box 的 RevyOS 支持对齐。
-* RuyiOS: 最近 1 个版本。
+* RedleafOS: 最近 1 个版本。
 * Ubuntu: 最近 2 个长期支持（LTS）版本。
     * Ubuntu 22.04
     * Ubuntu 24.04
