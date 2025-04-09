@@ -411,7 +411,7 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 <p>《从零开始开发VSCode插件与Ruyi IDE插件》 第3课已经上线B站。Eclipse 插件开发当前成功的搭建并解决了依赖项的问题，eclipse-embed-cdt/eclipse-plugins下的所有插件已经可以在Eclipse IDE中以插件工程方式成功运行和调试，后续可以基于现有的嵌入式插件学习并开展相关开发工作了。</p>
 <p>操作系统支持矩阵本期有大量更新，包括了测试报告元数据、首页表格 CI、issue 模板、测试报告更新等。</p>
 <p>RuyiSDK更多进展细节详见下方详情，欢迎大家试用并提供反馈和建议 ，下一个开发版本 RuyiSDK V0.22 版本将在 11 月 19 日发布。</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="包管��理器">包管理器<a class="hash-link" aria-label="包管理器的直接链接" title="包管理器的直接链接" href="https://ruyisdk.org/docs/biweekly/2024/11/05/ruyisdk-biweekly-32#%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="包管理器">包管理器<a class="hash-link" aria-label="包管理器的直接链接" title="包管理器的直接链接" href="https://ruyisdk.org/docs/biweekly/2024/11/05/ruyisdk-biweekly-32#%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
 <p>RuyiSDK 0.21 对应的包管理器版本也为 0.21.0，已于昨日发布。您可移步
 <a href="https://github.com/ruyisdk/ruyi/releases/tag/0.21.0" target="_blank" rel="noopener noreferrer">GitHub Releases</a> 或 <a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.21.0/" target="_blank" rel="noopener noreferrer">ISCAS 镜像源</a>下载体验。</p>
 <p>本次 RuyiSDK 包管理器的更新主要包含了以下内容：</p>
@@ -685,7 +685,7 @@ RevyOS 小队的工程师联合其他开源社区开发者，成功为 Eclipse �
 <p>操作系统支持矩阵项目新增了 Microchip PIC64GX Curiosity Kit 开发板的调研，但是我们没有开发板所以还未能完成相关测试验证，我们欢迎有该开发板的热心朋友参与进来协助完成验证。
 同时，支持矩阵项目通过一段时间的自动化工具研发，已经产生了第一个使用自动化工具完成的测试报告。</p>
 <p>RuyiSDK更多进展细节详见下方详情，欢迎大家试用并提供反馈和建议 ，下一个开发版本 RuyiSDK V0.19 版本将在 9 月 30 日发布。</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="包管理器">包管理器<a class="hash-link" aria-label="包�管理器的直接链接" title="包管理器的直接链接" href="https://ruyisdk.org/docs/biweekly/2024/09/14/ruyisdk-biweekly-29#%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="包管理器">包管理器<a class="hash-link" aria-label="包管理器的直接链接" title="包管理器的直接链接" href="https://ruyisdk.org/docs/biweekly/2024/09/14/ruyisdk-biweekly-29#%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
 <p>RuyiSDK 0.18 对应的包管理器版本也为 0.18.0，已于昨日发布。您可移步
 <a href="https://github.com/ruyisdk/ruyi/releases/tag/0.18.0" target="_blank" rel="noopener noreferrer">GitHub Releases</a> 或 <a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.18.0/" target="_blank" rel="noopener noreferrer">ISCAS 镜像源</a>下载体验。</p>
 <p>本次 RuyiSDK 包管理器的更新主要包含了以下内容：</p>
@@ -1200,7 +1200,7 @@ Python 语言的开发者都可使用熟悉的语法撰写 RuyiSDK 包管理器�
 <p>RuyiSDK V0.12 版本已于今日发布。 在这个版本中，操作系统支持矩阵为<strong>3 款开发板新增了其支持的操作系统</strong>，RuyiSDK 包管理器本期重点修复并完善了一些缺陷，并<strong>增加了 Ubuntu 24.04 LTS 系统的支持和测试</strong>；官网建设方面申请了公用邮箱<a href="mailto:contact@ruyisdk.cn" target="_blank" rel="noopener noreferrer">contact@ruyisdk.cn</a>，优化了订阅体验。</p>
 <p>RuyiSDK 目前采用先调研摸底、然后包管理器集成支持（含设备安装器集成支持）、再 IDE 集成支持的大致路线推进。前期初步完成了首批 RISC-V 开发板的初步调研（50 款），并优先在包管理器和安装器中提供了集成化的系统镜像安装服务。随着 RuyiSDK 对开发板的深入支持，计划与厂商对接，一起合作推动相关工作的开展。</p>
 <p>RuyiSDK 更多进展细节详见下方详情，欢迎大家试用并提供反馈和建议。下一个开发版本 RuyiSDK V0.13 版本将在 6 月 25 日发布。</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="包管理器">包管理器<a class="hash-link" aria-label="包管理器的直接链接" title="包管理器的直接链接" href="https://ruyisdk.org/docs/biweekly/2024/06/11/ruyisdk-biweekly-23#%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="包管理器">包管理器<a class="hash-link" aria-label="包管理器的直接链接" title="包管理器的直接��链接" href="https://ruyisdk.org/docs/biweekly/2024/06/11/ruyisdk-biweekly-23#%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
 <p>RuyiSDK 0.12 对应的包管理器版本也为 0.12.0，已于今日发布。您可移步
 <a href="https://github.com/ruyisdk/ruyi/releases/tag/0.12.0" target="_blank" rel="noopener noreferrer">GitHub Releases</a> 或 <a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.12.0/" target="_blank" rel="noopener noreferrer">ISCAS 镜像源</a>下载体验。</p>
 <p>本次 RuyiSDK 包管理器的更新主要包含了以下内容：</p>

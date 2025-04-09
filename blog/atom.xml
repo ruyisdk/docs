@@ -199,7 +199,7 @@
 <code>pygit2</code> 构建开始之后、试图在其虚拟环境中执行 <code>setup.py</code> 前，人工干预，在该环境中安装
 <code>setuptools</code>——从 Python 3.12 起该包已经不会被自动安装。</li>
 </ul>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="RuyiSDK 软件源的直接链接" title="RuyiSDK 软件��源的直接链接" href="https://ruyisdk.org/docs/blog/2024/07/09/ruyi-0.14#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="RuyiSDK 软件源的直接链接" title="RuyiSDK 软件源的直接链接" href="https://ruyisdk.org/docs/blog/2024/07/09/ruyi-0.14#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
 <ul>
 <li>增加了从上游源码打包的 Box64 架构模拟器：<code>emulator/box64-upstream</code>。</li>
 <li>增加了办公套件 <code>extra/wps-office</code>。请注意：由于是商业软件的缘故，首次运行该软件包时需要操作接受一份《最终用户许可协议》。</li>
