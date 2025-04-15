@@ -19,6 +19,8 @@
 3. 贡献文档；
 4. 提交修改并创建pull request将文档贡献提交到docs仓库，等待仓库管理员审核合入；
 
+请阅读[《贡献者指南》](./CONTRIBUTING.zh.md) ([English version](./CONTRIBUTING.md)) 以获取详细信息。
+
 ## 访问docs网站
 
 网址：https://ruyisdk.github.io/docs
