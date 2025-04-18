@@ -4,10 +4,225 @@
         <title>RuyiSDK Blog</title>
         <link>https://ruyisdk.org/docs/de/blog</link>
         <description>RuyiSDK Blog</description>
-        <lastBuildDate>Tue, 31 Dec 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 08 Apr 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>de</language>
+        <item>
+            <title><![CDATA[RuyiSDK 0.31 版本更新说明]]></title>
+            <link>https://ruyisdk.org/docs/de/blog/2025/04/08/ruyi-0.31</link>
+            <guid>https://ruyisdk.org/docs/de/blog/2025/04/08/ruyi-0.31</guid>
+            <pubDate>Tue, 08 Apr 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[RuyiSDK 0.31 现已发布，对应的包管理器版本也为 0.31.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></description>
+            <content:encoded><![CDATA[<p>RuyiSDK 0.31 现已发布，对应的包管理器版本也为 0.31.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
+<ul>
+<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.31.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.31.0</a></li>
+<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.31.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.31.0/</a></li>
+</ul>
+<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/04/08/ruyi-0.31#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<ul>
+<li>RuyiSDK 设备安装器在需要安装的软件包不止一个可用版本的时候，会额外允许您选择一个非默认（最新）的版本了。如果您的开发板需要旧版本的系统，该功能对您可能有所帮助。</li>
+<li>新增了实验模式开关：环境变量 <code>RUYI_EXPERIMENTAL</code>，用于启用一些我们暂不承诺兼容性的实验性功能。</li>
+<li>新增了实验性功能：实体数据库。<!-- -->
+<ul>
+<li>该功能有助于 RuyiSDK 为您提供与手头设备关联的有用信息。例如，可用 <code>ruyi list --related-to-entity device:sipeed-lpi4a</code> 查询适用于 Sipeed LicheePi 4A 的各种软件包了。</li>
+<li>初期支持 CPU 微架构（如香山南湖、玄铁 C910 等等）、CPU 型号（如香山南湖、玄铁 TH1520 等等）、设备型号（如 Sipeed LicheePi 4A 等等）、软件包等四种实体类型。</li>
+<li>这些功能为预览版，后续不排除作出不兼容变更以适应需求，因此仅在启用实验模式时才可用。如您有使用场景，请保持您的 <code>ruyi</code> 与软件源为最新。</li>
+</ul>
+</li>
+<li>工程化迭代：<!-- -->
+<ul>
+<li>为避免 CI 物理机资源的临时下线等原因影响到发版，将 RISC-V 架构的构建任务也暂时迁移至 GitHub Actions 公开免费提供的实例上了。</li>
+<li>将构建 <code>ruyi</code> 的单文件分发版本所用的 Python 版本升级到了 3.13.2。</li>
+</ul>
+</li>
+</ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[RuyiSDK 0.30 版本更新说明]]></title>
+            <link>https://ruyisdk.org/docs/de/blog/2025/03/25/ruyi-0.30</link>
+            <guid>https://ruyisdk.org/docs/de/blog/2025/03/25/ruyi-0.30</guid>
+            <pubDate>Tue, 25 Mar 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[RuyiSDK 0.30 现已发布，对应的包管理器版本也为 0.30.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></description>
+            <content:encoded><![CDATA[<p>RuyiSDK 0.30 现已发布，对应的包管理器版本也为 0.30.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
+<ul>
+<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.30.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.30.0</a></li>
+<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.30.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.30.0/</a></li>
+</ul>
+<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/03/25/ruyi-0.30#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<ul>
+<li>修复了 <code>ruyi list --category-contains</code> 不工作的问题。</li>
+<li>修复了全新安装 <code>ruyi</code> 之后直接进行 <code>ruyi install</code> 会崩溃的问题。</li>
+<li>软件源格式更新：<!-- -->
+<ul>
+<li>基于目前的设备安装器配置数据，新增实验性的结构化设备型号描述数据库，初期支持为每种设备型号描述其 CPU 与微架构能力。</li>
+</ul>
+</li>
+<li>工程化迭代：<!-- -->
+<ul>
+<li>将 AArch64 架构的构建任务迁移至 GitHub Actions 公开免费提供的实例上，以降低 RuyiSDK 团队的维护成本。</li>
+<li>修复了 CI 开源许可证检查任务。</li>
+</ul>
+</li>
+</ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[RuyiSDK 0.29 版本更新说明]]></title>
+            <link>https://ruyisdk.org/docs/de/blog/2025/03/11/ruyi-0.29</link>
+            <guid>https://ruyisdk.org/docs/de/blog/2025/03/11/ruyi-0.29</guid>
+            <pubDate>Tue, 11 Mar 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[RuyiSDK 0.29 现已发布，对应的包管理器版本也为 0.29.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></description>
+            <content:encoded><![CDATA[<p>RuyiSDK 0.29 现已发布，对应的包管理器版本也为 0.29.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
+<ul>
+<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.29.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.29.0</a></li>
+<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.29.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.29.0/</a></li>
+</ul>
+<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/03/11/ruyi-0.29#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<ul>
+<li>修复了 <code>ruyi news list</code> 命令的机读模式（porcelain mode）支持。</li>
+<li>为 <code>ruyi news read</code> 增加了机读模式（porcelain mode）支持，返回格式与 <code>ruyi news list</code> 相同。</li>
+<li>软件源格式更新：<!-- -->
+<ul>
+<li>不再支持以 JSON 格式撰写软件源全局配置与软件包描述。RuyiSDK 官方软件源已于 0.18 版本完成了升级，预期不受此变更影响。如您仍未升级您的 <code>ruyi</code> 版本，建议您重新安装 <code>ruyi</code> 并重做虚拟环境（如有）。</li>
+<li>为软件包版本描述新增了可选的 <code>upstream_version</code> 字段，用来记录相应上游对该版本的称呼。由于 RuyiSDK 软件源普遍采用语义化版本，经常需要对不采用语义化版本的上游版本号进行映射；新增该字段有助于 RuyiSDK 生态的软件包管理工具正确理解该类映射关系。</li>
+<li>为未来的软件包级别的公共信息作了向后兼容的预留。</li>
+</ul>
+</li>
+</ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[RuyiSDK 0.28 版本更新说明]]></title>
+            <link>https://ruyisdk.org/docs/de/blog/2025/02/25/ruyi-0.28</link>
+            <guid>https://ruyisdk.org/docs/de/blog/2025/02/25/ruyi-0.28</guid>
+            <pubDate>Tue, 25 Feb 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[RuyiSDK 0.28 现已发布，对应的包管理器版本也为 0.28.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></description>
+            <content:encoded><![CDATA[<p>RuyiSDK 0.28 现已发布，对应的包管理器版本也为 0.28.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
+<ul>
+<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.28.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.28.0</a></li>
+<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.28.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.28.0/</a></li>
+</ul>
+<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/02/25/ruyi-0.28#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<ul>
+<li>运行不依赖软件源的命令时，如软件源仓库尚未拉取到本地，现在不会多余做拉取动作了。</li>
+<li><code>ruyi list</code> 现在支持基本的过滤查询了：使用 <code>--category-is</code> 查询某个分类下的软件包，使用 <code>--name-contains</code> 查询名称中包含特定字样的软件包。</li>
+<li>考虑到软件包的数量持续增加，不带任何参数的 <code>ruyi list</code> 不再受到支持。如果您有依赖先前行为的脚本等，请按照提示修改使用方式。</li>
+</ul>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2025/02/25/ruyi-0.28#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
+<ul>
+<li>新增了以下软件包：<!-- -->
+<ul>
+<li><code>source/wiringx</code>: wiringX 项目的官方源码。wiringX 是模块化的 GPIO 支持组件。</li>
+</ul>
+</li>
+<li>更新了以下软件包：<!-- -->
+<ul>
+<li><code>board-image/bianbu-bpi-f3</code></li>
+<li><code>board-image/revyos-milkv-meles</code></li>
+<li><code>board-image/revyos-sg2042-milkv-pioneer</code></li>
+</ul>
+</li>
+<li>修复了 <code>board-image/revyos-milkv-meles</code> 的 <code>boot</code> 分区的文件类型标记。</li>
+</ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[RuyiSDK 0.27 版本更新说明]]></title>
+            <link>https://ruyisdk.org/docs/de/blog/2025/02/11/ruyi-0.27</link>
+            <guid>https://ruyisdk.org/docs/de/blog/2025/02/11/ruyi-0.27</guid>
+            <pubDate>Tue, 11 Feb 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[RuyiSDK 0.27 现已发布，对应的包管理器版本也为 0.27.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></description>
+            <content:encoded><![CDATA[<p>RuyiSDK 0.27 现已发布，对应的包管理器版本也为 0.27.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
+<ul>
+<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.27.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.27.0</a></li>
+<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.27.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.27.0/</a></li>
+</ul>
+<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/02/11/ruyi-0.27#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<ul>
+<li>新增了 <code>ruyi telemetry upload</code> 命令。如果您乐意配合，现在在 CI 等临时性场合也能确保遥测数据在任务结束、环境被清理之前得到上传了。</li>
+<li>支持分别指定软件包版本的服务等级了。如果某个软件包的某个版本存在已知问题，在安装或解压该版本时，<code>ruyi</code> 会输出提示信息，该信息可由打包人员在软件源维护。后续也将支持按照服务等级过滤软件包：届时将可以跳过存在已知问题的版本，或仅使用经过验证的版本等。</li>
+<li>工程化相关变更。<!-- -->
+<ul>
+<li>支持了 pygit2 1.17.0。<code>ruyi</code> 的单文件分发版本已经切换至该版本了。</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2025/02/11/ruyi-0.27#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
+<ul>
+<li>更新了以下软件包：<!-- -->
+<ul>
+<li><code>board-image/buildroot-sdk-milkv-duo</code></li>
+<li><code>board-image/buildroot-sdk-milkv-duo256m</code></li>
+<li><code>board-image/buildroot-sdk-milkv-duos-sd</code></li>
+<li><code>board-image/uboot-revyos-sipeed-lpi4a-16g</code></li>
+<li><code>board-image/uboot-revyos-sipeed-lpi4a-8g</code></li>
+</ul>
+</li>
+<li>修复了一些软件包得到自动化版本升级之后，无法正常下载的问题。</li>
+</ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[RuyiSDK 0.26 版本更新说明]]></title>
+            <link>https://ruyisdk.org/docs/de/blog/2025/01/14/ruyi-0.26</link>
+            <guid>https://ruyisdk.org/docs/de/blog/2025/01/14/ruyi-0.26</guid>
+            <pubDate>Tue, 14 Jan 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[RuyiSDK 0.26 现已发布，对应的包管理器版本也为 0.26.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></description>
+            <content:encoded><![CDATA[<p>RuyiSDK 0.26 现已发布，对应的包管理器版本也为 0.26.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
+<ul>
+<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.26.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.26.0</a></li>
+<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.26.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.26.0/</a></li>
+</ul>
+<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/01/14/ruyi-0.26#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<ul>
+<li>为 <code>ruyi telemetry status</code> 新增了 <code>--verbose</code> (<code>-v</code>) 选项，供用户在 <code>ruyi telemetry consent</code> 之后继续查看自身遥测数据的上传计划。</li>
+<li>修复了使用厂商工具链创建虚拟环境时，工具链 <code>-mcpu</code> 取值可能不被正确映射的问题。如果您受影响，请在 <code>ruyi update</code> 之后重建虚拟环境。</li>
+<li>继续加强了平台兼容性保障。<!-- -->
+<ul>
+<li>新增了一篇平台兼容性技术文档，明确了当前 <code>ruyi</code> 支持的第三方依赖的基线版本。</li>
+<li>以 CI 检查的方式确保了 <code>ruyi</code> 的所有变更都不影响 <code>ruyi</code> 在 Ubuntu 22.04 下通过测试套件。</li>
+</ul>
+</li>
+<li>工程化相关变更。<!-- -->
+<ul>
+<li>修复了源码包内遗漏了一层子目录结构的问题。</li>
+<li>更新 Poetry 至 2.0 版本，顺带更新了 <code>ruyi</code> 的 Python 项目元数据（<code>pyproject.toml</code>）。</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2025/01/14/ruyi-0.26#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
+<ul>
+<li>更新了 <code>board-image/revyos-sipeed-lpi4a</code>。</li>
+<li>配合 <code>ruyi</code> 0.26.0 相应更改，支持了新的 profile API，以便为虚拟环境正确配置 <code>-mcpu</code>。</li>
+</ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[RuyiSDK 0.25 版本更新说明]]></title>
+            <link>https://ruyisdk.org/docs/de/blog/2024/12/31/ruyi-0.25</link>
+            <guid>https://ruyisdk.org/docs/de/blog/2024/12/31/ruyi-0.25</guid>
+            <pubDate>Tue, 31 Dec 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[RuyiSDK 0.25 现已发布，对应的包管理器版本也为 0.25.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></description>
+            <content:encoded><![CDATA[<p>RuyiSDK 0.25 现已发布，对应的包管理器版本也为 0.25.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
+<ul>
+<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.25.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.25.0</a></li>
+<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.25.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.25.0/</a></li>
+</ul>
+<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2024/12/31/ruyi-0.25#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<ul>
+<li>新增了 <code>ruyi config</code> 子命令，方便用户通过命令行或脚本方式查询、修改 RuyiSDK 包管理器配置。该命令用法受到了 <code>git config</code> 的启发，详见 <code>ruyi config --help</code> 输出。</li>
+<li>新增了 <code>ruyi telemetry</code> 子命令，方便用户通过命令行或脚本方式查询、变更遥测偏好。详见 <code>ruyi telemetry --help</code> 输出。<!-- -->
+<ul>
+<li>特别地：在您表明遥测偏好前，每次运行 <code>ruyi</code> 您都会收到提醒。您现在可以通过 <code>ruyi telemetry off</code> 关闭遥测数据收集，或通过 <code>ruyi telemetry consent</code> 明确接受遥测数据收集与上传了。</li>
+</ul>
+</li>
+<li>修复了搭配 arpy 1.x 使用时，无法解压 Debian 格式软件包的问题。</li>
+<li>新增了两篇规范文档：RuyiSDK 官方软件源的包版本规范，以及 RuyiSDK 中的板卡型号、系统镜像命名规范。您可移步 RuyiSDK 包管理器的仓库 <code>docs/</code> 目录阅读。</li>
+</ul>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[内核从 5.10 升级至 6.6，RuyiSDK 发布面向 TH1520 系列开发板操作系统新镜像]]></title>
             <link>https://ruyisdk.org/docs/de/blog/2024/12/31/th1520</link>
@@ -45,6 +260,136 @@
 <p><img decoding="async" loading="lazy" alt="6404" src="https://ruyisdk.org/docs/de/assets/images/6404-625c20b71648630d480fee7d023e58c7.png" width="378" height="498" class="img_ev3q"></p>]]></content:encoded>
         </item>
         <item>
+            <title><![CDATA[RuyiSDK 0.24 版本更新说明]]></title>
+            <link>https://ruyisdk.org/docs/de/blog/2024/12/17/ruyi-0.24</link>
+            <guid>https://ruyisdk.org/docs/de/blog/2024/12/17/ruyi-0.24</guid>
+            <pubDate>Tue, 17 Dec 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[RuyiSDK 0.24 现已发布，对应的包管理器版本也为 0.24.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></description>
+            <content:encoded><![CDATA[<p>RuyiSDK 0.24 现已发布，对应的包管理器版本也为 0.24.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
+<ul>
+<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.24.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.24.0</a></li>
+<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.24.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.24.0/</a></li>
+</ul>
+<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2024/12/17/ruyi-0.24#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<ul>
+<li>更新了依赖版本。</li>
+</ul>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2024/12/17/ruyi-0.24#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
+<ul>
+<li>更新了以下软件到最新版本：<!-- -->
+<ul>
+<li><code>board-image/armbian-pine64-star64</code></li>
+<li><code>board-image/buildroot-sdk-milkv-duo</code></li>
+<li><code>board-image/buildroot-sdk-milkv-duos-sd</code></li>
+<li><code>board-image/buildroot-sdk-sipeed-licheervnano</code></li>
+<li><code>board-image/debian-fishwaldo-sg200x-sipeed-licheervnano</code></li>
+<li><code>board-image/revyos-sipeed-lpi4a</code></li>
+<li><code>board-image/uboot-revyos-sipeed-lpi4a-16g</code></li>
+<li><code>board-image/uboot-revyos-sipeed-lpi4a-8g</code></li>
+<li><code>extra/wps-office</code></li>
+</ul>
+</li>
+</ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[RuyiSDK 0.23 版本更新说明]]></title>
+            <link>https://ruyisdk.org/docs/de/blog/2024/12/03/ruyi-0.23</link>
+            <guid>https://ruyisdk.org/docs/de/blog/2024/12/03/ruyi-0.23</guid>
+            <pubDate>Tue, 03 Dec 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[RuyiSDK 0.23 现已发布，对应的包管理器版本也为 0.23.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></description>
+            <content:encoded><![CDATA[<p>RuyiSDK 0.23 现已发布，对应的包管理器版本也为 0.23.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
+<ul>
+<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.23.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.23.0</a></li>
+<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.23.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.23.0/</a></li>
+</ul>
+<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2024/12/03/ruyi-0.23#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<ul>
+<li>出于项目验收要求，调整了默认遥测模式为 <code>on</code>。后续会随着 RuyiSDK 软件源的更新，周期性上传匿名化的使用统计数据。遥测服务端位于中国大陆境内，由 RuyiSDK 团队管理。</li>
+<li>修复了与外部依赖 <code>semver</code> 2.x 版本的兼容性。</li>
+<li>允许了在 CI 环境以 <code>root</code> 身份运行 <code>ruyi</code>。</li>
+<li>每次发版会同时附带可重现（reproducible）的源码包了，有助于发行版打包工作等。</li>
+</ul>
+<p><strong>注意：<strong>由于活跃用户数等指标是项目 KPI，RuyiSDK 0.23 版本增加了遥测数据的上传功能，并</strong>在所有环境默认开启</strong>，不仅限于 CI。您可自行决定是否主动上传这部分匿名统计信息，以便 RuyiSDK 团队改进产品；您也可以选择删除先前的遥测数据，以及是否禁用遥测。您可用 <code>ruyi self clean --telemetry</code> 删除所有的遥测信息，包括设备信息。</p>
+<p>在遥测模式为 <code>on</code> 时，每次 <code>ruyi</code> 被调用时都会告知您您的遥测数据将在何时上传。您可以做以下操作之一以屏蔽该提示。</p>
+<ul>
+<li>设置遥测模式为 <code>local</code> 或 <code>off</code>；</li>
+<li>对数据上传行为给予同意。</li>
+</ul>
+<p>具体的 <code>ruyi</code> 配置文件写法示例如下。该配置文件一般位于 <code>~/.config/ruyi/config.toml</code> 位置，如不存在，创建即可。</p>
+<div class="language-toml codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-toml codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain"># 在 [telemetry] 一节体现以下内容之一。如不存在此节，创建即可：</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">[telemetry]</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"># 您可以变更遥测模式为 local 或 off:</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">mode = "local"</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"># 或告知 ruyi 您在当前日期时间给予了同意：</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">upload_consent = 2024-12-32T25:61:00+08:00</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"># 此日期格式并不合法，这是有意为之，请您自行填入您操作的当前时刻。例如执行以下命令：</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">#</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">#     echo "upload_consent = $(date -Iseconds)"</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">#</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"># 输出内容即可用于上述用途。</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="In die Zwischenablage kopieren" title="Kopieren" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[RuyiSDK 0.22 版本更新说明]]></title>
+            <link>https://ruyisdk.org/docs/de/blog/2024/11/19/ruyi-0.22</link>
+            <guid>https://ruyisdk.org/docs/de/blog/2024/11/19/ruyi-0.22</guid>
+            <pubDate>Tue, 19 Nov 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[RuyiSDK 0.22 现已发布，对应的包管理器版本也为 0.22.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></description>
+            <content:encoded><![CDATA[<p>RuyiSDK 0.22 现已发布，对应的包管理器版本也为 0.22.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
+<ul>
+<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.22.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.22.0</a></li>
+<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.22.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.22.0/</a></li>
+</ul>
+<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2024/11/19/ruyi-0.22#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<ul>
+<li>新增了 <a href="https://ruyisdk.org/docs/Other/platform-support" target="_blank" rel="noopener noreferrer">RuyiSDK 的平台支持文档</a>，基于此完善了 RuyiSDK 包管理器的平台兼容性：<!-- -->
+<ul>
+<li>将 Python 版本的最低要求降至 3.10，以与 Ubuntu 22.04 LTS 系统默认 Python 版本保持兼容。</li>
+<li>降低了各种 Python 依赖关系的版本要求，以支持与 Ubuntu 22.04 LTS 系统提供软件包配合工作。</li>
+<li>按照 Python 打包标准，新增声明 <code>ruyi</code> 入口点，以便发行版打包机制自动识别、处理。</li>
+</ul>
+</li>
+</ul>
+<p>**注意：**我们将于 RuyiSDK 0.23 版本增加 RuyiSDK 遥测数据的上传功能，并可能在 CI 环境将其默认开启。届时，您可自行决定是否主动上传这部分匿名统计信息，以便 RuyiSDK 团队改进产品；您也可以选择删除先前的遥测数据，以及是否禁用遥测。您可用 <code>ruyi self clean --telemetry</code> 删除所有的遥测信息，包括设备信息。</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[RuyiSDK 0.21 版本更新说明]]></title>
+            <link>https://ruyisdk.org/docs/de/blog/2024/11/05/ruyi-0.21</link>
+            <guid>https://ruyisdk.org/docs/de/blog/2024/11/05/ruyi-0.21</guid>
+            <pubDate>Tue, 05 Nov 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[RuyiSDK 0.21 现已发布，对应的包管理器版本也为 0.21.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></description>
+            <content:encoded><![CDATA[<p>RuyiSDK 0.21 现已发布，对应的包管理器版本也为 0.21.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
+<ul>
+<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.21.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.21.0</a></li>
+<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.21.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.21.0/</a></li>
+</ul>
+<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2024/11/05/ruyi-0.21#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<ul>
+<li>将 RuyiSDK 软件源打包辅助命令 <code>ruyi admin manifest</code> 重命名为 <code>ruyi admin checksum</code> 了。如果您在为 RuyiSDK 打包，您可能需要更新您的脚本。</li>
+<li><code>ruyi self clean</code> 支持删除新闻（<code>ruyi news</code>）的阅读状态了：<code>ruyi self clean --news-read-status</code>。</li>
+<li><code>ruyi self clean</code> 也支持一次性删除 <code>ruyi</code> 产生的所有可变状态文件了：<code>ruyi self clean --all</code>。</li>
+<li>修复了 <code>ruyi</code> 测试用例与 Python 3.11 的兼容性。我们现在以 CI 形式确保 <code>ruyi</code> 能够在 Python 3.11、3.12、3.13 这三个版本通过测试，这将有助于保障后续 <code>ruyi</code> 在多种 Linux 发行版上的兼容性。</li>
+<li>新增声明了遗漏的 <code>typing_extensions</code> 依赖，以修复第三方打包。</li>
+<li>重构了 <code>ruyi</code> 子命令的声明与实现方式，后续扩展 <code>ruyi</code> 命令行功能更加方便了。</li>
+</ul>
+<p>注意：我们可能在今后的一到两个版本期间，实装 RuyiSDK 遥测机制。届时，您可自行决定是否主动上传这部分匿名统计信息，以便 RuyiSDK 团队改进产品；您也可以选择删除先前的遥测数据，以及是否禁用遥测。您可用 <code>ruyi self clean --telemetry</code> 删除所有的遥测信息，包括设备信息。</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[RuyiSDK 0.20 版本更新说明]]></title>
+            <link>https://ruyisdk.org/docs/de/blog/2024/10/22/ruyi-0.20</link>
+            <guid>https://ruyisdk.org/docs/de/blog/2024/10/22/ruyi-0.20</guid>
+            <pubDate>Tue, 22 Oct 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[RuyiSDK 0.20 现已发布，对应的包管理器版本也为 0.20.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></description>
+            <content:encoded><![CDATA[<p>RuyiSDK 0.20 现已发布，对应的包管理器版本也为 0.20.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
+<ul>
+<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.20.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.20.0</a></li>
+<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.20.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.20.0/</a></li>
+</ul>
+<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2024/10/22/ruyi-0.20#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<ul>
+<li><code>ruyi self uninstall --purge</code> 不会遗留遥测数据了。</li>
+<li>修复了 <code>ruyi admin</code> 子命令无法被调用的问题。</li>
+<li>修复了 Ruyi 虚拟环境中，向无 target tuple 前缀的命令（如一系列 LLVM 工具）的转发。</li>
+<li>应 RuyiSDK 项目需求方要求，移除了插件机制的 Starlark 沙箱。这有助于简化打包与降低开发门槛：按照 RuyiSDK 当前的威胁模型（threat model），沙箱机制不会带来额外的安全性。</li>
+</ul>
+<p>注意：由于 Starlark 与 Python 存在细微的语义差异，在升级到 ruyi 0.20.0 之后，您必须将软件源 <code>ruyi update</code> 到最新，才能继续使用 <code>ruyi</code> 的部分功能（如 <code>ruyi venv</code> 等）。除此之外，我们预计插件机制的技术细节变更不会对实际使用造成影响。</p>
+<p>注意：我们可能在今后的一到两个版本期间，实装 RuyiSDK 遥测机制。届时，您可自行决定是否主动上传这部分匿名统计信息，以便 RuyiSDK 团队改进产品；您也可以选择删除先前的遥测数据，以及是否禁用遥测。您可用 <code>ruyi self clean --telemetry</code> 删除所有的遥测信息，包括设备信息。</p>]]></content:encoded>
+        </item>
+        <item>
             <title><![CDATA[Eclipse 上游初步支持 RISC-V，每日构建镜像已经可以下载试用]]></title>
             <link>https://ruyisdk.org/docs/de/blog/2024/09/30/eclipse-riscv64</link>
             <guid>https://ruyisdk.org/docs/de/blog/2024/09/30/eclipse-riscv64</guid>
@@ -72,6 +417,140 @@
 <p><strong>特别致谢以下贡献者</strong></p>
 <p>于波、陈璇、Hannes Wellmann、Alexander Kurtakov、Ed Merks、Pawel Stankiewicz、Frederic Gurr</p>
 <p><em>如有遗漏，请联系作者</em></p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[RuyiSDK 0.19 版本更新说明]]></title>
+            <link>https://ruyisdk.org/docs/de/blog/2024/09/30/ruyi-0.19</link>
+            <guid>https://ruyisdk.org/docs/de/blog/2024/09/30/ruyi-0.19</guid>
+            <pubDate>Mon, 30 Sep 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[RuyiSDK 0.19 现已发布，对应的包管理器版本也为 0.19.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></description>
+            <content:encoded><![CDATA[<p>RuyiSDK 0.19 现已发布，对应的包管理器版本也为 0.19.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
+<ul>
+<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.19.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.19.0</a></li>
+<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.19.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.19.0/</a></li>
+</ul>
+<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2024/09/30/ruyi-0.19#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<ul>
+<li>修复了当环境 locale 配置在本机上无效时，<code>ruyi news list</code> 在官方软件源上崩溃的问题。这也是 RuyiSDK 包管理器的首个来自外部贡献者的贡献。感谢 <a href="https://github.com/RekiDunois" target="_blank" rel="noopener noreferrer">RekiDunois</a>！</li>
+<li>为打包工作者新增了 <code>ruyi admin format-manifest</code> 命令，用来自动格式化软件包描述文件，确保符合标准格式。</li>
+<li>为 <code>ruyi venv</code> 新增了多工具链支持：可以为一个虚拟环境配置多个 target tuple 互不相同的工具链包了。</li>
+<li>新增了 <code>ruyi self clean</code> 命令，用来清理 Ruyi 产生的各种数据，释放存储空间。</li>
+<li>对于发行版直接再次分发 RuyiSDK 官方编译 <code>ruyi</code> 二进制的情况，为发行版打包工作者提供了手段来阻止用户不慎 <code>ruyi self uninstall</code>。</li>
+<li>基础的遥测功能，目前不支持数据上传。详见"遥测"一节。</li>
+</ul>
+<h3 class="anchor anchorWithHideOnScrollNavbar_emO8" id="遥测">遥测<a class="hash-link" aria-label="Direkter Link zur 遥测" title="Direkter Link zur 遥测" href="https://ruyisdk.org/docs/de/blog/2024/09/30/ruyi-0.19#%E9%81%A5%E6%B5%8B">​</a></h3>
+<p>为帮助 RuyiSDK 团队更好了解用户使用习惯以改进体验，我们为 RuyiSDK 包管理器增加了基础的遥测功能。有以下 3 种遥测模式：</p>
+<ul>
+<li><code>local</code>: 仅收集数据，不主动上报。这是默认模式。</li>
+<li><code>on</code>: 收集数据并周期性上报。目前未实现。</li>
+<li><code>off</code>: 完全禁用遥测。</li>
+</ul>
+<p>目前我们将收集以下的数据：</p>
+<ul>
+<li>首次运行 <code>ruyi</code> 时，将一次性收集少量设备信息。<!-- -->
+<ul>
+<li>仅从系统随机数生成唯一的安装 ID，与任何系统配置、本地数据均无关；</li>
+<li>当前运行环境是否为几种知名 CI 服务之一，如 GitHub Actions、GitLab CI、Travis CI 等；</li>
+<li>操作系统内核种类与处理器架构；</li>
+<li>C 运行库种类与版本（形如 <code>glibc 2.40</code>）；</li>
+<li>Linux 发行版代号与版本；</li>
+<li>如处理器架构为 RISC-V，还将收集由设备树指定的系统型号与 <code>/proc/cpuinfo</code> 所暴露的 CPU 核数、微架构、ISA 字符串等 RISC-V 特定信息。</li>
+</ul>
+</li>
+<li>每次运行 <code>ruyi</code>，将记录调用的命令种类，不含参数。</li>
+<li>每次运行 Ruyi 虚拟环境中的工具链代理，将记录被调用的命令名。</li>
+</ul>
+<p>如果您不希望参与遥测，请在运行新版 <code>ruyi</code> 之前做以下两种操作之一即可。要么确保环境变量中存在 <code>RUYI_TELEMETRY_OPTOUT=1</code>（请注意：不是 <code>OUTPUT</code>），要么在配置文件 <code>~/.config/ruyi/config.toml</code> 加入以下内容：</p>
+<div class="language-toml codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-toml codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">[telemetry]</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">mode = "off"</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="In die Zwischenablage kopieren" title="Kopieren" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>在 RuyiSDK 完全支持遥测数据上传之前的一个版本，我们将会告知您此事，您可自行决定是否删除先前的遥测数据，以及是否禁用遥测。您可用 <code>ruyi self clean --telemetry</code> 删除所有的遥测信息，包括设备信息。</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="linux-发行版打包">Linux 发行版打包<a class="hash-link" aria-label="Direkter Link zur Linux 发行版打包" title="Direkter Link zur Linux 发行版打包" href="https://ruyisdk.org/docs/de/blog/2024/09/30/ruyi-0.19#linux-%E5%8F%91%E8%A1%8C%E7%89%88%E6%89%93%E5%8C%85">​</a></h2>
+<p>RuyiSDK 包管理器已为以下主流 Linux 发行版打包：</p>
+<ul>
+<li>Debian 13 ("trixie")</li>
+<li>Fedora 39, 40, 41</li>
+<li>openEuler 24.03</li>
+<li>Ubuntu 22.04 ("jammy"), 24.04 ("noble")</li>
+<li>Arch Linux (通过 AUR)</li>
+</ul>
+<p>其中除 Fedora 39、Fedora 41 未有 <code>riscv64</code> 架构包之外，均提供三种官方支持架构即
+<code>amd64</code>、<code>arm64</code> 与 <code>riscv64</code> 的二进制包。</p>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[RuyiSDK 0.18 版本更新说明]]></title>
+            <link>https://ruyisdk.org/docs/de/blog/2024/09/14/ruyi-0.18</link>
+            <guid>https://ruyisdk.org/docs/de/blog/2024/09/14/ruyi-0.18</guid>
+            <pubDate>Sat, 14 Sep 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[RuyiSDK 0.18 现已发布，对应的包管理器版本也为 0.18.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></description>
+            <content:encoded><![CDATA[<p>RuyiSDK 0.18 现已发布，对应的包管理器版本也为 0.18.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
+<ul>
+<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.18.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.18.0</a></li>
+<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.18.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.18.0/</a></li>
+</ul>
+<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2024/09/14/ruyi-0.18#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<ul>
+<li>进一步完善了 <a href="https://github.com/ruyisdk/ruyi/issues/181" target="_blank" rel="noopener noreferrer">issue #181</a> 的修复：先前虽然修复了代码块的折行缺字问题，但不经意间也让长度超过一行的 Markdown 列表项、块状引用等内容被截断了。</li>
+<li>完成了 <a href="https://github.com/ruyisdk/ruyi/issues/193" target="_blank" rel="noopener noreferrer">issue #193</a>：为方便发行版的打包工作，移除了对 <code>python-frontmatter</code> 这一第三方库的依赖。</li>
+</ul>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2024/09/14/ruyi-0.18#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
+<ul>
+<li>更新了 WPS Office 到上游最新版本。</li>
+<li>更新了 RV64ILP32 裸机工具链 <code>toolchain/gnu-plct-rv64ilp32-elf</code> 到当前最新版本。</li>
+<li>更新了 Milk-V Duo 的支持：<!-- -->
+<ul>
+<li>新增打包了 Milk-V Duo 官方实例代码库 <code>source/milkv-duo-examples</code>。您可在一个新的目录下，用 <code>ruyi extract</code> 命令解压它。</li>
+<li>新增打包了 Milk-V 官方提供的 Milk-V Duo 宿主工具链如下。请注意：它们是 RuyiSDK 受权对上游 <a href="https://github.com/milkv-duo/host-tools" target="_blank" rel="noopener noreferrer">https://github.com/milkv-duo/host-tools</a> 仓库进行的重新打包；且上游仅提供了 <code>x86_64</code> 架构的二进制。<!-- -->
+<ul>
+<li><code>toolchain/gnu-milkv-milkv-duo-bin</code>：适用于 Linux glibc 环境。</li>
+<li><code>toolchain/gnu-milkv-milkv-duo-elf-bin</code>：适用于裸机环境。</li>
+<li><code>toolchain/gnu-milkv-milkv-duo-musl-bin</code>：适用于 Linux musl 环境。</li>
+</ul>
+</li>
+<li>更新了 Milk-V Duo 官方系统镜像包到上游最新版本。RuyiSDK 受权对这些镜像进行了重新打包，以便后续所有通过 RuyiSDK 渠道分发的系统镜像都能以 <code>ruyisdk</code> 用户名与密码登录，方便您的评估。</li>
+</ul>
+</li>
+</ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[RuyiSDK 0.17 版本更新说明]]></title>
+            <link>https://ruyisdk.org/docs/de/blog/2024/09/03/ruyi-0.17</link>
+            <guid>https://ruyisdk.org/docs/de/blog/2024/09/03/ruyi-0.17</guid>
+            <pubDate>Tue, 03 Sep 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[RuyiSDK 0.17 现已发布，对应的包管理器版本也为 0.17.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></description>
+            <content:encoded><![CDATA[<p>RuyiSDK 0.17 现已发布，对应的包管理器版本也为 0.17.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
+<ul>
+<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.17.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.17.0</a></li>
+<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.17.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.17.0/</a></li>
+</ul>
+<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2024/09/03/ruyi-0.17#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<ul>
+<li>修复了 <a href="https://github.com/ruyisdk/ruyi/issues/181" target="_blank" rel="noopener noreferrer">issue #181</a>：现在在宽度较短的终端窗口中使用 <code>ruyi news read</code> 等功能时，Markdown 代码块中的长行不会缺字了，行首、行尾也不再存在影响复制粘贴的空格。代价是覆盖整行宽度的漂亮的背景色无法实现了。</li>
+</ul>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2024/09/03/ruyi-0.17#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
+<ul>
+<li>更新了 Box64 到上游最新开发版本。</li>
+<li>更新了 WPS Office 到上游最新版本。请注意：上游移除了 AArch64 架构的原生支持。这部分用户也将需要依赖二进制翻译方案来运行 WPS Office 了。</li>
+<li>明确了软件源内容的开源许可证：Apache 2.0 许可证，与 Ruyi 包管理器本体一致。</li>
+</ul>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[RuyiSDK 0.16 版本更新说明]]></title>
+            <link>https://ruyisdk.org/docs/de/blog/2024/08/13/ruyi-0.16</link>
+            <guid>https://ruyisdk.org/docs/de/blog/2024/08/13/ruyi-0.16</guid>
+            <pubDate>Tue, 13 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[RuyiSDK 0.16 现已发布，对应的包管理器版本也为 0.16.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></description>
+            <content:encoded><![CDATA[<p>RuyiSDK 0.16 现已发布，对应的包管理器版本也为 0.16.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
+<ul>
+<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.16.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.16.0</a></li>
+<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.16.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.16.0/</a></li>
+</ul>
+<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2024/08/13/ruyi-0.16#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<ul>
+<li>完成了设备安装器（<code>ruyi device provision</code>）的插件化改造。今后对不常见刷写步骤的支持将更加方便了：不一定需要更新 <code>ruyi</code> 本体了。</li>
+</ul>]]></content:encoded>
         </item>
         <item>
             <title><![CDATA[嘉楠勘智K230D: 首款基于新32位 RuyiSDK 的AIoT量产芯片]]></title>
@@ -169,344 +648,6 @@
 </ul>
 </li>
 </ul>]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[RuyiSDK 0.14 版本更新说明]]></title>
-            <link>https://ruyisdk.org/docs/de/blog/2024/07/09/ruyi-0.14</link>
-            <guid>https://ruyisdk.org/docs/de/blog/2024/07/09/ruyi-0.14</guid>
-            <pubDate>Tue, 09 Jul 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[RuyiSDK 0.14 现已发布，对应的包管理器版本也为 0.14.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></description>
-            <content:encoded><![CDATA[<p>RuyiSDK 0.14 现已发布，对应的包管理器版本也为 0.14.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
-<ul>
-<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.14.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.14.0</a></li>
-<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.14.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.14.0/</a></li>
-</ul>
-<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2024/07/09/ruyi-0.14#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
-<ul>
-<li>正式引入插件架构：<code>ruyi</code> 虚拟环境的 profile 相关处理现在完全由插件负责了。</li>
-<li>支持了 Debian 软件包格式 <code>*.deb</code> 的解包操作。</li>
-<li>再次完善了对“预发布版本”的判断：先前会对非完全由数字结尾的该类版本号判断错误。
-但该潜在问题不会被当前的 RuyiSDK 软件源内容触发。</li>
-<li>修复了 riscv64 Python 3.12 环境下 <code>pygit2</code> 的构建失败问题：先前需要在
-<code>pygit2</code> 构建开始之后、试图在其虚拟环境中执行 <code>setup.py</code> 前，人工干预，在该环境中安装
-<code>setuptools</code>——从 Python 3.12 起该包已经不会被自动安装。</li>
-</ul>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2024/07/09/ruyi-0.14#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
-<ul>
-<li>增加了从上游源码打包的 Box64 架构模拟器：<code>emulator/box64-upstream</code>。</li>
-<li>增加了办公套件 <code>extra/wps-office</code>。请注意：由于是商业软件的缘故，首次运行该软件包时需要操作接受一份《最终用户许可协议》。</li>
-<li>您可按照 <code>ruyi news</code> 的指引，在您的 RISC-V 桌面设备上用 Box64 运行
-WPS Office 进行办公了。</li>
-</ul>
-<p>为了支持刷写方式复杂、需要夹杂人工干预、镜像文件需要手工下载等复杂情况下的设备初始化，我们正在将设备安装器重构为基于插件架构的形式。
-由于本开发周期临时加入了 Box64 运行 WPS Office 的 PoC 内容，设备安装器的插件化重构工作暂缓，但仍将在未来的版本上线。届时旧版
-<code>ruyi</code> 的设备安装器功能将不可用，请先升级再进行体验。</p>]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[尝鲜：使用 Box64 在 RISC-V 系统上运行 WPS Office]]></title>
-            <link>https://ruyisdk.org/docs/de/blog/2024/07/08/box64-wps-office-poc</link>
-            <guid>https://ruyisdk.org/docs/de/blog/2024/07/08/box64-wps-office-poc</guid>
-            <pubDate>Mon, 08 Jul 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[得益于 Box64 RISC-V 移植工作的进展，在 RISC-V Linux 桌面发行版上运行 WPS]]></description>
-            <content:encoded><![CDATA[<p>得益于 Box64 RISC-V 移植工作的进展，在 RISC-V Linux 桌面发行版上运行 WPS
-Office 等常见 x86 二进制软件已成为可能。RuyiSDK 正在开展此方面的集成工作；
-按以下的步骤操作，您将能先行一步感受 RISC-V 办公体验。</p>
-<p>我们假定您在进行以下操作之前，已经升级到了 <code>ruyi</code> 0.14.0 或更高的版本，
-并执行了 <code>ruyi update</code> 以将软件源信息同步到最新。</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="操作步骤">操作步骤<a class="hash-link" aria-label="Direkter Link zur 操作步骤" title="Direkter Link zur 操作步骤" href="https://ruyisdk.org/docs/de/blog/2024/07/08/box64-wps-office-poc#%E6%93%8D%E4%BD%9C%E6%AD%A5%E9%AA%A4">​</a></h2>
-<p>为叙述方便，设您的 <code>$HOME</code> 为 <code>/home/foo</code>，架构（<code>uname -m</code> 输出）为
-<code>riscv64</code>，使用 <code>sudo</code> 提权。</p>
-<h3 class="anchor anchorWithHideOnScrollNavbar_emO8" id="允许安装预发布版本的软件包">允许安装预发布版本的软件包<a class="hash-link" aria-label="Direkter Link zur 允许安装预发布版本的软件包" title="Direkter Link zur 允许安装预发布版本的软件包" href="https://ruyisdk.org/docs/de/blog/2024/07/08/box64-wps-office-poc#%E5%85%81%E8%AE%B8%E5%AE%89%E8%A3%85%E9%A2%84%E5%8F%91%E5%B8%83%E7%89%88%E6%9C%AC%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85">​</a></h3>
-<p>由于 Box64 RISC-V 支持进展迅速，目前（2024 年 7 月初）很多功能改进没有在
-其最新稳定版本得到体现。我们打包了 Box64 的开发快照版本；为了能够安装此版本，
-您需要配置 <code>ruyi</code> 以使其在安装软件包时考虑预发布版本。</p>
-<ul>
-<li>如果 <code>~/.config/ruyi</code> 目录不存在，则创建之。</li>
-<li>编辑 <code>~/.config/ruyi/config.toml</code>。</li>
-</ul>
-<div class="language-toml codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-toml codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">[packages]</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">prereleases = true</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="In die Zwischenablage kopieren" title="Kopieren" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<h3 class="anchor anchorWithHideOnScrollNavbar_emO8" id="安装-box64">安装 Box64<a class="hash-link" aria-label="Direkter Link zur 安装 Box64" title="Direkter Link zur 安装 Box64" href="https://ruyisdk.org/docs/de/blog/2024/07/08/box64-wps-office-poc#%E5%AE%89%E8%A3%85-box64">​</a></h3>
-<p>按照 RuyiSDK 软件包的命名习惯，从 Box64 的上游（而非 PLCT 或某些厂商的 fork）
-构建的 Box64 二进制包，名字叫 <code>box64-upstream</code>。</p>
-<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">ruyi </span><span class="token function" style="color:rgb(80, 250, 123)">install</span><span class="token plain"> box64-upstream</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token comment" style="color:rgb(98, 114, 164)"># ...</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token comment" style="color:rgb(98, 114, 164)"># info: package box64-upstream-0.2.8-ruyi.20240702 installed to /home/foo/.local/share/ruyi/binaries/riscv64/box64-upstream-0.2.8-ruyi.20240702</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="In die Zwischenablage kopieren" title="Kopieren" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<p>记下安装路径。</p>
-<h3 class="anchor anchorWithHideOnScrollNavbar_emO8" id="配置-linux-binfmt_misc-机制">配置 Linux <code>binfmt_misc</code> 机制<a class="hash-link" aria-label="Direkter Link zur 配置-linux-binfmt_misc-机制" title="Direkter Link zur 配置-linux-binfmt_misc-机制" href="https://ruyisdk.org/docs/de/blog/2024/07/08/box64-wps-office-poc#%E9%85%8D%E7%BD%AE-linux-binfmt_misc-%E6%9C%BA%E5%88%B6">​</a></h3>
-<p>由于 WPS Office 的打包方式特殊，它只能从开发商提供的启动器脚本被间接拉起，
-而不能直接交由 Box64 启动。因此您需要确保您的系统支持 <code>binfmt_misc</code>：
-如果不支持，接下来的操作会失败。</p>
-<p>不同 Linux 发行版的 <code>binfmt_misc</code> 配置方式不尽相同，以下针对采用 systemd
-的系统叙述。您可以根据自身情况自行调整。</p>
-<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token comment" style="color:rgb(98, 114, 164)"># 确认 Box64 可执行文件的位置</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">ls</span><span class="token plain"> /home/foo/.local/share/ruyi/binaries/riscv64/box64-upstream-0.2.8-ruyi.20240702/bin/box64</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token comment" style="color:rgb(98, 114, 164)"># 调整 Box64 `binfmt.d` 配置文件的路径</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token comment" style="color:rgb(98, 114, 164)"># 假设您使用 nano 编辑器</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">nano</span><span class="token plain"> /home/foo/.local/share/ruyi/binaries/riscv64/box64-upstream-0.2.8-ruyi.20240702/etc/binfmt.d/box64.conf</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token comment" style="color:rgb(98, 114, 164)"># 将行尾的 //bin/box64 改为先前验证过的绝对路径</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token comment" style="color:rgb(98, 114, 164)"># 将其部署到系统</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">cp</span><span class="token plain"> /home/foo/.local/share/ruyi/binaries/riscv64/box64-upstream-0.2.8-ruyi.20240702/etc/binfmt.d/box64.conf /etc/binfmt.d/box64.conf</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> systemctl restart systemd-binfmt</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token comment" style="color:rgb(98, 114, 164)"># 检查部署结果</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">cat</span><span class="token plain"> /proc/sys/fs/binfmt_misc/box64</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="In die Zwischenablage kopieren" title="Kopieren" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<h3 class="anchor anchorWithHideOnScrollNavbar_emO8" id="安装-x86-sysroot">安装 x86 sysroot<a class="hash-link" aria-label="Direkter Link zur 安装 x86 sysroot" title="Direkter Link zur 安装 x86 sysroot" href="https://ruyisdk.org/docs/de/blog/2024/07/08/box64-wps-office-poc#%E5%AE%89%E8%A3%85-x86-sysroot">​</a></h3>
-<p>由于 Box64 主要面向游戏等软件的模拟，而这些软件基本都自带所有依赖，所以 Box64
-本身基本没有自带什么 x86 运行时库。WPS Office 作为一个预期被系统包管理器管理的
-桌面应用，Box64 自带的少量 x86 运行时库无法满足它的需求，因此我们需要自行准备
-x86 环境。</p>
-<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token comment" style="color:rgb(98, 114, 164)"># 下载预制的 x86 sysroot</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token comment" style="color:rgb(98, 114, 164)"># 此为临时性的链接。后续待本功能迭代稳定之后，操作方式将改变，此链接也将失效</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token comment" style="color:rgb(98, 114, 164)"># 假设此文件放在了 ~/Downloads 目录下</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">wget</span><span class="token plain"> https://mirror.iscas.ac.cn/ruyisdk/dist/temp/debian-bookworm.gui.20240705.amd64.tar.zst</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token comment" style="color:rgb(98, 114, 164)"># 假设安装到 /opt/debian-bookworm.amd64</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">sudo</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">mkdir</span><span class="token plain"> /opt/debian-bookworm.amd64</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">pushd</span><span class="token plain"> /opt/debian-bookworm.amd64</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">tar</span><span class="token plain"> </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-xf</span><span class="token plain"> ~/Downloads/debian-bookworm.gui.20240705.amd64.tar.zst</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">popd</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="In die Zwischenablage kopieren" title="Kopieren" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<h3 class="anchor anchorWithHideOnScrollNavbar_emO8" id="安装-wps-office">安装 WPS Office<a class="hash-link" aria-label="Direkter Link zur 安装 WPS Office" title="Direkter Link zur 安装 WPS Office" href="https://ruyisdk.org/docs/de/blog/2024/07/08/box64-wps-office-poc#%E5%AE%89%E8%A3%85-wps-office">​</a></h3>
-<p>强制安装 <code>x86_64</code> 架构的 WPS Office 软件包：</p>
-<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">ruyi </span><span class="token function" style="color:rgb(80, 250, 123)">install</span><span class="token plain"> </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">--host</span><span class="token plain"> x86_64 wps-office</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token comment" style="color:rgb(98, 114, 164)"># ...</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token comment" style="color:rgb(98, 114, 164)"># info: package wps-office-11.1.0-r.11719 installed to /home/foo/.local/share/ruyi/binaries/x86_64/wps-office-11.1.0-r.11719</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="In die Zwischenablage kopieren" title="Kopieren" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<p>由于 WPS Office 官方下载页面的限制，<code>ruyi</code> 无法自动下载安装包。
-请按照提示信息操作，之后重新执行该命令以安装。</p>
-<h3 class="anchor anchorWithHideOnScrollNavbar_emO8" id="调整-wps-office-启动器脚本">调整 WPS Office 启动器脚本<a class="hash-link" aria-label="Direkter Link zur 调整 WPS Office 启动器脚本" title="Direkter Link zur 调整 WPS Office 启动器脚本" href="https://ruyisdk.org/docs/de/blog/2024/07/08/box64-wps-office-poc#%E8%B0%83%E6%95%B4-wps-office-%E5%90%AF%E5%8A%A8%E5%99%A8%E8%84%9A%E6%9C%AC">​</a></h3>
-<p>由于 WPS Office 预期自身被系统包管理器管理，它的启动器脚本假定了自身的安装路径
-为 <code>/opt/kingsoft/wps-office</code>，需要为它们打补丁。</p>
-<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token function" style="color:rgb(80, 250, 123)">pushd</span><span class="token plain"> /home/foo/.local/share/ruyi/binaries/x86_64/wps-office-11.1.0-r.11719</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token comment" style="color:rgb(98, 114, 164)"># 当前工作目录路径中应当不含特殊字符。</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token comment" style="color:rgb(98, 114, 164)"># 如果含有，请自行适当调整 sed 命令的参数</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">sed</span><span class="token plain"> </span><span class="token parameter variable" style="color:rgb(189, 147, 249);font-style:italic">-i</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">"s@gInstallPath=/@gInstallPath=</span><span class="token string variable" style="color:rgb(189, 147, 249);font-style:italic">$(</span><span class="token string variable builtin class-name" style="color:rgb(189, 147, 249);font-style:italic">pwd</span><span class="token string variable" style="color:rgb(189, 147, 249);font-style:italic">)</span><span class="token string" style="color:rgb(255, 121, 198)">/@"</span><span class="token plain"> ./usr/bin/*</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token function" style="color:rgb(80, 250, 123)">popd</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="In die Zwischenablage kopieren" title="Kopieren" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<h3 class="anchor anchorWithHideOnScrollNavbar_emO8" id="运行-wps-office">运行 WPS Office<a class="hash-link" aria-label="Direkter Link zur 运行 WPS Office" title="Direkter Link zur 运行 WPS Office" href="https://ruyisdk.org/docs/de/blog/2024/07/08/box64-wps-office-poc#%E8%BF%90%E8%A1%8C-wps-office">​</a></h3>
-<p>准备工作终于完成，现在将所有部分串起来：</p>
-<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token comment" style="color:rgb(98, 114, 164)"># 此动态链接库的原生转发仍有些问题，因此强制以模拟方式执行</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token builtin class-name" style="color:rgb(189, 147, 249)">export</span><span class="token plain"> </span><span class="token assign-left variable" style="color:rgb(189, 147, 249);font-style:italic">BOX64_EMULATED_LIBS</span><span class="token operator">=</span><span class="token plain">libsqlite3.so.0</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token comment" style="color:rgb(98, 114, 164)"># 配置 Box64 库搜索路径</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token builtin class-name" style="color:rgb(189, 147, 249)">export</span><span class="token plain"> </span><span class="token assign-left variable" style="color:rgb(189, 147, 249);font-style:italic">BOX64_LD_LIBRARY_PATH</span><span class="token operator">=</span><span class="token plain">/opt/debian-bookworm.amd64/usr/lib/x86_64-linux-gnu</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token comment" style="color:rgb(98, 114, 164)"># 现在可以执行了！</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">/home/foo/.local/share/ruyi/binaries/x86_64/wps-office-11.1.0-r.11719/usr/bin/wps</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="In die Zwischenablage kopieren" title="Kopieren" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="结语">结语<a class="hash-link" aria-label="Direkter Link zur 结语" title="Direkter Link zur 结语" href="https://ruyisdk.org/docs/de/blog/2024/07/08/box64-wps-office-poc#%E7%BB%93%E8%AF%AD">​</a></h2>
-<p>以上是 RuyiSDK 对 RISC-V 二进制翻译 x86 软件的初步集成成果。
-今后我们仍将迭代这一过程的用户体验，以期用户在 RISC-V 系统上运行需要的应用
-更加方便。</p>]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[RuyiSDK 0.12 版本更新说明]]></title>
-            <link>https://ruyisdk.org/docs/de/blog/2024/06/11/ruyi-0.12</link>
-            <guid>https://ruyisdk.org/docs/de/blog/2024/06/11/ruyi-0.12</guid>
-            <pubDate>Tue, 11 Jun 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[RuyiSDK 0.12 现已发布，对应的包管理器版本也为 0.12.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></description>
-            <content:encoded><![CDATA[<p>RuyiSDK 0.12 现已发布，对应的包管理器版本也为 0.12.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
-<ul>
-<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.12.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.12.0</a></li>
-<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.12.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.12.0/</a></li>
-</ul>
-<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2024/06/11/ruyi-0.12#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
-<ul>
-<li>修复了先前 Pine64 Star64 Armbian 镜像无法下载的问题。</li>
-<li>对于部分必须由用户手工下载的文件，支持了相应的用户体验：按照当前系统语言设置，渲染相应的提示语。</li>
-<li>升级了 pygit2 依赖库版本到 1.5.0，以支持 libgit2 的 1.8 版本。</li>
-<li>修复了 <code>XDG_STATE_HOME</code> 环境变量被无视的问题。</li>
-</ul>
-<p>为了支持刷写方式复杂、需要夹杂人工干预、镜像文件需要手工下载等复杂情况下的设备初始化，我们正在对设备安装器进行重构，预计将于下个版本付诸测试。届时旧版
-<code>ruyi</code> 的设备安装器功能将不可用，请先升级再进行体验。</p>]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[RuyiSDK 0.11 版本更新说明]]></title>
-            <link>https://ruyisdk.org/docs/de/blog/2024/05/28/ruyi-0.11</link>
-            <guid>https://ruyisdk.org/docs/de/blog/2024/05/28/ruyi-0.11</guid>
-            <pubDate>Tue, 28 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[RuyiSDK 0.11 现已发布，对应的包管理器版本也为 0.11.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></description>
-            <content:encoded><![CDATA[<p>RuyiSDK 0.11 现已发布，对应的包管理器版本也为 0.11.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
-<ul>
-<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.11.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.11.0</a></li>
-<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.11.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.11.0/</a></li>
-</ul>
-<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2024/05/28/ruyi-0.11#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
-<ul>
-<li>去除了先前唯一的 LGPL 依赖。现在 RuyiSDK 包管理器及其所有依赖都采用宽松开源许可证了，方便下游用户在商业场景取用。</li>
-</ul>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2024/05/28/ruyi-0.11#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
-<ul>
-<li>Ruyi 设备安装器（<code>ruyi device provision</code>）现已新增支持以下设备型号：<!-- -->
-<ul>
-<li>Pine64 Star64</li>
-</ul>
-</li>
-</ul>
-<p>请在升级 RuyiSDK 包管理器之后，执行 <code>ruyi update</code> 以拉取软件源更新。</p>
-<p>我们注意到越来越多的设备型号，甚至如最新面世的 BananaPi BPI-F3
-等等，其系统镜像仅以网盘（百度网盘、Google Drive、MEGA 等服务）方式分发。
-对这些设备型号的妥善支持面临挑战；在接下来的版本迭代中，我们将尝试支持此场景，敬请期待或参与进来。</p>]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[RuyiSDK 0.10 版本更新说明]]></title>
-            <link>https://ruyisdk.org/docs/de/blog/2024/05/14/ruyi-0.10</link>
-            <guid>https://ruyisdk.org/docs/de/blog/2024/05/14/ruyi-0.10</guid>
-            <pubDate>Tue, 14 May 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[RuyiSDK 0.10 现已发布，对应的包管理器版本也为 0.10.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></description>
-            <content:encoded><![CDATA[<p>RuyiSDK 0.10 现已发布，对应的包管理器版本也为 0.10.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
-<ul>
-<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.10.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.10.0</a></li>
-<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.10.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.10.0/</a></li>
-</ul>
-<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2024/05/14/ruyi-0.10#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
-<ul>
-<li>支持了全局选项 <code>--porcelain</code> 以方便外部程序与 <code>ruyi</code> 交互。初期为
-<code>ruyi list</code> 与 <code>ruyi news list</code> 两种操作适配了 porcelain 输出格式。</li>
-<li><code>ruyi news</code> 在某条新闻存在当前系统语言翻译版本时，会优先展示此语言版本了。</li>
-</ul>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2024/05/14/ruyi-0.10#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
-<p>RuyiSDK 自 0.10 版本开始支持沁恒微电子（WCH）RISC-V 产品。</p>
-<ul>
-<li>新增打包了 PLCT 维护的 LLVM 工具链 <code>toolchain/llvm-plct</code>。其主要特色是支持
-<code>XTHeadVector</code> 扩展。</li>
-<li>Ruyi 设备安装器（<code>ruyi device provision</code>）现已新增支持以下设备型号：<!-- -->
-<ul>
-<li>WCH CH32V103 评估板</li>
-<li>WCH CH32V203 评估板</li>
-<li>WCH CH32V208 评估板</li>
-<li>WCH CH32V303 评估板</li>
-<li>WCH CH32V305 评估板</li>
-<li>WCH CH32V307 评估板</li>
-<li>WCH CH582F 评估板</li>
-<li>WCH CH592X 评估板</li>
-</ul>
-</li>
-</ul>
-<p>请在升级 RuyiSDK 包管理器之后，执行 <code>ruyi update</code> 以拉取软件源更新。</p>]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[RuyiSDK 0.9 版本更新说明]]></title>
-            <link>https://ruyisdk.org/docs/de/blog/2024/04/23/ruyi-0.9</link>
-            <guid>https://ruyisdk.org/docs/de/blog/2024/04/23/ruyi-0.9</guid>
-            <pubDate>Tue, 23 Apr 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[RuyiSDK 0.9 现已发布，对应的包管理器版本也为 0.9.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></description>
-            <content:encoded><![CDATA[<p>RuyiSDK 0.9 现已发布，对应的包管理器版本也为 0.9.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
-<ul>
-<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.9.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.9.0</a></li>
-<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.9.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.9.0/</a></li>
-</ul>
-<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2024/04/23/ruyi-0.9#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
-<ul>
-<li>支持了 LZ4 格式压缩文件的解包。</li>
-</ul>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2024/04/23/ruyi-0.9#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
-<p>RuyiSDK 自 0.9 版本开始支持矽速（Sipeed）全线 RISC-V 产品。</p>
-<p>Ruyi 设备安装器（<code>ruyi device provision</code>）现已新增了以下设备型号：</p>
-<ul>
-<li>Sipeed LicheeRV Nano</li>
-<li>Sipeed Lichee Cluster 4A</li>
-<li>Sipeed Lichee Console 4A</li>
-<li>Sipeed Maix-I</li>
-<li>Sipeed Tang Mega 138K Pro</li>
-</ul>
-<p>以下设备型号先前已得到 Ruyi 设备安装器支持：</p>
-<ul>
-<li>Sipeed LicheePi 4A</li>
-<li>Sipeed LicheeRV</li>
-</ul>
-<p>请在升级 RuyiSDK 包管理器之后，执行 <code>ruyi update</code> 以拉取软件源更新。</p>]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[RV64ILP32 裸机工具链与 profile 现已可用]]></title>
-            <link>https://ruyisdk.org/docs/de/blog/2024/02/26/gnu-plct-rv64ilp32-elf</link>
-            <guid>https://ruyisdk.org/docs/de/blog/2024/02/26/gnu-plct-rv64ilp32-elf</guid>
-            <pubDate>Mon, 26 Feb 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[为了您的跟踪前沿开发动态方便，RuyiSDK 团队现已打包了 RV64ILP32 这一实验性 ABI 的裸机工具链供您使用。]]></description>
-            <content:encoded><![CDATA[<p>为了您的跟踪前沿开发动态方便，RuyiSDK 团队现已打包了 RV64ILP32 这一实验性 ABI 的裸机工具链供您使用。
-由于是裸机工具链，此工具链不自带 sysroot，且未开启 multilib：可用的 ABI 为 <code>ilp32d</code>。</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="使用示例">使用示例<a class="hash-link" aria-label="Direkter Link zur 使用示例" title="Direkter Link zur 使用示例" href="https://ruyisdk.org/docs/de/blog/2024/02/26/gnu-plct-rv64ilp32-elf#%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B">​</a></h2>
-<p>给定如下的 C 程序：</p>
-<div class="language-c codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-c codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token comment" style="color:rgb(98, 114, 164)">// test.c</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">long</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">long</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">add</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">long</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">long</span><span class="token plain"> </span><span class="token operator">*</span><span class="token plain">a</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">long</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">long</span><span class="token plain"> b</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">return</span><span class="token plain"> </span><span class="token operator">*</span><span class="token plain">a </span><span class="token operator">+</span><span class="token plain"> b</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain">  </span><span class="token comment" style="color:rgb(98, 114, 164)">// Should be realized with `ld` and `add`</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">void</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">check</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">int</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">void</span><span class="token plain"> </span><span class="token function" style="color:rgb(80, 250, 123)">check_sizes</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">void</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token function" style="color:rgb(80, 250, 123)">check</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">sizeof</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">int</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain">        </span><span class="token comment" style="color:rgb(98, 114, 164)">// a0 should be 4</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token function" style="color:rgb(80, 250, 123)">check</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">sizeof</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">long</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain">       </span><span class="token comment" style="color:rgb(98, 114, 164)">// a0 should be 4</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token function" style="color:rgb(80, 250, 123)">check</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">sizeof</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">long</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">long</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain">  </span><span class="token comment" style="color:rgb(98, 114, 164)">// a0 should be 8</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token function" style="color:rgb(80, 250, 123)">check</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">sizeof</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">void</span><span class="token plain"> </span><span class="token operator">*</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain">     </span><span class="token comment" style="color:rgb(98, 114, 164)">// a0 should be 4</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="In die Zwischenablage kopieren" title="Kopieren" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<p>使用相应的工具链包与 profile，我们将可编译出符合 RV64ILP32 ABI 的目标代码：</p>
-<div class="language-shell-session codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-shell-session codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">$ ruyi update</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">$ ruyi install gnu-plct-rv64ilp32-elf</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">$ ruyi venv -t gnu-plct-rv64ilp32-elf --without-sysroot baremetal-rv64ilp32 /tmp/venv</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">$ source /tmp/venv/bin/ruyi-activate</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">$ /tmp/venv11/bin/riscv64-plct-elf-gcc -O2 -c -o test.o test.c</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="In die Zwischenablage kopieren" title="Kopieren" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<p>检查目标代码是否符合预期：</p>
-<div class="language-shell-session codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-shell-session codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">$ riscv64-plct-elf-readelf -h test.o | grep 32</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  Class:                             ELF32</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  Flags:                             0x25, RVC, X32, double-float ABI</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="In die Zwischenablage kopieren" title="Kopieren" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<div class="language-shell-session codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-shell-session codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">$ riscv64-plct-elf-objdump -dw test.o</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">test.o:     file format elf32-littleriscv</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Disassembly of section .text:</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">00000000 &lt;add&gt;:</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">   0:   6108                    ld      a0,0(a0)</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">   2:   952e                    add     a0,a0,a1</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">   4:   8082                    ret</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">00000006 &lt;check_sizes&gt;:</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">   6:   3141                    addiw   sp,sp,-16</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">   8:   4511                    li      a0,4</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">   a:   e406                    sd      ra,8(sp)</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">   c:   00000097                auipc   ra,0x0</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  10:   000080e7                jalr    ra # c &lt;check_sizes+0x6&gt;</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  14:   4511                    li      a0,4</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  16:   00000097                auipc   ra,0x0</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  1a:   000080e7                jalr    ra # 16 &lt;check_sizes+0x10&gt;</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  1e:   4521                    li      a0,8</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  20:   00000097                auipc   ra,0x0</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  24:   000080e7                jalr    ra # 20 &lt;check_sizes+0x1a&gt;</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  28:   60a2                    ld      ra,8(sp)</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  2a:   4511                    li      a0,4</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  2c:   2141                    addiw   sp,sp,16</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  2e:   00000317                auipc   t1,0x0</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  32:   00030067                jr      t1 # 2e &lt;check_sizes+0x28&gt;</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="In die Zwischenablage kopieren" title="Kopieren" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<p>可见，此工具链确实生成了指针宽度为 32 位，但利用了 RV64 能力的目标代码。</p>]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[新增板卡支持 (2024-01-29)]]></title>
-            <link>https://ruyisdk.org/docs/de/blog/2024/01/29/new-board-images</link>
-            <guid>https://ruyisdk.org/docs/de/blog/2024/01/29/new-board-images</guid>
-            <pubDate>Mon, 29 Jan 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[现已为以下板卡新增了镜像包。]]></description>
-            <content:encoded><![CDATA[<p>现已为以下板卡新增了镜像包。</p>
-<p>您可用 RuyiSDK 设备安装向导 <code>ruyi device provision</code> 自动初始化您的设备，或通过
-<code>ruyi install</code> 手动安装它们：镜像文件会被自动解压或符号链接到 <code>~/.local/share/ruyi/blobs/&lt;包名&gt;-&lt;包版本号&gt;</code> 的位置。</p>
-<p>感谢您对 RuyiSDK 的支持！</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="sipeed-licheerv--allwinner-哪吒-d1">Sipeed LicheeRV &amp; Allwinner 哪吒 D1<a class="hash-link" aria-label="Direkter Link zur Sipeed LicheeRV &amp; Allwinner 哪吒 D1" title="Direkter Link zur Sipeed LicheeRV &amp; Allwinner 哪吒 D1" href="https://ruyisdk.org/docs/de/blog/2024/01/29/new-board-images#sipeed-licheerv--allwinner-%E5%93%AA%E5%90%92-d1">​</a></h2>
-<p>此两种型号在硬件层面大体兼容，但也有细微差别，仅体现在设备树层面。</p>
-<ul>
-<li><code>board-image/oerv-awol-d1-base</code>: openEuler RISC-V 系统镜像，基础系统</li>
-<li><code>board-image/oerv-awol-d1-xfce</code>: openEuler RISC-V 系统镜像，含 XFCE GUI</li>
-</ul>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="starfive-visionfive">StarFive VisionFive<a class="hash-link" aria-label="Direkter Link zur StarFive VisionFive" title="Direkter Link zur StarFive VisionFive" href="https://ruyisdk.org/docs/de/blog/2024/01/29/new-board-images#starfive-visionfive">​</a></h2>
-<ul>
-<li><code>board-image/oerv-starfive-visionfive-base</code>: openEuler RISC-V 系统镜像，基础系统</li>
-<li><code>board-image/oerv-starfive-visionfive-xfce</code>: openEuler RISC-V 系统镜像，含 XFCE GUI</li>
-</ul>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="starfive-visionfive2">StarFive VisionFive2<a class="hash-link" aria-label="Direkter Link zur StarFive VisionFive2" title="Direkter Link zur StarFive VisionFive2" href="https://ruyisdk.org/docs/de/blog/2024/01/29/new-board-images#starfive-visionfive2">​</a></h2>
-<ul>
-<li><code>board-image/oerv-starfive-visionfive2-base</code>: openEuler RISC-V 系统镜像，基础系统</li>
-<li><code>board-image/oerv-starfive-visionfive2-xfce</code>: openEuler RISC-V 系统镜像，含 XFCE GUI</li>
-</ul>]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[RuyiSDK 0.4 版本更新说明]]></title>
-            <link>https://ruyisdk.org/docs/de/blog/2024/01/29/ruyi-0.4</link>
-            <guid>https://ruyisdk.org/docs/de/blog/2024/01/29/ruyi-0.4</guid>
-            <pubDate>Mon, 29 Jan 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[RuyiSDK 0.4 现已发布，对应的包管理器版本也为 0.4.0。您可前往 RuyiSDK 包管理器的]]></description>
-            <content:encoded><![CDATA[<p>RuyiSDK 0.4 现已发布，对应的包管理器版本也为 0.4.0。您可前往 RuyiSDK 包管理器的
-GitHub Releases 页面: <a href="https://github.com/ruyisdk/ruyi/releases" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases</a> 下载。</p>
-<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2024/01/29/ruyi-0.4#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
-<ul>
-<li><code>ruyi device provision</code> 会将 <code>fastboot</code> 的调用以 <code>sudo</code> 包装了。</li>
-<li><code>ruyi self uninstall --purge</code> 不会忘记删除 <code>~/.local/state/ruyi</code> 目录了。</li>
-<li>从软件源下载文件失败时，会提供一些有助于用户自助排查问题的提示讯息了。</li>
-<li>为提供更稳定的服务，RuyiSDK 软件源仓库现已搬迁至 GitHub。
-视您所在地区或组织所可能设置的网络访问限制，您可能需要采取一些措施，
-以便能继续与 RuyiSDK 软件源同步。</li>
-</ul>
-<p>原先位置的 RuyiSDK 软件源仓库将在 2024-02-01 前后停止更新。请尽早更新您的
-<code>ruyi</code> 版本以自动迁移到最新配置。</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2024/01/29/ruyi-0.4#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
-<ul>
-<li>为 RISC-V 架构的系统，新增提供了 DynamoRIO 套件 <code>analyzer/dynamorio-riscv</code>。</li>
-<li>为 AMD64 架构的系统，新增提供了 QEMU 系统模拟器 <code>emulator/qemu-system-riscv-upstream</code>。</li>
-<li>上游版的 QEMU 版本现已升级至 8.2.0。</li>
-</ul>]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[新增板卡支持 (2024-01-15)]]></title>
-            <link>https://ruyisdk.org/docs/de/blog/2024/01/15/new-board-images</link>
-            <guid>https://ruyisdk.org/docs/de/blog/2024/01/15/new-board-images</guid>
-            <pubDate>Mon, 15 Jan 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[现已为以下板卡新增了镜像包。]]></description>
-            <content:encoded><![CDATA[<p>现已为以下板卡新增了镜像包。</p>
-<p>您可用 <code>ruyi install</code> 安装它们：镜像文件会被自动解压或符号链接到 <code>~/.local/share/ruyi/blobs/&lt;包名&gt;-&lt;包版本号&gt;</code> 的位置。</p>
-<p>感谢您对 RuyiSDK 的支持！</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="milk-v-duo">Milk-V Duo<a class="hash-link" aria-label="Direkter Link zur Milk-V Duo" title="Direkter Link zur Milk-V Duo" href="https://ruyisdk.org/docs/de/blog/2024/01/15/new-board-images#milk-v-duo">​</a></h2>
-<h3 class="anchor anchorWithHideOnScrollNavbar_emO8" id="64m-ram-版本">64M RAM 版本<a class="hash-link" aria-label="Direkter Link zur 64M RAM 版本" title="Direkter Link zur 64M RAM 版本" href="https://ruyisdk.org/docs/de/blog/2024/01/15/new-board-images#64m-ram-%E7%89%88%E6%9C%AC">​</a></h3>
-<ul>
-<li><code>board-image/buildroot-sdk-milkv-duo</code>: 官方 Buildroot SDK</li>
-<li><code>board-image/buildroot-sdk-milkv-duo-python</code>: 官方 Buildroot SDK，含 Python 环境</li>
-</ul>
-<h3 class="anchor anchorWithHideOnScrollNavbar_emO8" id="256m-ram-版本">256M RAM 版本<a class="hash-link" aria-label="Direkter Link zur 256M RAM 版本" title="Direkter Link zur 256M RAM 版本" href="https://ruyisdk.org/docs/de/blog/2024/01/15/new-board-images#256m-ram-%E7%89%88%E6%9C%AC">​</a></h3>
-<ul>
-<li><code>board-image/buildroot-sdk-milkv-duo256m</code>: 官方 Buildroot SDK</li>
-<li><code>board-image/buildroot-sdk-milkv-duo256m-python</code>: 官方 Buildroot SDK，含 Python 环境</li>
-</ul>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="milk-v-pioneer">Milk-V Pioneer<a class="hash-link" aria-label="Direkter Link zur Milk-V Pioneer" title="Direkter Link zur Milk-V Pioneer" href="https://ruyisdk.org/docs/de/blog/2024/01/15/new-board-images#milk-v-pioneer">​</a></h2>
-<ul>
-<li><code>board-image/oerv-sg2042-milkv-pioneer-base</code>: openEuler RISC-V 系统镜像，基础系统</li>
-<li><code>board-image/oerv-sg2042-milkv-pioneer-xfce</code>: openEuler RISC-V 系统镜像，含 XFCE GUI</li>
-<li><code>board-image/revyos-sg2042-milkv-pioneer</code>: RevyOS 系统镜像</li>
-</ul>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="sipeed-licheepi-4a">Sipeed LicheePi 4A<a class="hash-link" aria-label="Direkter Link zur Sipeed LicheePi 4A" title="Direkter Link zur Sipeed LicheePi 4A" href="https://ruyisdk.org/docs/de/blog/2024/01/15/new-board-images#sipeed-licheepi-4a">​</a></h2>
-<p>系统镜像：</p>
-<ul>
-<li><code>board-image/oerv-sipeed-lpi4a-headless</code>: openEuler RISC-V 系统镜像，不含 GUI</li>
-<li><code>board-image/oerv-sipeed-lpi4a-xfce</code>: openEuler RISC-V 系统镜像，含 XFCE GUI</li>
-<li><code>board-image/revyos-sipeed-lpi4a</code>: RevyOS 系统镜像</li>
-</ul>
-<p>引导器（U-Boot）：</p>
-<ul>
-<li><code>board-image/uboot-oerv-sipeed-lpi4a-16g</code>: 适用 Sipeed LicheePi 4A (16G RAM) 的 openEuler 系统</li>
-<li><code>board-image/uboot-oerv-sipeed-lpi4a-8g</code>: 适用 Sipeed LicheePi 4A (8G RAM) 的 openEuler 系统</li>
-<li><code>board-image/uboot-revyos-sipeed-lpi4a-16g</code>: 适用 Sipeed LicheePi 4A (16G RAM) 的 RevyOS 系统</li>
-<li><code>board-image/uboot-revyos-sipeed-lpi4a-8g</code>: 适用 Sipeed LicheePi 4A (8G RAM) 的 RevyOS 系统</li>
-</ul>]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[RuyiSDK 支持展示新闻了]]></title>
-            <link>https://ruyisdk.org/docs/de/blog/2024/01/14/ruyi-news</link>
-            <guid>https://ruyisdk.org/docs/de/blog/2024/01/14/ruyi-news</guid>
-            <pubDate>Sun, 14 Jan 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[为方便您及时了解 RuyiSDK 的开发动态，我们为 ruyi 工具新增了新闻支持。]]></description>
-            <content:encoded><![CDATA[<p>为方便您及时了解 RuyiSDK 的开发动态，我们为 <code>ruyi</code> 工具新增了新闻支持。</p>
-<p>如果您使用 ruyi 0.3 或更高的版本，那么当您完成 <code>ruyi update</code> 之后，
-如果软件源中有新增的新闻条目，将在命令输出中提示。
-您可用 <code>ruyi news list</code> 列出它们，并用 <code>ruyi news read</code> 阅读它们。</p>
-<p>感谢您对 RuyiSDK 的支持！</p>]]></content:encoded>
         </item>
     </channel>
 </rss>
