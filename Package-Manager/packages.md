@@ -14,24 +14,24 @@ $ ruyi update
 
 软件包缓存将存放在用户目录中，通常为 ``~/.cache/ruyi/packages-index/`` ；在 ``XDG_CACHE_HOME`` 环境变量被设置时，目录为 ``$XDG_CACHE_HOME/ruyi/packages-index/`` 。
 
-### ``ruyi update`` 拉取失败
+### `ruyi update` 拉取失败
 
-由于目前软件包索引信息托管于 GitHub 仓库，若出现仓库访问不稳定的情况，可在配置文件中配置使用 [备用仓库](https://mirror.iscas.ac.cn/git/ruyisdk/packages-index.git)。
-
-Ruyi 包管理器的配置文件默认存放在 ``~/.config/ruyi/config.toml``，在 ``XDG_CONFIG_HOME`` 被配置的时候为 ``$XDG_CONFIG_HOME/ruyi/config.toml``。文件不存在可以自行建立。
-
-```
-[repo]
-local = ""
-remote = "https://mirror.iscas.ac.cn/git/ruyisdk/packages-index.git"
-branch = "main"
-```
-
-其中 ``local`` 为本地缓存目录， ``remote`` 为远程镜像源地址， ``branch`` 为镜像所在 git 分支。
-
-保存配置后重新尝试刷新本地缓存：
+由于目前软件包索引信息托管于 GitHub 仓库，若出现仓库访问不稳定的情况，可以使用 `ruyi config` 子命令来配置使用[备用仓库](https://mirror.iscas.ac.cn/git/ruyisdk/packages-index.git)。
 
 ```bash
+# 查看当前仓库配置
+$ ruyi config get repo
+
+# 将远程仓库切换到中国科学院镜像
+$ ruyi config set repo.remote https://mirror.iscas.ac.cn/git/ruyisdk/packages-index.git
+
+# （可选）修改默认分支，通常为 main
+$ ruyi config set repo.branch main
+
+# （可选）修改本地缓存目录
+$ ruyi config set repo.local /your/custom/cache/path
+
+# 配置修改完成后，重新刷新本地软件包缓存
 $ ruyi update
 ```
 
