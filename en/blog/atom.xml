@@ -2,11 +2,61 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ruyisdk.org/docs/en/blog</id>
     <title>RuyiSDK Blog</title>
-    <updated>2025-04-08T00:00:00.000Z</updated>
+    <updated>2025-04-22T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ruyisdk.org/docs/en/blog"/>
     <subtitle>RuyiSDK Blog</subtitle>
     <icon>https://ruyisdk.org/docs/en/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Release notes for RuyiSDK 0.32]]></title>
+        <id>https://ruyisdk.org/docs/en/blog/2025/04/22/ruyi-0.32</id>
+        <link href="https://ruyisdk.org/docs/en/blog/2025/04/22/ruyi-0.32"/>
+        <updated>2025-04-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[RuyiSDK 0.32 is now released. The corresponding package manager version is also 0.32.0.]]></summary>
+        <content type="html"><![CDATA[<p>RuyiSDK 0.32 is now released. The corresponding package manager version is also 0.32.0.
+You can download the RuyiSDK package manager from one of the following locations:</p>
+<ul>
+<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.32.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.32.0</a></li>
+<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.32.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.32.0/</a></li>
+</ul>
+<p>This update mainly consists of the following changes. Happy hacking!</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-project-management">RuyiSDK Project Management<a class="hash-link" aria-label="Direct link to RuyiSDK Project Management" title="Direct link to RuyiSDK Project Management" href="https://ruyisdk.org/docs/en/blog/2025/04/22/ruyi-0.32#ruyisdk-project-management">​</a></h2>
+<ul>
+<li>For compliance, all pull requests to RuyiSDK now require a DCO (Developer Certificate of Origin).</li>
+</ul>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-package-manager">RuyiSDK Package Manager<a class="hash-link" aria-label="Direct link to RuyiSDK Package Manager" title="Direct link to RuyiSDK Package Manager" href="https://ruyisdk.org/docs/en/blog/2025/04/22/ruyi-0.32#ruyisdk-package-manager">​</a></h2>
+<ul>
+<li>Added contribution guidelines to make it easier for community members to contribute to the project.</li>
+</ul>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-software-repository">RuyiSDK Software Repository<a class="hash-link" aria-label="Direct link to RuyiSDK Software Repository" title="Direct link to RuyiSDK Software Repository" href="https://ruyisdk.org/docs/en/blog/2025/04/22/ruyi-0.32#ruyisdk-software-repository">​</a></h2>
+<ul>
+<li>Improved device support:<!-- -->
+<ul>
+<li>Added special flashing strategy support for SpacemiT K1 devices.</li>
+<li>Fixed an issue where the device provisioner failed to call <code>fastboot</code>.</li>
+<li>Updated the Buildroot SDK image for Sipeed LicheeRV Nano.</li>
+<li>Updated the RevyOS image version for Sipeed LicheePi 4A and fixed issues.</li>
+<li>Updated the RevyOS image for Milk-V Meles.</li>
+</ul>
+</li>
+<li>Renamed package <code>board-image/revyos-sg2042-milkv-pioneer</code> to <code>board-image/revyos-milkv-pioneer</code> to comply with current package naming conventions.</li>
+<li>Entity database updates:<!-- -->
+<ul>
+<li>Device entity definitions are now on par with the device provisioner's support range. Added device definitions for vendors including Milk-V, Sipeed, Canaan, StarFive, WCH, etc.</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="server-side-components">Server-side Components<a class="hash-link" aria-label="Direct link to Server-side Components" title="Direct link to Server-side Components" href="https://ruyisdk.org/docs/en/blog/2025/04/22/ruyi-0.32#server-side-components">​</a></h2>
+<ul>
+<li>Optimized ruyisdk.org's statistics page for performance.</li>
+<li>Integrated download counts from GitHub Releases channel into the RuyiSDK package manager download statistics on the official website, making the statistical data more accurate and comprehensive.</li>
+<li>Migrated the mirror synchronization script which resided in the RuyiSDK package manager repository and required manual set-up to server-side.</li>
+</ul>]]></content>
+        <author>
+            <name>xen0n</name>
+            <uri>https://github.com/xen0n</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Release notes for RuyiSDK 0.31]]></title>
         <id>https://ruyisdk.org/docs/en/blog/2025/04/08/ruyi-0.31</id>
@@ -688,62 +738,5 @@ You can download the RuyiSDK package manager from one of the following locations
             <uri>https://github.com/ruyisdk</uri>
         </author>
         <category label="K230D" term="K230D"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Release notes for RuyiSDK 0.15]]></title>
-        <id>https://ruyisdk.org/docs/en/blog/2024/07/23/ruyi-0.15</id>
-        <link href="https://ruyisdk.org/docs/en/blog/2024/07/23/ruyi-0.15"/>
-        <updated>2024-07-23T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[RuyiSDK 0.15 is now released. The corresponding package manager version is also 0.15.]]></summary>
-        <content type="html"><![CDATA[<p>RuyiSDK 0.15 is now released. The corresponding package manager version is also 0.15.
-You can download the RuyiSDK package manager from one of the following locations:</p>
-<ul>
-<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.15.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.15.0</a></li>
-<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.15.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.15.0/</a></li>
-</ul>
-<p>This update mainly consists of the following changes. Happy hacking!</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-package-manager">RuyiSDK Package Manager<a class="hash-link" aria-label="Direct link to RuyiSDK Package Manager" title="Direct link to RuyiSDK Package Manager" href="https://ruyisdk.org/docs/en/blog/2024/07/23/ruyi-0.15#ruyisdk-package-manager">​</a></h2>
-<ul>
-<li>
-<p>Getting prepared for multi-language support: in cases localized content
-is requested, such as manual download instructions for software packages,
-<code>ruyi</code> will now try to choose an appropriate locale if your system locale
-does not exactly match one of the available locales for the given content.</p>
-<blockquote>
-<p>For example: if you configure your system locale as Singaporean English
-(<code>en_SG</code>), but one piece of content is only available in U.S. English
-(<code>en_US</code>) and China Mainland Chinese (<code>zh_CN</code>), then in this case <code>ruyi</code>
-0.15.0 will show you the <code>en_US</code> version instead of crash.</p>
-</blockquote>
-</li>
-<li>
-<p><code>ruyi</code> can now be built without a Docker dependency, for distribution
-packagers' convenience, and for those users wanting to try out <code>ruyi</code> but
-are not running officially supported architecture and/or OS.</p>
-<blockquote>
-<p>Please note that as the majority of official RuyiSDK Software Repository
-packages are distributed in binary form, users who want to run <code>ruyi</code>
-on non-officially-supported systems have to get organized, and maintain
-their own software repository. The RuyiSDK team cannot guarantee user
-experience under such circumstance.</p>
-</blockquote>
-</li>
-</ul>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-software-repository">RuyiSDK Software Repository<a class="hash-link" aria-label="Direct link to RuyiSDK Software Repository" title="Direct link to RuyiSDK Software Repository" href="https://ruyisdk.org/docs/en/blog/2024/07/23/ruyi-0.15#ruyisdk-software-repository">​</a></h2>
-<ul>
-<li>The repository layout is no longer compatible with <code>ruyi</code> 0.7.0 or lower;
-such users should upgrade right now.</li>
-<li>Version 0.3.0 of <code>emulator/box64-upstream</code> is now packaged.</li>
-<li>The guide for running WPS Office with Box64 has been revised.</li>
-<li>The Ruyi Device Provisioner (<code>ruyi device provision</code>) now supports the following device model and system:<!-- -->
-<ul>
-<li>Canaan Kendryte K230D: CanMV Linux SDK image packaged by RuyiSDK with permission, with demo programs, available in two ABIs -- LP64 and RV64ILP32.</li>
-</ul>
-</li>
-</ul>]]></content>
-        <author>
-            <name>xen0n</name>
-            <uri>https://github.com/xen0n</uri>
-        </author>
     </entry>
 </feed>

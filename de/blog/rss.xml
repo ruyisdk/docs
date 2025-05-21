@@ -4,10 +4,55 @@
         <title>RuyiSDK Blog</title>
         <link>https://ruyisdk.org/docs/de/blog</link>
         <description>RuyiSDK Blog</description>
-        <lastBuildDate>Tue, 08 Apr 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 22 Apr 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>de</language>
+        <item>
+            <title><![CDATA[RuyiSDK 0.32 版本更新说明]]></title>
+            <link>https://ruyisdk.org/docs/de/blog/2025/04/22/ruyi-0.32</link>
+            <guid>https://ruyisdk.org/docs/de/blog/2025/04/22/ruyi-0.32</guid>
+            <pubDate>Tue, 22 Apr 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[RuyiSDK 0.32 现已发布，对应的包管理器版本也为 0.32.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></description>
+            <content:encoded><![CDATA[<p>RuyiSDK 0.32 现已发布，对应的包管理器版本也为 0.32.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
+<ul>
+<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.32.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.32.0</a></li>
+<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.32.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.32.0/</a></li>
+</ul>
+<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-项目管理">RuyiSDK 项目管理<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 项目管理" title="Direkter Link zur RuyiSDK 项目管理" href="https://ruyisdk.org/docs/de/blog/2025/04/22/ruyi-0.32#ruyisdk-%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86">​</a></h2>
+<ul>
+<li>为流程合规，现在要求所有向 RuyiSDK 发起的拉取请求（Pull Requests）都包含开发者原创声明（Developer's Certificate of Origin, DCO）了。</li>
+</ul>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/04/22/ruyi-0.32#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<ul>
+<li>新增了贡献指南文档，使社区成员更容易参与项目贡献。</li>
+</ul>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2025/04/22/ruyi-0.32#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
+<ul>
+<li>完善了设备支持：<!-- -->
+<ul>
+<li>新增支持了适用于 SpacemiT K1 设备的特殊刷写策略。</li>
+<li>修复了设备安装器调用 <code>fastboot</code> 失败的问题。</li>
+<li>更新了 Sipeed LicheeRV Nano 的 Buildroot SDK 镜像。</li>
+<li>更新了 Sipeed LicheePi 4A 的 RevyOS 镜像版本并修复问题。</li>
+<li>更新了 Milk-V Meles 的 RevyOS 镜像。</li>
+</ul>
+</li>
+<li>重命名了软件包 <code>board-image/revyos-sg2042-milkv-pioneer</code> 为 <code>board-image/revyos-milkv-pioneer</code> 以符合当前的软件包命名规范。</li>
+<li>实体数据库更新：<!-- -->
+<ul>
+<li>设备实体定义现已与设备安装器支持范围对齐。补充了 Milk-V、Sipeed、Canaan、StarFive、WCH 等厂商的设备定义。</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="服务端组件">服务端组件<a class="hash-link" aria-label="Direkter Link zur 服务端组件" title="Direkter Link zur 服务端组件" href="https://ruyisdk.org/docs/de/blog/2025/04/22/ruyi-0.32#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%BB%84%E4%BB%B6">​</a></h2>
+<ul>
+<li>优化了 ruyisdk.org 官网数据统计页面的性能。</li>
+<li>集成了 GitHub Releases 渠道的下载量到官网数据统计页面的 RuyiSDK 包管理器下载计数中，使统计数据更准确、全面。</li>
+<li>将原先位于 RuyiSDK 包管理器仓库、需要手工配置生效的镜像源同步脚本迁移到了服务端。</li>
+</ul>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[RuyiSDK 0.31 版本更新说明]]></title>
             <link>https://ruyisdk.org/docs/de/blog/2025/04/08/ruyi-0.31</link>
@@ -606,48 +651,6 @@
 <p>●&nbsp;&nbsp;&nbsp;达摩院玄铁团队持续深耕&nbsp;RISC-V&nbsp;技术研发及生态建设，并陆续推出了一系列玄铁处理器，可满足高中低全系列性能需求。玄铁积极拥抱开源，坚持开放创新，已逐渐构建起以&nbsp;RISC-V&nbsp;为核心的生态体系，与生态伙伴协同推动&nbsp;RISC-V&nbsp;芯片、开发工具、操作系统、应用解决方案等不同层面的软硬一体化发展。全力推动&nbsp;RISC-V&nbsp;软硬全栈技术多领域发展落地，加速实现智能时代的万物互联!</p>
 <p>●&nbsp;&nbsp;&nbsp;嘉楠科技（Canaan&nbsp;Inc.）（纳斯达克股票代码：CAN）是一家领先的高性能ASIC芯片设计公司，以“区块链+AI”为多元化经营战略，业务范围涵盖高性能ASIC计算芯片及设备研发、AI芯片及产品开发。作为一家纳斯达克上市公司，嘉楠科技是全球“区块链第一股”，也是第一家在美国上市的中国自主知识产权AI芯片公司。公司愿景：提升社会运行效率，改善人类生活方式。</p>]]></content:encoded>
             <category>K230D</category>
-        </item>
-        <item>
-            <title><![CDATA[RuyiSDK 0.15 版本更新说明]]></title>
-            <link>https://ruyisdk.org/docs/de/blog/2024/07/23/ruyi-0.15</link>
-            <guid>https://ruyisdk.org/docs/de/blog/2024/07/23/ruyi-0.15</guid>
-            <pubDate>Tue, 23 Jul 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[RuyiSDK 0.15 现已发布，对应的包管理器版本也为 0.15.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></description>
-            <content:encoded><![CDATA[<p>RuyiSDK 0.15 现已发布，对应的包管理器版本也为 0.15.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
-<ul>
-<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.15.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.15.0</a></li>
-<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.15.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.15.0/</a></li>
-</ul>
-<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2024/07/23/ruyi-0.15#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
-<ul>
-<li>
-<p>为多语言支持做好准备：在需要输出本地化内容，如软件包的手工下载步骤说明等内容时，当用户系统的区域、语言配置与当前内容的可选区域、语言版本不完全匹配时，现在会尽可能地匹配了。</p>
-<blockquote>
-<p>例如：如果您将系统配置为新加坡英语，而某条内容仅提供美国英语与中国大陆中文两种版本，那么
-<code>ruyi</code> 0.15.0 将为您展示美国英语内容，而非崩溃。</p>
-</blockquote>
-</li>
-<li>
-<p>支持了不依赖 Docker 的构建方式，以方便发行版打包者，或不使用官方支持架构、系统组合的用户尝鲜
-<code>ruyi</code>。</p>
-<blockquote>
-<p>需要注意的是：因为目前 RuyiSDK 官方软件源的内容分发形式以二进制为主，所以想在非官方支持系统上使用
-<code>ruyi</code> 的用户将需要组织起来，自行搭建另一套软件源。RuyiSDK 团队无法保证此种情况下的用户体验。</p>
-</blockquote>
-</li>
-</ul>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2024/07/23/ruyi-0.15#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
-<ul>
-<li>软件源的结构不再与 <code>ruyi</code> 0.7.0 或更低版本兼容。是时候升级到最新版本了。</li>
-<li><code>emulator/box64-upstream</code> 已更新到 0.3.0。</li>
-<li>用 Box64 运行 WPS Office 的操作文档已更新。</li>
-<li>Ruyi 设备安装器（<code>ruyi device provision</code>）现已新增支持以下设备型号与系统：<!-- -->
-<ul>
-<li>Canaan Kendryte K230D：由 RuyiSDK 受权打包的 CanMV Linux SDK 镜像，附带演示程序。提供 LP64 与 RV64ILP32 两种 ABI。</li>
-</ul>
-</li>
-</ul>]]></content:encoded>
         </item>
     </channel>
 </rss>
