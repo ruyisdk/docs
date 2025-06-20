@@ -16,6 +16,13 @@ RuyiSDK IDE 下载地址：https://mirror.iscas.ac.cn/ruyisdk/ide
 
 从上述下载地址下载最新版本的 ide ，注意需要选择匹配架构的安装包，如果您想在 x86_64 环境下开发，需下载最新版本的 `linux.gtk.x86_64.tar.gz` 包；如果您想在 ARM 设备上开发，则需要下载 `linux.gtk.aarch64.tar.gz` 包；如果您希望在 RISC-V 设备上运行，则下载 `linux.gtk.riscv64.tar.gz` 包。
 
+除了 IDE 本身，您还需要下载 RuyiSDK IDE 插件。目前插件整合到 RuyiSDK IDE 的工程工作还在完善，当前需要手动将插件拷贝到 RuyiSDK IDE dropins 目录使用，未来我们会完善相关工程，提供更加便捷的安装和使用方式。当前您可以参考下方的使用说明来安装和使用。
+
+插件使用说明：
+
+- 从 GitHub Releases[https://github.com/ruyisdk/ruyisdk-eclipse-plugins/releases/latest] 下载最新插件包
+- 将 `org.ruyisdk.ide_\*.zip` 解包到 RuyiSDK IDE 安装目录下的 `dropins` 目录中
+
 ### 启动 IDE
 
 解压缩后在命令行中执行 `./ruyisdk` 即可启动运行 RuyiSDK IDE。
