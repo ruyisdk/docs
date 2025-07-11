@@ -20,7 +20,7 @@ RuyiSDK IDE 下载地址：https://mirror.iscas.ac.cn/ruyisdk/ide
 
 插件使用说明：
 
-- 从 GitHub Releases[https://github.com/ruyisdk/ruyisdk-eclipse-plugins/releases/latest] 下载最新插件包
+- 从 [GitHub Releases](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/releases/latest) 下载最新插件包
 - 将 `org.ruyisdk.ide_\*.zip` 解包到 RuyiSDK IDE 安装目录下的 `dropins` 目录中
 
 ### 启动 IDE
