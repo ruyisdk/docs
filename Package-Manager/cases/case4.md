@@ -2,6 +2,8 @@
 sidebar_position: 4
 ---
 
+import CodeBlock from '@site/src/components/docs_utils/CodeBlock';
+
 # fastboot 方式刷写开发板（以 Licheepi 4A 为例）
 
 目前 ruyi 包管理器提供了更为简便的操作系统安装方式，通过以下步骤以及相关引导即可完成安装。
@@ -25,10 +27,8 @@ Licheepi 4A 支持从板载 emmc 或 SD 卡启动，刷写具有两种不同的�
 
 Licheepi 4A 使用 USB 线与 PC 连接，通过 fastboot 刷写。如果只希望使用普通用户完成刷写过程，可能需要配置 udev 规则。这里提供示例规则仅供参考：
 
-```
-SUBSYSTEM=="usb", ATTR{idVendor}="2345", ATTR{idProduct}=="7654", MODE="0666", GROUP="plugdev"
-SUBSYSTEM=="usb", ATTR{idVendor}="1234", ATTR{idProduct}=="8888", MODE="0666", GROUP="plugdev"
-```
+<CodeBlock lang=" " code={`SUBSYSTEM=="usb", ATTR{idVendor}="2345", ATTR{idProduct}=="7654", MODE="0666", GROUP="plugdev"
+SUBSYSTEM=="usb", ATTR{idVendor}="1234", ATTR{idProduct}=="8888", MODE="0666", GROUP="plugdev"`} />
 
 ## 安装操作系统
 
@@ -36,14 +36,11 @@ SUBSYSTEM=="usb", ATTR{idVendor}="1234", ATTR{idProduct}=="8888", MODE="0666", G
 
 ruyi 包管理器提供了为 RISC-V 开发板安装操作系统的功能，为任一型号的 RISC-V 开发板安装镜像都只需要执行：
 
-```bash
-ruyi device provision
-```
+<CodeBlock lang="bash" code={`ruyi device provision`} />
 
 该命令将会返回工具目前所支持的 RISC-V 开发板，选择开发板后将返回所有支持指定开发板的操作系统：
 
-```
-RuyiSDK Device Provisioning Wizard
+<CodeBlock lang="bash" code={`RuyiSDK Device Provisioning Wizard
 
 This is a wizard intended to help you install a system on your device for your
 development pleasure, all with ease.
@@ -72,15 +69,12 @@ The following devices are currently supported by the wizard. Please pick your de
 8. StarFive VisionFive
 9. StarFive VisionFive2
 
-Choice? (1-9)
-
-```
+Choice? (1-9)`} />
 
 以上，以 Sipeed LicheePi 4A 为例，需要为其安装镜像，只需要输入对应的序号：`7`
 
 
-```
-Choice? (1-9) 7
+<CodeBlock lang="bash" code={`Choice? (1-9) 7
 
 The device has the following variants. Please choose the one corresponding to your hardware at hand:
 
@@ -103,9 +97,7 @@ We are about to download and install the following packages for your device:
  * board-image/revyos-sipeed-lpi4a
  * board-image/uboot-revyos-sipeed-lpi4a-16g
 
-Proceed? (y/N) 
-
-```
+Proceed? (y/N)`} />
 
 您只需要按照引导提示一步步执行即可。
 

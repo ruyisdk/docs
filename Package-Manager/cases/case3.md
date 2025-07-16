@@ -2,6 +2,8 @@
 sidebar_position: 3
 ---
 
+import CodeBlock from '@site/src/components/docs_utils/CodeBlock';
+
 # dd 方式刷写开发板（以 MilkV Duo 为例）
 
 目前 ruyi 包管理器提供了更为简便的操作系统安装方式，通过以下步骤以及相关引导即可完成安装。
@@ -26,14 +28,11 @@ sidebar_position: 3
 
 ruyi 包管理器提供了为 RISC-V 开发板安装操作系统的功能，为任一型号的 RISC-V 开发板安装镜像都只需要执行：
 
-```bash
-$ ruyi device provision
-```
+<CodeBlock lang="bash" code={`$ ruyi device provision`} />
 
 该命令将会返回工具目前所支持的 RISC-V 开发板，选择开发板后将返回所有支持指定开发板的操作系统：
 
-```
-RuyiSDK Device Provisioning Wizard
+<CodeBlock lang="bash" code={`RuyiSDK Device Provisioning Wizard
 
 This is a wizard intended to help you install a system on your device for your
 development pleasure, all with ease.
@@ -83,62 +82,53 @@ The following devices are currently supported by the wizard. Please pick your de
   29. WCH CH582F EVB
   30. WCH CH592X EVB
 
-Choice? (1-30) 
-```
+Choice? (1-30)`} />
 
 输出请以实际为准，在示例中 MilkV Duo 所在序号为 5。
 
-```
-Choice? (1-30) 5
+<CodeBlock lang="bash" code={`Choice? (1-30) 5
 
 The device has the following variants. Please choose the one corresponding to your hardware at hand:
 
   1. Milk-V Duo (64M RAM)
   2. Milk-V Duo (256M RAM)
 
-Choice? (1-2)
-```
+Choice? (1-2)`} />
 
 注意 MilkV Duo 具有两个版本，分别使用了 CV1800B 和 SG2002 两种 SOC，其中 SG2002 的版本还被称为 Duo 256M。
 
 这里作为示例选择 64M RAM 的版本，也就是 CV1800B SOC 的版本。
 
-```
-Choice? (1-2) 1
+<CodeBlock lang="bash" code={`Choice? (1-2) 1
 
 The following system configurations are supported by the device variant you have chosen. Please pick the one you want to put on the device:
 
   1. Milk-V Duo Official Arduino SDK (64M RAM, SD card)
   2. Milk-V Duo Official buildroot SDK (64M RAM, SD card)
-  3. Milk-V Duo Official buildroot SDK (64M RAM, Lite, SD card)
-```
+  3. Milk-V Duo Official buildroot SDK (64M RAM, Lite, SD card)`} />
 
 此处根据需要选择，这里作为示例选择 ``2``。
 
-```
-Choice? (1-3) 2
+<CodeBlock lang="bash" code={`Choice? (1-3) 2
 
 We are about to download and install the following packages for your device:
 
  * board-image/buildroot-sdk-milkv-duo
 
-Proceed? (y/N)
-```
+Proceed? (y/N)`} />
 
 Ruyi 将提示具体会被下载的 board-image 分区下的 Ruyi 软件包，并且询问是否继续，填写 ``y`` 即可。
 
 在下载和解包完成后会提示键入磁盘的路径：
 
-```
-For initializing this target device, you should plug into this host system the
+<CodeBlock lang="bash" code={`For initializing this target device, you should plug into this host system the
 device's storage (e.g. SD card or NVMe SSD), or a removable disk to be
 reformatted as a live medium, and note down the corresponding device file
 path(s), e.g. /dev/sdX, /dev/nvmeXnY for whole disks; /dev/sdXY, /dev/nvmeXnYpZ
 for partitions. You may consult e.g. sudo blkid output for the
 information you will need later.
 
-Please give the path for the target's whole disk:
-```
+Please give the path for the target's whole disk:`} />
 
 此时可以接入希望刷写的磁盘设备，输入设备的绝对路径，等待写入完成。
 

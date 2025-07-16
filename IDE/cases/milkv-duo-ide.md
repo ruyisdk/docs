@@ -1,3 +1,5 @@
+import CodeBlock from '@site/src/components/docs_utils/CodeBlock';
+
 # Milkv Duo ：使用 riscv64-unknown-linux-musl-bin 工具链编译、运行、调试
 
 ## 编译环境搭建
@@ -5,25 +7,20 @@
 1. 安装 RuyiSDK 包管理器 [参考](/docs/Package-Manager/installation)
 2. 安装 gnu-milkv-milkv-duo-musl 编译器
 
-   ```bash
-   #查看软件源的资源
+   <CodeBlock lang="bash" code={`   #查看软件源的资源
    ruyi list --name-contains milkv --category-is toolchain
 
    #安装指定的工具链
    ruyi install gnu-milkv-milkv-duo-bin
 
-   #从返回信息中可以查看安装的路径，如 ~/.local/share/ruyi/binaries/x86_64/gnu-milkv-milkv-duo-bin-0.20240731.0+git.67688c7335e7
-
-   ```
+   #从返回信息中可以查看安装的路径，如 ~/.local/share/ruyi/binaries/x86_64/gnu-milkv-milkv-duo-bin-0.20240731.0+git.67688c7335e7`} />
 3. 创建和使用Duo编译环境
 
-   ```bash
-   #查看ruyi预配置环境
+   <CodeBlock lang="bash" code={`   #查看ruyi预配置环境
    #ruyi list profiles
 
    #创建一个虚拟环境：工具链为gnu-milkv-milkv-duo-musl-bin
-   ruyi venv -t gnu-milkv-milkv-duo-musl-bin milkv-duo ./venv-milkvduo
-   ```
+   ruyi venv -t gnu-milkv-milkv-duo-musl-bin milkv-duo ./venv-milkvduo`} />
 
 ## 在IDE中开发
 
@@ -31,18 +28,14 @@
 
 本文以 milkv-duo 开发板的应用示例 duo-examples 为例。使用下面任一方式获取源码：
 
-```bash
-
-#方法一：git clone
+<CodeBlock lang="bash" code={`#方法一：git clone
 
 git clone https://github.com/milkv-duo/duo-examples.git
 
 
 #方法二：ruyi extract 命令下载
 
-ruyi extract milkv-duo-examples
-
-```
+ruyi extract milkv-duo-examples`} />
 
 ### 导入并设置工程属性
 
@@ -79,8 +72,7 @@ ruyi extract milkv-duo-examples
    - 为了实现从构建到目标程序的自动拷贝到目标设备，Makefile中还增加了upload目标（这是建立在PC和目标设备完成SSH认证的前提下，请参考文末“SSH秘钥配置”），同时还需要预先在目标设备上建好相关的目录（存放路径自定义，但请修改scp命令后的路径确保和实际环境一致）。
    - 您还可以在下面 Makefile 的基础上继续修改，本文只是提供一种参考。
 
-   ```makefile
-   # Eclipse 工具链设置
+   <CodeBlock lang="makefile" code={`   # Eclipse 工具链设置
    #TOOLCHAIN_PREFIX := ~/milkv/duo/duo-examples/host-tools/gcc/riscv64-linux-musl-x86_64/bin/riscv64-unknown-linux-musl-
    TOOLCHAIN_PREFIX := ~/.local/share/ruyi/binaries/x86_64/gnu-milkv-milkv-duo-musl-bin-0.20240731.0+git.67688c7335e7/bin/riscv64-unknown-linux-musl-
 
@@ -123,8 +115,7 @@ ruyi extract milkv-duo-examples
    	rm -f *.o $(TARGET)
 
    # 让 'all' 目标依赖于 'upload'，以便在构建后自动上传
-   all: upload
-   ```
+   all: upload`} />
 6. 在IDE中打开 Terminal 视窗，创建一个 SSH Terminal，方便在IDE中登录目标设备并进行相关操作。如果需要，同时也可以再创建一个 Local Terminal 窗口配合使用。这个根据个人习惯自行选择。具体操作：
 
    - Window > Show View > Terminal
@@ -199,9 +190,7 @@ helloworld的示例调试效果不佳，为了体现调试、打断点、单步�
 
 sumdemo.c
 
-```c
-
-#include <stdio.h>
+<CodeBlock lang="c" code={`#include <stdio.h>
 
 
 int Sum(int s, int e)
@@ -231,24 +220,19 @@ int main()
 
     int end = 10;
 
-    printf("I will begin\n");
+    printf("I will begin\\n");
 
     int n = Sum(start, end);
 
-    printf("running done, result is: [%d-%d]=%d\n", start, end, n);
+    printf("running done, result is: [%d-%d]=%d\\n", start, end, n);
 
     return 0;
 
-}
-
-
-```
+}`} />
 
 Makefile：
 
-```makefile
-
-# Eclipse 工具链设置
+<CodeBlock lang="makefile" code={`# Eclipse 工具链设置
 #TOOLCHAIN_PREFIX := ~/milkv/duo/duo-examples/host-tools/gcc/riscv64-linux-musl-x86_64/bin/riscv64-unknown-linux-musl-
 TOOLCHAIN_PREFIX := ~/.local/share/ruyi/binaries/x86_64/gnu-milkv-milkv-duo-musl-bin-0.20240731.0+git.67688c7335e7/bin/riscv64-unknown-linux-musl-
 
@@ -316,9 +300,7 @@ clean:
 
 # 让 'all' 目标依赖于 'upload'，以便在构建后自动上传
 
-all: upload
-
-```
+all: upload`} />
 
 #### 准备gdbserver
 
@@ -327,13 +309,9 @@ all: upload
 1. 下载原厂gdbserver可执行程序：https://github.com/milkv-duo/duo-buildroot-sdk/blob/develop/ramdisk/rootfs/public/gdbserver/riscv_musl/usr/bin/gdbserver
 2. 将上述下载的gdbserver拷贝到milkv duo设备的path路径下：
 
-   ```bash
+   <CodeBlock lang="bash" code={`   scp gdbserver root@192.168.42.1:/usr/bin/
 
-   scp gdbserver root@192.168.42.1:/usr/bin/
-
-   ssh root@192.168.42.1 "chmod +x /usr/bin/gdbserver"
-
-   ```
+   ssh root@192.168.42.1 "chmod +x /usr/bin/gdbserver"`} />
 
 #### Terminal中调试
 
@@ -345,15 +323,12 @@ GDBServer + GDB命令远程调试的步骤如下：
 
 1. milkvduo设备端（helloworld所在目录下操作）:
 
-   ```
-   [root@milkv-duo]~/target# gdbserver :2345 ./sumdemo
+   <CodeBlock lang="bash" code={`   [root@milkv-duo]~/target# gdbserver :2345 ./sumdemo
    Process ./sumdemo created; pid = 1802
-   Listening on port 2345
-   ```
+   Listening on port 2345`} />
 2. PC端（helloworld.c所在目录下操作）：
 
-   ```
-   cd ~/ews-milkvduo-t01/sumdemo
+   <CodeBlock lang="bash" code={`   cd ~/ews-milkvduo-t01/sumdemo
 
    #查看gdb版本，启动调试
    #这里使用 ruyi 虚拟环境进行调试，激活虚拟环境，在虚拟环境下编译
@@ -368,9 +343,7 @@ GDBServer + GDB命令远程调试的步骤如下：
    #下面几个可能常用，请按需灵活使用
    c                                 #contuinu，继续程序的运行,直到遇到下一个断点
    disp result                       #跟踪查看某个变量,每次停下来都显示它的值
-   print result                      #打印内部变量result
-
-   ```
+   print result                      #打印内部变量result`} />
 
 ![1736326691511](image/1736326691511.png)
 
@@ -421,13 +394,9 @@ GDBServer + GDB命令远程调试的步骤如下：
 
     2. 将公钥添加到milkv duo上：
 
-    ```
+    <CodeBlock lang="bash" code={`    #cat ~/.ssh/id_rsa.pub | ssh username@milkv_duo_ip_address 'mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys'
 
-    #cat ~/.ssh/id_rsa.pub | ssh username@milkv_duo_ip_address 'mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys'
-
-    cat ~/.ssh/milkvduo.pub | ssh root@192.168.42.1 'mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys'
-
-    ```
+    cat ~/.ssh/milkvduo.pub | ssh root@192.168.42.1 'mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys'`} />
 
     3. 验证：ssh root@192.168.42.1
 
