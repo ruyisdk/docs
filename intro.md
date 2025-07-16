@@ -2,6 +2,8 @@
 sidebar_position: 1
 ---
 
+import CodeBlock from '@site/src/components/docs_utils/CodeBlock';
+
 # Hello Ruyi
 
 欢迎来到 [RuyiSDK](https://github.com/ruyisdk) 相关介绍内容，以下是本文相关内容：
@@ -33,16 +35,14 @@ RuyiSDK 分为以下三个部分：
 
 该包管理器是一个在线的软件源，在该包管理器中，我们提供了如下内容：
 
-```
-1. 工具链
+<CodeBlock lang=" " code={`1. 工具链
 2. 调试工具
 3. 模拟器
 4. 运行环境
 5. 文档
 6. 源码
 7. 工具、系统镜像
-8. GUI（TODO）
-```
+8. GUI（TODO）`} />
 
 ### [Ruyi IDE](/docs/category/ruyisdk-ide)
 
@@ -100,9 +100,7 @@ RuyiSDK 对 RISC-V 设备的集成和支持主要包括以下几个方面：
 
 开始的第一步：
 
-```bash
-$ ruyi device provision
-```
+<CodeBlock lang="bash" code={`$ ruyi device provision`} />
 
 > 该指令会识别硬件信息，并且开始自动执行对应程序为用户自动部署 RISC-V 开发环境，按照引导信息一步步执行即可。
 

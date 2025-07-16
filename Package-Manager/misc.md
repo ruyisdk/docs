@@ -2,6 +2,8 @@
 sidebar_position: 6
 ---
 
+import CodeBlock from '@site/src/components/docs_utils/CodeBlock';
+
 # 更多信息
 
 ## 更新 Ruyi 包管理器
@@ -10,9 +12,7 @@ sidebar_position: 6
 
 如果您使用系统包管理器安装 Ruyi 包管理器，则可以直接使用系统包管理器升级：
 
-```bash
-$ sudo pacman -Syuu
-```
+<CodeBlock lang="bash" code={`$ sudo pacman -Syuu`} />
 
 这个命令将在 Arch Linux 执行全面的升级，注意 Arch Linux 并不支持部分升级。
 
@@ -22,35 +22,25 @@ $ sudo pacman -Syuu
 
 如果您使用预编译的单二进制安装 Ruyi 包管理器，可以使用下面的命令卸载 ruyi 包管理器：
 
-```bash
-$ ruyi self uninstall
-```
+<CodeBlock lang="bash" code={`$ ruyi self uninstall`} />
 
 这个命令将会询问以二次确认该操作，如果希望 Ruyi 包管理不询问而直接执行：
 
-```bash
-$ ruyi self uninstall -y
-```
+<CodeBlock lang="bash" code={`$ ruyi self uninstall -y`} />
 
 上面的命令只是删除 Ruyi 包管理器本身，如果希望删除所有缓存和安装了的软件包以实现干净的卸载：
 
-```bash
-$ ruyi self uninstall --purge
-```
+<CodeBlock lang="bash" code={`$ ruyi self uninstall --purge`} />
 
 同样的，这个命令将会询问以二次确认该操作，如果希望 Ruyi 包管理不询问而直接执行：
 
-```bash
-$ ruyi self uninstall --purge -y
-```
+<CodeBlock lang="bash" code={`$ ruyi self uninstall --purge -y`} />
 
 Ruyi 包管理被设计为避免进行需要超级用户权限的操作，如果 Ruyi 包管理器被安装在 ``/usr/local/bin/`` 等需要超级用户权限才能更改的目录下， ``ruyi self uninstall`` 命令将会失败。
 
 此时您可以手动删除所有缓存和安装了的软件包（它们被安装在家目录故不需要超级用户权限来删除）：
 
-```bash
-$ ruyi self clean --all
-```
+<CodeBlock lang="bash" code={`$ ruyi self clean --all`} />
 
 然后手动删除 Ruyi 包管理器本体。
 

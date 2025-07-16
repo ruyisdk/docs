@@ -2,34 +2,29 @@
 sidebar_position: 6
 ---
 
+import CodeBlock from '@site/src/components/docs_utils/CodeBlock';
+
 # 使用 QEMU 和 LLVM
 
 本案例基于 [为 MilkV Duo 构建 Coremark](case2.md)
 
 首先安装必要的依赖：
-```shell
-ruyi install llvm-upstream gnu-plct qemu-user-riscv-upstream
-```
+<CodeBlock lang="shell" code={`ruyi install llvm-upstream gnu-plct qemu-user-riscv-upstream`} />
 
 创建虚拟环境并激活：
-```shell
-ruyi venv -t llvm-upstream --sysroot-from gnu-plct -e qemu-user-riscv-upstream generic venv
-. venv/bin/ruyi-activate
-```
+<CodeBlock lang="shell" code={`ruyi venv -t llvm-upstream --sysroot-from gnu-plct -e qemu-user-riscv-upstream generic venv
+. venv/bin/ruyi-activate`} />
 
 解包出 coremark 并编译：
-```shell
-«Ruyi milkv-venv» $ mkdir coremark
+<CodeBlock lang="shell" code={`«Ruyi milkv-venv» $ mkdir coremark
 «Ruyi milkv-venv» $ cd coremark
 «Ruyi milkv-venv» $ ruyi extract coremark
 
-«Ruyi milkv-venv» $ sed -i 's/\bgcc\b/riscv64-unknown-linux-gnu-gcc/g' linux64/core_portme.mak
-«Ruyi milkv-venv» $ make PORT_DIR=linux64 link
-```
+«Ruyi milkv-venv» $ sed -i 's/\\bgcc\\b/riscv64-unknown-linux-gnu-gcc/g' linux64/core_portme.mak
+«Ruyi milkv-venv» $ make PORT_DIR=linux64 link`} />
 
 这时通过 qemu 运行 coremark：
-```shell
-$ ruyi-qemu coremark.exe
+<CodeBlock lang="shell" code={`$ ruyi-qemu coremark.exe
 2K performance run parameters for coremark.
 CoreMark Size    : 666
 Total ticks      : 19567
@@ -46,5 +41,4 @@ seedcrc          : 0xe9f5
 [0]crcstate      : 0x8e3a
 [0]crcfinal      : 0x4983
 Correct operation validated. See readme.txt for run and reporting rules.
-CoreMark 1.0 : 10221.290949 / GCCClang 17.0.5 -O2   -lrt / Heap
-```
+CoreMark 1.0 : 10221.290949 / GCCClang 17.0.5 -O2   -lrt / Heap`} />

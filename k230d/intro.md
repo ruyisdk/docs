@@ -1,3 +1,5 @@
+import CodeBlock from '@site/src/components/docs_utils/CodeBlock';
+
 # Canaan K230D 使用说明
 
 ## 安装系统镜像
@@ -12,14 +14,11 @@ RuyiSDK 目前提供了 LP64 和 ILP32 两种镜像文件，可以通过 RuyiSDK
 
    当前，RuyiSDK 为 K230D 提供了 RV64ILP32（玄铁新32位内核+32位rootfs） 和 RV64LP64（常规64位系统），推荐您安装 RV64ILP32 系统体验新32位在动态内存空间消耗上的优势。
 
-   ```bash
-   The following system configurations are supported by the device variant you have chosen. 
+   <CodeBlock lang="bash" code={`   The following system configurations are supported by the device variant you have chosen. 
    Please pick the one you want to put on the device:
 
      1. Canaan Kendryte K230D CanMV Linux SDK demo, RV64ILP32 ABI
-     2. Canaan Kendryte K230D CanMV Linux SDK demo, RV64LP64 ABI
-
-   ```
+     2. Canaan Kendryte K230D CanMV Linux SDK demo, RV64LP64 ABI`} />
 
 ### 源码构建
 
@@ -29,21 +28,17 @@ K230D RuyiSDK 地址为：https://github.com/ruyisdk/k230_linux_sdk
 
 K230D SDK 提供了镜像的[构建说明](https://github.com/ruyisdk/k230_linux_sdk/blob/dev/README_zh.md)，构建完成后，镜像文件存放在 `output` 目录下。根据执行的 defconfig 分别存放，64ILP32 和 64LP64 的镜像文件路径分别为：
 
-```bash
-# 64ILP32
+<CodeBlock lang="bash" code={`# 64ILP32
 output/k230d_canmv_ilp32_defconfig/images/sysimage-sdcard.img
 
 # 64LP64
-output/k230d_canmv_lp64_defconfig/images/sysimage-sdcard.img
-```
+output/k230d_canmv_lp64_defconfig/images/sysimage-sdcard.img`} />
 
 构建完成后，请解压文件，刻录到 tf 卡，将 tf 插入设备，设备上电即可开始使用。
 
-```bash
-# 假设/dev/sdb就是TF卡设备节点，执行如下命令烧录TF卡：
+<CodeBlock lang="bash" code={`# 假设/dev/sdb就是TF卡设备节点，执行如下命令烧录TF卡：
 
-sudo dd if=sysimage-sdcard.img of=/dev/sdb bs=1M oflag=sync
-```
+sudo dd if=sysimage-sdcard.img of=/dev/sdb bs=1M oflag=sync`} />
 
 ## 启动
 

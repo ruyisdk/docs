@@ -1,3 +1,5 @@
+import CodeBlock from '@site/src/components/docs_utils/CodeBlock';
+
 # 隐私政策
 
 RuyiSDK 是由中国科学院软件研究所（下文简称“ISCAS”）开发和维护面向RISC-V开发者的开发工具套件。ISCAS 非常重视您的隐私权益，并致力于保护您的个人信息。以下是 ISCAS RuyiSDK （下面简称“我们”）关于个人信息收集和使用的《隐私政策声明》（以下简称“本声明”）。在向我们提供任何个人信息之前，请仔细阅读本声明。如有任何疑问，欢迎随时与我们联系。
@@ -42,10 +44,8 @@ RuyiSDK 专注于产品使用情况和用户体验优化，秉持最小化收集
 * 确保环境变量中存在 `RUYI_TELEMETRY_OPTOUT=1`；
 * 在配置文件 `~/.config/ruyi/config.toml` 中加入以下内容：
 
-```toml
-[telemetry]
-mode = "off"
-```
+<CodeBlock lang="toml" code={`[telemetry]
+mode = "off"`} />
 
 ### 2.4 删除遥测数据
 

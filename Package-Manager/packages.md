@@ -2,15 +2,15 @@
 sidebar_position: 3
 ---
 
+import CodeBlock from '@site/src/components/docs_utils/CodeBlock';
+
 # 管理 Ruyi 软件包
 
 ## 刷新本地软件包缓存
 
 获取远程软件源的内容并刷新本地软件包缓存，默认使用托管在 GitHub 上的镜像：
 
-```bash
-$ ruyi update
-```
+<CodeBlock lang="bash" code={`$ ruyi update`} />
 
 软件包缓存将存放在用户目录中，通常为 ``~/.cache/ruyi/packages-index/`` ；在 ``XDG_CACHE_HOME`` 环境变量被设置时，目录为 ``$XDG_CACHE_HOME/ruyi/packages-index/`` 。
 
@@ -18,8 +18,7 @@ $ ruyi update
 
 由于目前软件包索引信息托管于 GitHub 仓库，若出现仓库访问不稳定的情况，可以使用 `ruyi config` 子命令来配置使用[备用仓库](https://mirror.iscas.ac.cn/git/ruyisdk/packages-index.git)。
 
-```bash
-# 查看当前仓库配置
+<CodeBlock lang="bash" code={`# 查看当前仓库配置
 $ ruyi config get repo
 
 # 将远程仓库切换到中国科学院镜像
@@ -32,8 +31,7 @@ $ ruyi config set repo.branch main
 $ ruyi config set repo.local /your/custom/cache/path
 
 # 配置修改完成后，重新刷新本地软件包缓存
-$ ruyi update
-```
+$ ruyi update`} />
 
 ## 阅读新闻
 
@@ -43,16 +41,14 @@ $ ruyi update
 
 您可以使用下面的命令来浏览、阅读新闻和标记已读：
 
-```bash
-$ ruyi news list -h
+<CodeBlock lang="bash" code={`$ ruyi news list -h
 $ ruyi news list
 $ ruyi news list --new        # 仅列出未读新闻
 
 $ ruyi news read -h
 $ ruyi news read 1            # 阅读序号（ID）为 1 的新闻
 $ ruyi news read              # 阅读全部未读新闻
-$ ruyi news read --quiet      # 不输出任何东西，只标记未读新闻为已读
-```
+$ ruyi news read --quiet      # 不输出任何东西，只标记未读新闻为已读`} />
 
 Ruyi 通过在 ``~/.local/state/ruyi/news.read.txt`` 中存储新闻标题来标记已读新闻，在 ``XDG_STATE_HOME`` 被配置时文件路径为 ``$XDG_STATE_HOME/ruyi/news.read.txt``。
 
@@ -77,8 +73,7 @@ Ruyi 软件包大致分为几个分区：
 
 这是在 ``x86_64`` 机器上的一个示例，实际的列表会更长：
 
-```bash
-$ ruyi list --name-contains ''
+<CodeBlock lang="bash" code={`$ ruyi list --name-contains ''
 List of available packages:
 
 * source/milkv-duo-examples
@@ -116,8 +111,7 @@ List of available packages:
   - 8.1.2-ruyi.20231121 ()
 * extra/wps-office
   - 12.1.0-r.17900 (latest)
-  - 12.1.0-r.17885 ()
-```
+  - 12.1.0-r.17885 ()`} />
 
 ``list`` 命令还提供了 ``--verbose`` 或 ``-v`` 参数来输出更详细的信息，这将会打印软件源中几乎所有信息。由于全部输出将会很长，建议给 ``--name-contains`` 传入非空的查找字段，或添加其他限定参数，或将完整输出重定向到文件或 ``less`` 等工具。
 
@@ -141,10 +135,8 @@ List of available packages:
 
 如果您确实需要安装一个预发布版本，可以在配置文件中添加配置：
 
-```
-[packages]
-prereleases = true
-```
+<CodeBlock lang=" " code={`[packages]
+prereleases = true`} />
 
 ### ``no binary for current host``
 
@@ -154,9 +146,7 @@ prereleases = true
 
 此时可以指定安装某个架构的二进制软件包：
 
-```bash
-$ ruyi install --host x86_64 wps-office
-```
+<CodeBlock lang="bash" code={`$ ruyi install --host x86_64 wps-office`} />
 
 ## 安装二进制软件包
 
@@ -170,31 +160,23 @@ $ ruyi install --host x86_64 wps-office
 
 这些软件包可以使用 ``install`` 命令安装，如安装 GNU 上游 gcc 工具链：
 
-```bash
-$ ruyi install gnu-upstream
-$ ruyi install toolchain/gnu-upstream
-```
+<CodeBlock lang="bash" code={`$ ruyi install gnu-upstream
+$ ruyi install toolchain/gnu-upstream`} />
 
 上述通过指定软件包名安装的方式默认会安装标记为 latest 版本的 gnu-upstream 包，如果想安装某个历史版本的 gnu-upstream，则可以通过指定版本来安装：
 
-```bash
-$ ruyi install 'gnu-upstream(0.20231118.0)'
-$ ruyi install 'gnu-upstream(>=0.20231118.0)'
-```
+<CodeBlock lang="bash" code={`$ ruyi install 'gnu-upstream(0.20231118.0)'
+$ ruyi install 'gnu-upstream(>=0.20231118.0)'`} />
 
 表达式支持 ``<``、 ``>``、``==``、 ``<=``、 ``>=``、 ``!=`` 运算符。
 
 如果希望安装多个包：
 
-```bash
-$ ruyi install gnu-plct gnu-upsteam llvm-plct llvm-upstream
-```
+<CodeBlock lang="bash" code={`$ ruyi install gnu-plct gnu-upsteam llvm-plct llvm-upstream`} />
 
 在一些特殊情况下，如错误删除了已安装软件包的文件，则可以重新安装这个软件包来恢复：
 
-```bash
-$ ruyi install --reinstall gnu-upstream
-```
+<CodeBlock lang="bash" code={`$ ruyi install --reinstall gnu-upstream`} />
 
 包管理器下载的包存放在 ``~/.cache/ruyi/distfiles/`` 下，在 ``XDG_CACHE_HOME`` 被指定时为 ``$XDG_CACHE_HOME/ruyi/distfiles/``。这些包通常以已压缩的格式存在，需要调用系统工具解包。在系统中缺少对应的工具时将打印相应的警告。
 
@@ -210,11 +192,9 @@ $ ruyi install --reinstall gnu-upstream
 
 源码包可以使用 ``extract`` 命令下载一个源码包并解包到当前目录：
 
-```bash
-$ ruyi extract ruyisdk-demo
+<CodeBlock lang="bash" code={`$ ruyi extract ruyisdk-demo
 $ ls
-README.md  rvv-autovec
-```
+README.md  rvv-autovec`} />
 
 ``extract`` 命令支持和 ``install`` 相同的版本表达方式。
 
@@ -222,9 +202,7 @@ README.md  rvv-autovec
 
 Ruyi 包管理器没有实现卸载指定 Ruyi 软件包的功能，但是您可以使用如下命令删除所有已经下载和安装的软件包：
 
-```bash
-$ ruyi self clean --distfiles --installed-pkgs
-```
+<CodeBlock lang="bash" code={`$ ruyi self clean --distfiles --installed-pkgs`} />
 
 如果您执意要删除某个软件包，虽然不建议，但是您可以手动删除它们。如果错误删除了一些文件，但是 Ruyi 依然认为该软件包已经安装，可以尝试使用 ``install --reinstall`` 恢复。
 
