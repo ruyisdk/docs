@@ -19,12 +19,15 @@ sidebar_position: 1
 ruyi self uninstall --purge
 ```
 
-2. 下载 `ruyi` 工具并为其赋可执行权限并配置到环境变量中：从 [ruyi GitHub Releases](https://github.com/RuyiSDK/ruyi/releases/) 或 [ISCAS 镜像源](https://mirror.iscas.ac.cn/RuyiSDK/ruyi/releases/)下载最新的 `ruyi` 工具。
+2. 下载 `ruyi` 工具并为其赋可执行权限并配置到环境变量中：从 [ruyi GitHub Releases](https://github.com/ruyisdk/ruyi/releases/) 或 [ISCAS 镜像源](https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/)下载最新的 `ruyi` 工具。
 
 ```bash
-# 下载 riscv64 版本的 ruyi 包管理器，将其放到 PATH 路径下，并赋予其可执行权限
-wget https://github.com/ruyisdk/ruyi/releases/download/0.25.0/ruyi-0.25.0.riscv64
-sudo cp ruyi-0.25.0.riscv64 /usr/local/bin/ruyi
+# <ruyi-latest-version> 为 ruyi 最新版本号，请下载最新版本的 ruyi 包管理器，将其放到 PATH 路径下，并赋予其可执行权限； 
+# <arch> 为架构后缀，本例根据上述环境需要下载 riscv64 版本，如有不同请根据实际情况调整；
+
+# 请按照实际情况替换<ruyi-latest-version>和<arch>占位符
+wget https://github.com/ruyisdk/ruyi/releases/download/<ruyi-latest-version>/ruyi-<ruyi-latest-version>.<arch>  
+sudo cp ruyi-<ruyi-latest-version>.<arch> /usr/local/bin/ruyi
 sudo chmod +x ruyi
 cd
 ```
