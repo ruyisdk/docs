@@ -13,36 +13,8 @@ sidebar_position: 1
 
 ## ruyi 包管理器的安装
 
-1. [可选] 清除当前已经安装的 ruyi 包管理器及其所有数据。
-
-```bash
-ruyi self uninstall --purge
-```
-
-2. 下载 `ruyi` 工具并为其赋可执行权限并配置到环境变量中：从 [ruyi GitHub Releases](https://github.com/ruyisdk/ruyi/releases/) 或 [ISCAS 镜像源](https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/)下载最新的 `ruyi` 工具。
-
-```bash
-# <ruyi-latest-version> 为 ruyi 最新版本号，请下载最新版本的 ruyi 包管理器，将其放到 PATH 路径下，并赋予其可执行权限； 
-# <arch> 为架构后缀，本例根据上述环境需要下载 riscv64 版本，如有不同请根据实际情况调整；
-
-# 请按照实际情况替换<ruyi-latest-version>和<arch>占位符
-wget https://github.com/ruyisdk/ruyi/releases/download/<ruyi-latest-version>/ruyi-<ruyi-latest-version>.<arch>  
-sudo cp ruyi-<ruyi-latest-version>.<arch> /usr/local/bin/ruyi
-sudo chmod +x ruyi
-cd
-```
-
-3. 验证 ruyi 包管理器可否使用
-
-```bash
-ruyi --version
-```
-
-4. 更新最新的软件源索引
-
-```bash
-ruyi update
-```
+1. 参考 [RuyiSDK 包管理器下载安装](https://ruyisdk.org/download#%E4%B8%8B%E8%BD%BD-ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8) 文档，完成 ruyi 的安装。
+   > 本文档中，硬件环境是 RISC-V 设备，下载安装的是 riscv64 架构的 ruyi 版本。
 
 ## 使用 ruyi 包管理器部署开发环境：
 
@@ -105,7 +77,7 @@ sed -i 's/\bgcc\b/riscv64-plctxthead-linux-gnu-gcc/g' linux64/core_portme.mak
 
 ```bash
 make PORT_DIR=linux64 link
-ls -al    #新增可执行程序coremark.exe
+ls -al    # 新增可执行程序coremark.exe
 ```
 
 12. 查看 riscv64 可执行程序文件属性信息。
