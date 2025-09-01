@@ -2,11 +2,322 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ruyisdk.org/docs/de/blog</id>
     <title>RuyiSDK Blog</title>
-    <updated>2025-04-22T00:00:00.000Z</updated>
+    <updated>2025-08-12T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ruyisdk.org/docs/de/blog"/>
     <subtitle>RuyiSDK Blog</subtitle>
     <icon>https://ruyisdk.org/docs/de/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[RuyiSDK 0.39 版本更新说明]]></title>
+        <id>https://ruyisdk.org/docs/de/blog/2025/08/12/ruyi-0.39</id>
+        <link href="https://ruyisdk.org/docs/de/blog/2025/08/12/ruyi-0.39"/>
+        <updated>2025-08-12T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[RuyiSDK 0.39 现已发布，对应的包管理器版本也为 0.39.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></summary>
+        <content type="html"><![CDATA[<p>RuyiSDK 0.39 现已发布，对应的包管理器版本也为 0.39.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
+<ul>
+<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.39.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.39.0</a></li>
+<li><a href="https://pypi.org/project/ruyi/0.39.0/" target="_blank" rel="noopener noreferrer">https://pypi.org/project/ruyi/0.39.0/</a></li>
+<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.39.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.39.0/</a></li>
+</ul>
+<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/08/12/ruyi-0.39#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<ul>
+<li><code>ruyi</code> 现已在 PyPI <a href="https://pypi.org/project/ruyi/" target="_blank" rel="noopener noreferrer">同步发布</a>。只要您有 Python 环境，您就可以使用 <code>pip install ruyi</code> 或类似的命令安装 RuyiSDK 包管理器了。</li>
+<li>如用户自定义了软件源 Git 仓库的存放路径，当该仓库当前分支的远端 URL 与 <code>ruyi</code> 的相应配置项不同时，<code>ruyi update</code> 会报错退出了，而不再将用户配置覆盖。</li>
+<li>继续打磨 Shell 自动补全：<!-- -->
+<ul>
+<li>优化了常规（非自动补全）模式下的 <code>ruyi</code> 启动延迟；</li>
+<li>如本地没有同步过软件源，不会在补全命令行时尝试同步了。</li>
+</ul>
+</li>
+<li>工程化迭代：<!-- -->
+<ul>
+<li>现在会给每个 PR 进行端到端的集成测试了，以确保常规命令行使用方式不被破坏。</li>
+<li>将 Shell 自动补全脚本整合进了 <code>ruyi</code> 源码发行：位于 <code>contrib/shell-completions</code> 目录。发行版打包人员可进行集成了。</li>
+<li>为给 Ubuntu 22.04 LTS 打包做好准备：支持以 pytest 6.2.5 运行测试套件了。</li>
+<li>在构建 <code>ruyi</code> 的单文件发行版时，为 RISC-V 架构使用了预制的 <code>cffi</code> 与 <code>pygit2</code>，以节省构建时间。</li>
+<li>简化了 <code>ruyi</code> 的发版工作：支持了自助打 tag 并触发发版流程。</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2025/08/12/ruyi-0.39#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
+<ul>
+<li>更新软件包：<!-- -->
+<ul>
+<li><code>source/milkv-duo-examples</code>: Milk-V Duo 示例代码，20241219 版本。</li>
+</ul>
+</li>
+<li>完善了设备支持：<!-- -->
+<ul>
+<li>Milk-V Meles（4/8/16G 变体）的 RevyOS U-Boot：补齐了上游版本。</li>
+<li>Milk-V Pioneer、Milk-V Meles 的 RevyOS：补齐缺失版本</li>
+<li>Sipeed LicheeRV Nano 的 buildroot SDK：补齐了上游版本。</li>
+</ul>
+</li>
+<li>工程化迭代：<!-- -->
+<ul>
+<li>自动格式化了所有包版本描述，并以 CI 形式确保了新增的包遵循统一格式。</li>
+</ul>
+</li>
+</ul>
+<p>感谢 <a href="https://github.com/Cyl18" target="_blank" rel="noopener noreferrer">@Cyl18</a>、<a href="https://github.com/weilinfox" target="_blank" rel="noopener noreferrer">@weilinfox</a> 的贡献！</p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[RuyiSDK 0.38 版本更新说明]]></title>
+        <id>https://ruyisdk.org/docs/de/blog/2025/07/22/ruyi-0.38</id>
+        <link href="https://ruyisdk.org/docs/de/blog/2025/07/22/ruyi-0.38"/>
+        <updated>2025-07-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[RuyiSDK 0.38 现已发布，对应的包管理器版本也为 0.38.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></summary>
+        <content type="html"><![CDATA[<p>RuyiSDK 0.38 现已发布，对应的包管理器版本也为 0.38.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
+<ul>
+<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.38.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.38.0</a></li>
+<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/tags/0.38.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/tags/0.38.0/</a></li>
+</ul>
+<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/07/22/ruyi-0.38#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<ul>
+<li>为 RuyiSDK 设备安装器新增了 <code>ruyi device flash</code> 这一别名，以便理解记忆。感谢 RuyiSDK 社区论坛的 <a href="https://ruyisdk.cn/u/Sequel" target="_blank" rel="noopener noreferrer">@Sequel</a> 同学反馈！</li>
+<li>当 <code>ruyi</code> 需要调用某些外部命令但无法找到时，如果当前终端可以交互，会等待您安装以便重试了。您可以在另一个终端下安装所需命令，再回到 <code>ruyi</code> 所在终端按回车键继续。您也可以按 Ctrl+C 退出。感谢 RuyiSDK 社区论坛的 <a href="https://ruyisdk.cn/u/Sequel" target="_blank" rel="noopener noreferrer">@Sequel</a> 同学反馈！</li>
+</ul>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2025/07/22/ruyi-0.38#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
+<ul>
+<li>完善了设备支持：<!-- -->
+<ul>
+<li>新增了 Sipeed LicheePi 4A 的 RevyOS 的历史版本。感谢 <a href="https://github.com/Cyl18" target="_blank" rel="noopener noreferrer">@Cyl18</a> 的贡献！</li>
+<li>新增了 Milk-V Duo 的 Arduino 的 1.1.2 与 1.1.4 两个版本。感谢 <a href="https://github.com/Cyl18" target="_blank" rel="noopener noreferrer">@Cyl18</a> 的贡献！</li>
+</ul>
+</li>
+</ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[RuyiSDK 0.37 版本更新说明]]></title>
+        <id>https://ruyisdk.org/docs/de/blog/2025/07/08/ruyi-0.37</id>
+        <link href="https://ruyisdk.org/docs/de/blog/2025/07/08/ruyi-0.37"/>
+        <updated>2025-07-08T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[RuyiSDK 0.37 现已发布，对应的包管理器版本也为 0.37.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></summary>
+        <content type="html"><![CDATA[<p>RuyiSDK 0.37 现已发布，对应的包管理器版本也为 0.37.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
+<ul>
+<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.37.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.37.0</a></li>
+<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/tags/0.37.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/tags/0.37.0/</a></li>
+</ul>
+<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/07/08/ruyi-0.37#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<ul>
+<li>
+<p>新增了基本的命令行自动补全支持，初期支持 Bash 与 Zsh 两种 shells。感谢 <a href="https://github.com/wychlw" target="_blank" rel="noopener noreferrer">@wychlw</a> 的贡献！</p>
+<p>要使用命令行自动补全功能，请在您的 shell profile（如 <code>.bashrc</code> 或 <code>.zshrc</code>）的合适位置引入
+<code>ruyi</code> 的自动补全脚本：</p>
+<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># zsh 用户请将 bash 字样替换为 zsh</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token builtin class-name">eval</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"</span><span class="token string variable" style="color:#36acaa">$(</span><span class="token string variable" style="color:#36acaa">ruyi --output-completion-script</span><span class="token string variable operator" style="color:#393A34">=</span><span class="token string variable" style="color:#36acaa">bash</span><span class="token string variable" style="color:#36acaa">)</span><span class="token string" style="color:#e3116c">"</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="In die Zwischenablage kopieren" title="Kopieren" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>目前支持 <code>ruyi</code> 子命令与 <code>ruyi install</code> 等命令的软件包参数的自动补全。</p>
+</li>
+<li>
+<p>使用 <code>ruyi self clean</code> 清除本地数据时，如果新闻已读状态文件不存在，不会报错崩溃了。感谢 <a href="https://github.com/weilinfox" target="_blank" rel="noopener noreferrer">@weilinfox</a> <a href="https://github.com/ruyisdk/ruyi/issues/319" target="_blank" rel="noopener noreferrer">报告</a>问题！</p>
+</li>
+<li>
+<p>拉取远端 Git 仓库失败时，不会将 Python 错误信息暴露给用户了。</p>
+</li>
+<li>
+<p>只有在文件的下载 URL 协议为 FTP 时，才会为 <code>curl</code> 或 <code>wget</code> 启用 FTP 被动模式了。这修复了部分 RuyiSDK 用户由于<a href="https://github.com/curl/curl/issues/17545" target="_blank" rel="noopener noreferrer">cURL 8.14.1 的 bug</a> 而无法下载任何文件的问题。感谢 <a href="https://github.com/weilinfox" target="_blank" rel="noopener noreferrer">@weilinfox</a> 向 <code>ruyi</code> 项目<a href="https://github.com/ruyisdk/ruyi/issues/316" target="_blank" rel="noopener noreferrer">报告</a>问题！</p>
+</li>
+<li>
+<p>重构了 <code>ruyi</code> 的捆绑资源处理方式，将其从虚拟环境机制中剥离了，以便后续捆绑其他非虚拟环境相关资源，如命令行自动补全脚本、多语言字符串文件等等。同时，也以 CI 方式确保了 <code>ruyi</code> 所含的压缩资源总与原始文件保持同步。</p>
+</li>
+<li>
+<p>新增了对于 OpenCloudOS 9.4、openEuler 24.03 LTS SP2、openEuler 25.03、openKylin 2.0 的支持情况。<code>ruyi</code> 的 Python 依赖包在这些发行版上均有少量缺失，但其余依赖包的版本满足要求，我们预计将在 2025 年 10 月完成对它们的支持。</p>
+</li>
+</ul>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2025/07/08/ruyi-0.37#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
+<ul>
+<li>实体数据库更新：<!-- -->
+<ul>
+<li>新增了 SpacemiT X60 微架构。</li>
+<li>新增了 SpacemiT K1 处理器型号。</li>
+<li>新增了 BananaPi BPI-F3 的 eMMC 与 SD 存储两种设备变体。</li>
+</ul>
+</li>
+<li>完善了设备支持：<!-- -->
+<ul>
+<li>更新了 Milk-V Duo（64 &amp; 256M RAM）、Duo S（SD 存储）的 Buildroot SDK。感谢 <a href="https://github.com/Cyl18" target="_blank" rel="noopener noreferrer">@Cyl18</a> 的贡献！</li>
+<li>支持了 BananaPi BPI-F3 的 SD 存储型号，有 SpacemiT 提供的 Bianbu Desktop 与 Bianbu Minimal 两种系统供使用。感谢 <a href="https://github.com/wychlw" target="_blank" rel="noopener noreferrer">@wychlw</a> 的贡献！</li>
+</ul>
+</li>
+</ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[RuyiSDK 0.36 版本更新说明]]></title>
+        <id>https://ruyisdk.org/docs/de/blog/2025/06/24/ruyi-0.36</id>
+        <link href="https://ruyisdk.org/docs/de/blog/2025/06/24/ruyi-0.36"/>
+        <updated>2025-06-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[RuyiSDK 0.36 现已发布，对应的包管理器版本也为 0.36.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></summary>
+        <content type="html"><![CDATA[<p>RuyiSDK 0.36 现已发布，对应的包管理器版本也为 0.36.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
+<ul>
+<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.36.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.36.0</a></li>
+<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/tags/0.36.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/tags/0.36.0/</a></li>
+</ul>
+<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/06/24/ruyi-0.36#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<ul>
+<li>每次 <code>ruyi update</code> 完成后，会报告哪些已安装的软件包有更新版本可供安装了。考虑到具体项目对工具链版本的需求可能较为精确，您可自行 <code>ruyi install</code> 更新的版本，并自行重做相应的虚拟环境。</li>
+<li>可以用 <code>ruyi uninstall</code> 卸载已安装的软件包了。另有更简短的别名 <code>ruyi remove</code> 或 <code>ruyi rm</code> 可用。</li>
+<li>在 <code>ruyi list</code> 的输出中，可以看到软件包的安装文件是否完全下载了。</li>
+<li>在同时启用机读模式（porcelain mode）与调试输出（<code>RUYI_DEBUG=y</code>）时，最先输出的几条日志不会以错误格式输出了。</li>
+<li>优化了 <code>ruyi</code> 工具的启动速度，现在每次运行 <code>ruyi</code> 都能省下 200-300ms 时间（视机器性能而定），有助于后续实现低延迟的命令行补全特性。并以 CI 检查的方式确保了后续代码变更不会影响本次优化效果。</li>
+</ul>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2025/06/24/ruyi-0.36#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
+<ul>
+<li>更新了 <code>toolchain/gnu-plct</code>：由 PLCT 维护并构建的 GNU RISC-V 工具链，包含 GNU binutils 2.45 的预览版、GCC 15.1.0 以及 glibc 2.40。</li>
+<li>更新了实体数据库中的 RISC-V 微架构定义，新增以下微架构：<!-- -->
+<ul>
+<li>香山昆明湖</li>
+<li>玄铁 C908、C908V、C910V2、C920、C920V2</li>
+<li>MIPS P8700</li>
+<li>8-宽 Tenstorrent Ascalon</li>
+</ul>
+</li>
+<li>修正了玄铁 C910 的 RISC-V ISA 字符串为上游主线 GCC 接受的标准形式。</li>
+</ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[RuyiSDK 0.35 版本更新说明]]></title>
+        <id>https://ruyisdk.org/docs/de/blog/2025/06/10/ruyi-0.35</id>
+        <link href="https://ruyisdk.org/docs/de/blog/2025/06/10/ruyi-0.35"/>
+        <updated>2025-06-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[RuyiSDK 0.35 现已发布，对应的包管理器版本也为 0.35.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></summary>
+        <content type="html"><![CDATA[<p>RuyiSDK 0.35 现已发布，对应的包管理器版本也为 0.35.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
+<ul>
+<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.35.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.35.0</a></li>
+<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/tags/0.35.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/tags/0.35.0/</a></li>
+</ul>
+<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/06/10/ruyi-0.35#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<ul>
+<li>现在会记录软件包的安装状态了。该信息在 <code>ruyi list</code> 输出中也会体现，并且支持在 <code>ruyi list</code> 时传入 <code>--is-installed y/n</code> 参数进行过滤。</li>
+<li><code>ruyi entity list</code> 可以带一个或多个 <code>-t</code> / <code>--entity-type</code> 参数，用来列举特定类型的实体了。</li>
+<li><code>ruyi entity list</code> 现在支持机读模式（porcelain mode）输出了。</li>
+</ul>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2025/06/10/ruyi-0.35#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
+<ul>
+<li>新增了 Milk-V Duo (128M &amp; 156M) 开发板镜像的历史版本。</li>
+<li>修复了 Milk-V Duo (128M &amp; 256M) 开发板镜像 2.0.0 版本的配置。</li>
+<li>更新了多个 Milk-V Meles 的 RevyOS 镜像。</li>
+<li>修复了 Milk-V Meles 的 RevyOS 镜像 1.20250123.0 版本的配置。</li>
+<li>更新了一些文档链接的指向。</li>
+<li>清理了已于 RuyiSDK 0.33 版本弃用的 RuyiSDK 设备安装器的旧版配置数据。</li>
+</ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[RuyiSDK 0.34 版本更新说明]]></title>
+        <id>https://ruyisdk.org/docs/de/blog/2025/05/27/ruyi-0.34</id>
+        <link href="https://ruyisdk.org/docs/de/blog/2025/05/27/ruyi-0.34"/>
+        <updated>2025-05-27T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[RuyiSDK 0.34 现已发布，对应的包管理器版本也为 0.34.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></summary>
+        <content type="html"><![CDATA[<p>RuyiSDK 0.34 现已发布，对应的包管理器版本也为 0.34.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
+<ul>
+<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.34.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.34.0</a></li>
+<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/tags/0.34.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/tags/0.34.0/</a></li>
+</ul>
+<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/05/27/ruyi-0.34#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<ul>
+<li>支持了部分解包 <code>tar</code> 归档文件，以适应个别厂商在其官方渠道将多个软件打成一个包分发的做法。</li>
+<li>允许用 <code>ruyi venv --extra-commands-from</code> 为虚拟环境提供额外的与目标元组（target tuple）无关的命令，如特定厂商的刷写工具等。</li>
+<li><code>ruyi admin format-manifest</code> 会保留文件头部和尾部的注释了。</li>
+<li>遥测功能更新：<!-- -->
+<ul>
+<li>当用户在终端首次运行 <code>ruyi</code> 时，现在会一次性询问用户是否允许立即上传安装信息。</li>
+<li>修复了 <code>ruyi</code> 的命令转发模式下遥测事件未被记录的问题。</li>
+<li>支持在软件源级别记录软件包的安装动作，以便第一方或第三方软件源的维护者们了解其软件的使用情况。</li>
+</ul>
+</li>
+<li>重构了 <code>ruyi</code> 命令行工具的入口点和 <code>ruyi</code> 的日志处理方式，消除了大部分全局量的使用，以便后续 RuyiSDK 生态的其他 Python 组件复用 <code>ruyi</code> 的功能。</li>
+</ul>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2025/05/27/ruyi-0.34#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
+<p>本次更新的部分软件包需要最新版本的 RuyiSDK 包管理器才能正常解析、工作，因此强烈建议您在
+<code>ruyi update</code> 之余，将您的 <code>ruyi</code> 也升级到最新版本。</p>
+<p>再次提醒：现已弃用旧版设备安装器支持，请尽快更新您的 RuyiSDK 包管理器。该支持将于 RuyiSDK 0.35（下个版本）移除。</p>
+<ul>
+<li>软件源格式更新：<!-- -->
+<ul>
+<li>明确了官方软件源的 ID 为 <code>ruyisdk</code>，以便后续与第三方源和谐共存。</li>
+<li>术语更新：将那些指代非标准行为的“flavor”重命名为了“quirk”。</li>
+<li>为支持软件包声明其含有的可执行命令，为 <code>binary</code> 元数据新增了 <code>commands</code> 可选字段。</li>
+<li>为支持 <code>tar</code> 归档文件的部分解包，为 <code>distfile</code> 元数据新增了 <code>prefixes_to_unpack</code> 可选字段。</li>
+</ul>
+</li>
+<li>完善了设备支持：<!-- -->
+<ul>
+<li><code>board-image/revyos-sipeed-lpi4a</code>: 更新了 Sipeed LicheePi 4A 的 RevyOS 镜像版本至 20250420，修复了 20250323 版本的信息。</li>
+<li>将 Milk-V Duo 系列设备的 1.0.7 版本的 "Python" 镜像与非 "Python" 镜像调换了名称。</li>
+</ul>
+</li>
+<li>新增软件包：<!-- -->
+<ul>
+<li><code>board-util/wlink</code>: 社区独立实现的 WCH-Link 刷写与调试工具。</li>
+<li><code>source/wch-ch32v103-evt</code>: WCH CH32V103 EVT 官方代码示例包。</li>
+<li><code>source/wch-ch32v20x-evt</code>: WCH CH32V20x EVT 官方代码示例包。</li>
+<li><code>source/wch-ch32v307-evt</code>: WCH CH32V30x &amp; CH32V317 EVT 官方代码示例包。</li>
+<li><code>toolchain/gnu-wch-mrs-toolchain-gcc12-bin</code>: WCH MounRiver Studio (MRS) 工具链的官方 2.1.0 版本，其中的 GCC 12.x 工具链。仅支持 x86_64 架构。</li>
+<li><code>toolchain/gnu-wch-mrs-toolchain-gcc8-bin</code>: WCH MounRiver Studio (MRS) 工具链的官方 2.1.0 版本，其中的 GCC 8.x 工具链。仅支持 x86_64 架构。</li>
+</ul>
+</li>
+<li>更新软件包：<!-- -->
+<ul>
+<li><code>toolchain/gnu-plct-xthead</code>: 采用玄铁官方源码、由 PLCT 构建的玄铁工具链的 3.0.1 版本，GCC 版本为 14.1.1。</li>
+</ul>
+</li>
+<li>实体数据库更新：<!-- -->
+<ul>
+<li>新增了 WCH 微架构、CPU 的实体定义。</li>
+<li>修正了 WCH 开发板的 CPU 信息。</li>
+</ul>
+</li>
+<li>插件系统更新：<!-- -->
+<ul>
+<li>新增了初步的 RISC-V 32 位配置文件支持。</li>
+</ul>
+</li>
+<li>修复了一些软件包声明的格式错误。</li>
+</ul>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[RuyiSDK 0.33 版本更新说明]]></title>
+        <id>https://ruyisdk.org/docs/de/blog/2025/05/13/ruyi-0.33</id>
+        <link href="https://ruyisdk.org/docs/de/blog/2025/05/13/ruyi-0.33"/>
+        <updated>2025-05-13T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[RuyiSDK 0.33 现已发布，对应的包管理器版本也为 0.33.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></summary>
+        <content type="html"><![CDATA[<p>RuyiSDK 0.33 现已发布，对应的包管理器版本也为 0.33.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
+<ul>
+<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.33.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.33.0</a></li>
+<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.33.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.33.0/</a></li>
+</ul>
+<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/05/13/ruyi-0.33#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<ul>
+<li>将设备安装器的数据源迁移到了实体数据库，以降低维护成本、避免频繁更新时潜在的合并冲突等。</li>
+</ul>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2025/05/13/ruyi-0.33#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
+<ul>
+<li>完善了设备支持：<!-- -->
+<ul>
+<li>新增支持了 Milk-V Meles 的 16G RAM 型号，支持 RevyOS 系统。</li>
+</ul>
+</li>
+<li>实体数据库更新：<!-- -->
+<ul>
+<li>设备实体定义更新：设备型号变体现已被拆分为单独实体类型 <code>device-variant</code> 了。</li>
+<li>新增了“设备适用系统信息”实体 <code>image-combo</code>。</li>
+</ul>
+</li>
+<li>现已弃用旧版设备安装器支持，请尽快更新您的 RuyiSDK 包管理器。该支持将于 RuyiSDK 0.35 移除。</li>
+</ul>
+<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="服务端组件">服务端组件<a class="hash-link" aria-label="Direkter Link zur 服务端组件" title="Direkter Link zur 服务端组件" href="https://ruyisdk.org/docs/de/blog/2025/05/13/ruyi-0.33#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%BB%84%E4%BB%B6">​</a></h2>
+<ul>
+<li>新增了官方软件源的新闻条目阅读 API。</li>
+<li>新增了按版本号查询 RuyiSDK 版本发行注记的 API。</li>
+<li>将官方软件源当前目录结构下的所有子目录都纳入了下载量统计范围。</li>
+<li>改进了服务容器的构建方式。</li>
+</ul>]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[RuyiSDK 0.32 版本更新说明]]></title>
         <id>https://ruyisdk.org/docs/de/blog/2025/04/22/ruyi-0.32</id>
@@ -458,269 +769,5 @@
             <name>xen0n</name>
             <uri>https://github.com/xen0n</uri>
         </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[RuyiSDK 0.20 版本更新说明]]></title>
-        <id>https://ruyisdk.org/docs/de/blog/2024/10/22/ruyi-0.20</id>
-        <link href="https://ruyisdk.org/docs/de/blog/2024/10/22/ruyi-0.20"/>
-        <updated>2024-10-22T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[RuyiSDK 0.20 现已发布，对应的包管理器版本也为 0.20.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></summary>
-        <content type="html"><![CDATA[<p>RuyiSDK 0.20 现已发布，对应的包管理器版本也为 0.20.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
-<ul>
-<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.20.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.20.0</a></li>
-<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.20.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.20.0/</a></li>
-</ul>
-<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2024/10/22/ruyi-0.20#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
-<ul>
-<li><code>ruyi self uninstall --purge</code> 不会遗留遥测数据了。</li>
-<li>修复了 <code>ruyi admin</code> 子命令无法被调用的问题。</li>
-<li>修复了 Ruyi 虚拟环境中，向无 target tuple 前缀的命令（如一系列 LLVM 工具）的转发。</li>
-<li>应 RuyiSDK 项目需求方要求，移除了插件机制的 Starlark 沙箱。这有助于简化打包与降低开发门槛：按照 RuyiSDK 当前的威胁模型（threat model），沙箱机制不会带来额外的安全性。</li>
-</ul>
-<p>注意：由于 Starlark 与 Python 存在细微的语义差异，在升级到 ruyi 0.20.0 之后，您必须将软件源 <code>ruyi update</code> 到最新，才能继续使用 <code>ruyi</code> 的部分功能（如 <code>ruyi venv</code> 等）。除此之外，我们预计插件机制的技术细节变更不会对实际使用造成影响。</p>
-<p>注意：我们可能在今后的一到两个版本期间，实装 RuyiSDK 遥测机制。届时，您可自行决定是否主动上传这部分匿名统计信息，以便 RuyiSDK 团队改进产品；您也可以选择删除先前的遥测数据，以及是否禁用遥测。您可用 <code>ruyi self clean --telemetry</code> 删除所有的遥测信息，包括设备信息。</p>]]></content>
-        <author>
-            <name>xen0n</name>
-            <uri>https://github.com/xen0n</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Eclipse 上游初步支持 RISC-V，每日构建镜像已经可以下载试用]]></title>
-        <id>https://ruyisdk.org/docs/de/blog/2024/09/30/eclipse-riscv64</id>
-        <link href="https://ruyisdk.org/docs/de/blog/2024/09/30/eclipse-riscv64"/>
-        <updated>2024-09-30T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[- 原文链接：https://riscv.org/blog-chinese/2024/09/eclipse-riscv64-support-upstreamed/]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<ul>
-<li>原文链接：<a href="https://riscv.org/blog-chinese/2024/09/eclipse-riscv64-support-upstreamed/" target="_blank" rel="noopener noreferrer">https://riscv.org/blog-chinese/2024/09/eclipse-riscv64-support-upstreamed/</a></li>
-<li>日期: September 30, 2024</li>
-<li>作者：陈璇</li>
-</ul>
-</blockquote>
-<p>Eclipse 是一款开源且功能强大的集成开发环境（IDE），广泛支持多种编程语言，为开发者提供了一个统一的平台，用于编写、调试和管理代码。同时，Eclipse 还具备强大的插件系统，可根据需求灵活扩展功能。</p>
-<p>近期，来自中国科学院软件研究所（ISCAS）的 RevyOS 小队的工程师联合其他开源社区开发者，成功为 Eclipse 上游代码仓库引入了对 riscv64 架构的初步支持。期间创建了<a href="https://github.com/eclipse-platform/eclipse.platform.releng.aggregator/issues/2310" target="_blank" rel="noopener noreferrer">二十余个 Issue/PR</a>，涵盖了包括 SWT、Equinox 在内的关键组件。目前，Eclipse 已支持在 riscv64 平台上基于 OpenJDK 开发 Java 项目。</p>
-<p><img decoding="async" loading="lazy" alt="eclipse-pic-1.png" src="https://ruyisdk.org/docs/de/assets/images/eclipse-pic-1-51a293b492da56b5101250bd43dcd623.png" width="1163" height="1540" class="img_ev3q"></p>
-<p><em>图1-Eclipse upstream 涉及到几十个不同的组建和支持过程，许多开发者都进行了贡献</em></p>
-<p>相关改动已被合入上游，感兴趣的朋友可通过下方链接，建议选择 Integration Builds 板块中的最新构建日期（20240929以后每日构建支持riscv）进入每日构建资源页面，选择“Eclipse SDK -&gt; Linux (64 bit version for RISC-V)”下载后进行体验。</p>
-<p><a href="https://download.eclipse.org/eclipse/downloads/index.html" target="_blank" rel="noopener noreferrer">https://download.eclipse.org/eclipse/downloads/index.html</a></p>
-<p><img decoding="async" loading="lazy" alt="eclipse-pic-2.png" src="https://ruyisdk.org/docs/de/assets/images/eclipse-pic-2-6e961c948c3dbda71b1466d65e8a03ce.png" width="832" height="802" class="img_ev3q"></p>
-<p><em>图2-在安装了 Debian 操作系统的 SiFive Unmatched 上测试运行 Eclipse SDK IDE</em></p>
-<p>接下来，RevyOS 小队将继续完善 Eclipse riscv64 的支持，敬请期待更多优化与改进！</p>
-<p>中国科学院软件研究所诚邀对开源技术充满热情的开源软件贡献者加入进来，助力 Eclipse 在 riscv64 平台上的发展。</p>
-<p><strong>关于 ISCAS、RevyOS小队</strong></p>
-<p>RevyOS小队隶属于 PLCT Lab, ISCAS。ISCAS 是 RISC-V International 的 Development Partner、Training Partner，同时在2024年8月获得了 RISC-V Ecosystem Labs 认证。</p>
-<p><strong>特别致谢以下贡献者</strong></p>
-<p>于波、陈璇、Hannes Wellmann、Alexander Kurtakov、Ed Merks、Pawel Stankiewicz、Frederic Gurr</p>
-<p><em>如有遗漏，请联系作者</em></p>]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[RuyiSDK 0.19 版本更新说明]]></title>
-        <id>https://ruyisdk.org/docs/de/blog/2024/09/30/ruyi-0.19</id>
-        <link href="https://ruyisdk.org/docs/de/blog/2024/09/30/ruyi-0.19"/>
-        <updated>2024-09-30T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[RuyiSDK 0.19 现已发布，对应的包管理器版本也为 0.19.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></summary>
-        <content type="html"><![CDATA[<p>RuyiSDK 0.19 现已发布，对应的包管理器版本也为 0.19.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
-<ul>
-<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.19.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.19.0</a></li>
-<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.19.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.19.0/</a></li>
-</ul>
-<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2024/09/30/ruyi-0.19#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
-<ul>
-<li>修复了当环境 locale 配置在本机上无效时，<code>ruyi news list</code> 在官方软件源上崩溃的问题。这也是 RuyiSDK 包管理器的首个来自外部贡献者的贡献。感谢 <a href="https://github.com/RekiDunois" target="_blank" rel="noopener noreferrer">RekiDunois</a>！</li>
-<li>为打包工作者新增了 <code>ruyi admin format-manifest</code> 命令，用来自动格式化软件包描述文件，确保符合标准格式。</li>
-<li>为 <code>ruyi venv</code> 新增了多工具链支持：可以为一个虚拟环境配置多个 target tuple 互不相同的工具链包了。</li>
-<li>新增了 <code>ruyi self clean</code> 命令，用来清理 Ruyi 产生的各种数据，释放存储空间。</li>
-<li>对于发行版直接再次分发 RuyiSDK 官方编译 <code>ruyi</code> 二进制的情况，为发行版打包工作者提供了手段来阻止用户不慎 <code>ruyi self uninstall</code>。</li>
-<li>基础的遥测功能，目前不支持数据上传。详见"遥测"一节。</li>
-</ul>
-<h3 class="anchor anchorWithHideOnScrollNavbar_emO8" id="遥测">遥测<a class="hash-link" aria-label="Direkter Link zur 遥测" title="Direkter Link zur 遥测" href="https://ruyisdk.org/docs/de/blog/2024/09/30/ruyi-0.19#%E9%81%A5%E6%B5%8B">​</a></h3>
-<p>为帮助 RuyiSDK 团队更好了解用户使用习惯以改进体验，我们为 RuyiSDK 包管理器增加了基础的遥测功能。有以下 3 种遥测模式：</p>
-<ul>
-<li><code>local</code>: 仅收集数据，不主动上报。这是默认模式。</li>
-<li><code>on</code>: 收集数据并周期性上报。目前未实现。</li>
-<li><code>off</code>: 完全禁用遥测。</li>
-</ul>
-<p>目前我们将收集以下的数据：</p>
-<ul>
-<li>首次运行 <code>ruyi</code> 时，将一次性收集少量设备信息。<!-- -->
-<ul>
-<li>仅从系统随机数生成唯一的安装 ID，与任何系统配置、本地数据均无关；</li>
-<li>当前运行环境是否为几种知名 CI 服务之一，如 GitHub Actions、GitLab CI、Travis CI 等；</li>
-<li>操作系统内核种类与处理器架构；</li>
-<li>C 运行库种类与版本（形如 <code>glibc 2.40</code>）；</li>
-<li>Linux 发行版代号与版本；</li>
-<li>如处理器架构为 RISC-V，还将收集由设备树指定的系统型号与 <code>/proc/cpuinfo</code> 所暴露的 CPU 核数、微架构、ISA 字符串等 RISC-V 特定信息。</li>
-</ul>
-</li>
-<li>每次运行 <code>ruyi</code>，将记录调用的命令种类，不含参数。</li>
-<li>每次运行 Ruyi 虚拟环境中的工具链代理，将记录被调用的命令名。</li>
-</ul>
-<p>如果您不希望参与遥测，请在运行新版 <code>ruyi</code> 之前做以下两种操作之一即可。要么确保环境变量中存在 <code>RUYI_TELEMETRY_OPTOUT=1</code>（请注意：不是 <code>OUTPUT</code>），要么在配置文件 <code>~/.config/ruyi/config.toml</code> 加入以下内容：</p>
-<div class="language-toml codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-toml codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">[telemetry]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">mode = "off"</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="In die Zwischenablage kopieren" title="Kopieren" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
-<p>在 RuyiSDK 完全支持遥测数据上传之前的一个版本，我们将会告知您此事，您可自行决定是否删除先前的遥测数据，以及是否禁用遥测。您可用 <code>ruyi self clean --telemetry</code> 删除所有的遥测信息，包括设备信息。</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="linux-发行版打包">Linux 发行版打包<a class="hash-link" aria-label="Direkter Link zur Linux 发行版打包" title="Direkter Link zur Linux 发行版打包" href="https://ruyisdk.org/docs/de/blog/2024/09/30/ruyi-0.19#linux-%E5%8F%91%E8%A1%8C%E7%89%88%E6%89%93%E5%8C%85">​</a></h2>
-<p>RuyiSDK 包管理器已为以下主流 Linux 发行版打包：</p>
-<ul>
-<li>Debian 13 ("trixie")</li>
-<li>Fedora 39, 40, 41</li>
-<li>openEuler 24.03</li>
-<li>Ubuntu 22.04 ("jammy"), 24.04 ("noble")</li>
-<li>Arch Linux (通过 AUR)</li>
-</ul>
-<p>其中除 Fedora 39、Fedora 41 未有 <code>riscv64</code> 架构包之外，均提供三种官方支持架构即
-<code>amd64</code>、<code>arm64</code> 与 <code>riscv64</code> 的二进制包。</p>]]></content>
-        <author>
-            <name>xen0n</name>
-            <uri>https://github.com/xen0n</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[RuyiSDK 0.18 版本更新说明]]></title>
-        <id>https://ruyisdk.org/docs/de/blog/2024/09/14/ruyi-0.18</id>
-        <link href="https://ruyisdk.org/docs/de/blog/2024/09/14/ruyi-0.18"/>
-        <updated>2024-09-14T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[RuyiSDK 0.18 现已发布，对应的包管理器版本也为 0.18.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></summary>
-        <content type="html"><![CDATA[<p>RuyiSDK 0.18 现已发布，对应的包管理器版本也为 0.18.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
-<ul>
-<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.18.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.18.0</a></li>
-<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.18.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.18.0/</a></li>
-</ul>
-<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2024/09/14/ruyi-0.18#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
-<ul>
-<li>进一步完善了 <a href="https://github.com/ruyisdk/ruyi/issues/181" target="_blank" rel="noopener noreferrer">issue #181</a> 的修复：先前虽然修复了代码块的折行缺字问题，但不经意间也让长度超过一行的 Markdown 列表项、块状引用等内容被截断了。</li>
-<li>完成了 <a href="https://github.com/ruyisdk/ruyi/issues/193" target="_blank" rel="noopener noreferrer">issue #193</a>：为方便发行版的打包工作，移除了对 <code>python-frontmatter</code> 这一第三方库的依赖。</li>
-</ul>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2024/09/14/ruyi-0.18#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
-<ul>
-<li>更新了 WPS Office 到上游最新版本。</li>
-<li>更新了 RV64ILP32 裸机工具链 <code>toolchain/gnu-plct-rv64ilp32-elf</code> 到当前最新版本。</li>
-<li>更新了 Milk-V Duo 的支持：<!-- -->
-<ul>
-<li>新增打包了 Milk-V Duo 官方实例代码库 <code>source/milkv-duo-examples</code>。您可在一个新的目录下，用 <code>ruyi extract</code> 命令解压它。</li>
-<li>新增打包了 Milk-V 官方提供的 Milk-V Duo 宿主工具链如下。请注意：它们是 RuyiSDK 受权对上游 <a href="https://github.com/milkv-duo/host-tools" target="_blank" rel="noopener noreferrer">https://github.com/milkv-duo/host-tools</a> 仓库进行的重新打包；且上游仅提供了 <code>x86_64</code> 架构的二进制。<!-- -->
-<ul>
-<li><code>toolchain/gnu-milkv-milkv-duo-bin</code>：适用于 Linux glibc 环境。</li>
-<li><code>toolchain/gnu-milkv-milkv-duo-elf-bin</code>：适用于裸机环境。</li>
-<li><code>toolchain/gnu-milkv-milkv-duo-musl-bin</code>：适用于 Linux musl 环境。</li>
-</ul>
-</li>
-<li>更新了 Milk-V Duo 官方系统镜像包到上游最新版本。RuyiSDK 受权对这些镜像进行了重新打包，以便后续所有通过 RuyiSDK 渠道分发的系统镜像都能以 <code>ruyisdk</code> 用户名与密码登录，方便您的评估。</li>
-</ul>
-</li>
-</ul>]]></content>
-        <author>
-            <name>xen0n</name>
-            <uri>https://github.com/xen0n</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[RuyiSDK 0.17 版本更新说明]]></title>
-        <id>https://ruyisdk.org/docs/de/blog/2024/09/03/ruyi-0.17</id>
-        <link href="https://ruyisdk.org/docs/de/blog/2024/09/03/ruyi-0.17"/>
-        <updated>2024-09-03T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[RuyiSDK 0.17 现已发布，对应的包管理器版本也为 0.17.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></summary>
-        <content type="html"><![CDATA[<p>RuyiSDK 0.17 现已发布，对应的包管理器版本也为 0.17.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
-<ul>
-<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.17.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.17.0</a></li>
-<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.17.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.17.0/</a></li>
-</ul>
-<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2024/09/03/ruyi-0.17#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
-<ul>
-<li>修复了 <a href="https://github.com/ruyisdk/ruyi/issues/181" target="_blank" rel="noopener noreferrer">issue #181</a>：现在在宽度较短的终端窗口中使用 <code>ruyi news read</code> 等功能时，Markdown 代码块中的长行不会缺字了，行首、行尾也不再存在影响复制粘贴的空格。代价是覆盖整行宽度的漂亮的背景色无法实现了。</li>
-</ul>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2024/09/03/ruyi-0.17#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
-<ul>
-<li>更新了 Box64 到上游最新开发版本。</li>
-<li>更新了 WPS Office 到上游最新版本。请注意：上游移除了 AArch64 架构的原生支持。这部分用户也将需要依赖二进制翻译方案来运行 WPS Office 了。</li>
-<li>明确了软件源内容的开源许可证：Apache 2.0 许可证，与 Ruyi 包管理器本体一致。</li>
-</ul>]]></content>
-        <author>
-            <name>xen0n</name>
-            <uri>https://github.com/xen0n</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[RuyiSDK 0.16 版本更新说明]]></title>
-        <id>https://ruyisdk.org/docs/de/blog/2024/08/13/ruyi-0.16</id>
-        <link href="https://ruyisdk.org/docs/de/blog/2024/08/13/ruyi-0.16"/>
-        <updated>2024-08-13T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[RuyiSDK 0.16 现已发布，对应的包管理器版本也为 0.16.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></summary>
-        <content type="html"><![CDATA[<p>RuyiSDK 0.16 现已发布，对应的包管理器版本也为 0.16.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
-<ul>
-<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.16.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.16.0</a></li>
-<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.16.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.16.0/</a></li>
-</ul>
-<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2024/08/13/ruyi-0.16#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
-<ul>
-<li>完成了设备安装器（<code>ruyi device provision</code>）的插件化改造。今后对不常见刷写步骤的支持将更加方便了：不一定需要更新 <code>ruyi</code> 本体了。</li>
-</ul>]]></content>
-        <author>
-            <name>xen0n</name>
-            <uri>https://github.com/xen0n</uri>
-        </author>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[嘉楠勘智K230D: 首款基于新32位 RuyiSDK 的AIoT量产芯片]]></title>
-        <id>https://ruyisdk.org/docs/de/blog/2024/07/30/k230d</id>
-        <link href="https://ruyisdk.org/docs/de/blog/2024/07/30/k230d"/>
-        <updated>2024-07-30T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[在上期文章中，向大家介绍了《玄铁团队与PLCT实验室联合发布：新32位产品级开源工具链及Linux内核》，本期为大家带来新32位（RV64ILP32）产品化的最新进展：嘉楠勘智K230D。去年，嘉楠推出 K230，它基于玄铁c908 打造，是世界上第一款带有 VECTOR 1.0 的 RISC-V 64位 AIOT 芯片。今年，嘉楠勘智推出更高集成度的 K230D AIoT 芯片，内存由原来外挂 256MB/512MB 改为内封 128MB。原先基于 LP64 ABI 的软件内存开销过大，不再适合 K230D，而新32位技术可同时提升内存与缓存的效率。PLCT实验室联合玄铁团队，一起为 K230D 打造基于新32位的 RuyiSDK，第一次实现新32位 AIoT 产品的落地。相比原先基于 LP64 ABI 的 SDK，新32位 SDK 内存开销下降 30%，同时链表遍历性能提升 20%，兼顾成本和性能。]]></summary>
-        <content type="html"><![CDATA[<p>在上期文章中，向大家介绍了《<a href="https://mp.weixin.qq.com/s/argIGP4_rUKDm9IRIB-YTg" target="_blank" rel="noopener noreferrer">玄铁团队与PLCT实验室联合发布：新32位产品级开源工具链及Linux内核</a>》，本期为大家带来新32位（RV64ILP32）产品化的最新进展：嘉楠勘智K230D。去年，嘉楠推出&nbsp;<a href="https://gitee.com/kendryte/k230_docs" target="_blank" rel="noopener noreferrer">K230</a>，它基于玄铁c908&nbsp;打造，是世界上第一款带有&nbsp;VECTOR&nbsp;1.0&nbsp;的&nbsp;RISC-V&nbsp;64位&nbsp;AIOT&nbsp;芯片。今年，嘉楠勘智推出更高集成度的&nbsp;K230D&nbsp;AIoT&nbsp;芯片，内存由原来外挂&nbsp;256MB/512MB&nbsp;改为内封&nbsp;128MB。原先基于&nbsp;LP64&nbsp;ABI&nbsp;的软件内存开销过大，不再适合&nbsp;K230D，而新32位技术可同时提升内存与缓存的效率。PLCT实验室联合玄铁团队，一起为&nbsp;K230D&nbsp;打造基于新32位的&nbsp;RuyiSDK，第一次实现新32位&nbsp;AIoT&nbsp;产品的落地。相比原先基于&nbsp;LP64&nbsp;ABI&nbsp;的&nbsp;SDK，新32位&nbsp;SDK&nbsp;<strong>内存开销下降&nbsp;30%</strong>，同时链表遍历<strong>性能提升&nbsp;20%</strong>，兼顾成本和性能。</p>
-<p><img decoding="async" loading="lazy" alt="616c6103a9a4656a2b24226e55425d62.png" src="https://ruyisdk.org/docs/de/assets/images/616c6103a9a4656a2b24226e55425d62-c5bc732bda5e2ff90e6d0b2d824cffe3.png" width="4080" height="1836" class="img_ev3q"></p>
-<p>达摩院玄铁团队联手嘉楠科技和中科院软件所PLCT实验室，将新32位落地到Banana&nbsp;Pi开源社区的BPI-CANMV-K230D-Zero&nbsp;开发板，并与PLCT实验室的&nbsp;RuyiSDK&nbsp;集成，一起为用户提供便捷的使用体验：</p>
-<ul>
-<li>
-<p>升级&nbsp;Linux&nbsp;内核至&nbsp;6.6、升级工具链</p>
-</li>
-<li>
-<p>新增32位根系统&nbsp;和&nbsp;LVGL</p>
-</li>
-<li>
-<p>基于&nbsp;VECTOR&nbsp;的图形加速</p>
-</li>
-<li>
-<p>支持&nbsp;Linux&nbsp;+&nbsp;Nuttx&nbsp;双系统，大小核任意切换</p>
-</li>
-<li>
-<p>支持传统64位和新32位，两种系统配置</p>
-</li>
-</ul>
-<h3 class="anchor anchorWithHideOnScrollNavbar_emO8" id="内核配置">内核配置：<a class="hash-link" aria-label="Direkter Link zur 内核配置：" title="Direkter Link zur 内核配置：" href="https://ruyisdk.org/docs/de/blog/2024/07/30/k230d#%E5%86%85%E6%A0%B8%E9%85%8D%E7%BD%AE">​</a></h3>
-<table><thead><tr><th></th><th>传统64位（64LP64）</th><th>新32位（64ILP32）</th></tr></thead><tbody><tr><td>内核编译命令</td><td>make&nbsp;ARCH=riscv&nbsp;k230_defconfig&nbsp;all</td><td>make&nbsp;ARCH=riscv&nbsp;k230_defconfig&nbsp;64ilp32.config&nbsp;all</td></tr></tbody></table>
-<p>默认配置差异仅2行：</p>
-<p>CONFIG_ARCH_RV64ILP32=y</p>
-<p>CONFIG_32BIT=y</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="内存对比">内存对比<a class="hash-link" aria-label="Direkter Link zur 内存对比" title="Direkter Link zur 内存对比" href="https://ruyisdk.org/docs/de/blog/2024/07/30/k230d#%E5%86%85%E5%AD%98%E5%AF%B9%E6%AF%94">​</a></h2>
-<p>下面的视频和图片展示了，传统64位（左）与新32位（右）对比&nbsp;LVGL&nbsp;的运行：</p>
-<div style="width:640px;height:360px"></div>
-<p><img decoding="async" loading="lazy" alt="k230d_final.jpeg" src="https://ruyisdk.org/docs/de/assets/images/k230d_final-b5ce65fdf30c4d9670234fab9e63310a.jpeg" width="3072" height="4096" class="img_ev3q"></p>
-<table><thead><tr><th><strong>动态内存对比</strong></th><th><strong>传统64位&nbsp;(RV64&nbsp;LP64)</strong></th><th><strong>新32位&nbsp;(RV64&nbsp;ILP32)</strong></th></tr></thead><tbody><tr><td><strong>used</strong></td><td><strong>37MB</strong></td><td><strong>24MB</strong></td></tr></tbody></table>
-<table><thead><tr><th>静态内存对比</th><th>传统64位&nbsp;(RV64&nbsp;LP64)</th><th>新32位&nbsp;(RV64&nbsp;ILP32)</th></tr></thead><tbody><tr><td>kernel&nbsp;code</td><td>10282KB</td><td>10456KB</td></tr><tr><td>rwdata</td><td>1126KB</td><td>832KB</td></tr><tr><td>rodata</td><td>5105KB</td><td>4464KB</td></tr><tr><td>bss</td><td>500KB</td><td>376KB</td></tr></tbody></table>
-<p>相比传统64位，新32位&nbsp;RuyiSDK&nbsp;大幅提升内存使用效率，避免了&nbsp;K230D&nbsp;产品化中的内存浪费。</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="性能对比">性能对比<a class="hash-link" aria-label="Direkter Link zur 性能对比" title="Direkter Link zur 性能对比" href="https://ruyisdk.org/docs/de/blog/2024/07/30/k230d#%E6%80%A7%E8%83%BD%E5%AF%B9%E6%AF%94">​</a></h2>
-<p>由于&nbsp;LP64&nbsp;的指针数据类型比&nbsp;ILP32&nbsp;大一倍，导致&nbsp;LP64&nbsp;的缓存利用率偏低。下面，基于&nbsp;K230D&nbsp;对比二者的双向链表遍历性能：</p>
-<h3 class="anchor anchorWithHideOnScrollNavbar_emO8" id="双向链表遍历-链表节点为4000遍历50000次结果">双向链表遍历 （链表节点为4000，遍历50000次结果）<a class="hash-link" aria-label="Direkter Link zur 双向链表遍历 （链表节点为4000，遍历50000次结果）" title="Direkter Link zur 双向链表遍历 （链表节点为4000，遍历50000次结果）" href="https://ruyisdk.org/docs/de/blog/2024/07/30/k230d#%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8%E9%81%8D%E5%8E%86-%E9%93%BE%E8%A1%A8%E8%8A%82%E7%82%B9%E4%B8%BA4000%E9%81%8D%E5%8E%8650000%E6%AC%A1%E7%BB%93%E6%9E%9C">​</a></h3>
-<table><thead><tr><th></th><th>第一次执行时长</th><th>第二次执行时长</th><th>第三次执行时长</th><th>第四次执行时长</th><th>第五次执行时长</th><th><strong>平均执行时长</strong></th></tr></thead><tbody><tr><td></td><td>单位：纳秒</td><td></td><td></td><td></td><td></td><td>单位：秒</td></tr><tr><td>LP64</td><td>3872221628</td><td>3420261850</td><td>3774494961</td><td>3539484998</td><td>4034940590</td><td><strong>3.728280805</strong></td></tr><tr><td>ILP32</td><td>2614749257</td><td>2261891517</td><td>2680216665</td><td>2894499368</td><td>2847282036</td><td><strong>2.659727769</strong></td></tr></tbody></table>
-<p>结果显示，ILP32&nbsp;的链表遍历性能显著优于&nbsp;LP64。</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="相关资料">相关资料：<a class="hash-link" aria-label="Direkter Link zur 相关资料：" title="Direkter Link zur 相关资料：" href="https://ruyisdk.org/docs/de/blog/2024/07/30/k230d#%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99">​</a></h2>
-<p>K230D&nbsp;RuyiSDK：<a href="https://github.com/ruyisdk/k230_linux_sdk" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/k230_linux_sdk</a></p>
-<p>（镜像构建详见文档 <a href="https://github.com/ruyisdk/k230_linux_sdk/blob/dev/README_zh.md" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/k230_linux_sdk/blob/dev/README_zh.md</a>）</p>
-<p>K230D&nbsp;使用说明：<a href="https://ruyisdk.org/docs/k230d/intro" target="_blank" rel="noopener noreferrer">https://ruyisdk.org/docs/k230d/intro</a></p>
-<h1>结束语</h1>
-<p>与过往的架构（ARM、x86、MIPS、Sparc）聚焦用户态的思路不同，当前新32位的方案是：基于&nbsp;RVA20/22/23&nbsp;Profiles&nbsp;<strong>为&nbsp;RV64&nbsp;架构的特权态提供&nbsp;ILP32&nbsp;ABI</strong>&nbsp;能力，这是前人未曾走过的新路。自&nbsp;2024&nbsp;年&nbsp;3&nbsp;月推出新&nbsp;32&nbsp;位工具链和&nbsp;Linux&nbsp;内核以来，这次终于在&nbsp;K230D&nbsp;上实现了产品化，降低了&nbsp;30%&nbsp;的内存开销，大幅提升缓存性能，这些成果进一步揭示了新&nbsp;32&nbsp;位的产业化价值。我们热切期待开发者们积极参与新32位的开发和完善中，共同提出宝贵的建议和意见，推动新&nbsp;32&nbsp;位不断发展。我们致力于建立一个健康和活跃的开源社区，将持续投入资源和精力，确保新32位软件的稳定和可靠，并不断改进和完善其功能和性能。在此，我们也呼吁更多的硬件厂商加入我们的阵营，共同推动新32位嵌入式系统的发展和创新，为行业带来更多机遇。</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="关于我们">关于我们<a class="hash-link" aria-label="Direkter Link zur 关于我们" title="Direkter Link zur 关于我们" href="https://ruyisdk.org/docs/de/blog/2024/07/30/k230d#%E5%85%B3%E4%BA%8E%E6%88%91%E4%BB%AC">​</a></h2>
-<p>●&nbsp;&nbsp;&nbsp;<a href="https://ruyisdk.org/" target="_blank" rel="noopener noreferrer">RuyiSDK</a>&nbsp;是一个由&nbsp;<a href="https://plctlab.org/zh/" target="_blank" rel="noopener noreferrer">PLCT&nbsp;Lab</a>&nbsp;所启动的开源项目，该项目旨在为&nbsp;RISC-V&nbsp;开发者提供一个完整的、全家桶式的全功能开发环境，包含从编译、调试到仿真的全套工具，并计划支持市面上主流的&nbsp;RISC-V&nbsp;硬件。</p>
-<p>●&nbsp;&nbsp;&nbsp;达摩院玄铁团队持续深耕&nbsp;RISC-V&nbsp;技术研发及生态建设，并陆续推出了一系列玄铁处理器，可满足高中低全系列性能需求。玄铁积极拥抱开源，坚持开放创新，已逐渐构建起以&nbsp;RISC-V&nbsp;为核心的生态体系，与生态伙伴协同推动&nbsp;RISC-V&nbsp;芯片、开发工具、操作系统、应用解决方案等不同层面的软硬一体化发展。全力推动&nbsp;RISC-V&nbsp;软硬全栈技术多领域发展落地，加速实现智能时代的万物互联!</p>
-<p>●&nbsp;&nbsp;&nbsp;嘉楠科技（Canaan&nbsp;Inc.）（纳斯达克股票代码：CAN）是一家领先的高性能ASIC芯片设计公司，以“区块链+AI”为多元化经营战略，业务范围涵盖高性能ASIC计算芯片及设备研发、AI芯片及产品开发。作为一家纳斯达克上市公司，嘉楠科技是全球“区块链第一股”，也是第一家在美国上市的中国自主知识产权AI芯片公司。公司愿景：提升社会运行效率，改善人类生活方式。</p>]]></content>
-        <author>
-            <name>RuyiSDK</name>
-            <uri>https://github.com/ruyisdk</uri>
-        </author>
-        <category label="K230D" term="K230D"/>
     </entry>
 </feed>
