@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-import ReleaseProvider, { DownloadRuyi } from '@site/src/pages/LatestReleases';
+import ReleaseProvider, { DownloadRuyi, ChmodCommand, CpCommand } from '@site/src/components/docs_utils/LatestReleases';
 
 # 安装
 
@@ -38,18 +38,13 @@ import ReleaseProvider, { DownloadRuyi } from '@site/src/pages/LatestReleases';
 
 您也可以浏览 [RuyiSDK 镜像](https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/) 以获取更新的版本。您也可以选择从 [GitHub releases](https://github.com/ruyisdk/ruyi/releases) 下载。
 
-
 下面以 ``x86_64`` 架构为例，给下载的二进制添加执行权限：
 
-```bash
-$ chmod +x ./ruyi.amd64
-```
+<ChmodCommand arch="x86_64" />
 
 安装二进制到 ``PATH`` 包含的目录中：
 
-```bash
-$ sudo cp -v ruyi.amd64 /usr/local/bin/ruyi
-```
+<CpCommand arch="x86_64" />
 
 如果您的 ``PATH`` 中包含 ``~/.local/bin/`` 目录，将 ``ruyi`` 安装到 ``~/.local/bin/ruyi`` 可能会是一个更推荐的选择。这个目录下的安装和删除并不需要超级用户权限。
 
