@@ -42,7 +42,7 @@ output/k230d_canmv_lp64_defconfig/images/sysimage-sdcard.img
 ```bash
 # 假设/dev/sdb就是TF卡设备节点，执行如下命令烧录TF卡：
 
-sudo dd if=sysimage-sdcard.img of=/dev/sdb bs=1M oflag=sync
+$ sudo dd if=sysimage-sdcard.img of=/dev/sdb bs=1M oflag=sync
 ```
 
 ## 启动
