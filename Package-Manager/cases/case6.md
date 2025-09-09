@@ -8,13 +8,13 @@ sidebar_position: 6
 
 首先安装必要的依赖：
 ```shell
-ruyi install llvm-upstream gnu-plct qemu-user-riscv-upstream
+$ ruyi install llvm-upstream gnu-plct qemu-user-riscv-upstream
 ```
 
 创建虚拟环境并激活：
 ```shell
-ruyi venv -t llvm-upstream --sysroot-from gnu-plct -e qemu-user-riscv-upstream generic venv
-. venv/bin/ruyi-activate
+$ ruyi venv -t llvm-upstream --sysroot-from gnu-plct -e qemu-user-riscv-upstream generic venv
+$ . venv/bin/ruyi-activate
 ```
 
 解包出 coremark 并编译：

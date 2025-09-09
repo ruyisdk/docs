@@ -1,7 +1,6 @@
 ---
 sidebar_position: 2
 ---
-
 # 使用厂商发布的二进制工具链构建（以 MilkV Duo 为例）
 
 本文使用 Milkv-Duo 编译环境，构建 coremark 。
@@ -24,7 +23,7 @@ coremark 源码可以直接从 Ruyi 软件仓库中下载：
 «Ruyi milkv-venv» $ mkdir coremark
 «Ruyi milkv-venv» $ cd coremark
 «Ruyi milkv-venv» $ ruyi extract coremark
-info: downloading https://mirror.iscas.ac.cn/RuyiSDK/dist/coremark-1.01.tar.gz to /home/myon/.cache/ruyi/distfiles/coremark-1.01.tar.gz
+info: downloading https://mirror.iscas.ac.cn/ruyisdk/dist/coremark-1.01.tar.gz to /home/myon/.cache/ruyi/distfiles/coremark-1.01.tar.gz
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 100  391k  100  391k    0     0  1400k      0 --:--:-- --:--:-- --:--:-- 1404k
@@ -69,7 +68,6 @@ $ scp -O ./coremark.exe root@192.168.42.1:~
 
 在 Milkv Duo 上运行
 
-
 ```bash
 [root@milkv-duo]~# ./coremark.exe
 2K performance run parameters for coremark.
@@ -90,4 +88,3 @@ seedcrc          : 0xe9f5
 Correct operation validated. See readme.txt for run and reporting rules.
 CoreMark 1.0 : 2011.937496 / GCC13.1.0 -O2   -static / Heap
 ```
-
