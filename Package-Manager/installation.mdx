@@ -123,6 +123,27 @@ sudo dispatch-conf
 sudo emerge --ask dev-util/ruyi
 ```
 
+## 使用 Python 包管理器安装
+
+RuyiSDK 包管理器现已在 PyPI [同步发布](https://pypi.org/project/ruyi/)，您可以使用
+`pip` 等 Python 包管理器进行安装。
+
+```bash
+# 如果您使用 pipx 进行全局安装：
+pipx install ruyi
+
+# 如果您在某个虚拟环境中安装：
+# 假设该虚拟环境位于 /path/to/some/venv
+/path/to/some/venv/bin/pip install ruyi
+```
+
+:::info RISC-V 用户注意
+RISC-V 用户可以使用 `pip` 安装 `ruyi`，但由于 `ruyi` 依赖的部分 Python 库暂未在 PyPI
+上提供 RISC-V 架构的预编译包，安装 `ruyi` 时 Python 包管理器会尝试从源代码编译安装这些依赖，可能非常耗时或编译失败。
+
+如果您在 RISC-V 设备上安装 `ruyi` 时遇到问题，建议使用其他安装方法。
+:::
+
 ---
 
 
