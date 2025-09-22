@@ -37,7 +37,7 @@ output/k230d_canmv_ilp32_defconfig/images/sysimage-sdcard.img
 output/k230d_canmv_lp64_defconfig/images/sysimage-sdcard.img
 ```
 
-构建完成后，请解压文件，刻录到 tf 卡，将 tf 插入设备，设备上电即可开始使用。
+构建完成后，请解压文件，刻录到 TF 卡，将 TF 卡插入设备，设备上电即可开始使用。
 
 ```bash
 # 假设/dev/sdb就是TF卡设备节点，执行如下命令烧录TF卡：
