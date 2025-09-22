@@ -89,5 +89,5 @@ ruyi 包管理器通过遥测数据收集功能，收集用户在使用 ruyi 包
     * 不会暴露任何参数
     * 调用时间的粒度为 1 分钟
 
-你可以在 RuyiSDK 官网查看我们的隐私政策。
+你可以在 RuyiSDK 官网查看我们的[隐私政策](https://ruyisdk.org/docs/legal/privacyPolicy)。
 
