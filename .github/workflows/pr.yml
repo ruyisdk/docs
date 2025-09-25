@@ -18,3 +18,27 @@ jobs:
           args: '--verbose'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  build:
+    name: Website build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          repository: 'ruyisdk/ruyisdk-website'
+
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          path: './docs'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.4.1
+          cache: npm
+
+      - name: install dependencies
+        run: npm ci
+      - name: build website
+        run: npm run build
