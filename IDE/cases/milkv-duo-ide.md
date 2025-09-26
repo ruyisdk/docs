@@ -80,11 +80,11 @@
      #TOOLCHAIN_PREFIX := ~/milkv/duo/duo-examples/host-tools/gcc/riscv64-linux-musl-x86_64/bin/riscv64-unknown-linux-musl-
      TOOLCHAIN_PREFIX := ~/.local/share/ruyi/binaries/x86_64/gnu-milkv-milkv-duo-musl-bin-0.20240731.0+git.67688c7335e7/bin/riscv64-unknown-linux-musl-
 
-     # 编译选项-O3  
+     # 编译选项-O3
      #CFLAGS := -mcpu=c906fdv -march=rv64imafdcv0p7xthead -mcmodel=medany -mabi=lp64d -DNDEBUG -I/home/phebe/milkv/duo/duo-examples/include/system
      #LDFLAGS := -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -L/home/phebe/milkv/duo/duo-examples/libs/system/musl_riscv64
      CFLAGS := -mcpu=c906fdv -march=rv64imafdcv0p7xthead -g  #-mcpu=c906fdv -march=rv64imafdcv0p7xthead : One of the two must be set
-     LDFLAGS := 
+     LDFLAGS :=
 
      TARGET=helloworld
 
@@ -133,7 +133,7 @@
      ![1735626766840](image/1735626766840.png)
 
      ![1735626979037](image/1735626979037.png)
-   - 配合 Makefile 中 scp 命令中的路径，预先创建好目标文件的传输路径。（执行构建后，目录下将会出现目标程序）
+   - 使用 Makefile 中的 `scp` 命令前，需要在目标主机上提前创建好对应的目录结构，这样文件能够正确被传输到目标目录。构建完成后，目录下将会出现目标程序。
 
      ![1736776549440](image/1736776549440.png)
 
@@ -232,8 +232,8 @@ TOOLCHAIN_PREFIX := ~/.local/share/ruyi/binaries/x86_64/gnu-milkv-milkv-duo-musl
 # 编译选项-O3   -static
 #CFLAGS := -mcpu=c906fdv -march=rv64imafdcv0p7xthead -mcmodel=medany -mabi=lp64d -DNDEBUG -I~/milkv/duo/duo-examples/include/system
 #LDFLAGS := -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -L/home/phebe/milkv/duo/duo-examples/libs/system/musl_riscv64
-CFLAGS := -march=rv64imafdcv0p7xthead -g 
-LDFLAGS := 
+CFLAGS := -march=rv64imafdcv0p7xthead -g
+LDFLAGS :=
 
 TARGET=sumdemo
 
@@ -308,7 +308,7 @@ GDBServer + GDB命令远程调试的步骤如下：
 
    # 查看gdb版本，启动调试
    # 这里使用 ruyi 虚拟环境进行调试，激活虚拟环境，在虚拟环境下编译
-   $ source ~/venv-milkvduo/bin/ruyi-activate 
+   $ source ~/venv-milkvduo/bin/ruyi-activate
    $ riscv64-unknown-linux-musl-gdb --version
    $ riscv64-unknown-linux-musl-gdb ./sumdemo
 

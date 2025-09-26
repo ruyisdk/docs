@@ -12,7 +12,9 @@ RuyiSDK IDE 是一款基于开源软件 Eclipse 开发的、图形化的、主�
 
 ### 下载 IDE
 
-RuyiSDK IDE 下载地址：https://mirror.iscas.ac.cn/ruyisdk/ide
+RuyiSDK IDE 下载地址：https://mirror.iscas.ac.cn/ruyisdk/ide/
+
+> 注意：请保留地址末尾的 `/`，否则可能打不开目录页面。
 
 从上述下载地址下载最新版本的 IDE ，注意需要选择匹配架构的安装包，如果您想在 x86_64 环境下开发，需下载最新版本的 `linux.gtk.x86_64.tar.gz` 包；如果您想在 ARM 设备上开发，则需要下载 `linux.gtk.aarch64.tar.gz` 包；如果您希望在 RISC-V 设备上运行，则下载 `linux.gtk.riscv64.tar.gz` 包。
 
