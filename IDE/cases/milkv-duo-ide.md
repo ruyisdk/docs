@@ -76,10 +76,10 @@
    - 您还可以在下面 Makefile 的基础上继续修改，本文只是提供一种参考。
 
      ```makefile
-     TOOLCHAIN_PREFIX := ~/.local/share/ruyi/binaries/x86_64/gnu-milkv-milkv-duo-musl-bin-0.20240731.0+git.67688c7335e7/bin/riscv64-unknown-linux-musl-
+TOOLCHAIN_PREFIX := ~/.local/share/ruyi/binaries/x86_64/gnu-milkv-milkv-duo-musl-bin-0.20240731.0+git.67688c7335e7/bin/riscv64-unknown-linux-musl-
 
 CFLAGS := -mcpu=c906fdv -march=rv64imafdcv0p7xthead -g
-LDFLAGS := 
+LDFLAGS :=
 
 TARGET = helloworld
 
@@ -103,7 +103,7 @@ clean:
 	rm -f *.o $(TARGET)
 
 .PHONY: all clean upload
-     ```
+```
 6. 在IDE中打开 Terminal 视窗，创建一个 SSH Terminal，方便在IDE中登录目标设备并进行相关操作。如果需要，同时也可以再创建一个 Local Terminal 窗口配合使用。这个根据个人习惯自行选择。具体操作：
 
    - Window > Show View > Terminal
