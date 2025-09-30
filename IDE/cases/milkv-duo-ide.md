@@ -10,7 +10,7 @@
    $ ruyi list --name-contains milkv --category-is toolchain
 
    # 安装指定的工具链
-   $ ruyi install gnu-milkv-milkv-duo-bin
+   $ ruyi install gnu-milkv-milkv-duo-musl-bin
 
    # 从返回信息中可以查看安装的路径，如 ~/.local/share/ruyi/binaries/x86_64/gnu-milkv-milkv-duo-bin-0.20240731.0+git.67688c7335e7
 
@@ -76,51 +76,34 @@
    - 您还可以在下面 Makefile 的基础上继续修改，本文只是提供一种参考。
 
      ```makefile
-     # Eclipse 工具链设置
-     #TOOLCHAIN_PREFIX := ~/milkv/duo/duo-examples/host-tools/gcc/riscv64-linux-musl-x86_64/bin/riscv64-unknown-linux-musl-
-     TOOLCHAIN_PREFIX := ~/.local/share/ruyi/binaries/x86_64/gnu-milkv-milkv-duo-musl-bin-0.20240731.0+git.67688c7335e7/bin/riscv64-unknown-linux-musl-
+TOOLCHAIN_PREFIX := ~/.local/share/ruyi/binaries/x86_64/gnu-milkv-milkv-duo-musl-bin-0.20240731.0+git.67688c7335e7/bin/riscv64-unknown-linux-musl-
 
-     # 编译选项-O3
-     #CFLAGS := -mcpu=c906fdv -march=rv64imafdcv0p7xthead -mcmodel=medany -mabi=lp64d -DNDEBUG -I/home/phebe/milkv/duo/duo-examples/include/system
-     #LDFLAGS := -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -L/home/phebe/milkv/duo/duo-examples/libs/system/musl_riscv64
-     CFLAGS := -mcpu=c906fdv -march=rv64imafdcv0p7xthead -g  #-mcpu=c906fdv -march=rv64imafdcv0p7xthead : One of the two must be set
-     LDFLAGS :=
+CFLAGS := -mcpu=c906fdv -march=rv64imafdcv0p7xthead -g
+LDFLAGS :=
 
-     TARGET=helloworld
+TARGET = helloworld
 
-     ifeq (,$(TOOLCHAIN_PREFIX))
-     $(error TOOLCHAIN_PREFIX is not set)
-     endif
+CC = $(TOOLCHAIN_PREFIX)gcc
 
-     ifeq (,$(CFLAGS))
-     $(error CFLAGS is not set)
-     endif
+SOURCE = $(wildcard *.c)
+OBJS = $(patsubst %.c,%.o,$(SOURCE))
 
-     CC = $(TOOLCHAIN_PREFIX)gcc
+all: $(TARGET)
 
-     SOURCE = $(wildcard *.c)
-     OBJS = $(patsubst %.c,%.o,$(SOURCE))
+$(TARGET): $(OBJS)
+	$(CC) $(CFLAGS) -o $@ $(OBJS) $(LDFLAGS)
 
-     # 默认目标
-     all: $(TARGET)
+%.o: %.c
+	$(CC) $(CFLAGS) -o $@ -c $<
 
-     $(TARGET): $(OBJS)
-        $(CC) $(CFLAGS) -o $@ $(OBJS) $(LDFLAGS)
+upload: $(TARGET)
+	scp $(TARGET) root@192.168.42.1:/root/target/$(TARGET)
 
-     %.o: %.c
-        $(CC) $(CFLAGS) -o $@ -c $<
+clean:
+	rm -f *.o $(TARGET)
 
-     # 上传目标
-     upload: $(TARGET)
-        scp $(TARGET) root@192.168.42.1:/root/target/$(TARGET)
-
-     .PHONY: clean upload
-     clean:
-        rm -f *.o $(TARGET)
-
-     # 让 'all' 目标依赖于 'upload'，以便在构建后自动上传
-     all: upload
-     ```
+.PHONY: all clean upload
+```
 6. 在IDE中打开 Terminal 视窗，创建一个 SSH Terminal，方便在IDE中登录目标设备并进行相关操作。如果需要，同时也可以再创建一个 Local Terminal 窗口配合使用。这个根据个人习惯自行选择。具体操作：
 
    - Window > Show View > Terminal
@@ -225,50 +208,41 @@ int main()
 **Makefile：**
 
 ```makefile
-# Eclipse 工具链设置
-#TOOLCHAIN_PREFIX := ~/milkv/duo/duo-examples/host-tools/gcc/riscv64-linux-musl-x86_64/bin/riscv64-unknown-linux-musl-
+# 工具链前缀
 TOOLCHAIN_PREFIX := ~/.local/share/ruyi/binaries/x86_64/gnu-milkv-milkv-duo-musl-bin-0.20240731.0+git.67688c7335e7/bin/riscv64-unknown-linux-musl-
 
-# 编译选项-O3   -static
-#CFLAGS := -mcpu=c906fdv -march=rv64imafdcv0p7xthead -mcmodel=medany -mabi=lp64d -DNDEBUG -I~/milkv/duo/duo-examples/include/system
-#LDFLAGS := -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -L/home/phebe/milkv/duo/duo-examples/libs/system/musl_riscv64
-CFLAGS := -march=rv64imafdcv0p7xthead -g
-LDFLAGS :=
+# 编译选项
+CFLAGS := -mcpu=c906fdv -march=rv64imafdcv0p7xthead -g
+LDFLAGS := 
 
-TARGET=sumdemo
+# 目标文件名
+TARGET = sumdemo
 
-ifeq (,$(TOOLCHAIN_PREFIX))
-$(error TOOLCHAIN_PREFIX is not set)
-endif
-
-ifeq (,$(CFLAGS))
-$(error CFLAGS is not set)
-endif
-
+# 编译器
 CC = $(TOOLCHAIN_PREFIX)gcc
-SOURCE = $(wildcard*.c)
-OBJS = $(patsubst%.c,%.o,$(SOURCE))
 
+# 源文件与目标文件
+SOURCE = $(wildcard *.c)
+OBJS = $(patsubst %.c,%.o,$(SOURCE))
 
 # 默认目标
 all: $(TARGET)
 
 $(TARGET): $(OBJS)
-   $(CC)$(CFLAGS) -o $@$(OBJS)$(LDFLAGS)
+	$(CC) $(CFLAGS) -o $@ $(OBJS) $(LDFLAGS)
 
 %.o: %.c
-   $(CC)$(CFLAGS) -o $@ -c $<
+	$(CC) $(CFLAGS) -o $@ -c $<
 
 # 上传目标
 upload: $(TARGET)
-   scp $(TARGET) root@192.168.42.1:/root/target/$(TARGET)
+	scp $(TARGET) root@192.168.42.1:/root/target/$(TARGET)
 
-.PHONY: clean upload
+# 清理
 clean:
-   rm -f *.o $(TARGET)
+	rm -f *.o $(TARGET)
 
-# 让 'all' 目标依赖于 'upload'，以便在构建后自动上传
-all: upload
+.PHONY: all clean upload
 ```
 
 #### 准备gdbserver
