@@ -1,0 +1,49 @@
+
+import ReleaseProvider, { DownloadRuyi, ChmodCommand, CpCommand } from '@site/src/components/docs_utils/LatestReleases';
+import ArchSelector from '@site/src/components/docs_utils/LatestReleases/ArchSelector';
+import CodeBlock from '@site/src/components/docs_utils/CodeBlock';
+
+<ReleaseProvider>
+  <>
+
+## 使用预编译的二进制安装
+> 环境标签： Linux x86_64 arm64 riscv64
+
+### 下载 RuyiSDK 包管理器
+
+目前 RuyiSDK 包管理器工具为 **Linux** 系统预编译了 **amd64**(即x86_64)、**arm64**、**riscv64** 三种架构的二进制，它不依赖系统 Python，适用范围较为广泛。
+
+它们同时发布在 GitHub Release 和 ISCAS 镜像站上：
+
+- [ruyi GitHub Releases](https://github.com/ruyisdk/ruyi/releases/)
+- [ISCAS 镜像源](https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/)
+
+以 ISCAS 镜像源为例描述安装流程，首先运行 ``uname -m`` 检查系统架构并下载对应的二进制。
+
+<ArchSelector />
+
+
+### 安装 RuyiSDK 包管理器
+
+上方已根据您的架构自动生成命令。确保二进制安装为 ``ruyi`` 并位于 ``PATH`` 中的目录。
+
+您可以通过以下方式验证安装是否成功：
+
+<CodeBlock lang="bash" showTitleCopyButton="true" code={`
+$ ruyi version
+`} />
+
+若命令执行并正常打印了 Copyright 信息则安装已经成功；若出现了非预期的输出则需要检查安装过程和系统环境。
+
+:::tip 问题排查
+- 安装后的文件名**必须**是 ``ruyi``（不能包含架构名称）。
+- 确保已经为 ``ruyi`` 添加可执行权限。
+- 通过 ``echo $PATH`` 检查确保 ``ruyi`` 所在的目录存在于 ``PATH`` 环境变量配置中。
+:::
+:::tip 更改安装路径
+- 如果您需要自定义安装目录，请参考上述的文档，将命令中的 ``/usr/local/bin`` 路径替换为您的自定义安装目录，并确保您的 ``PATH`` 中包含该目录。
+- 将 ``ruyi`` 安装到 ``~/.local/bin/ruyi`` 可能会是一个更推荐的选择（用户目录下安装和删除不需要超级用户权限），此时您的 ``PATH`` 中需包含 ``~/.local/bin/`` 目录。
+:::
+
+  </>
+</ReleaseProvider>
