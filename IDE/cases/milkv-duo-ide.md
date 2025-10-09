@@ -3,16 +3,16 @@
 ## 编译环境搭建
 
 1. 安装 RuyiSDK 包管理器 [参考](/docs/Package-Manager/installation)
-2. 安装 gnu-milkv-milkv-duo-musl 编译器
+2. 安装编译工具链，本文以 `gnu-milkv-milkv-duo-musl` 编译器举例（您可以根据需要修改工具链及版本）：
 
    ```bash
    # 查看软件源的资源
    $ ruyi list --name-contains milkv --category-is toolchain
 
    # 安装指定的工具链
-   $ ruyi install gnu-milkv-milkv-duo-bin
+   $ ruyi install gnu-milkv-milkv-duo-musl-bin
 
-   # 从返回信息中可以查看安装的路径，如 ~/.local/share/ruyi/binaries/x86_64/gnu-milkv-milkv-duo-bin-0.20240731.0+git.67688c7335e7
+   # 从返回信息中可以查看安装的路径，如 ~/.local/share/ruyi/binaries/x86_64/gnu-milkv-milkv-duo-musl-bin-0.20240731.0+git.67688c7335e7
 
    ```
 3. 创建和使用Duo编译环境
