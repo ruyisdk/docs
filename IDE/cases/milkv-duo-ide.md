@@ -80,28 +80,16 @@
      #TOOLCHAIN_PREFIX := ~/milkv/duo/duo-examples/host-tools/gcc/riscv64-linux-musl-x86_64/bin/riscv64-unknown-linux-musl-
      TOOLCHAIN_PREFIX := ~/.local/share/ruyi/binaries/x86_64/gnu-milkv-milkv-duo-musl-bin-0.20240731.0+git.67688c7335e7/bin/riscv64-unknown-linux-musl-
 
-     # 编译选项-O3
-     #CFLAGS := -mcpu=c906fdv -march=rv64imafdcv0p7xthead -mcmodel=medany -mabi=lp64d -DNDEBUG -I/home/phebe/milkv/duo/duo-examples/include/system
-     #LDFLAGS := -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -L/home/phebe/milkv/duo/duo-examples/libs/system/musl_riscv64
-     CFLAGS := -mcpu=c906fdv -march=rv64imafdcv0p7xthead -g  #-mcpu=c906fdv -march=rv64imafdcv0p7xthead : One of the two must be set
-     LDFLAGS :=
+     CFLAGS := -mcpu=c906fdv -march=rv64imafdcv0p7xthead -g
+     LDFLAGS := 
 
-     TARGET=helloworld
-
-     ifeq (,$(TOOLCHAIN_PREFIX))
-     $(error TOOLCHAIN_PREFIX is not set)
-     endif
-
-     ifeq (,$(CFLAGS))
-     $(error CFLAGS is not set)
-     endif
+     TARGET = helloworld
 
      CC = $(TOOLCHAIN_PREFIX)gcc
 
      SOURCE = $(wildcard *.c)
      OBJS = $(patsubst %.c,%.o,$(SOURCE))
 
-     # 默认目标
      all: $(TARGET)
 
      $(TARGET): $(OBJS)
@@ -110,16 +98,13 @@
      %.o: %.c
         $(CC) $(CFLAGS) -o $@ -c $<
 
-     # 上传目标
      upload: $(TARGET)
         scp $(TARGET) root@192.168.42.1:/root/target/$(TARGET)
 
-     .PHONY: clean upload
      clean:
         rm -f *.o $(TARGET)
 
-     # 让 'all' 目标依赖于 'upload'，以便在构建后自动上传
-     all: upload
+     .PHONY: all clean upload
      ```
 6. 在IDE中打开 Terminal 视窗，创建一个 SSH Terminal，方便在IDE中登录目标设备并进行相关操作。如果需要，同时也可以再创建一个 Local Terminal 窗口配合使用。这个根据个人习惯自行选择。具体操作：
 
@@ -181,8 +166,8 @@
 
 运行效果展示：
 
-- [勾选Skip download to target path远程运行成功效果](image/run1.gif)
-- [不勾选Skip download to target path运行报错效果](image/run1.gif)
+- ![勾选Skip download to target path远程运行成功效果](image/run1.gif)
+- ![不勾选Skip download to target path运行报错效果](image/run1.gif)
 
   > milkv duo img 目前不支持sftp：https://github.com/milkv-duo/duo-buildroot-sdk/issues/167  当milvduo镜像支持 sftp-server 后该问题能够解决。
   >
@@ -225,50 +210,41 @@ int main()
 **Makefile：**
 
 ```makefile
-# Eclipse 工具链设置
-#TOOLCHAIN_PREFIX := ~/milkv/duo/duo-examples/host-tools/gcc/riscv64-linux-musl-x86_64/bin/riscv64-unknown-linux-musl-
+# 工具链前缀
 TOOLCHAIN_PREFIX := ~/.local/share/ruyi/binaries/x86_64/gnu-milkv-milkv-duo-musl-bin-0.20240731.0+git.67688c7335e7/bin/riscv64-unknown-linux-musl-
 
-# 编译选项-O3   -static
-#CFLAGS := -mcpu=c906fdv -march=rv64imafdcv0p7xthead -mcmodel=medany -mabi=lp64d -DNDEBUG -I~/milkv/duo/duo-examples/include/system
-#LDFLAGS := -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -L/home/phebe/milkv/duo/duo-examples/libs/system/musl_riscv64
-CFLAGS := -march=rv64imafdcv0p7xthead -g
-LDFLAGS :=
+# 编译选项
+CFLAGS := -mcpu=c906fdv -march=rv64imafdcv0p7xthead -g
+LDFLAGS := 
 
-TARGET=sumdemo
+# 目标文件名
+TARGET = sumdemo
 
-ifeq (,$(TOOLCHAIN_PREFIX))
-$(error TOOLCHAIN_PREFIX is not set)
-endif
-
-ifeq (,$(CFLAGS))
-$(error CFLAGS is not set)
-endif
-
+# 编译器
 CC = $(TOOLCHAIN_PREFIX)gcc
-SOURCE = $(wildcard*.c)
-OBJS = $(patsubst%.c,%.o,$(SOURCE))
 
+# 源文件与目标文件
+SOURCE = $(wildcard *.c)
+OBJS = $(patsubst %.c,%.o,$(SOURCE))
 
 # 默认目标
 all: $(TARGET)
 
 $(TARGET): $(OBJS)
-   $(CC)$(CFLAGS) -o $@$(OBJS)$(LDFLAGS)
+	$(CC) $(CFLAGS) -o $@ $(OBJS) $(LDFLAGS)
 
 %.o: %.c
-   $(CC)$(CFLAGS) -o $@ -c $<
+	$(CC) $(CFLAGS) -o $@ -c $<
 
 # 上传目标
 upload: $(TARGET)
-   scp $(TARGET) root@192.168.42.1:/root/target/$(TARGET)
+	scp $(TARGET) root@192.168.42.1:/root/target/$(TARGET)
 
-.PHONY: clean upload
+# 清理
 clean:
-   rm -f *.o $(TARGET)
+	rm -f *.o $(TARGET)
 
-# 让 'all' 目标依赖于 'upload'，以便在构建后自动上传
-all: upload
+.PHONY: all clean upload
 ```
 
 #### 准备gdbserver
@@ -357,8 +333,8 @@ GDBServer + GDB命令远程调试的步骤如下：
 
 运行效果展示：
 
-- [不勾选Skip download to target path远程运行报错效果](image/gdb-withdownload.gif)
-- [勾选Skip download to target path运行成功效果](image/gdb-withoutdownload.gif)
+- ![不勾选Skip download to target path远程运行报错效果](image/gdb-withdownload.gif)
+- ![勾选Skip download to target path运行成功效果](image/gdb-withoutdownload.gif)
 
 ## 补充说明
 
@@ -373,7 +349,7 @@ GDBServer + GDB命令远程调试的步骤如下：
     2. 将公钥添加到milkv duo上：
 
 ```bash
-$ cat ~/.ssh/milkvduo.pub | ssh root@192.168.42.1 'mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys'
+$ cat ~/.ssh/xxxx.pub | ssh root@192.168.42.1 'mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys'
 ```
 
     3. 验证：`ssh root@192.168.42.1`
