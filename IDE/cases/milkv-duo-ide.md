@@ -301,7 +301,7 @@ GDBServer + GDB命令远程调试的步骤如下：
 
    ![1736326691511](image/1736326691511.png)
 
-   [Local Terminal + SSH Terminal | GDBSerer+GDB 调试展示](image/gdb-terminal-1.gif)
+   ![Local Terminal + SSH Terminal | GDBSerer+GDB 调试展示](image/gdb-terminal-1.gif)
 
 #### C/C++ Remote Application
 
