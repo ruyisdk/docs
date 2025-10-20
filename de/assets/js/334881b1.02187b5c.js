@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkruyisdk=self.webpackChunkruyisdk||[]).push([[8011],{77555:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/docs/de/biweekly/page/3","page":3,"postsPerPage":10,"totalPages":5,"totalCount":43,"previousPage":"/docs/de/biweekly/page/2","nextPage":"/docs/de/biweekly/page/4","blogDescription":"Blog","blogTitle":"RuyiSDK-Zeitung"}}')}}]);

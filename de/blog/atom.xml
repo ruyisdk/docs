@@ -20,7 +20,7 @@
 <li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.39.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.39.0/</a></li>
 </ul>
 <p>本次更新主要包含了以下内容，祝您使用愉快！</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/08/12/ruyi-0.39#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/08/12/ruyi-0.39#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
 <ul>
 <li><code>ruyi</code> 现已在 PyPI <a href="https://pypi.org/project/ruyi/" target="_blank" rel="noopener noreferrer">同步发布</a>。只要您有 Python 环境，您就可以使用 <code>pip install ruyi</code> 或类似的命令安装 RuyiSDK 包管理器了。</li>
 <li>如用户自定义了软件源 Git 仓库的存放路径，当该仓库当前分支的远端 URL 与 <code>ruyi</code> 的相应配置项不同时，<code>ruyi update</code> 会报错退出了，而不再将用户配置覆盖。</li>
@@ -40,7 +40,7 @@
 </ul>
 </li>
 </ul>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2025/08/12/ruyi-0.39#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2025/08/12/ruyi-0.39#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
 <ul>
 <li>更新软件包：<!-- -->
 <ul>
@@ -74,12 +74,12 @@
 <li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/tags/0.38.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/tags/0.38.0/</a></li>
 </ul>
 <p>本次更新主要包含了以下内容，祝您使用愉快！</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/07/22/ruyi-0.38#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/07/22/ruyi-0.38#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
 <ul>
 <li>为 RuyiSDK 设备安装器新增了 <code>ruyi device flash</code> 这一别名，以便理解记忆。感谢 RuyiSDK 社区论坛的 <a href="https://ruyisdk.cn/u/Sequel" target="_blank" rel="noopener noreferrer">@Sequel</a> 同学反馈！</li>
 <li>当 <code>ruyi</code> 需要调用某些外部命令但无法找到时，如果当前终端可以交互，会等待您安装以便重试了。您可以在另一个终端下安装所需命令，再回到 <code>ruyi</code> 所在终端按回车键继续。您也可以按 Ctrl+C 退出。感谢 RuyiSDK 社区论坛的 <a href="https://ruyisdk.cn/u/Sequel" target="_blank" rel="noopener noreferrer">@Sequel</a> 同学反馈！</li>
 </ul>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2025/07/22/ruyi-0.38#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2025/07/22/ruyi-0.38#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
 <ul>
 <li>完善了设备支持：<!-- -->
 <ul>
@@ -101,13 +101,15 @@
 <li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/tags/0.37.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/tags/0.37.0/</a></li>
 </ul>
 <p>本次更新主要包含了以下内容，祝您使用愉快！</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/07/08/ruyi-0.37#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/07/08/ruyi-0.37#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
 <ul>
 <li>
 <p>新增了基本的命令行自动补全支持，初期支持 Bash 与 Zsh 两种 shells。感谢 <a href="https://github.com/wychlw" target="_blank" rel="noopener noreferrer">@wychlw</a> 的贡献！</p>
 <p>要使用命令行自动补全功能，请在您的 shell profile（如 <code>.bashrc</code> 或 <code>.zshrc</code>）的合适位置引入
 <code>ruyi</code> 的自动补全脚本：</p>
-<div class="language-sh codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-sh codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token comment" style="color:#999988;font-style:italic"># zsh 用户请将 bash 字样替换为 zsh</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token builtin class-name">eval</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"</span><span class="token string variable" style="color:#36acaa">$(</span><span class="token string variable" style="color:#36acaa">ruyi --output-completion-script</span><span class="token string variable operator" style="color:#393A34">=</span><span class="token string variable" style="color:#36acaa">bash</span><span class="token string variable" style="color:#36acaa">)</span><span class="token string" style="color:#e3116c">"</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="In die Zwischenablage kopieren" title="Kopieren" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<div class="rounded-xl font-mono my-6 overflow-hidden text-sm bg-neutral-50 border border-neutral-200 shadow-sm dark:bg-neutral-900 dark:border-neutral-800 dark:shadow-black/30"><div class="flex items-center justify-between pl-4 pr-3 py-0 min-h-[48px] bg-[#FAFAFA]"><div class="flex items-center gap-3"><div class="flex items-center gap-2"><span class="text-[13px] font-normal tracking-normal text-[#666666] dark:text-[#666666]" style="font-family:Geist, Arial, &quot;Apple Color Emoji&quot;, sans-serif">sh</span></div></div><div class="transition-opacity duration-200" style="opacity:0"><button class="flex items-center justify-center p-2 rounded-md border-0 cursor-pointer transition-all duration-200 text-neutral-500 hover:text-neutral-900 hover:bg-neutral-200 dark:text-neutral-400 dark:hover:text-white dark:hover:bg-neutral-700 focus-visible:outline-2 focus-visible:outline-blue-500 focus-visible:outline-offset-2" aria-label="Copy code" title="Copy code"><svg height="16" stroke-linejoin="round" viewBox="0 0 16 16" width="16" style="color:currentcolor"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor"></path></svg></button></div></div><pre style="color:black;background:#f5f2f0;text-shadow:0 1px white;font-family:Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;font-size:0.875rem;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:20px 0px 20px 20px;margin:0;overflow:auto;font-weight:400;background-color:#FFFFFF"><code class="language-sh" style="white-space:pre;color:black;background:none;text-shadow:0 1px white;font-family:Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;font-size:1em;text-align:left;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none"><span><span># zsh 用户请将 bash 字样替换为 zsh
+</span></span><span>eval "$(ruyi --output-completion-script=bash)"
+</span><span></span></code></pre></div>
 <p>目前支持 <code>ruyi</code> 子命令与 <code>ruyi install</code> 等命令的软件包参数的自动补全。</p>
 </li>
 <li>
@@ -126,7 +128,7 @@
 <p>新增了对于 OpenCloudOS 9.4、openEuler 24.03 LTS SP2、openEuler 25.03、openKylin 2.0 的支持情况。<code>ruyi</code> 的 Python 依赖包在这些发行版上均有少量缺失，但其余依赖包的版本满足要求，我们预计将在 2025 年 10 月完成对它们的支持。</p>
 </li>
 </ul>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2025/07/08/ruyi-0.37#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2025/07/08/ruyi-0.37#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
 <ul>
 <li>实体数据库更新：<!-- -->
 <ul>
@@ -155,7 +157,7 @@
 <li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/tags/0.36.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/tags/0.36.0/</a></li>
 </ul>
 <p>本次更新主要包含了以下内容，祝您使用愉快！</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/06/24/ruyi-0.36#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/06/24/ruyi-0.36#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
 <ul>
 <li>每次 <code>ruyi update</code> 完成后，会报告哪些已安装的软件包有更新版本可供安装了。考虑到具体项目对工具链版本的需求可能较为精确，您可自行 <code>ruyi install</code> 更新的版本，并自行重做相应的虚拟环境。</li>
 <li>可以用 <code>ruyi uninstall</code> 卸载已安装的软件包了。另有更简短的别名 <code>ruyi remove</code> 或 <code>ruyi rm</code> 可用。</li>
@@ -163,7 +165,7 @@
 <li>在同时启用机读模式（porcelain mode）与调试输出（<code>RUYI_DEBUG=y</code>）时，最先输出的几条日志不会以错误格式输出了。</li>
 <li>优化了 <code>ruyi</code> 工具的启动速度，现在每次运行 <code>ruyi</code> 都能省下 200-300ms 时间（视机器性能而定），有助于后续实现低延迟的命令行补全特性。并以 CI 检查的方式确保了后续代码变更不会影响本次优化效果。</li>
 </ul>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2025/06/24/ruyi-0.36#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2025/06/24/ruyi-0.36#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
 <ul>
 <li>更新了 <code>toolchain/gnu-plct</code>：由 PLCT 维护并构建的 GNU RISC-V 工具链，包含 GNU binutils 2.45 的预览版、GCC 15.1.0 以及 glibc 2.40。</li>
 <li>更新了实体数据库中的 RISC-V 微架构定义，新增以下微架构：<!-- -->
@@ -189,13 +191,13 @@
 <li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/tags/0.35.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/tags/0.35.0/</a></li>
 </ul>
 <p>本次更新主要包含了以下内容，祝您使用愉快！</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/06/10/ruyi-0.35#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/06/10/ruyi-0.35#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
 <ul>
 <li>现在会记录软件包的安装状态了。该信息在 <code>ruyi list</code> 输出中也会体现，并且支持在 <code>ruyi list</code> 时传入 <code>--is-installed y/n</code> 参数进行过滤。</li>
 <li><code>ruyi entity list</code> 可以带一个或多个 <code>-t</code> / <code>--entity-type</code> 参数，用来列举特定类型的实体了。</li>
 <li><code>ruyi entity list</code> 现在支持机读模式（porcelain mode）输出了。</li>
 </ul>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2025/06/10/ruyi-0.35#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2025/06/10/ruyi-0.35#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
 <ul>
 <li>新增了 Milk-V Duo (128M &amp; 156M) 开发板镜像的历史版本。</li>
 <li>修复了 Milk-V Duo (128M &amp; 256M) 开发板镜像 2.0.0 版本的配置。</li>
@@ -217,7 +219,7 @@
 <li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/tags/0.34.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/tags/0.34.0/</a></li>
 </ul>
 <p>本次更新主要包含了以下内容，祝您使用愉快！</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/05/27/ruyi-0.34#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/05/27/ruyi-0.34#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
 <ul>
 <li>支持了部分解包 <code>tar</code> 归档文件，以适应个别厂商在其官方渠道将多个软件打成一个包分发的做法。</li>
 <li>允许用 <code>ruyi venv --extra-commands-from</code> 为虚拟环境提供额外的与目标元组（target tuple）无关的命令，如特定厂商的刷写工具等。</li>
@@ -231,7 +233,7 @@
 </li>
 <li>重构了 <code>ruyi</code> 命令行工具的入口点和 <code>ruyi</code> 的日志处理方式，消除了大部分全局量的使用，以便后续 RuyiSDK 生态的其他 Python 组件复用 <code>ruyi</code> 的功能。</li>
 </ul>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2025/05/27/ruyi-0.34#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2025/05/27/ruyi-0.34#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
 <p>本次更新的部分软件包需要最新版本的 RuyiSDK 包管理器才能正常解析、工作，因此强烈建议您在
 <code>ruyi update</code> 之余，将您的 <code>ruyi</code> 也升级到最新版本。</p>
 <p>再次提醒：现已弃用旧版设备安装器支持，请尽快更新您的 RuyiSDK 包管理器。该支持将于 RuyiSDK 0.35（下个版本）移除。</p>
@@ -291,11 +293,11 @@
 <li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.33.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.33.0/</a></li>
 </ul>
 <p>本次更新主要包含了以下内容，祝您使用愉快！</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/05/13/ruyi-0.33#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/05/13/ruyi-0.33#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
 <ul>
 <li>将设备安装器的数据源迁移到了实体数据库，以降低维护成本、避免频繁更新时潜在的合并冲突等。</li>
 </ul>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2025/05/13/ruyi-0.33#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2025/05/13/ruyi-0.33#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
 <ul>
 <li>完善了设备支持：<!-- -->
 <ul>
@@ -310,7 +312,7 @@
 </li>
 <li>现已弃用旧版设备安装器支持，请尽快更新您的 RuyiSDK 包管理器。该支持将于 RuyiSDK 0.35 移除。</li>
 </ul>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="服务端组件">服务端组件<a class="hash-link" aria-label="Direkter Link zur 服务端组件" title="Direkter Link zur 服务端组件" href="https://ruyisdk.org/docs/de/blog/2025/05/13/ruyi-0.33#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%BB%84%E4%BB%B6">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="服务端组件">服务端组件<a class="hash-link" aria-label="Direkter Link zur 服务端组件" title="Direkter Link zur 服务端组件" href="https://ruyisdk.org/docs/de/blog/2025/05/13/ruyi-0.33#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%BB%84%E4%BB%B6">​</a></h2>
 <ul>
 <li>新增了官方软件源的新闻条目阅读 API。</li>
 <li>新增了按版本号查询 RuyiSDK 版本发行注记的 API。</li>
@@ -330,15 +332,15 @@
 <li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.32.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.32.0/</a></li>
 </ul>
 <p>本次更新主要包含了以下内容，祝您使用愉快！</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-项目管理">RuyiSDK 项目管理<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 项目管理" title="Direkter Link zur RuyiSDK 项目管理" href="https://ruyisdk.org/docs/de/blog/2025/04/22/ruyi-0.32#ruyisdk-%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="ruyisdk-项目管理">RuyiSDK 项目管理<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 项目管理" title="Direkter Link zur RuyiSDK 项目管理" href="https://ruyisdk.org/docs/de/blog/2025/04/22/ruyi-0.32#ruyisdk-%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86">​</a></h2>
 <ul>
 <li>为流程合规，现在要求所有向 RuyiSDK 发起的拉取请求（Pull Requests）都包含开发者原创声明（Developer's Certificate of Origin, DCO）了。</li>
 </ul>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/04/22/ruyi-0.32#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/04/22/ruyi-0.32#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
 <ul>
 <li>新增了贡献指南文档，使社区成员更容易参与项目贡献。</li>
 </ul>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2025/04/22/ruyi-0.32#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2025/04/22/ruyi-0.32#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
 <ul>
 <li>完善了设备支持：<!-- -->
 <ul>
@@ -356,7 +358,7 @@
 </ul>
 </li>
 </ul>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="服务端组件">服务端组件<a class="hash-link" aria-label="Direkter Link zur 服务端组件" title="Direkter Link zur 服务端组件" href="https://ruyisdk.org/docs/de/blog/2025/04/22/ruyi-0.32#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%BB%84%E4%BB%B6">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="服务端组件">服务端组件<a class="hash-link" aria-label="Direkter Link zur 服务端组件" title="Direkter Link zur 服务端组件" href="https://ruyisdk.org/docs/de/blog/2025/04/22/ruyi-0.32#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%BB%84%E4%BB%B6">​</a></h2>
 <ul>
 <li>优化了 ruyisdk.org 官网数据统计页面的性能。</li>
 <li>集成了 GitHub Releases 渠道的下载量到官网数据统计页面的 RuyiSDK 包管理器下载计数中，使统计数据更准确、全面。</li>
@@ -379,7 +381,7 @@
 <li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.31.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.31.0/</a></li>
 </ul>
 <p>本次更新主要包含了以下内容，祝您使用愉快！</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/04/08/ruyi-0.31#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/04/08/ruyi-0.31#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
 <ul>
 <li>RuyiSDK 设备安装器在需要安装的软件包不止一个可用版本的时候，会额外允许您选择一个非默认（最新）的版本了。如果您的开发板需要旧版本的系统，该功能对您可能有所帮助。</li>
 <li>新增了实验模式开关：环境变量 <code>RUYI_EXPERIMENTAL</code>，用于启用一些我们暂不承诺兼容性的实验性功能。</li>
@@ -414,7 +416,7 @@
 <li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.30.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.30.0/</a></li>
 </ul>
 <p>本次更新主要包含了以下内容，祝您使用愉快！</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/03/25/ruyi-0.30#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/03/25/ruyi-0.30#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
 <ul>
 <li>修复了 <code>ruyi list --category-contains</code> 不工作的问题。</li>
 <li>修复了全新安装 <code>ruyi</code> 之后直接进行 <code>ruyi install</code> 会崩溃的问题。</li>
@@ -447,7 +449,7 @@
 <li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.29.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.29.0/</a></li>
 </ul>
 <p>本次更新主要包含了以下内容，祝您使用愉快！</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/03/11/ruyi-0.29#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/03/11/ruyi-0.29#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
 <ul>
 <li>修复了 <code>ruyi news list</code> 命令的机读模式（porcelain mode）支持。</li>
 <li>为 <code>ruyi news read</code> 增加了机读模式（porcelain mode）支持，返回格式与 <code>ruyi news list</code> 相同。</li>
@@ -476,13 +478,13 @@
 <li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.28.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.28.0/</a></li>
 </ul>
 <p>本次更新主要包含了以下内容，祝您使用愉快！</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/02/25/ruyi-0.28#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/02/25/ruyi-0.28#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
 <ul>
 <li>运行不依赖软件源的命令时，如软件源仓库尚未拉取到本地，现在不会多余做拉取动作了。</li>
 <li><code>ruyi list</code> 现在支持基本的过滤查询了：使用 <code>--category-is</code> 查询某个分类下的软件包，使用 <code>--name-contains</code> 查询名称中包含特定字样的软件包。</li>
 <li>考虑到软件包的数量持续增加，不带任何参数的 <code>ruyi list</code> 不再受到支持。如果您有依赖先前行为的脚本等，请按照提示修改使用方式。</li>
 </ul>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2025/02/25/ruyi-0.28#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2025/02/25/ruyi-0.28#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
 <ul>
 <li>新增了以下软件包：<!-- -->
 <ul>
@@ -515,7 +517,7 @@
 <li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.27.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.27.0/</a></li>
 </ul>
 <p>本次更新主要包含了以下内容，祝您使用愉快！</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/02/11/ruyi-0.27#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/02/11/ruyi-0.27#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
 <ul>
 <li>新增了 <code>ruyi telemetry upload</code> 命令。如果您乐意配合，现在在 CI 等临时性场合也能确保遥测数据在任务结束、环境被清理之前得到上传了。</li>
 <li>支持分别指定软件包版本的服务等级了。如果某个软件包的某个版本存在已知问题，在安装或解压该版本时，<code>ruyi</code> 会输出提示信息，该信息可由打包人员在软件源维护。后续也将支持按照服务等级过滤软件包：届时将可以跳过存在已知问题的版本，或仅使用经过验证的版本等。</li>
@@ -525,7 +527,7 @@
 </ul>
 </li>
 </ul>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2025/02/11/ruyi-0.27#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2025/02/11/ruyi-0.27#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
 <ul>
 <li>更新了以下软件包：<!-- -->
 <ul>
@@ -555,7 +557,7 @@
 <li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.26.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.26.0/</a></li>
 </ul>
 <p>本次更新主要包含了以下内容，祝您使用愉快！</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/01/14/ruyi-0.26#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2025/01/14/ruyi-0.26#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
 <ul>
 <li>为 <code>ruyi telemetry status</code> 新增了 <code>--verbose</code> (<code>-v</code>) 选项，供用户在 <code>ruyi telemetry consent</code> 之后继续查看自身遥测数据的上传计划。</li>
 <li>修复了使用厂商工具链创建虚拟环境时，工具链 <code>-mcpu</code> 取值可能不被正确映射的问题。如果您受影响，请在 <code>ruyi update</code> 之后重建虚拟环境。</li>
@@ -572,7 +574,7 @@
 </ul>
 </li>
 </ul>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2025/01/14/ruyi-0.26#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2025/01/14/ruyi-0.26#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
 <ul>
 <li>更新了 <code>board-image/revyos-sipeed-lpi4a</code>。</li>
 <li>配合 <code>ruyi</code> 0.26.0 相应更改，支持了新的 profile API，以便为虚拟环境正确配置 <code>-mcpu</code>。</li>
@@ -594,7 +596,7 @@
 <li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.25.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.25.0/</a></li>
 </ul>
 <p>本次更新主要包含了以下内容，祝您使用愉快！</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2024/12/31/ruyi-0.25#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2024/12/31/ruyi-0.25#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
 <ul>
 <li>新增了 <code>ruyi config</code> 子命令，方便用户通过命令行或脚本方式查询、修改 RuyiSDK 包管理器配置。该命令用法受到了 <code>git config</code> 的启发，详见 <code>ruyi config --help</code> 输出。</li>
 <li>新增了 <code>ruyi telemetry</code> 子命令，方便用户通过命令行或脚本方式查询、变更遥测偏好。详见 <code>ruyi telemetry --help</code> 输出。<!-- -->
@@ -642,7 +644,7 @@
 <p>为了帮助开发者更好地理解和使用 RevyOS，团队还提供了丰富的教程文档，涵盖了 Debian 软件包构建、GCC 编译工具链、 XuanTie QEMU 编译流程以及内核替换与编译等，请访问官方文档库获取更多资源：</p>
 <p><img decoding="async" loading="lazy" alt="6403" src="https://ruyisdk.org/docs/de/assets/images/6403-a43133f2181948481185f4a2d9fe056a.png" width="404" height="404" class="img_ev3q"></p>
 <p><a href="https://docs.revyos.dev/" target="_blank" rel="noopener noreferrer">https://docs.revyos.dev/</a></p>
-<h6 class="anchor anchorWithHideOnScrollNavbar_emO8" id="关于-th1520"><strong>关于 TH1520</strong><a class="hash-link" aria-label="Direkter Link zur 关于-th1520" title="Direkter Link zur 关于-th1520" href="https://ruyisdk.org/docs/de/blog/2024/12/31/th1520#%E5%85%B3%E4%BA%8E-th1520">​</a></h6>
+<h6 class="anchor anchorWithStickyNavbar_loeA" id="关于-th1520"><strong>关于 TH1520</strong><a class="hash-link" aria-label="Direkter Link zur 关于-th1520" title="Direkter Link zur 关于-th1520" href="https://ruyisdk.org/docs/de/blog/2024/12/31/th1520#%E5%85%B3%E4%BA%8E-th1520">​</a></h6>
 <p>基于玄铁 C910 内核，最高主频可达2.5GHz，支持全链路安全防护，具有4k视频处理能力，同时含有丰富的异构计算和高速IO资源。可广泛用于中高性能的应用场景，欢迎开发者扫码，备注【TH1520】进微信群。</p>
 <p><img decoding="async" loading="lazy" alt="6404" src="https://ruyisdk.org/docs/de/assets/images/6404-625c20b71648630d480fee7d023e58c7.png" width="378" height="498" class="img_ev3q"></p>]]></content>
     </entry>
@@ -658,11 +660,11 @@
 <li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.24.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.24.0/</a></li>
 </ul>
 <p>本次更新主要包含了以下内容，祝您使用愉快！</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2024/12/17/ruyi-0.24#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2024/12/17/ruyi-0.24#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
 <ul>
 <li>更新了依赖版本。</li>
 </ul>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2024/12/17/ruyi-0.24#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 软件源" title="Direkter Link zur RuyiSDK 软件源" href="https://ruyisdk.org/docs/de/blog/2024/12/17/ruyi-0.24#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90">​</a></h2>
 <ul>
 <li>更新了以下软件到最新版本：<!-- -->
 <ul>
@@ -695,7 +697,7 @@
 <li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.23.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.23.0/</a></li>
 </ul>
 <p>本次更新主要包含了以下内容，祝您使用愉快！</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2024/12/03/ruyi-0.23#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2024/12/03/ruyi-0.23#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
 <ul>
 <li>出于项目验收要求，调整了默认遥测模式为 <code>on</code>。后续会随着 RuyiSDK 软件源的更新，周期性上传匿名化的使用统计数据。遥测服务端位于中国大陆境内，由 RuyiSDK 团队管理。</li>
 <li>修复了与外部依赖 <code>semver</code> 2.x 版本的兼容性。</li>
@@ -709,7 +711,20 @@
 <li>对数据上传行为给予同意。</li>
 </ul>
 <p>具体的 <code>ruyi</code> 配置文件写法示例如下。该配置文件一般位于 <code>~/.config/ruyi/config.toml</code> 位置，如不存在，创建即可。</p>
-<div class="language-toml codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-toml codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain"># 在 [telemetry] 一节体现以下内容之一。如不存在此节，创建即可：</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">[telemetry]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># 您可以变更遥测模式为 local 或 off:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">mode = "local"</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># 或告知 ruyi 您在当前日期时间给予了同意：</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">upload_consent = 2024-12-32T25:61:00+08:00</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># 此日期格式并不合法，这是有意为之，请您自行填入您操作的当前时刻。例如执行以下命令：</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">#</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">#     echo "upload_consent = $(date -Iseconds)"</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">#</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"># 输出内容即可用于上述用途。</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="In die Zwischenablage kopieren" title="Kopieren" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>]]></content>
+<div class="rounded-xl font-mono my-6 overflow-hidden text-sm bg-neutral-50 border border-neutral-200 shadow-sm dark:bg-neutral-900 dark:border-neutral-800 dark:shadow-black/30"><div class="flex items-center justify-between pl-4 pr-3 py-0 min-h-[48px] bg-[#FAFAFA]"><div class="flex items-center gap-3"><div class="flex items-center gap-2"><span class="text-[13px] font-normal tracking-normal text-[#666666] dark:text-[#666666]" style="font-family:Geist, Arial, &quot;Apple Color Emoji&quot;, sans-serif">toml</span></div></div><div class="transition-opacity duration-200" style="opacity:0"><button class="flex items-center justify-center p-2 rounded-md border-0 cursor-pointer transition-all duration-200 text-neutral-500 hover:text-neutral-900 hover:bg-neutral-200 dark:text-neutral-400 dark:hover:text-white dark:hover:bg-neutral-700 focus-visible:outline-2 focus-visible:outline-blue-500 focus-visible:outline-offset-2" aria-label="Copy code" title="Copy code"><svg height="16" stroke-linejoin="round" viewBox="0 0 16 16" width="16" style="color:currentcolor"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 0.5C1.7835 0.5 1 1.2835 1 2.25V9.75C1 10.7165 1.7835 11.5 2.75 11.5H3.75H4.5V10H3.75H2.75C2.61193 10 2.5 9.88807 2.5 9.75V2.25C2.5 2.11193 2.61193 2 2.75 2H8.25C8.38807 2 8.5 2.11193 8.5 2.25V3H10V2.25C10 1.2835 9.2165 0.5 8.25 0.5H2.75ZM7.75 4.5C6.7835 4.5 6 5.2835 6 6.25V13.75C6 14.7165 6.7835 15.5 7.75 15.5H13.25C14.2165 15.5 15 14.7165 15 13.75V6.25C15 5.2835 14.2165 4.5 13.25 4.5H7.75ZM7.5 6.25C7.5 6.11193 7.61193 6 7.75 6H13.25C13.3881 6 13.5 6.11193 13.5 6.25V13.75C13.5 13.8881 13.3881 14 13.25 14H7.75C7.61193 14 7.5 13.8881 7.5 13.75V6.25Z" fill="currentColor"></path></svg></button></div></div><pre style="color:black;background:#f5f2f0;text-shadow:0 1px white;font-family:Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;font-size:0.875rem;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:20px 0px 20px 20px;margin:0;overflow:auto;font-weight:400;background-color:#FFFFFF"><code class="language-toml" style="white-space:pre;color:black;background:none;text-shadow:0 1px white;font-family:Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;font-size:1em;text-align:left;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none"><span><span class="token" style="color:slategray"># 在 [telemetry] 一节体现以下内容之一。如不存在此节，创建即可：</span><span>
+</span></span><span><span></span><span class="token" style="color:#999">[</span><span class="token table" style="color:#DD4A68">telemetry</span><span class="token" style="color:#999">]</span><span>
+</span></span><span>
+</span><span><span></span><span class="token" style="color:slategray"># 您可以变更遥测模式为 local 或 off:</span><span>
+</span></span><span><span></span><span class="token key" style="color:#905">mode</span><span> </span><span class="token" style="color:#999">=</span><span> </span><span class="token" style="color:#690">"local"</span><span>
+</span></span><span>
+</span><span><span></span><span class="token" style="color:slategray"># 或告知 ruyi 您在当前日期时间给予了同意：</span><span>
+</span></span><span><span></span><span class="token key" style="color:#905">upload_consent</span><span> </span><span class="token" style="color:#999">=</span><span> </span><span class="token date" style="color:#905">2024-12-32T25:61:00+08:00</span><span>
+</span></span><span><span></span><span class="token" style="color:slategray"># 此日期格式并不合法，这是有意为之，请您自行填入您操作的当前时刻。例如执行以下命令：</span><span>
+</span></span><span><span></span><span class="token" style="color:slategray">#</span><span>
+</span></span><span><span></span><span class="token" style="color:slategray">#     echo "upload_consent = $(date -Iseconds)"</span><span>
+</span></span><span><span></span><span class="token" style="color:slategray">#</span><span>
+</span></span><span><span></span><span class="token" style="color:slategray"># 输出内容即可用于上述用途。</span><span>
+</span></span><span></span></code></pre></div>]]></content>
         <author>
             <name>xen0n</name>
             <uri>https://github.com/xen0n</uri>
@@ -727,7 +742,7 @@
 <li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.22.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.22.0/</a></li>
 </ul>
 <p>本次更新主要包含了以下内容，祝您使用愉快！</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2024/11/19/ruyi-0.22#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2024/11/19/ruyi-0.22#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
 <ul>
 <li>新增了 <a href="https://ruyisdk.org/docs/Other/platform-support" target="_blank" rel="noopener noreferrer">RuyiSDK 的平台支持文档</a>，基于此完善了 RuyiSDK 包管理器的平台兼容性：<!-- -->
 <ul>
@@ -755,7 +770,7 @@
 <li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.21.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.21.0/</a></li>
 </ul>
 <p>本次更新主要包含了以下内容，祝您使用愉快！</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_emO8" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2024/11/05/ruyi-0.21#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" aria-label="Direkter Link zur RuyiSDK 包管理器" title="Direkter Link zur RuyiSDK 包管理器" href="https://ruyisdk.org/docs/de/blog/2024/11/05/ruyi-0.21#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8">​</a></h2>
 <ul>
 <li>将 RuyiSDK 软件源打包辅助命令 <code>ruyi admin manifest</code> 重命名为 <code>ruyi admin checksum</code> 了。如果您在为 RuyiSDK 打包，您可能需要更新您的脚本。</li>
 <li><code>ruyi self clean</code> 支持删除新闻（<code>ruyi news</code>）的阅读状态了：<code>ruyi self clean --news-read-status</code>。</li>
