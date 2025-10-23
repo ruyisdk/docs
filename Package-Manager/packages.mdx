@@ -210,12 +210,33 @@ $ ruyi install --reinstall gnu-upstream
 
 - source 源码包
 
-源码包可以使用 ``extract`` 命令下载一个源码包并解包到当前目录：
+源码包可以使用 ``extract`` 命令下载一个源码包并解包。默认情况下,``extract`` 会将所请求的软件包内容解压到以软件包名、版本命名的独立目录下:
 
 <CodeBlock lang="bash" showTitleCopyButton="true" code={`
 $ ruyi extract ruyisdk-demo
+$ cd ruyisdk-demo-0.20231114.0
 $ ls
 README.md  rvv-autovec
+`} />
+
+如果您需要直接解压到当前工作目录(先前版本的默认行为),可以使用 ``--extract-without-subdir`` 选项:
+
+<CodeBlock lang="bash" showTitleCopyButton="true" code={`
+$ ruyi extract --extract-without-subdir ruyisdk-demo
+$ ls
+README.md  rvv-autovec
+`} />
+
+如果您需要将内容解压到其他目录,可以使用 ``--dest-dir`` 或 ``-d`` 选项指定目标目录:
+
+<CodeBlock lang="bash" showTitleCopyButton="true" code={`
+$ ruyi extract -d /path/to/destination ruyisdk-demo
+`} />
+
+如果您只需要下载源码包但不解压,可以使用 ``--fetch-only`` 或 ``-f`` 选项:
+
+<CodeBlock lang="bash" showTitleCopyButton="true" code={`
+$ ruyi extract -f ruyisdk-demo
 `} />
 
 ``extract`` 命令支持和 ``install`` 相同的版本表达方式。
