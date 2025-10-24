@@ -25,6 +25,7 @@ ruyi 包管理器主要提供以下功能。
 | `ruyi install 'gnu-upstream(0.20231118.0)'`                                                  | 安装指定版本的 GNU 上游工具链。          | 通过指定版本号安装历史版本。                      |
 | `ruyi install 'gnu-upstream(==0.20231118.0)'`                                                | 安装特定版本的 GNU 上游工具链。          | 版本匹配格式应为 `<op><ver>`。               |
 | `ruyi install --reinstall gnu-upstream`                                                      | 重新安装 GNU 上游工具链。             |                                     |
+| `ruyi uninstall gnu-upstream`                                                                | 卸载已安装的软件包。                   | 也可使用 `ruyi remove` 或 `ruyi rm`。     |
 | `ruyi extract ruyisdk-demo`                                                                  | 下载并解包ruyisdk-demo 源码包。      | 默认解包到以软件包名、版本命名的独立目录下。                            |
 | `ruyi venv --toolchain gnu-upstream --emulator qemu-user-riscv-upstream generic ./ruyi_venv` | 在指定目录建立包含工具链和模拟器的虚拟环境。      | 使用预置的 generic 配置。                   |
 | `ruyi version`                                                                               | 查看 ruyi 包管理器的版本。              |                                     |
