@@ -243,13 +243,24 @@ $ ruyi extract -f ruyisdk-demo
 
 ## 卸载软件包
 
-Ruyi 包管理器没有实现卸载指定 Ruyi 软件包的功能，但是您可以使用如下命令删除所有已经下载和安装的软件包：
+您可以使用 ``ruyi uninstall`` 命令卸载已安装的软件包:
+
+<CodeBlock lang="bash" showTitleCopyButton="true" code={`
+$ ruyi uninstall gnu-upstream
+`} />
+
+该命令还有更简短的别名 ``ruyi remove`` 或 ``ruyi rm`` 可用:
+
+<CodeBlock lang="bash" showTitleCopyButton="true" code={`
+$ ruyi remove gnu-upstream
+$ ruyi rm gnu-upstream
+`} />
+
+如果您需要删除所有已经下载和安装的软件包，可以使用如下命令:
 
 <CodeBlock lang="bash" showTitleCopyButton="true" code={`
 $ ruyi self clean --distfiles --installed-pkgs
 `} />
-
-如果您执意要删除某个软件包，虽然不建议，但是您可以手动删除它们。如果错误删除了一些文件，但是 Ruyi 依然认为该软件包已经安装，可以尝试使用 ``install --reinstall`` 恢复。
 
 注意，如果某个工具链软件包被删除，已经建立的依赖该包的虚拟环境将失效，且激活该编译环境时并不会有相关警告。
 
