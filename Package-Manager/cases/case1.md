@@ -20,20 +20,20 @@ sidebar_position: 1
 
 2. 查看软件仓软件包索引信息
 
-```bash
+```bash input="1"
 $ ruyi list --name-contains gnu-plct --category-is toolchain
 ```
 
 3. 安装 gnu：ruyi install `<package-name>`
 
-```bash
+```bash input="2"
 # 安装适用于 Licheepi 4A 的编译工具链 gnu-plct-xthead 
 $ ruyi install gnu-plct-xthead 
 ```
 
 4. 查看预置编译环境
 
-```bash
+```bash input="1"
 $ ruyi list profiles
 ```
 
@@ -41,7 +41,7 @@ $ ruyi list profiles
    > 注意在虚拟环境创建时，需要指定正确的编译器版本和 sysroot 类型。
    > 在不指定版本号时默认使用的是软件源里的最新版本，而不是本地安装的版本。
 
-```bash
+```bash input="2,5,8,11,14"
 # 使用帮助命令了解使用
 $ ruyi venv -h
 
@@ -60,7 +60,7 @@ $ . venv-sipeed/bin/ruyi-activate
 
 6. 下载解压 coremark 源码作为编译对象
 
-```bash
+```bash input="2,5,8"
 # 创建目录，用于管理解压的源码
 $ mkdir coremark && cd coremark
 
@@ -75,14 +75,14 @@ $ ls -al
 
 7. 设置 coremark 源码中的编译配置信息(参考 coremark 仓库自述文档)
 
-```bash
+```bash input="2"
 # 按照coremark项目build指导修改gcc
 $ sed -i 's/\bgcc\b/riscv64-plctxthead-linux-gnu-gcc/g' linux64/core_portme.mak
 ```
 
 8. 执行交叉编译和构建，得到可执行程序 coremark.exe
 
-```bash
+```bash input="2,4"
 # 执行构建
 $ make PORT_DIR=linux64 link
 
@@ -92,7 +92,7 @@ $ ls -al
 
 9. 查看 riscv64 可执行程序文件属性信息。
 
-```bash
+```bash input="1"
 $ file coremark.exe
 # 命令回显信息显示了文件的架构相关信息
 ```
@@ -101,7 +101,7 @@ $ file coremark.exe
 
 10. 直接运行 riscv64 coremark 可执行程序
 
-```bash
+```bash input="1"
 $ ./coremark.exe
 ```
 

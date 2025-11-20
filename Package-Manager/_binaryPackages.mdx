@@ -1,7 +1,6 @@
 
 import ReleaseProvider, { DownloadRuyi, ChmodCommand, CpCommand } from '@site/src/components/docs_utils/LatestReleases';
 import ArchSelector from '@site/src/components/docs_utils/LatestReleases/ArchSelector';
-import CodeBlock from '@site/src/components/docs_utils/CodeBlock';
 
 <ReleaseProvider>
   <>
@@ -29,9 +28,9 @@ import CodeBlock from '@site/src/components/docs_utils/CodeBlock';
 
 您可以通过以下方式验证安装是否成功：
 
-<CodeBlock lang="bash" showTitleCopyButton="true" code={`
+```bash input="1"
 $ ruyi version
-`} />
+```
 
 若命令执行并正常打印了 Copyright 信息则安装已经成功；若出现了非预期的输出则需要检查安装过程和系统环境。
 

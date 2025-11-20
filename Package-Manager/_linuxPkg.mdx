@@ -1,4 +1,3 @@
-import CodeBlock from '@site/src/components/docs_utils/CodeBlock';
 
 ## 使用系统包管理器安装
 
@@ -9,9 +8,9 @@ import CodeBlock from '@site/src/components/docs_utils/CodeBlock';
 
 从 AUR 安装，以 ``yay`` 为例，注意应当使用普通用户：
 
-<CodeBlock lang="bash" showTitleCopyButton="true" code={`
+```bash input="1"
 $ yay -S ruyi
-`} />
+```
 
 从 Arch Linux CN 软件源安装，以 ISCAS 开源镜像站为例添加配置：
 
@@ -22,10 +21,10 @@ Server = https://mirror.iscas.ac.cn/archlinuxcn/$arch
 
 使用 ``pacman`` 安装：
 
-<CodeBlock lang="bash" showTitleCopyButton="true" code={`
+```bash input="1,2"
 $ sudo pacman -Sy
 $ sudo pacman -S ruyi
-`} />
+```
 
 
 ### Gentoo Linux
@@ -35,24 +34,24 @@ Gentoo Linux 用户可参考以下步骤，通过官方提供的 `ruyisdk-overla
 
 1. 安装 `eselect-repository` 与 Git 客户端：
 
-<CodeBlock lang="bash" showTitleCopyButton="true" code={`
+```bash input="1"
 $ sudo emerge --ask app-eselect/eselect-repository dev-vcs/git
-`} />
+```
 
 2. 确保系统已添加主 Gentoo 仓库（通常已默认配置）。
 
 
 3. 使用 `eselect-repository` 添加 `ruyisdk-overlay`
 
-<CodeBlock lang="bash" showTitleCopyButton="true" code={`
+```bash input="1"
 $ sudo eselect repository add ruyisdk git https://github.com/ruyisdk/ruyisdk-overlay.git
-`} />
+```
 
 4. 同步仓库
 
-<CodeBlock lang="bash" showTitleCopyButton="true" code={`
+```bash input="1"
 $ sudo emaint sync -r ruyisdk
-`} />
+```
 
 5. 接受测试关键字（Unmask）
 
@@ -60,26 +59,26 @@ Ruyi 的 ebuild 被标记为测试版本，需要解屏蔽才能安装。
 
     - 首先执行以下命令生成必要的 package.accept_keywords 改动
 
-        <CodeBlock lang="bash" showTitleCopyButton="true" code={`
+        ```bash input="1"
         $ sudo emerge dev-util/ruyi --autounmask-write --autounmask
-        `} />
+        ```
 
     - 运行 `dispatch-conf` ，并在界面中输入 `u`（use-new）接受所有改动。
 
-        <CodeBlock lang="bash" showTitleCopyButton="true" code={`
+        ```bash input="1"
         $ sudo dispatch-conf
-        `} />
+        ```
 
 6. 安装 Ruyi 包管理器
 
-<CodeBlock lang="bash" showTitleCopyButton="true" code={`
+```bash input="1"
 $ sudo emerge --ask dev-util/ruyi
-`} />
+```
 
 7. 验证你的安装
 
-<CodeBlock lang="bash" showTitleCopyButton="true" code={`
+```bash input="1"
 $ ruyi version
-`} />
+```
 
 命令应当可以正常运行并打印版本和 Copyright 信息，如果失败请检查系统环境或重新尝试安装。

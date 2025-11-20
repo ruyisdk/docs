@@ -26,7 +26,7 @@ sidebar_position: 3
 
 ruyi 包管理器提供了为 RISC-V 开发板安装操作系统的功能，为任一型号的 RISC-V 开发板安装镜像都只需要执行：
 
-```bash
+```bash input="1"
 $ ruyi device provision
 ```
 

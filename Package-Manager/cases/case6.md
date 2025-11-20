@@ -7,18 +7,18 @@ sidebar_position: 6
 本案例基于 [为 MilkV Duo 构建 Coremark](case2.md)
 
 首先安装必要的依赖：
-```shell
+```bash input="1"
 $ ruyi install llvm-upstream gnu-plct qemu-user-riscv-upstream
 ```
 
 创建虚拟环境并激活：
-```shell
+```bash input="1-2"
 $ ruyi venv -t llvm-upstream --sysroot-from gnu-plct -e qemu-user-riscv-upstream generic venv
 $ . venv/bin/ruyi-activate
 ```
 
 解包出 coremark 并编译：
-```shell
+```bash input="1-3,5-6"
 «Ruyi milkv-venv» $ mkdir coremark
 «Ruyi milkv-venv» $ cd coremark
 «Ruyi milkv-venv» $ ruyi extract coremark
@@ -28,7 +28,7 @@ $ . venv/bin/ruyi-activate
 ```
 
 这时通过 qemu 运行 coremark：
-```shell
+```bash input="1"
 $ ruyi-qemu coremark.exe
 2K performance run parameters for coremark.
 CoreMark Size    : 666
