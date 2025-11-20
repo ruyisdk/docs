@@ -6,12 +6,12 @@ sidebar_position: 7
 
 首先安装必要的依赖：
 
-```shell
+```bash input="1"
 $ ruyi install gnu-milkv-milkv-duo-musl-bin
 ```
 
 解包出 milkv-duo-examples 并编译：
-```shell
+```bash input="1-3"
 $ mkdir test-duo-examples
 $ cd test-duo-examples
 $ ruyi extract milkv-duo-examples
@@ -132,13 +132,13 @@ print_info "Environment is ready."
 
 启动虚拟环境：
 
-```shell
+```bash input="1"
 $ source envsetup.sh
 ```
 
 应当可以正常构建：
 
-```shell
+```bash input="1-2"
 $ cd i2c/ssd1306_i2c
 $ make
 ```

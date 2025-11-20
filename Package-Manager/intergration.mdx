@@ -24,14 +24,14 @@ Ruyi 包管理器工具的 ``venv`` 命令用于组合工具链、模拟器来�
 
 Ruyi 软件源中已经提供了一些预置的配置且无需安装，这些配置可以使用 ``ruyi list profiles`` 命令列出：
 
-<CodeBlock lang="bash" showTitleCopyButton="true" code={`
+```bash input="1"
 $ ruyi list profiles
 generic
 baremetal-rv64ilp32 (needs flavor(s): {'rv64ilp32'})
 xiangshan-nanhu
 sipeed-lpi4a (needs flavor(s): {'xthead'})
 milkv-duo
-`} />
+```
 
 一些配置需要支持特定 flavor(s) 的 Ruyi 工具链包才能使用，您可以在 ``ruyi list --verbose`` 中查看某个工具链包是否支持这种特性。或者，直接参考“工具链与预制配置组合“中的表格。
 
@@ -64,12 +64,12 @@ Ruyi 包管理在建立虚拟环境之前会检查该环境是否存在冲突，
 
 使用 ``venv`` 命令的具体方法可通过 ``-h`` 参数获得：
 
-<CodeBlock lang="bash" showTitleCopyButton="true" code={`
+```bash input="1"
 $ ruyi venv -h
-`} />
+```
 这里给出一些实例：
 
-<CodeBlock lang="bash" showTitleCopyButton="true" code={`
+```bash input="2,5,8,11,14,17,20,23"
 # 使用 GNU 上游工具链配置 RISC-V 虚拟环境：
 $ ruyi venv -t gnu-upstream generic ./generic-venv
 
@@ -93,7 +93,7 @@ $ ruyi venv -t gnu-plct-xthead sipeed-lpi4a -e qemu-user-riscv-xthead ./xthead-q
 
 # 多工具链示例，其中 gnu-upstream 提供了 sysroot
 $ ruyi venv -t llvm-upstream -t gnu-upstream generic ./upstream-venv
-`} />
+```
 
 虚拟环境是用于集成工具链、模拟器等工具的，创建编译环境之前请确保对应的 Ruyi 软件包已经安装。
 
@@ -103,29 +103,29 @@ $ ruyi venv -t llvm-upstream -t gnu-upstream generic ./upstream-venv
 
 首先安装本示例所需的软件包：
 
-<CodeBlock lang="bash" showTitleCopyButton="true" code={`
+```bash input="1"
 $ ruyi install gnu-upstream qemu-user-riscv-upstream
-`} />
+```
 
 建立一个干净的目录用于运行用例：
 
-<CodeBlock lang="bash" showTitleCopyButton="true" code={`
+```bash input="1-2"
 $ mkdir hello-ruyi
 $ cd hello-ruyi
-`} />
+```
 
 获取 ruyisdk-demo 源码：
 
-<CodeBlock lang="bash" showTitleCopyButton="true" code={`
+```bash input="1-3"
 $ ruyi extract ruyisdk-demo
 $ cd ruyisdk-demo-0.20231114.0
 $ ls
 README.md  rvv-autovec
-`} />
+```
 
 建立虚拟环境：
 
-<CodeBlock lang="bash" showTitleCopyButton="true" code={`
+```bash input="1"
 $ ruyi venv -t gnu-upstream -e qemu-user-riscv-upstream generic ./myhone-venv
 info: Creating a Ruyi virtual environment at myhone-venv...
 info: The virtual environment is now created.
@@ -141,26 +141,26 @@ It is available at the following path:
 The virtual environment also comes with ready-made CMake toolchain file
 and Meson cross file. Check the virtual environment root for those;
 comments in the files contain usage instructions.
-`} />
+```
 
 该虚拟环境集成了 gnu-upstream 工具链和 qemu-user-riscv-upstream 模拟器，使用目标 riscv64 Linux 操作系统的 generic 配置，将编译环境建立在 ``./myhome-venv`` 目录下（亦可用绝对路径）。命令的输出给出了激活编译环境的方法，退出编译环境的命令， sysroot 目录的绝对路径以及一些其他信息。
 
 在虚拟环境目录可以看到编译环境相关的文件：
 
-<CodeBlock lang="bash" showTitleCopyButton="true" code={`
+```bash input="1"
 $ ls ./myhone-venv/
 bin                                        ruyi-venv.toml
 binfmt.conf                                sysroot
 meson-cross.ini                            sysroot.riscv64-unknown-linux-gnu
 meson-cross.riscv64-unknown-linux-gnu.ini  toolchain.cmake
 ruyi-cache.v1.toml                         toolchain.riscv64-unknown-linux-gnu.cmake
-`} />
+```
 
 其中 ``binfmt.conf`` 是可用于 systemd-binfmt 的示例配置， ``toolchain.cmake`` 和 ``meson-cross.ini`` 可用于项目的交叉编译， ``sysroot`` 为该虚拟环境使用的 sysroot， ``bin`` 目录包含了该编译环境可用的命令和脚本。
 
 在 ``bin`` 目录下可以查看到可用的工具链二进制：
 
-<CodeBlock lang="bash" showTitleCopyButton="true" code={`
+```bash input="1"
 $ ls ./myhone-venv/bin/
 riscv64-unknown-linux-gnu-addr2line  riscv64-unknown-linux-gnu-gcc-ranlib     riscv64-unknown-linux-gnu-nm
 riscv64-unknown-linux-gnu-ar         riscv64-unknown-linux-gnu-gcov           riscv64-unknown-linux-gnu-objcopy
@@ -174,20 +174,20 @@ riscv64-unknown-linux-gnu-g++        riscv64-unknown-linux-gnu-ld             ru
 riscv64-unknown-linux-gnu-gcc        riscv64-unknown-linux-gnu-ld.bfd         ruyi-qemu
 riscv64-unknown-linux-gnu-gcc-ar     riscv64-unknown-linux-gnu-ldd
 riscv64-unknown-linux-gnu-gcc-nm     riscv64-unknown-linux-gnu-lto-dump
-`} />
+```
 
 其中包含了全部的工具链命令，被重命名为 ``ruyi-qemu`` 的 QEMU 用户态模拟器，以及用于进入虚拟环境的 ``ruyi-activate`` 脚本。其中工具链命令实际上是指向 ruyi 的软链接。
 
 ``source`` ruyi-activate 脚本即可激活构建环境， ``PS1`` 将被修改：
 
-<CodeBlock lang="bash" showTitleCopyButton="true" code={`
+```bash input="1"
 $ source ./myhone-venv/bin/ruyi-activate
 «Ruyi myhone-venv» $
-`} />
+```
 
 同时 ``PATH`` 也被修改，现在可以直接调用工具链了：
 
-<CodeBlock lang="bash" showTitleCopyButton="true" code={`
+```bash input="1,3"
 «Ruyi myhone-venv» $ whereis riscv64-unknown-linux-gnu-gcc
 riscv64-unknown-linux-gnu-gcc: /home/myhone/hello-ruyi/myhone-venv/bin/riscv64-unknown-linux-gnu-gcc
 «Ruyi myhone-venv» $ riscv64-unknown-linux-gnu-gcc --version
@@ -195,23 +195,23 @@ riscv64-unknown-linux-gnu-gcc (RuyiSDK 20231212 Upstream-Sources) 13.2.0
 Copyright (C) 2023 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-`} />
+```
 
 在 Ruyi 虚拟环境下，除了会自动向工具链传入配置的架构选项外，工具链和模拟器的使用并没有太大的区别。更多内容还可以参考“使用案例”章节。
 
 构建 ruyisdk-demo：
 
-<CodeBlock lang="bash" showTitleCopyButton="true" code={`
+```bash input="1,2"
 $ cd rvv-autovec
 $ make
-`} />
+```
 
 在完成虚拟环境的使用后，退出编译环境，一切都将被还原到进入以前的状态：
 
-<CodeBlock lang="bash" showTitleCopyButton="true" code={`
+```bash input="1"
 «Ruyi myhone-venv» $ ruyi-deactivate
 $
-`} />
+```
 
 ## Ruyi 镜像集成
 
@@ -219,9 +219,9 @@ Ruyi 的镜像集成提供了开发板镜像刷写和单片机设备文档。该
 
 该功能提供了一个向导，支持使用 ``dd`` 和 ``fastboot`` 对 RISC-V 设备进行系统镜像刷写，同时也为 RISC-V 单片机这类不能常规刷写的设备提供了指导文档。
 
-<CodeBlock lang="bash" showTitleCopyButton="true" code={`
+```bash input="1"
 $ ruyi device provision
-`} />
+```
 
 更详细的示例还可以参考“使用案例”章节。
 

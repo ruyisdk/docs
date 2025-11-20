@@ -7,7 +7,7 @@ sidebar_position: 2
 
 首先进入编译环境：
 
-```bash
+```bash input="2,4,6"
 # 安装编译工具链 gnu-milkv-milkv-duo-musl-bin
 $ ruyi install gnu-milkv-milkv-duo-musl-bin
 # 以 generic profile 创建虚拟环境 milkv-venv
@@ -19,7 +19,7 @@ $ . milkv-venv/bin/ruyi-activate
 
 coremark 源码可以直接从 Ruyi 软件仓库中下载：
 
-```bash
+```bash input="1-3"
 «Ruyi milkv-venv» $ mkdir coremark
 «Ruyi milkv-venv» $ cd coremark
 «Ruyi milkv-venv» $ ruyi extract coremark
@@ -35,13 +35,13 @@ info: package coremark-1.0.1 extracted to current working directory
 
 由于使用的工具链为 ``gnu-milkv-milkv-duo-bin``，查看 bin 文件夹，需要编辑构建脚本：
 
-```bash
+```bash input="1"
 «Ruyi milkv-venv» $ sed -i 's/\bgcc\b/riscv64-unknown-linux-musl-gcc/g' linux64/core_portme.mak
 ```
 
 构建 coremark：
 
-```bash
+```bash input="1,4"
 «Ruyi milkv-venv» $ make PORT_DIR=linux64 LFLAGS_END=-march=rv64gcv0p7xthead link
 riscv64-unknown-linux-musl-gcc -O2 -Ilinux64 -I. -DFLAGS_STR=\""-O2   -march=rv64gcv0p7xthead"\" -DITERATIONS=0  core_list_join.c core_main.c core_matrix.c core_state.c core_util.c linux64/core_portme.c -o ./coremark.exe -march=rv64gcv0p7xthead
 Link performed along with compile
@@ -53,7 +53,7 @@ coremark.exe: ELF 64-bit LSB executable, UCB RISC-V, RVC, double-float ABI, vers
 
 退出虚拟环境
 
-```bash
+```bash input="1"
 «Ruyi milkv-venv» $ ruyi-deactivate
 $
 ```
@@ -62,13 +62,13 @@ $
 
 传送 coremark 二进制的 Milkv Duo， Milkv Duo 的 IP 地址请按实际情况更改。
 
-```bash
+```bash input="1"
 $ scp -O ./coremark.exe root@192.168.42.1:~
 ```
 
 在 Milkv Duo 上运行
 
-```bash
+```bash input="1"
 [root@milkv-duo]~# ./coremark.exe
 2K performance run parameters for coremark.
 CoreMark Size    : 666

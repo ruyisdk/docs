@@ -1,4 +1,3 @@
-import CodeBlock from '@site/src/components/docs_utils/CodeBlock';
 
 ## 使用 Python 包管理器安装
 > 环境标签： Linux x86_64 arm64
@@ -17,15 +16,15 @@ RuyiSDK 包管理器现已同步发布至 PyPI（[查看 PyPI 页面](https://py
 ### 使用 `pipx` 全局安装
 `pipx` 是一个用于安装 Python CLI 工具的工具，它会将每个包安装到独立的环境中，并自动将可执行文件链接到 `PATH`。
 
-<CodeBlock lang="bash" showTitleCopyButton="true" code={`
+```bash input="1"
 $ pipx install ruyi
-`} />
+```
 
 安装完成后，`ruyi` 命令会自动添加到你的 `PATH` 中，通常位于 `~/.local/bin`，因此可以通过以下命令验证 `ruyi` 是否安装成功：
 
-<CodeBlock lang="bash" showTitleCopyButton="true" code={`
+```bash input="1"
 $ ruyi version
-`} />
+```
 
 若命令执行并正常打印了 Copyright 信息则安装已经成功。如果出现错误或未找到命令，请检查安装步骤是否正确，并确认环境变量配置是否生效。
 
@@ -33,15 +32,15 @@ $ ruyi version
 ### 在虚拟环境中安装
 如果你希望将 `ruyi` 安装在某个虚拟环境中（例如 `/path/to/some/venv`），参考以下方式在虚拟环境中使用，在使用前请务必将路径替换为您环境的实际路径：
 
-<CodeBlock lang="bash" code={`
+```bash input="3"
 # 使用绝对路径调用命令
 # 注意：请务必将路径替换为您环境中的实际路径
 $ /path/to/some/venv/bin/pip install ruyi
-`} />
+```
 
 此时，`ruyi` 可执行文件会位于虚拟环境的 `bin` 目录下，**不会**自动添加到系统 `PATH`，因此使用时需要使用完整路径调用命令或者先激活虚拟环境：
 
-<CodeBlock lang="bash" code={`
+```bash input="3,7,8"
 # 使用完整路径执行ruyi 
 # 注意：请务必将路径替换为您环境中的实际路径
 $ /path/to/some/venv/bin/ruyi version
@@ -50,7 +49,6 @@ $ /path/to/some/venv/bin/ruyi version
 # 注意：请务必将路径替换为您环境中的实际路径
 $ source /path/to/some/venv/bin/activate
 $ ruyi version
-
-`} />
+```
 
 若命令执行并正常打印了 Copyright 信息则安装已经成功。

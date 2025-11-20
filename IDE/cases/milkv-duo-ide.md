@@ -5,7 +5,7 @@
 1. 安装 RuyiSDK 包管理器 [参考](/docs/Package-Manager/installation)
 2. 安装编译工具链，本文以 `gnu-milkv-milkv-duo-musl` 编译器举例（您可以根据需要修改工具链及版本）：
 
-   ```bash
+   ```bash input="2,5"
    # 查看软件源的资源
    $ ruyi list --name-contains milkv --category-is toolchain
 
@@ -13,11 +13,10 @@
    $ ruyi install gnu-milkv-milkv-duo-musl-bin
 
    # 从返回信息中可以查看安装的路径，如 ~/.local/share/ruyi/binaries/x86_64/gnu-milkv-milkv-duo-musl-bin-0.20240731.0+git.67688c7335e7
-
    ```
 3. 创建和使用Duo编译环境
 
-   ```bash
+   ```bash input="2,5"
    # 查看ruyi预配置环境
    $ ruyi list profiles
 
@@ -31,7 +30,7 @@
 
 本文以 milkv-duo 开发板的应用示例 duo-examples 为例。使用下面任一方式获取源码：
 
-   ```bash
+   ```bash input="2,5"
    # 方法一：git clone
    $ git clone https://github.com/milkv-duo/duo-examples.git
 
@@ -254,12 +253,9 @@ clean:
 1. 下载原厂gdbserver可执行程序：https://github.com/milkv-duo/duo-buildroot-sdk/blob/develop/ramdisk/rootfs/public/gdbserver/riscv_musl/usr/bin/gdbserver
 2. 将上述下载的gdbserver拷贝到milkv duo设备的path路径下：
 
-   ```bash
-
+   ```bash input="1-2"
    $ scp gdbserver root@192.168.42.1:/usr/bin/
-
    $ ssh root@192.168.42.1 "chmod +x /usr/bin/gdbserver"
-
    ```
 
 #### Terminal中调试
@@ -272,14 +268,14 @@ GDBServer + GDB命令远程调试的步骤如下：
 
 1. milkvduo设备端（helloworld所在目录下操作）:
 
-   ```bash
+   ```bash input="1"
    [root@milkv-duo]~/target# gdbserver :2345 ./sumdemo
    Process ./sumdemo created; pid = 1802
    Listening on port 2345
    ```
 2. PC端（helloworld.c所在目录下操作）：
 
-   ```bash
+   ```bash input="1,5-7"
    $ cd ~/ews-milkvduo-t01/sumdemo
 
    # 查看gdb版本，启动调试
@@ -348,7 +344,7 @@ GDBServer + GDB命令远程调试的步骤如下：
 
     2. 将公钥添加到milkv duo上：
 
-```bash
+```bash input="1"
 $ cat ~/.ssh/xxxx.pub | ssh root@192.168.42.1 'mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys'
 ```
 
