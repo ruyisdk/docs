@@ -1,12 +1,20 @@
 {
   "articles": [
     {
-      "title": "学以致用 虚位以待｜玄铁RV学院课程正式上线，玄铁与PLCT实验室邀您创\"芯\"未来",
-      "summary": "玄铁携手 PLCT 实验室推出 RISC-V 系列课程，包含三大中级课程与两大高阶进阶课程。由专业讲师团队授课，涵盖 RISC-V 软件生态、编译器开发等领域。提供主流开发板实践机会，结业后可参与技术沙龙、Hackathon 比赛等活动，与行业专家交流，获得职业发展机会。",
-      "date": 1761264000000,
-      "image": "/img/newsshowcase/1.png",
-      "filename": "2025-10-27-xuantie-rv-academy.md",
-      "link": "https://mp.weixin.qq.com/s/1K17gWu_TZFfzkxgZGxL-Q"
+      "title": "RuyiSDK 的 VSCode 扩展插件",
+      "summary": "RuyiSDK VSCode 扩展插件 0.1.0 版本已正式发布啦～赶紧来试试吧！",
+      "date": 1767225600000,
+      "image": "/img/newsshowcase/2025-01-01-ruyisdk-vscode-extension.png",
+      "filename": "2026-01-01-ruyisdk-vscode-extension.md",
+      "link": "https://ruyisdk.cn/t/topic/2338"
+    },
+    {
+      "title": "喜报：Steam 可以在 RISC-V 上稳定运行了！Box64 再次立大功",
+      "summary": "Box64新版本v0.3.8 发布，本版本RISC-V 后端得到了大量的兼容性修复，Linux Steam （终于）可以稳定运行了！",
+      "date": 1760572800000,
+      "image": "/img/newsshowcase/2025-10-16-steam-riscv-box64.png",
+      "filename": "2025-10-16-steam-riscv-box64.md",
+      "link": "https://mp.weixin.qq.com/s/zIuQ-2k4B98wEmNbHG5CUA"
     },
     {
       "title": "openGauss RISC-V SIG 深度参与 openGauss Meetup 成都站，探索开源数据库与 RISC-V 的融合与实践",
@@ -23,6 +31,14 @@
       "image": "/img/newsshowcase/3.png",
       "filename": "2025-09-24-hefei-riscv-open-day.md",
       "link": "https://mp.weixin.qq.com/s/BNRZfGiAbu8FPx8sjQeC5g"
+    },
+    {
+      "title": "学以致用 虚位以待｜玄铁RV学院课程正式上线，玄铁与PLCT实验室邀您创\"芯\"未来",
+      "summary": "玄铁携手 PLCT 实验室推出 RISC-V 系列课程，包含三大中级课程与两大高阶进阶课程。由专业讲师团队授课，涵盖 RISC-V 软件生态、编译器开发等领域。提供主流开发板实践机会，结业后可参与技术沙龙、Hackathon 比赛等活动，与行业专家交流，获得职业发展机会。",
+      "date": 1755820800000,
+      "image": "/img/newsshowcase/1.png",
+      "filename": "2025-08-22-xuantie-rv-academy.md",
+      "link": "https://mp.weixin.qq.com/s/1K17gWu_TZFfzkxgZGxL-Q"
     }
   ],
   "ruyinews": [],

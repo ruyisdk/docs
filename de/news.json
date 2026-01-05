@@ -1,12 +1,20 @@
 {
   "articles": [
     {
-      "title": "Lernen durch Anwenden – XuanTie RV Academy startet Kurse; gestalten Sie mit uns die Zukunft der Chips",
-      "summary": "XuanTie hat gemeinsam mit dem PLCT‑Labor eine RISC‑V‑Kursreihe gestartet, bestehend aus drei Mittelstufen‑ und zwei Fortgeschrittenenkursen, geleitet von einem erfahrenen Dozententeam. Die Inhalte umf...",
-      "date": 1761264000000,
-      "image": "/img/newsshowcase/1.png",
-      "filename": "2025-10-27-xuantie-rv-academy.de.md",
-      "link": "https://mp.weixin.qq.com/s/1K17gWu_TZFfzkxgZGxL-Q"
+      "title": "VS-Code-Erweiterung für RuyiSDK",
+      "summary": "Die RuyiSDK-VS-Code-Erweiterung in der Version 0.1.0 wurde offiziell veröffentlicht. Probieren Sie sie jetzt aus!",
+      "date": 1767225600000,
+      "image": "/img/newsshowcase/2025-01-01-ruyisdk-vscode-extension.png",
+      "filename": "2026-01-01-ruyisdk-vscode-extension.de.md",
+      "link": "https://ruyisdk.cn/t/topic/2338"
+    },
+    {
+      "title": "Gute Nachrichten: Steam kann jetzt stabil auf RISC-V laufen! Box64 liefert erneut ab",
+      "summary": "Box64 Version v0.3.8 wurde veröffentlicht. Dieses Update bringt eine große Anzahl an Kompatibilitätskorrekturen für das RISC-V-Backend, wodurch Linux Steam (endlich) stabil ausgeführt werden kann!",
+      "date": 1760572800000,
+      "image": "/img/newsshowcase/2025-10-16-steam-riscv-box64.png",
+      "filename": "2025-10-16-steam-riscv-box64.de.md",
+      "link": "https://mp.weixin.qq.com/s/zIuQ-2k4B98wEmNbHG5CUA"
     },
     {
       "title": "openGauss RISC-V SIG beim Chengdu Meetup: Open-Source-Datenbanken auf RISC‑V voranbringen",
@@ -23,6 +31,14 @@
       "image": "/img/newsshowcase/3.png",
       "filename": "2025-09-24-hefei-riscv-open-day.de.md",
       "link": "https://mp.weixin.qq.com/s/BNRZfGiAbu8FPx8sjQeC5g"
+    },
+    {
+      "title": "Lernen durch Anwenden – XuanTie RV Academy startet Kurse; gestalten Sie mit uns die Zukunft der Chips",
+      "summary": "XuanTie hat gemeinsam mit dem PLCT‑Labor eine RISC‑V‑Kursreihe gestartet, bestehend aus drei Mittelstufen‑ und zwei Fortgeschrittenenkursen, geleitet von einem erfahrenen Dozententeam. Die Inhalte umf...",
+      "date": 1755820800000,
+      "image": "/img/newsshowcase/1.png",
+      "filename": "2025-08-22-xuantie-rv-academy.de.md",
+      "link": "https://mp.weixin.qq.com/s/1K17gWu_TZFfzkxgZGxL-Q"
     }
   ],
   "ruyinews": [],
