@@ -4,10 +4,149 @@
         <title>RuyiSDK Blog</title>
         <link>https://ruyisdk.org/docs/de/biweekly</link>
         <description>RuyiSDK Blog</description>
-        <lastBuildDate>Tue, 16 Dec 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 30 Dec 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>de</language>
+        <item>
+            <title><![CDATA[第 059 期·2025 年 12 月 30 日]]></title>
+            <link>https://ruyisdk.org/docs/de/biweekly/2025/12/30/ruyisdk-biweekly-59</link>
+            <guid>https://ruyisdk.org/docs/de/biweekly/2025/12/30/ruyisdk-biweekly-59</guid>
+            <pubDate>Tue, 30 Dec 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[卷首语]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="卷首语">卷首语<a class="hash-link" href="https://ruyisdk.org/docs/de/biweekly/2025/12/30/ruyisdk-biweekly-59#%E5%8D%B7%E9%A6%96%E8%AF%AD" aria-label="卷首语 permalink" title="卷首语 permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>各位 RuyiSDK 的小伙伴们，大家好！辞旧迎新之际，先祝福大家元旦快乐，万事如意！</p>
+<p>Ruyi 包管理器 0.44.0 版本已于今日发布，我们新增Milk-V Megrez设备支持并完善RV32的manual profile命名，修复了遥测功能的若干细节，旨在提供更多设备支持和更好的服务。</p>
+<p>同时，RuyiSDK VS Code 插件和 Eclipse 插件也均发布了 0.1.0 版本。目前这两个插件已集成了包管理器，支持软件包的查询、安装与卸载，以及虚拟环境和新闻等功能，希望能为使用不同 IDE 的开发者在工具链配置和环境管理上提供一些便利。</p>
+<p>我们诚挚邀请您常来 <a href="https://ruyisdk.cn/" target="_blank" rel="noopener noreferrer">RuyiSDK 技术社区</a> 交流想法，共同成长。</p>
+<p>每一次版本的迭代，都离不开社区伙伴的反馈与贡献。下个版本计划在 1 月底与大家见面，让我们一起期待 RuyiSDK 在新的一年里带来更多惊喜吧！</p>
+<h2 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="包管理器">包管理器<a class="hash-link" href="https://ruyisdk.org/docs/de/biweekly/2025/12/30/ruyisdk-biweekly-59#%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8" aria-label="包管理器 permalink" title="包管理器 permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>RuyiSDK 0.44 已于今日发布，对应的包管理器版本也为 0.44.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
+<ul>
+<li><a href="https://pypi.org/project/ruyi/0.44.0/" target="_blank" rel="noopener noreferrer">PyPI</a>: <code>pip install ruyi</code></li>
+<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.44.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.44.0</a></li>
+<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.44.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.44.0/</a></li>
+</ul>
+<blockquote>
+<p>[!NOTE]
+RISC-V 用户可以使用 <code>pip</code> 安装 <code>ruyi</code>，但由于 <code>ruyi</code> 依赖的部分 Python
+库暂未在 PyPI 上提供 RISC-V 架构的预编译包，安装 <code>ruyi</code> 时 Python
+包管理器会尝试从源代码编译安装这些依赖，可能非常耗时或编译失败。</p>
+<p>如果您在 RISC-V 设备上安装 <code>ruyi</code> 时遇到问题，建议使用其他安装方法。</p>
+</blockquote>
+<blockquote>
+<p>[!NOTE]
+请注意：<a href="https://github.com/ruyisdk/ruyi/issues/414" target="_blank" rel="noopener noreferrer">已知</a>使用 <code>pipx</code> 安装 <code>ruyi</code> 会导致随后创建的 Ruyi
+虚拟环境不可用，将在下个版本修复。在此之前，请不要使用 <code>pipx</code> 安装 <code>ruyi</code>。</p>
+</blockquote>
+<p>本次 RuyiSDK 包管理器的更新主要包含了以下内容：</p>
+<ul>
+<li>遥测功能变更：<!-- -->
+<ul>
+<li>修复了遥测模式为 <code>local</code> 时，主动进行的 <code>ruyi telemetry upload</code> 不生效的问题。</li>
+<li>出于 RuyiSDK 运营需要，如您的遥测模式为 <code>on</code> 且距离上次上传遥测数据至少 7 天，<code>ruyi</code>
+则会在您下一次调用时上传遥测数据，不论预定的上传日为星期几。</li>
+<li>出于 RuyiSDK 运营需要，如您在首次运行 <code>ruyi</code> 时选择了禁用数据收集与上传，<code>ruyi</code>
+仍然会进行一次上传，仅此一次，内容为不被保存的随机 ID 与当前 <code>ruyi</code> 版本号。
+如您不希望进行此类上传，请确保您使用 <code>ruyi</code> 前为其设置了环境变量 <code>RUYI_TELEMETRY_OPTOUT=1</code>。</li>
+</ul>
+</li>
+</ul>
+<p>对于低频使用 <code>ruyi</code> 的用户而言，本次更新包含的变更可能允许 RuyiSDK 团队就您的安装
+ID 而言观测到比先前更具体的行为模式。截至目前 RuyiSDK 团队未进行过任何有关数据挖掘。</p>
+<p>本次 RuyiSDK 软件源的更新主要包含了以下内容：</p>
+<ul>
+<li>新增设备支持：<!-- -->
+<ul>
+<li>Milk-V Megrez: 兼容 RockOS。感谢 <a href="https://github.com/weilinfox" target="_blank" rel="noopener noreferrer">@weilinfox</a> 的贡献！</li>
+</ul>
+</li>
+<li>完善设备支持：<!-- -->
+<ul>
+<li>重命名 RV32 的 <code>manual</code> profile（用于手工管理编译参数）为 <code>manual-rv32</code> 以避免与 RV64 同名 profile 冲突。感谢 <a href="https://github.com/Cyl18" target="_blank" rel="noopener noreferrer">@Cyl18</a> <a href="https://github.com/ruyisdk/packages-index/issues/149" target="_blank" rel="noopener noreferrer">报告</a>！</li>
+</ul>
+</li>
+</ul>
+<p>欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。您也可以亲自参与
+RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的<a href="https://github.com/ruyisdk/ruyici" target="_blank" rel="noopener noreferrer">部分打包脚本</a>与<a href="https://github.com/ruyisdk/packages-index" target="_blank" rel="noopener noreferrer">软件源仓库</a>。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。</p>
+<h2 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="ide">IDE<a class="hash-link" href="https://ruyisdk.org/docs/de/biweekly/2025/12/30/ruyisdk-biweekly-59#ide" aria-label="IDE permalink" title="IDE permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>RuyiSDK 基于VSCode 和 Eclipse 均开发了插件以集成 Ruyi 包管理器方便开发者在 IDE 中快速完成环境准备，VSCode 插件 0.1.0 版本和 Eclipse 插件 0.1.0 版本均于今日发布。您可前往以下位置之一下载：</p>
+<ul>
+<li>RuyiSDK VSCode Extension：<!-- -->
+<ul>
+<li><a href="https://github.com/ruyisdk/ruyisdk-vscode-extension/releases/tag/0.1.0/" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyisdk-vscode-extension/releases/tag/0.1.0/</a></li>
+<li><a href="https://mirror.isrc.ac.cn/ruyisdk/ide/plugins/vscode/" target="_blank" rel="noopener noreferrer">https://mirror.isrc.ac.cn/ruyisdk/ide/plugins/vscode/</a></li>
+</ul>
+</li>
+<li>RuyiSDK Eclipse Plugins：<!-- -->
+<ul>
+<li><a href="https://github.com/ruyisdk/ruyisdk-eclipse-plugins/releases/tag/v0.1.0/" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyisdk-eclipse-plugins/releases/tag/v0.1.0/</a></li>
+<li><a href="https://mirror.isrc.ac.cn/ruyisdk/ide/plugins/eclipse/" target="_blank" rel="noopener noreferrer">https://mirror.isrc.ac.cn/ruyisdk/ide/plugins/eclipse/</a></li>
+</ul>
+</li>
+</ul>
+<p><strong>近期更新：</strong></p>
+<ul>
+<li>
+<p>VSCode 插件：</p>
+<ul>
+<li>优化虚拟环境模块的逻辑</li>
+<li>修复重复的命令</li>
+<li>发布beta1版本</li>
+</ul>
+</li>
+<li>
+<p>Eclipse 插件：</p>
+<ul>
+<li>发布：准备版本 0.1.0 。</li>
+<li>菜单栏：在 "RuyiSDK" 下添加新闻和虚拟环境模块的入口。</li>
+<li>新闻：使较新的新闻位于更高位置。</li>
+<li>虚拟环境：可一键配置工具链到已打开的项目中。</li>
+<li>日志：为新闻和虚拟环境模块添加必要的日志。</li>
+<li>构建：修复第三方库缺失的问题；整理 .target 目标文件，为使用其他 IDE 开发本插件做初步准备。</li>
+<li>编码：使用现代 Java 的特性并统一类名、变量名等代码风格。</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="gcc">GCC<a class="hash-link" href="https://ruyisdk.org/docs/de/biweekly/2025/12/30/ruyisdk-biweekly-59#gcc" aria-label="GCC permalink" title="GCC permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>修复了Zilsd扩展回归测试中发现的错误，更新了B扩展优化补丁。</p>
+<h2 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="llvm">LLVM<a class="hash-link" href="https://ruyisdk.org/docs/de/biweekly/2025/12/30/ruyisdk-biweekly-59#llvm" aria-label="LLVM permalink" title="LLVM permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="https://github.com/ruyisdk/llvm-project/pull/165" target="_blank" rel="noopener noreferrer">[LLVM][XTHeadVector] Implement th.vwcvt{u}.x.x.v</a></li>
+<li><a href="https://github.com/ruyisdk/llvm-project/pull/166" target="_blank" rel="noopener noreferrer">[LLVM][XTHeadVector] fix vadd, vsub, vrsub masked intrinsics</a></li>
+</ul>
+<h2 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="v8">V8<a class="hash-link" href="https://ruyisdk.org/docs/de/biweekly/2025/12/30/ruyisdk-biweekly-59#v8" aria-label="V8 permalink" title="V8 permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>本期提交的patch：</p>
+<ol>
+<li><strong>[riscv] Enable CanUseGenericJsToWasmWrapper</strong> [RISCV] 启用 GenericJsToWasmWrapper 功能，节省Wasm Import function的调用开销（<a href="https://chromium-review.googlesource.com/c/7268664%EF%BC%89" target="_blank" rel="noopener noreferrer">https://chromium-review.googlesource.com/c/7268664）</a></li>
+<li><strong>[riscv][heap] Make read-only MemoryChunk field conditionally optional</strong> [RISCV][堆内存] 使能只读 MemoryChunk 字段的可选配置（<a href="https://chromium-review.googlesource.com/c/7271945%EF%BC%89" target="_blank" rel="noopener noreferrer">https://chromium-review.googlesource.com/c/7271945）</a></li>
+<li><strong>[riscv] Skip message/wasm-debug-trace-minimal</strong> [RISCV] 跳过 message/wasm-debug-trace-minimal 测试用例（<a href="https://chromium-review.googlesource.com/c/7274736%EF%BC%89" target="_blank" rel="noopener noreferrer">https://chromium-review.googlesource.com/c/7274736）</a></li>
+<li><strong>[riscv64] Protect return addresses stored on stack.</strong> [RISCV64] 保护存储在栈上的返回地址（<a href="https://chromium-review.googlesource.com/c/7039660%EF%BC%89" target="_blank" rel="noopener noreferrer">https://chromium-review.googlesource.com/c/7039660）</a></li>
+<li><strong>[riscv] Implement FP16 in simulator</strong> [RISCV] 在模拟器中实现FP16（半精度浮点）功能（<a href="https://chromium-review.googlesource.com/c/7266607%EF%BC%89" target="_blank" rel="noopener noreferrer">https://chromium-review.googlesource.com/c/7266607）</a></li>
+<li><strong>[riscv] Fix build failed on v8_unittests</strong> [RISCV] 修复 v8_unittests 构建失败的问题（<a href="https://chromium-review.googlesource.com/c/7304885%EF%BC%89" target="_blank" rel="noopener noreferrer">https://chromium-review.googlesource.com/c/7304885）</a></li>
+<li><strong>[Turbofan] optimize ChangeUint32ToUint64(BitcastFloat32ToUint32)</strong> [Turbofan编译器] 优化 ChangeUint32ToUint64(BitcastFloat32ToUint32) 操作（<a href="https://chromium-review.googlesource.com/c/7271804%EF%BC%89" target="_blank" rel="noopener noreferrer">https://chromium-review.googlesource.com/c/7271804）</a></li>
+<li><strong>[riscv][builtins] Refactor CallApiGetter builtin</strong> [RISCV][内置函数] 重构 CallApiGetter 内置函数（<a href="https://chromium-review.googlesource.com/c/7274581%EF%BC%89" target="_blank" rel="noopener noreferrer">https://chromium-review.googlesource.com/c/7274581）</a></li>
+</ol>
+<p>本期审阅的patch：</p>
+<ol>
+<li><strong>[maglev] Do not use condition flags on loong64 and riscv64</strong> [Maglev编译器] 取消loong64和riscv64架构条件标志位在IR上的使用（<a href="https://chromium-review.googlesource.com/c/7273937%EF%BC%89" target="_blank" rel="noopener noreferrer">https://chromium-review.googlesource.com/c/7273937）</a></li>
+</ol>
+<h2 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="版本测试及遗留问题">版本测试及遗留问题<a class="hash-link" href="https://ruyisdk.org/docs/de/biweekly/2025/12/30/ruyisdk-biweekly-59#%E7%89%88%E6%9C%AC%E6%B5%8B%E8%AF%95%E5%8F%8A%E9%81%97%E7%95%99%E9%97%AE%E9%A2%98" aria-label="版本测试及遗留问题 permalink" title="版本测试及遗留问题 permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>RuyiSDK 0.44.0 版本已通过<a href="https://gitee.com/yunxiangluo/ruyisdk-test/blob/master/20251222/README.md" target="_blank" rel="noopener noreferrer">发版测试</a>。该版本测试是基于 0.44.0-beta.20251219 版本开展的，0.44.0
+版本将基于 0.44.0-beta.20251219 版本代码发版。下面的表格记录了当前版本新增未修复缺陷：</p>
+<table><thead><tr><th>缺陷</th><th>问题等级</th><th>判定依据</th></tr></thead><tbody><tr><td><a href="https://github.com/ruyisdk/ruyi/issues/415" target="_blank" rel="noopener noreferrer">Occasional pygit2 failures during testing #415</a></td><td>一般</td><td>已有 issue 回复</td></tr></tbody></table>
+<p>VSCode 插件版本测试基于 ruyisdk-vscode-extension <a href="https://github.com/ruyisdk/ruyisdk-vscode-extension/releases/tag/0.1.0" target="_blank" rel="noopener noreferrer">0.1.0</a> 前的测试版本开展多轮手动测试，并以经过测试的
+最新 commit 发版。下面的表格记录了当前版本新增待改进内容：</p>
+<table><thead><tr><th>缺陷</th><th>问题等级</th><th>备注</th></tr></thead><tbody><tr><td><a href="https://github.com/ruyisdk/ruyisdk-vscode-extension/issues/94" target="_blank" rel="noopener noreferrer">激活虚拟环境时图标未正确显示 #94</a></td><td>建议</td><td></td></tr><tr><td><a href="https://github.com/ruyisdk/ruyisdk-vscode-extension/issues/95" target="_blank" rel="noopener noreferrer">安装包时弹窗中的进度条不动 #95</a></td><td>建议</td><td></td></tr><tr><td><a href="https://github.com/ruyisdk/ruyisdk-vscode-extension/issues/96" target="_blank" rel="noopener noreferrer">新闻的搜索功能中的使用id搜索应如何使用？ #96</a></td><td>建议</td><td></td></tr></tbody></table>
+<p>Eclipse 插件版本测试基于 ruyisdk-eclipse-plugins <a href="https://github.com/ruyisdk/ruyisdk-eclipse-plugins/releases/tag/v0.1.0" target="_blank" rel="noopener noreferrer">v0.1.0</a> 前的测试版本开展多轮手动测试，并以经过测试的
+最新 <a href="https://github.com/ruyisdk/ruyisdk-eclipse-plugins/releases/tag/continuous" target="_blank" rel="noopener noreferrer">Continuous</a> tag 发版。下面的表格记录了当前版本新增待改进内容：</p>
+<table><thead><tr><th>缺陷</th><th>问题等级</th><th>备注</th></tr></thead><tbody><tr><td><a href="https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/82" target="_blank" rel="noopener noreferrer">命令执行提示框可以任意关闭且无法重新打开 #82</a></td><td>建议</td><td></td></tr><tr><td><a href="https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/83" target="_blank" rel="noopener noreferrer">开发板选择框中开发板型号未排序 #83</a></td><td>建议</td><td></td></tr><tr><td><a href="https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/84" target="_blank" rel="noopener noreferrer">虚拟环境建立的项目绑定问题 #84</a></td><td>建议</td><td></td></tr><tr><td><a href="https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/85" target="_blank" rel="noopener noreferrer">安装插件时 Eclipse 提示未签名 #85</a></td><td>建议</td><td></td></tr><tr><td><a href="https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/86" target="_blank" rel="noopener noreferrer">打开 Ruyi Package Explorer 时必须选择某款开发板 #86</a></td><td>建议</td><td></td></tr><tr><td><a href="https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/87" target="_blank" rel="noopener noreferrer">虚拟环境建立的 quirks 过滤问题 #87</a></td><td>建议</td><td></td></tr><tr><td><a href="https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/88" target="_blank" rel="noopener noreferrer">虚拟环境建立的 ruyi update 错误处理问题 #88</a></td><td>建议</td><td></td></tr><tr><td><a href="https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/89" target="_blank" rel="noopener noreferrer">虚拟环境建立的 profile 排序问题 #89</a></td><td>建议</td><td></td></tr><tr><td><a href="https://github.com/ruyisdk/ruyisdk-eclipse-plugins/issues/90" target="_blank" rel="noopener noreferrer">有一些可以自动获取的东西，不需要手动填写 #90</a></td><td>建议</td><td></td></tr><tr><td><a href="https://github.com/ruyisdk/docs/issues/123" target="_blank" rel="noopener noreferrer">RuyiSDK IDE 主文档的更新 #123</a></td><td>一般</td><td>已有修复计划</td></tr></tbody></table>
+<p>参与当前版本测试的实习生：</p>
+<ul>
+<li><a href="https://github.com/Cyl18" target="_blank" rel="noopener noreferrer">@Cyl18</a></li>
+<li><a href="https://github.com/YXCZS" target="_blank" rel="noopener noreferrer">@YXCZS</a></li>
+</ul>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[第 058 期·2025 年 12 月 16 日]]></title>
             <link>https://ruyisdk.org/docs/de/biweekly/2025/12/16/ruyisdk-biweekly-58</link>
@@ -576,7 +715,7 @@ Eclipse 插件开发恢复！欢迎对Eclipse插件开发有兴趣的小伙伴�
 <p>我们如期带来了 RuyiSDK 包管理器 0.41.0 版本，为大家的国庆假期准备了一份特别的“技术礼物”！每一个版本的迭代，都离不开社区朋友们的支持与反馈，我们由衷地感谢大家。</p>
 <p>值此国庆佳节来临之际，祝大家节日快乐，阖家幸福！如果您在假期里有了闲暇时光，不妨来 RuyiSDK 的世界里转一转，体验一下新版本。也欢迎大家随时来 <a href="https://ruyisdk.cn/" target="_blank" rel="noopener noreferrer">RuyiSDK 技术社区</a> 浏览下关于 RISC-V 领域的新动态。</p>
 <p>下个版本计划在 10 月 21 日发布，敬请关注！</p>
-<h2 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="包管理器">包管理器<a class="hash-link" href="https://ruyisdk.org/docs/de/biweekly/2025/09/30/ruyisdk-biweekly-53#%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8" aria-label="包管理器 permalink" title="包管理器 permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="包管理器">包管理器<a class="hash-link" href="https://ruyisdk.org/docs/de/biweekly/2025/09/30/ruyisdk-biweekly-53#%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8" aria-label="包�管理器 permalink" title="包管理器 permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
 <p>RuyiSDK 0.41 对应的包管理器版本也为 0.41.0，已于今日发布。您可移步
 <a href="https://github.com/ruyisdk/ruyi/releases/tag/0.41.0" target="_blank" rel="noopener noreferrer">GitHub Releases</a>、<a href="https://pypi.org/project/ruyi/0.41.0/" target="_blank" rel="noopener noreferrer">PyPI</a> 或 <a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/tags/0.41.0/" target="_blank" rel="noopener noreferrer">ISCAS 镜像源</a>下载体验。</p>
 <ul>
@@ -843,7 +982,7 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 <li><a href="https://github.com/ruyisdk/support-matrix/pull/365" target="_blank" rel="noopener noreferrer">Dump ArchLinux@Duo_S</a></li>
 <li><a href="https://github.com/ruyisdk/support-matrix/pull/366" target="_blank" rel="noopener noreferrer">Fix OrangePi-RV metadata</a></li>
 </ul>
-<h2 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="版本测试及遗留问题">版本测试及遗留问题<a class="hash-link" href="https://ruyisdk.org/docs/de/biweekly/2025/09/11/ruyisdk-biweekly-52#%E7%89%88%E6%9C%AC%E6%B5%8B%E8%AF%95%E5%8F%8A%E9%81%97%E7%95%99%E9%97%AE%E9%A2%98" aria-label="版本测试及遗留问题 permalink" title="版本测试及遗留问题 permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="版本测试及遗留问题">版本测试及遗留问题<a class="hash-link" href="https://ruyisdk.org/docs/de/biweekly/2025/09/11/ruyisdk-biweekly-52#%E7%89%88%E6%9C%AC%E6%B5%8B%E8%AF%95%E5%8F%8A%E9%81%97%E7%95%99%E9%97%AE%E9%A2%98" aria-label="版�本测试及遗留问题 permalink" title="版本测试及遗留问题 permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
 <p>RuyiSDK 0.40 已通过<a href="https://gitee.com/yunxiangluo/ruyisdk-test/blob/master/20250903/README.md" target="_blank" rel="noopener noreferrer">发版测试</a>。该
 RuyiSDK 版本存在部分不影响核心功能的已知问题，请您在下载使用前务必了解相关情况，审慎评估，以避免可能的不良体验或损失。</p>
 <table><thead><tr><th>缺陷</th><th>问题等级</th><th>备注</th></tr></thead><tbody><tr><td><a href="https://github.com/ruyisdk/docs/issues/93" target="_blank" rel="noopener noreferrer">文档代码块格式不统一 #93</a></td><td>修复</td><td>见 issue 下方更新</td></tr><tr><td><a href="https://github.com/ruyisdk/docs/issues/94" target="_blank" rel="noopener noreferrer">链接中的 RuyiSDK 大小写问题 #94</a></td><td>修复</td><td>见 issue 下方更新</td></tr><tr><td><a href="https://github.com/ruyisdk/docs/issues/95" target="_blank" rel="noopener noreferrer">关于 fastboot 的文档提示 #95</a></td><td>严重</td><td>建立新的 <a href="https://github.com/ruyisdk/ruyisdk/issues/52" target="_blank" rel="noopener noreferrer">issue</a> 进行更新，且已拟订相关修复版本号为 0.42.0 版本</td></tr><tr><td><a href="https://github.com/ruyisdk/docs/issues/96" target="_blank" rel="noopener noreferrer">关于使用 pip 安装 ruyi 的文档提示 #96</a></td><td>严重</td><td>已有文档整体更新计划，已有具体时间节点和时间表安排</td></tr><tr><td><a href="https://github.com/ruyisdk/packages-index/issues/37" target="_blank" rel="noopener noreferrer">有一部分包无法下载 #37</a></td><td>一般</td><td>已有相关 issue 回复且已经在修复中</td></tr><tr><td><a href="https://github.com/ruyisdk/packages-index/issues/101" target="_blank" rel="noopener noreferrer">BananaPi BPI-F3 eMMC storage variant did not refer to any combo #101</a></td><td>一般</td><td>软件自带修复功能，且已有相关 issue 回复</td></tr></tbody></table>]]></content:encoded>
@@ -1240,7 +1379,7 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 <li><a href="https://chromium-review.googlesource.com/c/v8/v8/+/6702989" target="_blank" rel="noopener noreferrer">删除liftoff中冗余的code emit size margin </a></li>
 <li>审阅Rivos提交5项，主要涉及后端的代码重构，typo修复和测试用例补充完善。</li>
 </ul>
-<h2 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="操作系统支持矩阵">操作系统支持矩阵<a class="hash-link" href="https://ruyisdk.org/docs/de/biweekly/2025/07/22/ruyisdk-biweekly-49#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%94%AF%E6%8C%81%E7%9F%A9%E9%98%B5" aria-label="操作系统支持矩阵 permalink" title="操作系统��支持矩阵 permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="操作系��统支持矩阵">操作系统支持矩阵<a class="hash-link" href="https://ruyisdk.org/docs/de/biweekly/2025/07/22/ruyisdk-biweekly-49#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%94%AF%E6%8C%81%E7%9F%A9%E9%98%B5" aria-label="操作系统支持矩阵 permalink" title="操作系统支持矩阵 permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
 <ul>
 <li><a href="https://github.com/ruyisdk/support-matrix/pull/342" target="_blank" rel="noopener noreferrer">Tests bump (for Pine64 Star64 and more)</a></li>
 <li><a href="https://github.com/ruyisdk/support-matrix/pull/343" target="_blank" rel="noopener noreferrer">DuoS: Dump Debian</a></li>
@@ -2216,96 +2355,6 @@ RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查�
 <li><a href="https://github.com/ruyisdk/support-matrix/pull/191" target="_blank" rel="noopener noreferrer">fix: images generation</a></li>
 <li><a href="https://github.com/ruyisdk/support-matrix/pull/192" target="_blank" rel="noopener noreferrer">VisionFive2: add irradium(core),Bit-Brick_K1: update bianbu</a></li>
 <li><a href="https://github.com/ruyisdk/support-matrix/pull/196" target="_blank" rel="noopener noreferrer">VisionFive2: remove non-existent images</a></li>
-</ul>]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[第 039 期·2025 年 02 月 25 日]]></title>
-            <link>https://ruyisdk.org/docs/de/biweekly/2025/02/25/ruyisdk-biweekly-39</link>
-            <guid>https://ruyisdk.org/docs/de/biweekly/2025/02/25/ruyisdk-biweekly-39</guid>
-            <pubDate>Tue, 25 Feb 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[卷首语]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="卷首语">卷首语<a class="hash-link" href="https://ruyisdk.org/docs/de/biweekly/2025/02/25/ruyisdk-biweekly-39#%E5%8D%B7%E9%A6%96%E8%AF%AD" aria-label="卷首语 permalink" title="卷首语 permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
-<p>欢迎阅读《RuyiSDK 双周进展汇报》第 39 期。在过去的两周里，我们团队持续努力，推进各项功能的开发与优化，具体进展将在下文中详细呈现。</p>
-<p>我们期待在2025年3月11日发布下一个开发版本，届时将带来更多创新与改进。感谢您一直以来的支持与关注，您的反馈是我们前进的动力！</p>
-<h2 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="包管理器">包管理器<a class="hash-link" href="https://ruyisdk.org/docs/de/biweekly/2025/02/25/ruyisdk-biweekly-39#%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8" aria-label="包管理器 permalink" title="包管理器 permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
-<p>RuyiSDK 0.28 对应的包管理器版本也为 0.28.0，已于今日发布。您可移步
-<a href="https://github.com/ruyisdk/ruyi/releases/tag/0.28.0" target="_blank" rel="noopener noreferrer">GitHub Releases</a> 或 <a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.28.0/" target="_blank" rel="noopener noreferrer">ISCAS 镜像源</a>下载体验。</p>
-<p>本次 RuyiSDK 包管理器的更新主要包含了以下内容：</p>
-<ul>
-<li>运行不依赖软件源的命令时，如软件源仓库尚未拉取到本地，现在不会多余做拉取动作了。</li>
-<li><code>ruyi list</code> 现在支持基本的过滤查询了：使用 <code>--category-is</code> 查询某个分类下的软件包，使用
-<code>--name-contains</code> 查询名称中包含特定字样的软件包。</li>
-<li>考虑到软件包的数量持续增加，不带任何参数的 <code>ruyi list</code> 不再受到支持。如果您有依赖先前行为的脚本等，请按照提示修改使用方式。</li>
-</ul>
-<p>本次 RuyiSDK 软件源的更新主要包含了以下内容：</p>
-<ul>
-<li>新增了以下软件包：<!-- -->
-<ul>
-<li><code>source/wiringx</code>: wiringX 项目的官方源码。wiringX 是模块化的 GPIO 支持组件。</li>
-</ul>
-</li>
-<li>更新了以下软件包：<!-- -->
-<ul>
-<li><code>board-image/bianbu-bpi-f3</code></li>
-<li><code>board-image/revyos-milkv-meles</code></li>
-<li><code>board-image/revyos-sg2042-milkv-pioneer</code></li>
-</ul>
-</li>
-<li>修复了 <code>board-image/revyos-milkv-meles</code> 的 <code>boot</code> 分区的文件类型标记。</li>
-</ul>
-<p>欢迎试用或来上游围观；您的需求是我们迭代开发的目标和动力。您也可以亲自参与
-RuyiSDK 软件的打包与分发工作：目前您可以直接在 GitHub 上查看、修改我们的<a href="https://github.com/ruyisdk/ruyici" target="_blank" rel="noopener noreferrer">部分打包脚本</a>与<a href="https://github.com/ruyisdk/packages-index" target="_blank" rel="noopener noreferrer">软件源仓库</a>。今后，按照本年度的开发计划，我们也将支持有权的第三方贡献者通过程序化的方式上传软件包、系统镜像等分发文件，以便利打包工作。</p>
-<h2 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="ide">IDE<a class="hash-link" href="https://ruyisdk.org/docs/de/biweekly/2025/02/25/ruyisdk-biweekly-39#ide" aria-label="IDE permalink" title="IDE permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
-<ul>
-<li>
-<p>实现 Eclipse 插件的三种导出和安装方式，输出<a href="https://github.com/xijing21/eclipse-myplugins/blob/main/chapter2-pluginIntro/2.4-exportAndInstall.md" target="_blank" rel="noopener noreferrer">操作文档</a></p>
-</li>
-<li>
-<p>继续 RuyiSDK IDE Plugins 插件功能开发：</p>
-<ul>
-<li>增加启动时执行 <code>ruyi update</code> 命令，并展示未读的 <code>ruyi news</code> 信息（基于接口协议）</li>
-<li>实现关于缓存/配置路径的 RuyiPaths 工具类</li>
-</ul>
-<p>插件使用说明：</p>
-<ol start="0">
-<li>环境要求：要求环境中已经安装好了 ruyi ,您可以参考<a href="https://ruyisdk.org/docs/Package-Manager/installation" target="_blank" rel="noopener noreferrer">文档</a>安装</li>
-<li>下载 <a href="https://github.com/xijing21/eclipse-plugins/releases/download/v0.0.2/org.ruyisdk.ide_0.0.2.jar" target="_blank" rel="noopener noreferrer">org.ruyisdk.ide_0.0.2.jar</a>。</li>
-<li>访问 <a href="https://mirror.iscas.ac.cn/ruyisdk/ide/0.0.3/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ide/0.0.3/</a> 下载 ruyisdk-0.0.3 并解压。</li>
-<li>将 org.ruyisdk.ide_0.0.2.jar 放入 ruyisdk ide 的 dropins 目录。</li>
-<li>执行 ./ruyisdk 重启 IDE。启动后会自动弹出未读 News。</li>
-</ol>
-</li>
-</ul>
-<h2 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="gcc">GCC<a class="hash-link" href="https://ruyisdk.org/docs/de/biweekly/2025/02/25/ruyisdk-biweekly-39#gcc" aria-label="GCC permalink" title="GCC permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
-<p>实现了 Xqc 系列自定义厂商扩展支持，等待上游 review 中，继续维护 p 扩展实现，修复了工具链构建中的一些问题。</p>
-<h2 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="llvm">LLVM<a class="hash-link" href="https://ruyisdk.org/docs/de/biweekly/2025/02/25/ruyisdk-biweekly-39#llvm" aria-label="LLVM permalink" title="LLVM permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
-<ul>
-<li>在 17.1.6 版本中修复了缺少 <code>th.vloxei</code> 和 <code>th.vsoxei</code> 指令的问题</li>
-<li>在 17.1.6 版本中新增对部分内建函数操作数合法性检查的过程</li>
-<li>在 17.1.6 版本中修复部分包装函数名称不符合 RVV 1.0 规范的问题，选择这些包装函数将同时提供 1.0 和 0.7.1 规范下的函数名，以便更方便地进行迁移</li>
-<li>在 19.1.6 版本中修复了 MC 汇编器生成部分指令会出现编译器内部错误的问题</li>
-</ul>
-<h2 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="v8">V8<a class="hash-link" href="https://ruyisdk.org/docs/de/biweekly/2025/02/25/ruyisdk-biweekly-39#v8" aria-label="V8 permalink" title="V8 permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
-<ul>
-<li>Review 并合入 Leaptiering 支持</li>
-<li>添加模拟器中对 fp16 类型指令的模拟例程</li>
-<li>继续增加 Maglev 的特性支持</li>
-</ul>
-<h2 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="操作系统支持矩阵">操作系统支持矩阵<a class="hash-link" href="https://ruyisdk.org/docs/de/biweekly/2025/02/25/ruyisdk-biweekly-39#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%94%AF%E6%8C%81%E7%9F%A9%E9%98%B5" aria-label="操作系统支持矩阵 permalink" title="操作系统支持矩阵 permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
-<ul>
-<li><a href="https://github.com/ruyisdk/support-matrix/pull/160" target="_blank" rel="noopener noreferrer">meles/revyos: update to 20250123</a></li>
-<li><a href="https://github.com/ruyisdk/support-matrix/pull/161" target="_blank" rel="noopener noreferrer">CI: Fix: Bump python version</a></li>
-<li><a href="https://github.com/ruyisdk/support-matrix/pull/162" target="_blank" rel="noopener noreferrer">Updator: Add milkv-meles, milkv pioneer revyos</a></li>
-<li><a href="https://github.com/ruyisdk/support-matrix/pull/164" target="_blank" rel="noopener noreferrer">Fix: exclude u-boot from boot</a></li>
-<li><a href="https://github.com/ruyisdk/support-matrix/pull/165" target="_blank" rel="noopener noreferrer">Refactor: Use ruyi's minifest defination</a></li>
-<li><a href="https://github.com/ruyisdk/support-matrix/pull/166" target="_blank" rel="noopener noreferrer">Updator: Add plugin for bpi-f3 ok and pioneer ok</a></li>
-<li><a href="https://github.com/ruyisdk/support-matrix/pull/167" target="_blank" rel="noopener noreferrer">Megrez: update RockOS 20250219</a></li>
-<li><a href="https://github.com/ruyisdk/support-matrix/pull/168" target="_blank" rel="noopener noreferrer">VisionFive2,LicheeRV Dock: update to Ubuntu 24.04.2 LTS</a></li>
-<li><a href="https://github.com/ruyisdk/support-matrix/pull/169" target="_blank" rel="noopener noreferrer">Add TTGO T-Display-GD32 board &amp; Add μC/OS-II</a></li>
-<li><a href="https://github.com/ruyisdk/support-matrix/pull/171" target="_blank" rel="noopener noreferrer">Icicle: Ubuntu 24.04.2 LTS</a></li>
-<li><a href="https://github.com/ruyisdk/support-matrix/pull/172" target="_blank" rel="noopener noreferrer">PIC64GX: Ubuntu 24.04.2</a></li>
-<li><a href="https://github.com/ruyisdk/support-matrix/pull/173" target="_blank" rel="noopener noreferrer">Mars: Ubuntu 24.04.2</a></li>
-<li><a href="https://github.com/ruyisdk/support-matrix/pull/174" target="_blank" rel="noopener noreferrer">Unmatched: Ubuntu 24.04.2</a></li>
 </ul>]]></content:encoded>
         </item>
     </channel>

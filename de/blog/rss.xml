@@ -4,10 +4,107 @@
         <title>RuyiSDK Blog</title>
         <link>https://ruyisdk.org/docs/de/blog</link>
         <description>RuyiSDK Blog</description>
-        <lastBuildDate>Wed, 26 Nov 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 30 Dec 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>de</language>
+        <item>
+            <title><![CDATA[RuyiSDK 0.44 版本更新说明]]></title>
+            <link>https://ruyisdk.org/docs/de/blog/2025/12/30/ruyi-0.44</link>
+            <guid>https://ruyisdk.org/docs/de/blog/2025/12/30/ruyi-0.44</guid>
+            <pubDate>Tue, 30 Dec 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[RuyiSDK 0.44 现已发布，对应的包管理器版本也为 0.44.0。您可前往以下位置之一下载 RuyiSDK 包管理器：]]></description>
+            <content:encoded><![CDATA[<p>RuyiSDK 0.44 现已发布，对应的包管理器版本也为 0.44.0。您可前往以下位置之一下载 RuyiSDK 包管理器：</p>
+<ul>
+<li><a href="https://pypi.org/project/ruyi/0.44.0/" target="_blank" rel="noopener noreferrer">PyPI</a>: <code>pip install ruyi</code></li>
+<li><a href="https://github.com/ruyisdk/ruyi/releases/tag/0.44.0" target="_blank" rel="noopener noreferrer">https://github.com/ruyisdk/ruyi/releases/tag/0.44.0</a></li>
+<li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.44.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.44.0/</a></li>
+</ul>
+<blockquote>
+<p>[!NOTE]
+RISC-V 用户可以使用 <code>pip</code> 安装 <code>ruyi</code>，但由于 <code>ruyi</code> 依赖的部分 Python
+库暂未在 PyPI 上提供 RISC-V 架构的预编译包，安装 <code>ruyi</code> 时 Python
+包管理器会尝试从源代码编译安装这些依赖，可能非常耗时或编译失败。</p>
+<p>如果您在 RISC-V 设备上安装 <code>ruyi</code> 时遇到问题，建议使用其他安装方法。</p>
+</blockquote>
+<blockquote>
+<p>[!NOTE]
+请注意：<a href="https://github.com/ruyisdk/ruyi/issues/414" target="_blank" rel="noopener noreferrer">已知</a>使用 <code>pipx</code> 安装 <code>ruyi</code> 会导致随后创建的 Ruyi
+虚拟环境不可用，将在下个版本修复。在此之前，请不要使用 <code>pipx</code> 安装 <code>ruyi</code>。</p>
+</blockquote>
+<p>本次更新主要包含了以下内容，祝您使用愉快！</p>
+<h2 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" href="https://ruyisdk.org/docs/de/blog/2025/12/30/ruyi-0.44#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8" aria-label="RuyiSDK 包管理器 permalink" title="RuyiSDK 包管理器 permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>遥测功能变更：<!-- -->
+<ul>
+<li>修复了遥测模式为 <code>local</code> 时，主动进行的 <code>ruyi telemetry upload</code> 不生效的问题。</li>
+<li>出于 RuyiSDK 运营需要，如您的遥测模式为 <code>on</code> 且距离上次上传遥测数据至少 7 天，<code>ruyi</code>
+则会在您下一次调用时上传遥测数据，不论预定的上传日为星期几。</li>
+<li>出于 RuyiSDK 运营需要，如您在首次运行 <code>ruyi</code> 时选择了禁用数据收集与上传，<code>ruyi</code>
+仍然会进行一次上传，仅此一次，内容为不被保存的随机 ID 与当前 <code>ruyi</code> 版本号。
+如您不希望进行此类上传，请确保您使用 <code>ruyi</code> 前为其设置了环境变量 <code>RUYI_TELEMETRY_OPTOUT=1</code>。</li>
+</ul>
+</li>
+</ul>
+<p>对于低频使用 <code>ruyi</code> 的用户而言，本次更新包含的变更可能允许 RuyiSDK 团队就您的安装
+ID 而言观测到比先前更具体的行为模式。截至目前 RuyiSDK 团队未进行过任何有关数据挖掘。</p>
+<h2 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" href="https://ruyisdk.org/docs/de/blog/2025/12/30/ruyi-0.44#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90" aria-label="RuyiSDK 软件源 permalink" title="RuyiSDK 软件源 permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>新增设备支持：<!-- -->
+<ul>
+<li>Milk-V Megrez: 兼容 RockOS。感谢 <a href="https://github.com/weilinfox" target="_blank" rel="noopener noreferrer">@weilinfox</a> 的贡献！</li>
+</ul>
+</li>
+<li>完善设备支持：<!-- -->
+<ul>
+<li>重命名 RV32 的 <code>manual</code> profile（用于手工管理编译参数）为 <code>manual-rv32</code> 以避免与 RV64 同名 profile 冲突。感谢 <a href="https://github.com/Cyl18" target="_blank" rel="noopener noreferrer">@Cyl18</a> <a href="https://github.com/ruyisdk/packages-index/issues/149" target="_blank" rel="noopener noreferrer">报告</a>！</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="ide">IDE<a class="hash-link" href="https://ruyisdk.org/docs/de/blog/2025/12/30/ruyi-0.44#ide" aria-label="IDE permalink" title="IDE permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="vscode">VSCode<a class="hash-link" href="https://ruyisdk.org/docs/de/blog/2025/12/30/ruyi-0.44#vscode" aria-label="VSCode permalink" title="VSCode permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>RuyiSDK 管理：<!-- -->
+<ul>
+<li>新增 RuyiSDK 自动检测功能：支持一键安装系统缺失的 RuyiSDK。</li>
+<li>完善多版本管理：支持管理多个安装路径，并实现不同版本间的灵活切换。</li>
+</ul>
+</li>
+<li>虚拟环境：<!-- -->
+<ul>
+<li>新增可视化管理：支持通过树状视图直观查看并操作所有虚拟环境。</li>
+<li>新增工作区感知：支持基于当前工作区智能检测并关联虚拟环境。</li>
+</ul>
+</li>
+<li>软件包管理：<!-- -->
+<ul>
+<li>新增搜索功能：支持快速检索并浏览 RuyiSDK 软件仓库。</li>
+<li>优化安装体验：支持工具链与模拟器的一键提取与快速安装。</li>
+<li>新增版本选择：支持在安装时手动指定软件包的具体版本。</li>
+<li>完善系统集成：新增文件资源管理器右键菜单，支持直接提取 RuyiSDK 软件包。</li>
+</ul>
+</li>
+<li>新闻与更新：<!-- -->
+<ul>
+<li>新增资讯系统：支持实时查看 RuyiSDK 官方新闻与更新动态。</li>
+<li>新增离线模式：支持缓存新闻内容，确保在离线状态下仍可阅读。</li>
+<li>完善状态跟踪：支持自动记录并持久化新闻的阅读状态。</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="eclipse">Eclipse<a class="hash-link" href="https://ruyisdk.org/docs/de/blog/2025/12/30/ruyi-0.44#eclipse" aria-label="Eclipse permalink" title="Eclipse permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>引入 Maven 管理构建流程和依赖，引入 CI 检查 DCO 规范并在 GitHub Pages 自动发布插件。</li>
+<li>重构插件目录、优化现有文档。</li>
+<li>制定代码风格约束，审查所有代码。</li>
+<li>添加并测试“新闻”和“虚拟环境”模块。</li>
+<li>菜单栏：在 "RuyiSDK" 下添加新闻和虚拟环境模块的入口。</li>
+<li>发布：版本 0.1.0 。</li>
+</ul>
+<h2 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="版本测试及遗留问题">版本测试及遗留问题<a class="hash-link" href="https://ruyisdk.org/docs/de/blog/2025/12/30/ruyi-0.44#%E7%89%88%E6%9C%AC%E6%B5%8B%E8%AF%95%E5%8F%8A%E9%81%97%E7%95%99%E9%97%AE%E9%A2%98" aria-label="版本测试及遗留问题 permalink" title="版本测试及遗留问题 permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>RuyiSDK 0.44.0 版本已通过<a href="https://gitee.com/yunxiangluo/ruyisdk-test/blob/master/20251222/README.md" target="_blank" rel="noopener noreferrer">发版测试</a>。该版本测试是基于 0.44.0-beta.20251219 测试版本开展的，预期 0.44.0
+版本将基于 0.44.0-beta.20251219 版本代码发版。</p>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[RuyiSDK 0.43 版本更新说明]]></title>
             <link>https://ruyisdk.org/docs/de/blog/2025/11/26/ruyi-0.43</link>
@@ -573,7 +670,7 @@ Ruyi 包管理器版本前了解。其中 packages-index 相关问题将主要�
 </li>
 <li>现已弃用旧版设备安装器支持，请尽快更新您的 RuyiSDK 包管理器。该支持将于 RuyiSDK 0.35 移除。</li>
 </ul>
-<h2 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="服务端组件">服务端组件<a class="hash-link" href="https://ruyisdk.org/docs/de/blog/2025/05/13/ruyi-0.33#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%BB%84%E4%BB%B6" aria-label="服务端组件 permalink" title="服务端组件 permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="服务端组件">服务端组件<a class="hash-link" href="https://ruyisdk.org/docs/de/blog/2025/05/13/ruyi-0.33#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%BB%84%E4%BB%B6" aria-label="服务端组�件 permalink" title="服务端组件 permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
 <ul>
 <li>新增了官方软件源的新闻条目阅读 API。</li>
 <li>新增了按版本号查询 RuyiSDK 版本发行注记的 API。</li>
@@ -768,7 +865,7 @@ Ruyi 包管理器版本前了解。其中 packages-index 相关问题将主要�
 </ul>
 </li>
 </ul>
-<h2 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" href="https://ruyisdk.org/docs/de/blog/2025/02/11/ruyi-0.27#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90" aria-label="RuyiSDK 软件源 permalink" title="RuyiSDK 软件源 permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" href="https://ruyisdk.org/docs/de/blog/2025/02/11/ruyi-0.27#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90" aria-label="RuyiSDK 软件�源 permalink" title="RuyiSDK 软件源 permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
 <ul>
 <li>更新了以下软件包：<!-- -->
 <ul>
@@ -840,42 +937,6 @@ Ruyi 包管理器版本前了解。其中 packages-index 相关问题将主要�
 <li>修复了搭配 arpy 1.x 使用时，无法解压 Debian 格式软件包的问题。</li>
 <li>新增了两篇规范文档：RuyiSDK 官方软件源的包版本规范，以及 RuyiSDK 中的板卡型号、系统镜像命名规范。您可移步 RuyiSDK 包管理器的仓库 <code>docs/</code> 目录阅读。</li>
 </ul>]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[内核从 5.10 升级至 6.6，RuyiSDK 发布面向 TH1520 系列开发板操作系统新镜像]]></title>
-            <link>https://ruyisdk.org/docs/de/blog/2024/12/31/th1520</link>
-            <guid>https://ruyisdk.org/docs/de/blog/2024/12/31/th1520</guid>
-            <pubDate>Tue, 31 Dec 2024 00:00:00 GMT</pubDate>
-            <description><![CDATA[- 原文链接：https://mp.weixin.qq.com/s/iVKqprdmaHCylPZAOyKigg]]></description>
-            <content:encoded><![CDATA[<blockquote>
-<ul>
-<li>原文链接：<a href="https://mp.weixin.qq.com/s/iVKqprdmaHCylPZAOyKigg" target="_blank" rel="noopener noreferrer">https://mp.weixin.qq.com/s/iVKqprdmaHCylPZAOyKigg</a></li>
-<li>日期: December 31, 2024</li>
-<li>作者：聂雨婷</li>
-</ul>
-</blockquote>
-<p>12月29日，<strong>面向</strong> <strong>TH1520</strong> <strong>的</strong> <strong>RevyOS</strong> <strong>操作系统已完成内核版本从</strong> <strong>5.1</strong> <strong>至</strong> <strong>6.6</strong> <strong>的更新</strong>，并提供了对 Milk-V Meles 和 LicheePi 4A 的最新支持，新增支持如下：</p>
-<ul>
-<li>CPU 调频和风扇调速功能</li>
-<li>支持 Milk-V Meles 和 LicheePi 4A 8GB 内存版本</li>
-<li>在 eMMC 存储上运行正常，可以通过 eMMC 启动操作系统</li>
-<li>有线网络连接功能，确保用户在使用时可以通过以太网稳定地连接互联网</li>
-<li>HDMI 显示输出/音频</li>
-<li>支持 AP6256 WiFi 模块（需要更新内核后使用）</li>
-</ul>
-<p>截至目前，RevyOS 已全面覆盖 Milk-V Meles 4GB/8GB/16GB 和 LicheePi 4A 8GB/16GB 的多版本支持。</p>
-<p><img decoding="async" loading="lazy" alt="6401" src="https://ruyisdk.org/docs/de/assets/images/6401-c19d121a0b8829da0ad647ca6e5e7fee.png" width="822" height="344" class="img_ev3q"></p>
-<p>Milk-V Meles 最新 RevyOS 版本镜像下载地址（镜像支持SD卡刷写）：</p>
-<p><a href="https://mirror.iscas.ac.cn/revyos/extra/images/meles/20241229/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/revyos/extra/images/meles/20241229/</a></p>
-<p><img decoding="async" loading="lazy" alt="6402" src="https://ruyisdk.org/docs/de/assets/images/6402-93caa2af1f73204123a6cb640d2c8ba1.png" width="832" height="344" class="img_ev3q"></p>
-<p>LicheePi 4A 最新 RevyOS 版本镜像下载地址（镜像支持SD卡刷写）：</p>
-<p><a href="https://mirror.iscas.ac.cn/revyos/extra/images/lpi4a/20241229/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/revyos/extra/images/lpi4a/20241229/</a></p>
-<p>为了帮助开发者更好地理解和使用 RevyOS，团队还提供了丰富的教程文档，涵盖了 Debian 软件包构建、GCC 编译工具链、 XuanTie QEMU 编译流程以及内核替换与编译等，请访问官方文档库获取更多资源：</p>
-<p><img decoding="async" loading="lazy" alt="6403" src="https://ruyisdk.org/docs/de/assets/images/6403-a43133f2181948481185f4a2d9fe056a.png" width="404" height="404" class="img_ev3q"></p>
-<p><a href="https://docs.revyos.dev/" target="_blank" rel="noopener noreferrer">https://docs.revyos.dev/</a></p>
-<h6 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="关于-th1520"><strong>关于 TH1520</strong><a class="hash-link" href="https://ruyisdk.org/docs/de/blog/2024/12/31/th1520#%E5%85%B3%E4%BA%8E-th1520" aria-label="[object Object] permalink" title="[object Object] permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h6>
-<p>基于玄铁 C910 内核，最高主频可达2.5GHz，支持全链路安全防护，具有4k视频处理能力，同时含有丰富的异构计算和高速IO资源。可广泛用于中高性能的应用场景，欢迎开发者扫码，备注【TH1520】进微信群。</p>
-<p><img decoding="async" loading="lazy" alt="6404" src="https://ruyisdk.org/docs/de/assets/images/6404-625c20b71648630d480fee7d023e58c7.png" width="378" height="498" class="img_ev3q"></p>]]></content:encoded>
         </item>
     </channel>
 </rss>
