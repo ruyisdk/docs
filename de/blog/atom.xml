@@ -267,7 +267,7 @@ Ruyi 包管理器版本前了解。其中 packages-index 相关问题将主要�
 <li><a href="https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.41.0/" target="_blank" rel="noopener noreferrer">https://mirror.iscas.ac.cn/ruyisdk/ruyi/releases/0.41.0/</a></li>
 </ul>
 <p>本次更新主要包含了以下内容，祝您使用愉快！</p>
-<h2 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" href="https://ruyisdk.org/docs/de/blog/2025/09/30/ruyi-0.41#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8" aria-label="RuyiSDK 包管理器 permalink" title="RuyiSDK 包管理器 permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="ruyisdk-包管理器">RuyiSDK 包管理器<a class="hash-link" href="https://ruyisdk.org/docs/de/blog/2025/09/30/ruyi-0.41#ruyisdk-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8" aria-label="RuyiSDK 包管理�器 permalink" title="RuyiSDK 包管理器 permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
 <ul>
 <li><code>ruyi update</code> 在访问网络前后会打印提示信息了。</li>
 <li>如果执行 <code>ruyi</code> 命令时触发了软件源同步动作，会打印提示信息了。</li>
@@ -669,7 +669,7 @@ Ruyi 包管理器版本前了解。其中 packages-index 相关问题将主要�
 </li>
 <li>现已弃用旧版设备安装器支持，请尽快更新您的 RuyiSDK 包管理器。该支持将于 RuyiSDK 0.35 移除。</li>
 </ul>
-<h2 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="服务端组件">服务端组件<a class="hash-link" href="https://ruyisdk.org/docs/de/blog/2025/05/13/ruyi-0.33#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%BB%84%E4%BB%B6" aria-label="服务端组�件 permalink" title="服务端组件 permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="服务端组件">服务端组件<a class="hash-link" href="https://ruyisdk.org/docs/de/blog/2025/05/13/ruyi-0.33#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%BB%84%E4%BB%B6" aria-label="服务端组件 permalink" title="服务端组件 permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
 <ul>
 <li>新增了官方软件源的新闻条目阅读 API。</li>
 <li>新增了按版本号查询 RuyiSDK 版本发行注记的 API。</li>
@@ -884,7 +884,7 @@ Ruyi 包管理器版本前了解。其中 packages-index 相关问题将主要�
 </ul>
 </li>
 </ul>
-<h2 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" href="https://ruyisdk.org/docs/de/blog/2025/02/11/ruyi-0.27#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90" aria-label="RuyiSDK 软件�源 permalink" title="RuyiSDK 软件源 permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 class="anchor [scroll-margin-top:calc(var(--ifm-navbar-height)_+_0.5rem)]" id="ruyisdk-软件源">RuyiSDK 软件源<a class="hash-link" href="https://ruyisdk.org/docs/de/blog/2025/02/11/ruyi-0.27#ruyisdk-%E8%BD%AF%E4%BB%B6%E6%BA%90" aria-label="RuyiSDK 软件源 permalink" title="RuyiSDK 软件源 permalink"><svg xmlns="http://www.w3.org/2000/svg" width="0.75em" height="0.75em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-link" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
 <ul>
 <li>更新了以下软件包：<!-- -->
 <ul>
