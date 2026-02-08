@@ -34,7 +34,7 @@ RuyiSDK IDE 下载地址：https://fast-mirror.isrc.ac.cn/ruyisdk/ide/0.0.3/ (�
 
 ![eclipse-marketplace-ruyisdk](image/eclipse-marketplace-ruyisdk.jpg)
 
-目前我们正在完善整合了插件的 RuyiSDK IDE 工程，将很快提供更加便捷的安装方式。
+目前我们正在完善集成插件的 RuyiSDK IDE 工程，将很快提供更加便捷的安装方式。
 
 ## 案例
 
