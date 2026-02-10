@@ -30,7 +30,13 @@ RuyiSDK IDE 下载地址：https://fast-mirror.isrc.ac.cn/ruyisdk/ide/0.0.3/ (�
 
 ## 安装插件
 
-为了使用完整的 RuyiSDK 环境，您需要安装 RuyiSDK IDE 插件。请访问 Eclipse Marketplace 安装插件: https://marketplace.eclipse.org/content/ruyisdk
+为了使用完整的 RuyiSDK 环境，您需要安装 RuyiSDK IDE 插件。
+
+展开顶部菜单栏的 "Help"，单击 "Eclipse Marketplace..." 打开 "Eclipse Marketplace" 窗口。在搜索框中输入 "ruyisdk" 并单击 "Go" 按钮即可找到本插件。确认名称、版本和作者无误后，单击 "Install" 按钮开始安装。
+
+![ruyisdk-ide-eclipse-marketplace-ruyisdk](image/ruyisdk-ide-eclipse-marketplace-ruyisdk.jpg)
+
+也可以访问 Eclipse Marketplace 网站，将 "Install" 按钮拖拽到 IDE 中以安装本插件: https://marketplace.eclipse.org/content/ruyisdk
 
 ![eclipse-marketplace-ruyisdk](image/eclipse-marketplace-ruyisdk.jpg)
 
