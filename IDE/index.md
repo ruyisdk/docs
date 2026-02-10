@@ -30,11 +30,17 @@ RuyiSDK IDE 下载地址：https://fast-mirror.isrc.ac.cn/ruyisdk/ide/0.0.3/ (�
 
 ## 安装插件
 
-为了使用完整的 RuyiSDK 环境，您需要安装 RuyiSDK IDE 插件。请按照插件仓库中的说明进行配置: https://github.com/ruyisdk/ruyisdk-eclipse-plugins/releases/tag/continuous
+为了使用完整的 RuyiSDK 环境，您需要安装 RuyiSDK IDE 插件。
 
-![eclipse-ide-plugin-installation](image/eclipse-ide-plugin-installation.jpg)
+展开顶部菜单栏的 "Help"，单击 "Eclipse Marketplace..." 打开 "Eclipse Marketplace" 窗口。在搜索框中输入 "ruyisdk" 并单击 "Go" 按钮即可找到本插件。确认名称、版本和作者无误后，单击 "Install" 按钮开始安装。
 
-目前我们正在完善整合了插件的 RuyiSDK IDE 工程，将很快提供更加便捷的安装和使用方式。
+![ruyisdk-ide-eclipse-marketplace-ruyisdk](image/ruyisdk-ide-eclipse-marketplace-ruyisdk.jpg)
+
+也可以访问 Eclipse Marketplace 网站，将 "Install" 按钮拖拽到 IDE 中以安装本插件: https://marketplace.eclipse.org/content/ruyisdk
+
+![eclipse-marketplace-ruyisdk](image/eclipse-marketplace-ruyisdk.jpg)
+
+目前我们正在完善集成插件的 RuyiSDK IDE 工程，将很快提供更加便捷的安装方式。
 
 ## 案例
 
@@ -44,4 +50,4 @@ RuyiSDK IDE 的文档均以 Ubuntu 22.04 LTS x86_64 为例展开说明，如果�
 
 ## 更新
 
-RuyiSDK IDE 在不断迭代。启动新版本 IDE 时，您可以放心选择已有的工作空间 (Workspace) 以继续开发。我们的文档将跟随 IDE 更新而更新，建议您保持使用最新版本以获得新功能和问题修复。
+RuyiSDK IDE 在不断迭代。启动新版本 IDE 或更新 RuyiSDK 插件后，您可以放心选择已有的工作空间 (Workspace) 以继续开发。我们的文档将不断更新，建议您始终使用最新版本的 RuyiSDK IDE 以解决 bug 并获得新功能。
