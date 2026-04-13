@@ -79,13 +79,14 @@ RuyiSDK 的操作系统支持程度也分为三级。
     * Debian 12
     * Debian 13
 * openEuler: 最近 2 个长期支持（LTS）版本与最近 1 个创新版本。
-    * openEuler 24.03 LTS SP1
     * openEuler 24.03 LTS SP2
+    * openEuler 24.03 LTS SP3
     * openEuler 25.03
+* openRuyi: 最近 1 个版本。
 * RevyOS: 与 LicheePi 4A 及 Pioneer Box 的 RevyOS 支持对齐。
 * Ubuntu: 最近 2 个长期支持（LTS）版本。
-    * Ubuntu 22.04
     * Ubuntu 24.04
+    * Ubuntu 26.04
 
 **二级（Tier 2）：**
 
@@ -97,7 +98,6 @@ RuyiSDK 的操作系统支持程度也分为三级。
     * Fedora 43
 * OpenCloudOS: 最近 1 个版本。
 * openKylin: 最近 1 个版本。
-* RedleafOS: 最近 1 个版本。
 
 <!-- TODO: Move RedleafOS back to Tier 1 after 2025-11-01 -->
 
