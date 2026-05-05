@@ -1,6 +1,6 @@
 {
   "label": "插件使用案例",
-  "position": 7,
+  "position": 8,
   "link": {
     "type": "generated-index",
     "description": "使用 VS Code 插件完成构建与调试的示例。"
