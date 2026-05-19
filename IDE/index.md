@@ -10,23 +10,9 @@ RuyiSDK IDE 是一款基于开源软件 Eclipse Embedded CDT 开发的图形化�
 
 ## 下载
 
-RuyiSDK IDE 下载地址：https://fast-mirror.isrc.ac.cn/ruyisdk/ide/0.0.3/ (请勿去掉末尾的斜杠)
+旧的 RuyiSDK IDE 从 0.0.3 版本以后就不再维护，现在可以直接在 Eclipse Embedded CDT 安装 RuyiSDK IDE 插件，更加方便。
 
-本 IDE 支持 x86_64、aarch64、riscv64 三种架构，请按照您当前的开发环境选择；IDE 中已包含 JRE，您无需额外配置 Java 环境。
-
-## 启动
-
-1. 将 tar.gz 包解压缩，在释放出的 ruyisdk 文件夹中双击 `ruyisdk` 以启动 IDE。
-
-![ruyisdk-ide-startup-0-download-logo](image/ruyisdk-ide-startup-0-download-logo.jpg)
-
-2. 选择一个文件夹作为 IDE 的工作空间 (Workspace)。如果是首次使用，您可以选择一个新文件夹；如果您要继续之前的开发，请填入已存在的工作空间的路径。
-
-![ruyisdk-ide-startup-1-workspace-configuration](image/ruyisdk-ide-startup-1-workspace-configuration.jpg)
-
-3. 完成工作空间的选择后，单击 `Launch` 按钮就可以进入 IDE 了。
-
-![ruyisdk-ide-startup-2-main-ui](image/ruyisdk-ide-startup-2-main-ui.jpg)
+Eclipse Embedded CDT 可以从 [projects.eclipse.org](https://projects.eclipse.org/projects/iot.embed-cdt) 或其他分发渠道下载。
 
 ## 安装插件
 
