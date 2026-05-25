@@ -61,7 +61,7 @@ RuyiSDK IDE 下载地址：https://fast-mirror.isrc.ac.cn/ruyisdk/ide/0.0.3/ (�
 
 ![ruyisdk-ide-eclipse-update-site-offline-2-select-feature](image/ruyisdk-ide-eclipse-update-site-offline-2-select-feature.jpg)
 
-将来若需要升级插件，请下载最新的版本的 zip 包并重复上述步骤。
+将来若需要升级插件，请下载最新版本的 zip 包并重复上述步骤。
 
 ## 案例
 
