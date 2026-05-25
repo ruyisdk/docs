@@ -30,17 +30,38 @@ RuyiSDK IDE 下载地址：https://fast-mirror.isrc.ac.cn/ruyisdk/ide/0.0.3/ (�
 
 ## 安装插件
 
-为了使用完整的 RuyiSDK 环境，您需要安装 RuyiSDK IDE 插件。
+为了使用完整的 RuyiSDK 环境，您需要安装 RuyiSDK IDE 插件。目前有在线和离线两种安装方式。
 
-展开顶部菜单栏的 "Help"，单击 "Eclipse Marketplace..." 打开 "Eclipse Marketplace" 窗口。在搜索框中输入 "ruyisdk" 并单击 "Go" 按钮即可找到本插件。确认名称、版本和作者无误后，单击 "Install" 按钮开始安装。
+### 在线安装（推荐）
 
-![ruyisdk-ide-eclipse-marketplace-ruyisdk](image/ruyisdk-ide-eclipse-marketplace-ruyisdk.jpg)
+展开顶部菜单栏的 "Help"，单击 "Install New Software..." 打开 "Install" 窗口。单击 "Add..." 按钮打开 "Add Repository" 对话框，填写如下内容后单击 "Add" 按钮：
 
-也可以访问 Eclipse Marketplace 网站，将 "Install" 按钮拖拽到 IDE 中以安装本插件: https://marketplace.eclipse.org/content/ruyisdk
+- Name: `RuyiSDK Updates (GitHub)`
+- Location: `https://ruyisdk.github.io/ruyisdk-eclipse-plugins/`
 
-![eclipse-marketplace-ruyisdk](image/eclipse-marketplace-ruyisdk.jpg)
+![ruyisdk-ide-eclipse-update-site-online-0-add-repository](image/ruyisdk-ide-eclipse-update-site-online-0-add-repository.jpg)
 
-目前我们正在完善集成插件的 RuyiSDK IDE 工程，将很快提供更加便捷的安装方式。
+待数据加载完毕后，勾选 "RuyiSDK IDE" ，再单击 "Next >" 按钮开始安装。
+
+![ruyisdk-ide-eclipse-update-site-online-1-select-feature](image/ruyisdk-ide-eclipse-update-site-online-1-select-feature.jpg)
+
+将来可通过顶部菜单栏的 "Help" - "Check for Updates" 升级插件。
+
+### 离线安装
+
+在网络受限的环境中，可通过预先下载的 zip 包安装插件。从 [GitHub Releases](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/releases/latest) 下载 `ruyisdk-eclipse-plugins-<版本号>.zip`。这里以 0.1.4 版本为例。
+
+![ruyisdk-ide-eclipse-update-site-offline-0-download-zip](image/ruyisdk-ide-eclipse-update-site-offline-0-download-zip.jpg)
+
+展开顶部菜单栏的 "Help"，单击 "Install New Software..." 打开 "Install" 窗口。单击 "Add..." 按钮打开 "Add Repository" 对话框，再单击 "Archive..." 选择刚才下载的 zip 文件，然后单击 "Add" 按钮。
+
+![ruyisdk-ide-eclipse-update-site-offline-1-select-zip](image/ruyisdk-ide-eclipse-update-site-offline-1-select-zip.jpg)
+
+勾选 "RuyiSDK IDE" 后单击 "Next >" 按钮开始安装。
+
+![ruyisdk-ide-eclipse-update-site-offline-2-select-feature](image/ruyisdk-ide-eclipse-update-site-offline-2-select-feature.jpg)
+
+将来若需要升级插件，请下载最新版本的 zip 包并重复上述步骤。
 
 ## 案例
 
