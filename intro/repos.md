@@ -7,12 +7,19 @@
 | 组件 | 说明 | 仓库地址 | 维护方式 | Maintainer | 贡献指南 |
 |------|------|---------|---------|-----------|---------|
 | **ruyi（包管理器）** | RuyiSDK 核心包管理器，采用 Apache-2.0 许可证 | [github.com/ruyisdk/ruyi](https://github.com/ruyisdk/ruyi) | RuyiSDK 自研维护 | [xen0n](https://github.com/xen0n) | [CONTRIBUTING](https://github.com/ruyisdk/ruyi/blob/main/CONTRIBUTING.zh.md) |
-| **RuyiSDK 软件包索引** | 定义所有软件包的元信息 | [github.com/ruyisdk/packages-index](https://github.com/ruyisdk/packages-index) | RuyiSDK 自研维护 | [xen0n](https://github.com/xen0n)、[weilinfox](https://github.com/weilinfox) | [CONTRIBUTING](https://github.com/ruyisdk/packages-index/blob/main/CONTRIBUTING.zh.md) |
-| **RuyiSDK 软件包索引（备用仓）** | 国内加速站点，自动同步 | [mirror.iscas.ac.cn/git/ruyisdk/packages-index](https://mirror.iscas.ac.cn/git/ruyisdk/packages-index.git) | RuyiSDK 自研维护（镜像） | [xen0n](https://github.com/xen0n) | -- |
-| **RuyiSDK 资源镜像站** | 资源分发，提供国内高速下载 | [mirror.iscas.ac.cn/ruyisdk/](https://mirror.iscas.ac.cn/ruyisdk/) | RuyiSDK 自研维护（镜像运维） | [xen0n](https://github.com/xen0n) | -- |
 | **VSCode 插件** | RuyiSDK VSCode 插件 | [github.com/ruyisdk/ruyisdk-vscode-extension](https://github.com/ruyisdk/ruyisdk-vscode-extension) | RuyiSDK 自研维护 | [U2FsdGVkX1](https://github.com/U2FsdGVkX1) | 暂无 |
 | **Eclipse 插件** | RuyiSDK Eclipse 插件 | [github.com/ruyisdk/ruyisdk-eclipse-plugins](https://github.com/ruyisdk/ruyisdk-eclipse-plugins) | RuyiSDK 自研维护 | [pzhlkj6612](https://github.com/pzhlkj6612) | [CONTRIBUTING](https://github.com/ruyisdk/ruyisdk-eclipse-plugins/blob/main/docs/developer/CONTRIBUTING.md) |
-| **支持矩阵** | RISC-V 开发板 × 操作系统兼容性矩阵 | [github.com/ruyisdk/support-matrix](https://github.com/ruyisdk/support-matrix) | RuyiSDK 社区维护 | [DuoQilai](https://github.com/DuoQilai)、[KevinMX](https://github.com/KevinMX) | [CONTRIBUTING](https://github.com/ruyisdk/support-matrix/blob/main/CONTRIBUTING_zh.md) |
+
+## RuyiSDK 资源与内容
+
+| 组件 | 说明 | 仓库地址 | 维护方式 | Maintainer | 贡献指南 |
+|------|------|---------|---------|-----------|---------|
+| **RuyiSDK 软件包索引** | 定义所有软件包的元信息 | [github.com/ruyisdk/packages-index](https://github.com/ruyisdk/packages-index) | RuyiSDK 自研维护 | [xen0n](https://github.com/xen0n)、[weilinfox](https://github.com/weilinfox) | [CONTRIBUTING](https://github.com/ruyisdk/packages-index/blob/main/CONTRIBUTING.zh.md) |
+| **RuyiSDK 软件包索引（备用镜像）** | 国内加速站点，自动同步 | [mirror.iscas.ac.cn/git/ruyisdk/packages-index](https://mirror.iscas.ac.cn/git/ruyisdk/packages-index.git) | RuyiSDK 自研维护（镜像） | [xen0n](https://github.com/xen0n) | -- |
+| **RuyiSDK 资源镜像站** | 资源分发，提供国内高速下载 | [mirror.iscas.ac.cn/ruyisdk/](https://mirror.iscas.ac.cn/ruyisdk/) | RuyiSDK 自研维护（镜像运维） | [xen0n](https://github.com/xen0n) | -- |
+| **RuyiSDK 官网** | 官网（ruyisdk.org） | [github.com/ruyisdk/ruyisdk-website](https://github.com/ruyisdk/ruyisdk-website) | RuyiSDK 自研维护 | [weilinfox](https://github.com/weilinfox) | [CONTRIBUTING](https://github.com/ruyisdk/ruyisdk-website/blob/main/CONTRIBUTING.md) |
+| **RuyiSDK 文档** | RuyiSDK 产品使用指南 | [github.com/ruyisdk/docs](https://github.com/ruyisdk/docs) | RuyiSDK 自研维护 | [xijing21](https://github.com/xijing21)、[weilinfox](https://github.com/weilinfox) | [CONTRIBUTING](https://github.com/ruyisdk/docs/blob/main/README.md) |
+| **开发板操作系统支持矩阵** | RISC-V 开发板 × 操作系统兼容性矩阵 | [github.com/ruyisdk/support-matrix](https://github.com/ruyisdk/support-matrix) | RuyiSDK 社区维护 | [DuoQilai](https://github.com/DuoQilai)、[KevinMX](https://github.com/KevinMX) | [CONTRIBUTING](https://github.com/ruyisdk/support-matrix/blob/main/CONTRIBUTING_zh.md) |
 | **开发板应用示例** | RISC-V 开发板应用示例文档 | [github.com/ruyisdk/board-docs](https://github.com/ruyisdk/board-docs) | RuyiSDK 社区维护 | [DuoQilai](https://github.com/DuoQilai) | [CONTRIBUTING](https://github.com/ruyisdk/board-docs/blob/main/README_zh.md) |
 
 ## 基础组件
