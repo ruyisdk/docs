@@ -34,18 +34,18 @@ RuyiSDK 是面向 RISC-V 开发者的“一站式集成开发环境”生态。�
 
 ## 快速对照
 
-| 你的场景                             | 用什么                                   |
-| ------------------------------------ | ---------------------------------------- |
-| 安装 RISC-V 工具链                   | `ruyi install`                         |
-| 多项目使用不同工具链                 | `ruyi venv`（环境隔离）                |
-| 团队环境保持一致                     | 约定统一版本 +`ruyi venv` 环境隔离     |
-| 没有实体开发板                       | QEMU 模拟                                |
-| 调试开发板上的程序                   | IDE 插件远程调试                         |
-| 烧写系统到开发板                     | `ruyi device provision`                |
-| 查询板子支持哪些系统                 | 访问支持矩阵                             |
-| 在板子上跑点应用示例感受下使用过程   | 访问开发板应用示例                       |
-| 在 RISC-V 上运行 Node.js / Java 程序 | 系统包管理器（apt/dnf/pacman）安装运行时 |
-| 遇到 RISC-V 或 RuyiSDK 各组件问题    | 技术论坛 / 社群                          |
+| 你的场景                             | 用什么                                                        |
+| ------------------------------------ | ------------------------------------------------------------- |
+| 安装 RISC-V 工具链                   | `ruyi install`                                              |
+| 多项目使用不同工具链                 | `ruyi venv`（环境隔离）                                     |
+| 团队环境保持一致                     | 约定统一版本 +`ruyi venv` 环境隔离                          |
+| 没有实体开发板                       | QEMU 模拟                                                     |
+| 调试开发板上的程序                   | IDE 插件远程调试                                              |
+| 烧写系统到开发板                     | `ruyi device provision`                                     |
+| 查询板子支持哪些系统                 | 访问[支持矩阵](https://matrix.ruyisdk.org)                       |
+| 在板子上跑点应用示例感受下使用过程   | 访问[开发板应用示例](https://board-docs-frontend.pages.dev/)     |
+| 在 RISC-V 上运行 Node.js / Java 程序 | 系统包管理器（apt/dnf/pacman）安装运行时                      |
+| 遇到 RISC-V 或 RuyiSDK 各组件问题    | [技术论坛](https://ruyisdk.cn/) / [社群](https://ruyisdk.org/about) |
 
 ## 下一步
 
@@ -53,6 +53,5 @@ RuyiSDK 是面向 RISC-V 开发者的“一站式集成开发环境”生态。�
 * **我想快速体验** → 请阅读 [快速入门](start/qemu.md)
 * **我有开发板** → 请阅读 [开发板初体验](start/hw.md)
 * **我想了解详细功能** → 请阅读 [产品详细指南](prod/)
-* **我想查看硬件支持情况** → 请访问 [支持矩阵](https://matrix.ruyisdk.org)
 * **关心RuyiSDK的项目进展** → 请访问 [双周进展报告](https://github.com/ruyisdk/wechat-articles)
-* **想要参与贡献** → 请关注[核心仓库](intro/repos.md)和贡献指南
+* **想要参与贡献** → 请关注[核心仓库](intro/repos.md)和仓库贡献指南
