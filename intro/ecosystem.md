@@ -99,9 +99,9 @@ RuyiSDK 已为以下芯片与开发板提供系统镜像烧录、工具链适配
 | **TH1520**                   | 阿里平头哥               | 玄铁 C910 核心，LicheePi 4A 搭载            |
 | **K230**                     | 嘉楠科技(Canaan)         | 高性能 AI 视觉 RISC-V 芯片，CanMV K230 搭载 |
 | **K1 / M1**                  | 进迭时空(SpacemiT)       | 灵犀系列芯片，BananaPi BPI-F3 搭载          |
-| **JH7110**                   | 赛昉科技                 | VisionFive 2 搭载                           |
-| **D1**                       | 全志科技                 | 玄铁 C906 核心                              |
-| **SG2000 / SG2002 / SG2042** | 算能                     | Milk-V 系列开发板搭载                       |
+| **JH7110**                   | 赛昉科技(StarFive‌)       | VisionFive 2 搭载                           |
+| **D1**                       | 全志科技(Allwinner‌)       | 玄铁 C906 核心                              |
+| **SG2000 / SG2002 / SG2042** | 算能(Sophgo‌)        | Milk-V 系列开发板搭载                       |
 
 > 💡 **已支持的芯片可参考开发板支持情况。**
 
@@ -109,16 +109,16 @@ RuyiSDK 已为以下芯片与开发板提供系统镜像烧录、工具链适配
 
 | 开发板                            | 芯片                  | 资源-系统镜像            | 功能-镜像烧录 | 功能-调试支持 |
 | :-------------------------------- | :-------------------- | :----------------------- | :------------ | :------------ |
-| **LicheePi 4A**             | TH1520                | ✅ RevyOS / Debian       | ✅            |               |
-| **Milk-V Duo (64M/256M/S)** | CV1800B/SG2000/SG2002 | ✅ Buildroot / Debian    | ✅            |               |
-| **Milk-V Mars**             | JH7110                | ✅ Debian / Fedora       | ✅            |               |
-| **VisionFive 2**            | JH7110                | ✅ Debian / openEuler    | ✅            |               |
-| **BananaPi BPI-F3**         | SpacemiT K1           | ✅ Deepin / Bianbu       | ✅            |               |
-| **BeagleV-Ahead**           | TH1520                | ✅ RevyOS / Ubuntu       | ✅            |               |
-| **HiFive Unmatched**        | SiFive Freedom U740   | ✅ Deepin / openEuler    | ✅            |               |
-| **Pioneer Box**             | SG2042                | ✅ openEuler / openKylin | ✅            |               |
-| **CanMV K230**              | K230                  | ✅ Fedora / Debian       | ✅            |               |
-| **香山南湖笔记本**          | 香山 (Nanhu)          | ✅ Debian                |               |               |
+| **LicheePi 4A**             | TH1520                | ✅ RevyOS / Debian / ... | ✅            |               |
+| **Milk-V Duo (64M/256M/S)** | CV1800B/SG2000/SG2002 | ✅ Buildroot / Debian / ... | ✅            |               |
+| **Milk-V Mars**             | JH7110                | ✅ Debian / Fedora / ... | ✅            |               |
+| **VisionFive 2**            | JH7110                | ✅ Debian / openEuler / ... | ✅            |               |
+| **BananaPi BPI-F3**         | SpacemiT K1           | ✅ Deepin / Bianbu / ... | ✅            |               |
+| **BeagleV-Ahead**           | TH1520                | ✅ RevyOS / Ubuntu / ... | ✅            |               |
+| **HiFive Unmatched**        | SiFive Freedom U740   | ✅ Deepin / openEuler / ... | ✅            |               |
+| **Pioneer Box**             | SG2042                | ✅ openEuler / openKylin / ... | ✅            |               |
+| **CanMV K230**              | K230                  | ✅ Fedora / Debian / ... | ✅            |               |
+| **香山南湖笔记本**           | 香山 (Nanhu)          | ✅ Debian / ... |               |               |
 
 > 💡 **开发板支持是多个层面的，每个层面支持程度不是齐头并进，而是分别推进的。因此具体的支持情况请参考以下方式自查：**
 >
@@ -132,7 +132,7 @@ RuyiSDK 在各发行版中的集成遵循“广泛可用 → 融入官方”的�
 
 **发行版集成状态定义**
 
-| 状态名称 | 含义 | 对用户的价值 |
+| 级别 | 状态名称 | 含义 | 对用户的价值 |
 | :--- | :--- | :--- | :--- |
 | **L0** | **原生预装** | 软件包被包含在发行版的默认镜像中。 | 特殊状态，视为对L1的附加增强。 开箱即用，是最高级别的集成，但非必须目标。 |
 | **L1** | **构建集成** | 软件包已纳入发行版核心构建系统，随版本持续发布。 | **推荐状态**。用户在新版本中均可通过系统原生包管理器直接安装，体验稳定可靠。 |
@@ -141,20 +141,21 @@ RuyiSDK 在各发行版中的集成遵循“广泛可用 → 融入官方”的�
 
 `ruyi` 与各发行版支持情况如下：
 
-| 操作系统                  | 支持状态    | 支持版本             | 备注                                                         |
-| :------------------------ | :---------- | :------------------- | :----------------------------------------------------------- |
+| 操作系统                  | 支持状态    | 支持版本             | 备注                                                       |
+| :------------------------ | :---------- | :------------------- | :------------------------------------------------------- |
 | **Arch Linux**      | ✅ 构建集成 | ruyi-0.16.0 ~ 0.49.0 | [AUR](https://aur.archlinux.org/packages/ruyi)                  |
-| **Gentoo**          | ✅ 外部提供 |                      | [ruyisdk-overlay](https://github.com/ruyisdk/ruyisdk-overlay)   |
-| **Fedora Rawhide**  | ✅ 构建集成 |                      | [Fedora](https://packages.fedoraproject.org/pkgs/ruyi/ruyi/)    |
-| **Debian**          | ✅ 构建集成 |                      | [Debian testing](https://packages.debian.org/testing/main/ruyi) |
-| **OpenRuyi**        | ✅ 构建集成 |                      |                                                              |
-| **openEuler**       | ✅ 仓库接纳 |                      |                                                              |
-| **Ubuntu**          | ✅ 外部提供 |                      |                                                              |
-| **RevyOS**          | ✅ 仓库接纳 |                      |                                                              |
-| **bianbu 2.2/3.0**  | ✅ 仓库接纳 | ruyi-0.41.0          |                                                              |
-| **rockos 20250730** | ✅ 仓库接纳 | ruyi-0.41.0          |                                                              |
+| **Gentoo**          | ✅ 外部提供 | ruyi-0.22.0 ~ 0.50.0 | [ruyisdk-overlay](https://github.com/ruyisdk/ruyisdk-overlay)   |
+| **Fedora Rawhide/45/44/43**  | ✅ 构建集成 | ruyi-0.47.0/0.44.0/0.42.0/0.41.0 | [Fedora](https://packages.fedoraproject.org/pkgs/ruyi/ruyi/) |
+| **Debian**          | ✅ 构建集成 | ruyi-0.49.0 | [Debian testing](https://packages.debian.org/testing/main/ruyi) |
+| **OpenRuyi**        | ✅ 构建集成 | ruyi-0.46.0 | [openRuyi Repository](https://boat.openruyi.cn/stable/rva23/) |
+| **openEuler**       | ✅ 仓库接纳推进中 | ruyi-0.47.0 | [ruyi](https://gitcode.com/src-openeuler/ruyi) |
+| **Ubuntu**          | ✅ 外部提供 | | |
+| **RevyOS sid(Debian sid)**         | ✅ 仓库接纳 | ruyi-0.41.0 | [revyos](https://fast-mirror.isrc.ac.cn/revyos/revyos-addons/pool/main/p/python-ruyi/) |
+| **RevyOS trixie(Debian 13 trixie)**| ✅ 仓库接纳 | ruyi-0.41.0 | [revyos/trixie](https://fast-mirror.isrc.ac.cn/revyos/trixie/revyos-addons/pool/main/p/python-ruyi/) |
+| **bianbu 2.2/3.0**  | ✅ 仓库接纳 | ruyi-0.41.0 | [link](https://archive.spacemit.com/bianbu/pool/main/p/python-ruyi/) |
+| **rockos 20250730** | ✅ 仓库接纳 | ruyi-0.41.0 | [link](https://fast-mirror.isrc.ac.cn/rockos/20250730/rockos-addons/pool/main/p/python-ruyi/) |
 
-> 💡 目前，**Arch Linux、Gentoo、Fedora、Debian、OpenRuyi** 等社区已将 `ruyi` 纳入官方或社区软件源仓库，并纳入到构建系统（每次发版都包含这个包，构建完后ruyi在官方软件源中）这是开源协作从“项目适配”走向“生态接纳”的生动体现。我们将继续努力，争取让 RuyiSDK 进入更多发行版的官方生态。
+> 💡 目前，**Arch Linux、Fedora、Debian、OpenRuyi** 等社区已将 `ruyi` 纳入官方或社区软件源仓库，并纳入到构建系统（每次发版都包含这个包，构建完后ruyi在官方软件源中）这是开源协作从“项目适配”走向“生态接纳”的生动体现。我们将继续努力，争取让 RuyiSDK 进入更多发行版的官方生态。
 
 
 ## 社区参与指南
@@ -168,7 +169,7 @@ RuyiSDK 是一个社区驱动的项目，我们欢迎每一位开发者的参与
 | **技术论坛**          | 技术讨论、问题答疑、经验分享            | [ruyisdk.cn](https://ruyisdk.cn/)                |
 | **官网**              | 产品信息、下载入口、社群二维码          | [ruyisdk.org](https://ruyisdk.org)               |
 | **GitHub 组织**       | 开源协作、源码托管、Issue 跟踪、PR 提交 | [github.com/ruyisdk](https://github.com/ruyisdk) |
-| **双周 Office Hours** | 每双周四下午 15:00 在线答疑             | 详见官网或社群公告                            |
+| **双周 Office Hours** | 每双周四下午 15:00 在线答疑             | 详见技术论坛或社群公告                            |
 
 ### 核心仓库
 
