@@ -177,7 +177,7 @@ RuyiSDK 是一个社区驱动的项目，我们欢迎每一位开发者的参与
 | :--------------------------------------------------------------------------------- | :--------------------------------- |
 | [ruyisdk/ruyi](https://github.com/ruyisdk/ruyi)                                       | RuyiSDK 包管理器核心代码           |
 | [ruyisdk/packages-index](https://github.com/ruyisdk/packages-index)                   | 软件包索引仓库，定义所有资源元数据 |
-| [ruyisdk/ruyisdk-vscode-plugin](https://github.com/ruyisdk/ruyisdk-vscode-plugin)     | VS Code 插件源码                   |
+| [ruyisdk/ruyisdk-vscode-plugin](https://github.com/ruyisdk/ruyisdk-vscode-extension)     | VS Code 插件源码                   |
 | [ruyisdk/ruyisdk-eclipse-plugins](https://github.com/ruyisdk/ruyisdk-eclipse-plugins) | Eclipse 插件源码                   |
 | [ruyisdk/support-matrix](https://github.com/ruyisdk/support-matrix)                   | 开发板与操作系统支持矩阵数据       |
 | [ruyisdk/board-docs](https://github.com/ruyisdk/board-docs)                           | 设备应用示例库                     |
