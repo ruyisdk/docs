@@ -1,6 +1,6 @@
 # 产品详细介绍
 
-> 本文档是 RuyiSDK 的详细介绍，面向希望深入了解产品构成与技术架构的开发者。若您首次接触 RuyiSDK，建议先阅读 [产品总览](../intro/overview.md)。
+> 本文档是 RuyiSDK 的详细介绍，面向希望深入了解产品构成与技术架构的开发者。若您首次接触 RuyiSDK，建议先阅读 [产品总览](overview.md)。
 
 ## 产品定义与诞生
 
@@ -126,13 +126,13 @@ RuyiSDK 包管理器（`ruyi`）所管理的所有资源，均通过 **RuyiSDK �
 
 除了最核心的索引库之外，RuyiSDK 还提供了以下对开发者比较有帮助的资源：
 
-| 资源                                                                                                    | 说明                                                    |
-| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
-| **RuyiSDK 索引库**（[packages-index](https://github.com/ruyisdk/packages-index)）                    | RuyiSDK 资源的统一声明仓库，`ruyi` 工具的核心配置来源 |
-| **RuyiSDK 软件源**（[mirror.iscas.ac.cn/ruyisdk/](https://mirror.iscas.ac.cn/ruyisdk/)）             | RuyiSDK 软件包与资源的统一分发站点，提供高速下载        |
-| **RISC-V 开发板和操作系统支持矩阵**（[matrix.ruyisdk.org](https://matrix.ruyisdk.org/)）             | 查询某款开发板支持哪些操作系统                          |
-| **RuyiSDK 文档**（[ruyisdk.org/docs/intro](https://ruyisdk.org/docs/intro)）                         | 提供 RuyiSDK 产品使用指南                               |
-| **RISC-V 开发板应用示例**（[board-docs-frontend.pages.dev](https://board-docs-frontend.pages.dev/)） | 查询某款开发板有哪些应用示例程序部署运行指南            |
+| 资源 | 说明 |
+| ---------- | -------- |
+| **RuyiSDK 索引库**（[packages-index](https://github.com/ruyisdk/packages-index)） | RuyiSDK 资源的统一声明仓库，`ruyi` 工具的核心配置来源 |
+| **RuyiSDK 软件源**（[mirror.iscas.ac.cn/ruyisdk/](https://mirror.iscas.ac.cn/ruyisdk/)） | RuyiSDK 软件包与资源的统一分发站点，提供高速下载 |
+| **RISC-V 开发板和操作系统支持矩阵**（[matrix.ruyisdk.org](https://matrix.ruyisdk.org/)） | 查询某款开发板支持哪些操作系统 |
+| **RuyiSDK 文档**（[ruyisdk.org/docs/intro](https://ruyisdk.org/docs/intro)） | 提供 RuyiSDK 产品使用指南 |
+| **RISC-V 开发板应用示例**（[board-docs-frontend.pages.dev](https://board-docs-frontend.pages.dev/)） | 查询某款开发板有哪些应用示例程序部署运行指南 |
 
 ### 硬件与系统层：覆盖哪些生态？
 
@@ -150,25 +150,25 @@ RuyiSDK 包管理器（`ruyi`）所管理的所有资源，均通过 **RuyiSDK �
 
 ## RuyiSDK 组成部分及对照表
 
-| 组件           | 能力                       | 分类             | 获取方式                                                                          |
-| -------------- | -------------------------- | ---------------- | --------------------------------------------------------------------------------- |
-| GLIBC / newlib | 编译（C 库）               | 基础组件         | `ruyi install gnu-upstream`                                                     |
-| GCC            | 编译（编译器）             | 基础组件         | `ruyi install gnu-upstream` / `gnu-plct` / ...                                |
-| LLVM / Clang   | 编译（编译器）             | 基础组件         | `ruyi install llvm-upstream` / `llvm-plct` / ...                              |
-| QEMU           | 模拟                       | 基础组件         | `ruyi install qemu-user-riscv-upstream` / ...                                   |
-| Box64          | 模拟（x86 转译）           | 基础组件         | `ruyi install box64-upstream`                                                   |
-| GDB            | 调试                       | 基础组件         | `ruyi install gnu-upstream` / `gnu-plct` / ...                                |
-| LLDB           | 调试                       | 基础组件         | `ruyi install llvm-upstream` / `llvm-plct` / ...                              |
-| V8             | 运行时（JavaScript引擎）   | 基础组件         | [上游官网](https://chromium.googlesource.com/v8/v8)                                  |
-| Node.js        | 运行时（JavaScript）       | 基础组件         | 系统包管理器                                                                      |
-| OpenJDK        | 运行时（Java）             | 基础组件         | 系统包管理器                                                                      |
-| Go             | 运行时（Go）               | 基础组件         | 系统包管理器                                                                      |
-| ruyi           | 包管理、环境管理、镜像烧写 | 自研集成工具     | `pip install ruyi` 或 [下载二进制](https://github.com/ruyisdk/ruyi)                |
-| VSCode 插件    | IDE 集成                   | 自研集成工具     | VSCode 插件市场 / Open VSX 搜索 "RuyiSDK"                                         |
-| Eclipse 插件   | IDE 集成                   | 自研集成工具     | Eclipse Marketplace 或[更新站点](https://ruyisdk.github.io/ruyisdk-eclipse-plugins/) |
-| packages-index | 生态资源（索引）           | 资源层·生态项目 | 随 `ruyi update` 自动使用                                                       |
-| support-matrix | 生态资源（支持矩阵）       | 资源层·生态项目 | 访问[matrix.ruyisdk.org](https://matrix.ruyisdk.org)                                 |
-| board-docs     | 生态资源（开发板应用示例） | 资源层·生态项目 | 访问[board-docs-frontend.pages.dev](https://board-docs-frontend.pages.dev)           |
+| 组件 | 能力 | 分类 | 获取方式 |
+| ---- | ------ | ----- | ------ |
+| GLIBC / newlib | 编译（C 库）   | 基础组件 | `ruyi install gnu-upstream` |
+| GCC            | 编译（编译器） | 基础组件 | `ruyi install gnu-upstream` / `gnu-plct` / ... |
+| LLVM / Clang   | 编译（编译器） | 基础组件 | `ruyi install llvm-upstream` / `llvm-plct` / ... |
+| QEMU           | 模拟          | 基础组件 | `ruyi install qemu-user-riscv-upstream` / ... |
+| Box64          | 模拟（x86 转译）| 基础组件 | `ruyi install box64-upstream` |
+| GDB            | 调试            | 基础组件 | `ruyi install gnu-upstream` / `gnu-plct` / ... |
+| LLDB           | 调试            | 基础组件 | `ruyi install llvm-upstream` / `llvm-plct` / ... |
+| V8             | 运行时（JavaScript引擎）   | 基础组件 | [上游官网](https://chromium.googlesource.com/v8/v8) |
+| Node.js        | 运行时（JavaScript）       | 基础组件 | 系统包管理器 |
+| OpenJDK        | 运行时（Java）             | 基础组件 | 系统包管理器 |
+| Go             | 运行时（Go）               | 基础组件 | 系统包管理器 |
+| ruyi           | 包管理、环境管理、镜像烧写 | 自研集成工具 | `pip install ruyi` 或 [下载二进制](https://github.com/ruyisdk/ruyi) |
+| VSCode 插件    | IDE 集成                   | 自研集成工具 | VSCode 插件市场 / Open VSX 搜索 "RuyiSDK" |
+| Eclipse 插件   | IDE 集成                   | 自研集成工具 | Eclipse Marketplace 或[更新站点](https://ruyisdk.github.io/ruyisdk-eclipse-plugins/) |
+| packages-index | 生态资源（索引）           | 资源层·生态项目 | 随 `ruyi update` 自动使用 |
+| support-matrix | 生态资源（支持矩阵）       | 资源层·生态项目 | 访问[matrix.ruyisdk.org](https://matrix.ruyisdk.org) |
+| board-docs     | 生态资源（开发板应用示例） | 资源层·生态项目 | 访问[board-docs-frontend.pages.dev](https://board-docs-frontend.pages.dev) |
 
 > **说明**：
 >
@@ -176,4 +176,4 @@ RuyiSDK 包管理器（`ruyi`）所管理的所有资源，均通过 **RuyiSDK �
 > - Node.js、OpenJDK、Go 等运行时组件由系统包管理器提供，ruyi 暂不重复分发。
 > - V8 已被 Chrome/Chromium 和 Node.js 内置，一般用户无需单独获取。如需将 V8 作为 C++ 库嵌入应用程序，或为 RISC-V 平台交叉编译，请从上游源码构建。
 > - VSCode 插件已上架 Visual Studio Marketplace 和 Open VSX Registry，支持 VS Code 及 VSCodium。
-> - 上述组件的仓库地址详见 [核心仓库](comm/repos.md)。
+> - 上述组件的仓库地址详见 [核心仓库](repos.md)。
