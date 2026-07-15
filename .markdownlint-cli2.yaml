@@ -1,0 +1,109 @@
+# .markdownlint-cli2.yaml
+# RuyiSDK 文档 markdownlint-cli2 配置
+
+# 扫描范围
+globs:
+  - "docs/**/*.md"
+  - "docs/**/*.mdx"
+
+# 忽略目录
+ignores:
+  - "node_modules/"
+  - "build/"
+  - ".docusaurus/"
+  - "versioned_docs/"
+  - "versioned_sidebars/"
+
+# 显示扫描的文件列表
+showFound: true
+
+# 禁用进度显示（CI 环境下可设为 true）
+noProgress: false
+
+# 规则配置
+config:
+  # ---- 基础规则 ----
+  # 启用所有默认规则
+  default: true
+
+  # ---- 规则覆盖（与规范对齐） ----
+  # MD004/ul-style：无序列表统一使用短横
+  MD004:
+    style: "dash"
+
+  # MD013/line-length：关闭行长度限制（文档链接常超长）
+  MD013: false
+
+  # MD033/no-inline-html：允许内联 HTML（Docusaurus 需要 <details>、<Tabs> 等标签）
+  MD033: false
+
+  # MD034/no-bare-urls：允许裸 URL（部分场景需要）
+  MD034: false
+
+  # MD041/first-line-heading：关闭"首行为一级标题"要求（有 Front Matter）
+  MD041: false
+
+  # MD024/no-duplicate-heading：允许不同章节有相同标题
+  MD024:
+    siblings_only: true
+
+  # MD046/code-block-style：强制围栏式代码块（规范 5.1.1）
+  MD046:
+    style: "fenced"
+
+  # MD048/code-fence-style：强制使用反引号代码围栏
+  MD048:
+    style: "backtick"
+
+  # MD049/emphasis-style：强调符号统一为星号
+  MD049:
+    style: "asterisk"
+
+  # MD050/strong-style：粗体符号统一为星号
+  MD050:
+    style: "asterisk"
+
+  # MD007/ul-indent：无序列表缩进 2 空格
+  MD007:
+    indent: 2
+
+  # MD012/no-multiple-blanks：最大连续空行数 2
+  MD012:
+    maximum: 2
+
+  # MD055/table-pipe-style：表格管道符首尾都有（规范 5.2.2）
+  MD055:
+    style: "leading_and_trailing"
+
+  # MD060/table-column-style：表格 compact 风格（规范 5.2.1）
+  # 单元格内容与管道符之间恰好一个空格
+  MD060:
+    style: "compact"
+    #aligned_delimiter: true
+
+  # MD022/blanks-around-headings：标题前后必须有空行
+  MD022:
+    lines_above: 1
+    lines_below: 1
+
+  # MD031/blanks-around-fences：代码块前后必须有空行
+  MD031:
+    list_items: true
+
+  # MD032/blanks-around-lists：列表前后必须有空行
+  MD032: true
+
+  # MD037/no-space-in-emphasis：强调符号内不允许空格
+  MD037: true
+
+  # MD039/no-space-in-links：链接文本内不允许空格
+  MD039: true
+
+  # MD045/no-alt-text：图片必须有 alt 文本（规范 5.3.2）
+  MD045: true
+
+  # MD051/link-fragments：锚点链接必须有效
+  MD051: true
+
+  # MD053/link-image-reference-definitions：禁止引用未使用的链接/图片定义
+  MD053: false
