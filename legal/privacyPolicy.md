@@ -6,7 +6,10 @@ RuyiSDK 是由中国科学院软件研究所（下文简称“ISCAS”）开发�
 
 RuyiSDK 专注于产品使用情况和用户体验优化，秉持最小化收集信息的原则，尽可能避免收集用户个人身份信息，更倾向采用匿名化方式收集信息用于产品的运营和服务的提升。以下是我们的收集和处理方式：
 
-- 浏览网站：仅浏览本网站时，无需提供个人信息。
+- 浏览网站：当您访问我们的官网（[ruyisdk.org](https://ruyisdk.org/)）及开发板示例网站（[board-docs](https://board-docs-frontend.pages.dev/)）时，我们会通过第三方分析服务 Cloudflare 收集匿名化的、聚合的访问统计信息，以了解网站的整体使用情况和用户偏好，从而优化内容与体验，除此以外，浏览上述网站无需提供任何个人信息。Cloudflare 服务采用隐私优先设计：
+  - 不使用 Cookie 或类似技术追踪您在本网站上的行为；
+  - 不通过 IP 地址、User-Agent 等信息进行用户指纹识别；
+  - 仅提供匿名化的、聚合的访问统计信息（如页面访问量、热门页面、访问者大致地理位置等），无法识别或追踪您的个人身份。
 - 邮件订阅：当您使用我们的邮件订阅服务时，我们会收集您的电子邮件地址以提供相关服务。
 - 参与贡献：RuyiSDK 社区是一个开源社区，其代码托管在 GitHub 平台。您可以通过 GitHub 仓库 issue 和 discussions 的方式参与沟通和反馈，或直接参与开发。通过 GitHub 平台参与社区活动时，您将需要遵循 GitHub 的隐私政策 [*GitHub General Privacy Statement*](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement)。
 - 安装与使用工具：使用 RuyiSDK 包管理器时，我们可能会收集匿名化的使用数据，具体请参见第 2 章节。
