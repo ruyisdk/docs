@@ -3,28 +3,10 @@
     {
       "total": 1,
       "author": {
-        "login": "SmulllLu",
-        "id": 149551813,
-        "avatar_url": "https://avatars.githubusercontent.com/u/149551813?v=4",
-        "html_url": "https://github.com/SmulllLu"
-      }
-    },
-    {
-      "total": 1,
-      "author": {
-        "login": "pzhlkj6612",
-        "id": 29089388,
-        "avatar_url": "https://avatars.githubusercontent.com/u/29089388?v=4",
-        "html_url": "https://github.com/pzhlkj6612"
-      }
-    },
-    {
-      "total": 1,
-      "author": {
-        "login": "U2FsdGVkX1",
-        "id": 11484206,
-        "avatar_url": "https://avatars.githubusercontent.com/u/11484206?v=4",
-        "html_url": "https://github.com/U2FsdGVkX1"
+        "login": "trg-rgb",
+        "id": 147071803,
+        "avatar_url": "https://avatars.githubusercontent.com/u/147071803?v=4",
+        "html_url": "https://github.com/trg-rgb"
       }
     },
     {
@@ -37,12 +19,39 @@
       }
     },
     {
+      "total": 2,
+      "author": {
+        "login": "U2FsdGVkX1",
+        "id": 11484206,
+        "avatar_url": "https://avatars.githubusercontent.com/u/11484206?v=4",
+        "html_url": "https://github.com/U2FsdGVkX1"
+      }
+    },
+    {
+      "total": 2,
+      "author": {
+        "login": "pzhlkj6612",
+        "id": 29089388,
+        "avatar_url": "https://avatars.githubusercontent.com/u/29089388?v=4",
+        "html_url": "https://github.com/pzhlkj6612"
+      }
+    },
+    {
       "total": 7,
       "author": {
         "login": "Cyl18",
         "id": 14993992,
         "avatar_url": "https://avatars.githubusercontent.com/u/14993992?v=4",
         "html_url": "https://github.com/Cyl18"
+      }
+    },
+    {
+      "total": 11,
+      "author": {
+        "login": "SmulllLu",
+        "id": 149551813,
+        "avatar_url": "https://avatars.githubusercontent.com/u/149551813?v=4",
+        "html_url": "https://github.com/SmulllLu"
       }
     },
     {
@@ -55,7 +64,7 @@
       }
     },
     {
-      "total": 74,
+      "total": 84,
       "author": {
         "login": "weilinfox",
         "id": 54651938,
@@ -64,7 +73,7 @@
       }
     },
     {
-      "total": 332,
+      "total": 348,
       "author": {
         "login": "xen0n",
         "id": 1175567,
@@ -74,7 +83,7 @@
     }
   ],
   "ruyisdk_org_data": {
-    "generatedAt": "2026-03-26T19:51:20.813Z",
+    "generatedAt": "2026-07-21T20:16:10.974Z",
     "source": "https://api.github.com/repos/ruyisdk/packages-index/stats/contributors"
   }
 }
