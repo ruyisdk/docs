@@ -1,0 +1,195 @@
+# 生态与社区
+
+RuyiSDK 不仅是一套开发工具，更是一个开放的 RISC-V 开发者生态与协作平台。我们坚信，RISC-V 的成功离不开一个健康、活跃且紧密协作的生态系统。因此，RuyiSDK 从创立之初就将生态建设置于与产品开发同等重要的位置。
+
+本文档介绍 RuyiSDK 的生态合作思路、当前覆盖成果，以及开发者如何参与共建。
+
+## 生态合作策略
+
+RuyiSDK 的生态策略可以概括为：**开源协作，软硬协同，融入主流**。我们通过与芯片厂商、开发板制造商、操作系统社区及全球开发者的深度协作，将原本碎片化的 RISC-V 开发资源，逐步转化为开发者触手可及的基础设施。
+
+### 硬件生态：广泛兼容，降低门槛
+
+在硬件侧，RuyiSDK 致力于与芯片和开发板厂商建立深度技术伙伴关系，从源头优化开发体验。我们的策略是：
+
+- **主动适配**：与芯片和开发板厂商紧密合作，在工具链、模拟器、系统镜像和调试工具层面进行主动集成或适配，确保主流硬件在 RuyiSDK 中“开箱可用”。
+- **系统预装合作**：推动 RuyiSDK 包管理器在 RISC-V 设备出厂时即完成配置，实现“开箱即用”的开发环境。
+- **生态资源共建**：与厂商联合提供针对其硬件的示例代码、基础库和开发工具，并集成到 RuyiSDK 的资源体系中，丰富面向开发者的应用素材。
+- **工具链优化合作**：针对厂商的特定芯片架构进行工具链的性能调优与适配，确保充分发挥硬件特性，并将这些优化回馈至上游社区。
+- **持续扩展**：动态跟踪市场上新出现的 RISC-V 硬件，并将“支持绝大多数市面可获取的主流 RISC-V 设备及芯片”作为长期目标。
+
+### 软件生态：融入发行版官方体系，成为基础设施
+
+在软件侧，RuyiSDK 积极与各大 Linux 发行版社区开展协作，推动 RISC-V 开发工具的深度融合。遵循“**广泛可用 → 融入官方**”的路径：
+
+- **广泛可用**：首先确保 RuyiSDK 能在多种主流发行版上便捷安装。通过提供独立二进制包、`pip` 安装、系统扩展软件源等多种部署方式，确保不同生态的开发者都能无障碍接入。
+- **融入官方**：在“广泛可用”的基础上，推动 `ruyi` 进入各发行版的**官方软件源仓库**。这不仅是技术适配的完成，更是社区对 RuyiSDK 价值和稳定性的认可，能让开发者通过 `apt`、`dnf`、`pacman` 等原生包管理器无缝使用，从而成为系统级的基础设施。
+
+
+### 社区协作：开放治理，共建共享
+
+RuyiSDK 本身采用开源模式开发，项目代码、工具配置、文档资源均托管在 GitHub。我们通过以下方式实践开放协作：
+
+- **透明开发**：通过每双周发布的进展报告和公开的 Issue 跟踪，让社区清晰了解项目的最新动态与决策过程。
+- **鼓励贡献**：降低贡献门槛，欢迎任何形式的反馈、文档改进和代码提交。
+- **生态激励**：积极将社区贡献的硬件适配、工具补丁合入主分支，形成“贡献-受益”的正向循环。
+
+---
+
+## 合作路径：不同的角色，共同的生态
+
+RuyiSDK 生态的参与者可以大致分为两类：**个人开发者/贡献者**与**企业/机构合作伙伴**。两者的参与方式和关注点不同，但目标一致——共同推动 RISC-V 开发体验的提升。
+
+### 面向个人开发者与贡献者
+
+作为个人开发者，您可以通过以下方式参与 RuyiSDK 生态，并在过程中提升自己的技术能力、获得社区认可。
+
+**您能做什么：**
+
+*   **反馈与建议**：在 GitHub 仓库提交 Issue，报告 Bug 或提出功能建议。
+*   **完善文档与示例**：改进现有文档，或为某款开发板撰写新的应用示例，帮助后来者少走弯路。
+*   **贡献代码**：为 `ruyi` 包管理器、IDE 插件或工具链（GCC/LLVM）提交 Bug 修复或新功能。
+*   **参与支持矩阵维护**：如果您拥有某款开发板并测试了新的操作系统，欢迎向 [支持矩阵](https://matrix.ruyisdk.org) 提交兼容性数据。
+*   **社区互助与讨论**：在技术论坛（ruyisdk.cn）上解答其他开发者的问题，分享您的 RISC-V 开发经验。或参加双周 Office Hours 与团队直接交流。
+
+
+**您将获得什么：**
+
+*   与 RuyiSDK 核心团队直接交流的机会（双周 Office Hours）。
+*   您的贡献将被记录并公开致谢，成为您在 RISC-V 社区的技术名片。
+*   第一时间接触 RuyiSDK 支持的最新硬件与工具链特性。
+
+### 面向企业、机构与社区合作伙伴
+
+对于企业、开源社区或教育机构，RuyiSDK 提供了一套完整的生态资源接入与合作体系，帮助您的产品、平台或课程触达更多 RISC-V 开发者。
+
+**合作模式概览：**
+
+| 合作方向 | 合作内容 | 适合对象 |
+| :--- | :--- | :--- |
+| **资源接入** | 将您的工具链、系统镜像、SDK 或示例代码集成到 `ruyi` 包管理体系中。 | 芯片厂商、开发板厂商、开源项目、软件提供商 |
+| **工具链优化与适配** | 针对您的硬件特性，联合优化 GCC/LLVM 支持，并共同推送至上游。 | 芯片厂商、开发板厂商 |
+| **系统预装与镜像集成** | 推动 RuyiSDK 成为您发行版或设备出厂时的默认开发环境。 | 操作系统社区、设备厂商 |
+| **应用示例与课程共建** | 联合开发面向您硬件的教程、示例代码或教学课程，并发布在 RuyiSDK 官方渠道。 | 开发板厂商、教育机构 |
+
+**合作价值**：
+
+*   **精准触达开发者**：RuyiSDK 的 `ruyi` 包管理器是 RISC-V 开发者获取工具链和资源的入口，您的产品将直接呈现在目标用户面前。
+*   **降低开发者适配成本**：通过 RuyiSDK 的统一接口，开发者可以更轻松地使用您的硬件或软件，降低试用门槛。
+*   **生态协同放大效应**：您的投入将与 RuyiSDK 生态中其他组件（工具链、支持矩阵、示例库）形成联动，共同提升开发者体验。
+
+**如何启动合作**：
+RuyiSDK 提供了标准化的 [生态资源接入指南](https://ruyisdk.org/docs/Other/partner-guide)，详细说明了三种接入模式（源码集成、二进制托管、自有渠道）及协作流程。您也可以通过邮件 [contact@ruyisdk.cn](mailto:contact@ruyisdk.cn) 与团队直接沟通。
+
+---
+
+## 生态合作成果
+
+在上述策略的指导下，RuyiSDK 在硬件、操作系统等方面取得了以下具体成果。
+
+### 硬件生态覆盖
+
+RuyiSDK 已为以下芯片与开发板提供系统镜像烧录、工具链适配或调试支持。
+
+#### 已支持的芯片（部分）
+
+| 芯片                               | 厂商/项目                | 说明                                        |
+| :--------------------------------- | :----------------------- | :------------------------------------------ |
+| **香山** (Nanhu)             | 中国科学院计算技术研究所 | 开源高性能 RISC-V 处理器，支持南湖架构      |
+| **TH1520**                   | 阿里平头哥               | 玄铁 C910 核心，LicheePi 4A 搭载            |
+| **K230**                     | 嘉楠科技(Canaan)         | 高性能 AI 视觉 RISC-V 芯片，CanMV K230 搭载 |
+| **K1 / M1**                  | 进迭时空(SpacemiT)       | 灵犀系列芯片，BananaPi BPI-F3 搭载          |
+| **JH7110**                   | 赛昉科技(StarFive‌)       | VisionFive 2 搭载                           |
+| **D1**                       | 全志科技(Allwinner‌)       | 玄铁 C906 核心                              |
+| **SG2000 / SG2002 / SG2042** | 算能(Sophgo‌)        | Milk-V 系列开发板搭载                       |
+
+> 💡 **已支持的芯片可参考开发板支持情况。**
+
+#### 已支持的开发板（部分）
+
+| 开发板                            | 芯片                  | 资源-系统镜像            | 功能-镜像烧录 | 功能-调试支持 |
+| :-------------------------------- | :-------------------- | :----------------------- | :------------ | :------------ |
+| **LicheePi 4A**             | TH1520                | ✅ RevyOS / Debian / ... | ✅            |               |
+| **Milk-V Duo (64M/256M/S)** | CV1800B/SG2000/SG2002 | ✅ Buildroot / Debian / ... | ✅            |               |
+| **Milk-V Mars**             | JH7110                | ✅ Debian / Fedora / ... | ✅            |               |
+| **VisionFive 2**            | JH7110                | ✅ Debian / openEuler / ... | ✅            |               |
+| **BananaPi BPI-F3**         | SpacemiT K1           | ✅ Deepin / Bianbu / ... | ✅            |               |
+| **BeagleV-Ahead**           | TH1520                | ✅ RevyOS / Ubuntu / ... | ✅            |               |
+| **HiFive Unmatched**        | SiFive Freedom U740   | ✅ Deepin / openEuler / ... | ✅            |               |
+| **Pioneer Box**             | SG2042                | ✅ openEuler / openKylin / ... | ✅            |               |
+| **CanMV K230**              | K230                  | ✅ Fedora / Debian / ... | ✅            |               |
+| **香山南湖笔记本**           | 香山 (Nanhu)          | ✅ Debian / ... |               |               |
+
+> 💡 **开发板支持是多个层面的，每个层面支持程度不是齐头并进，而是分别推进的。因此具体的支持情况请参考以下方式自查：**
+>
+> - 支持开发板的系统镜像：请访问 [RISC-V 开发板和操作系统支持矩阵](https://matrix.ruyisdk.org) 获取支持详情。
+> - ruyi 支持烧录的开发板和镜像：通过 `ruyi device provision` 命令查询。
+> - IDE 对开发板调试功能支持：功能完善中，支持情况待补充。
+
+### 操作系统生态融入
+
+RuyiSDK 在各发行版中的集成遵循“广泛可用 → 融入官方”的策略，为了方便描述和了解，目前定义了如下的几种支持状态，并对不同发行版的支持情况进行总结，方便大家了解。
+
+**发行版集成状态定义**
+
+| 级别 | 状态名称 | 含义 | 对用户的价值 |
+| :--- | :--- | :--- | :--- |
+| **L0** | **原生预装** | 软件包被包含在发行版的默认镜像中。 | 特殊状态，视为对L1的附加增强。 开箱即用，是最高级别的集成，但非必须目标。 |
+| **L1** | **构建集成** | 软件包已纳入发行版核心构建系统，随版本持续发布。 | **推荐状态**。用户在新版本中均可通过系统原生包管理器直接安装，体验稳定可靠。 |
+| **L2** | **仓库接纳** | 软件包已进入发行版官方软件源，但未集成构建系统。 | 用户可通过系统原生包管理器安装，但可能不会随发行版更新而持续更新。 |
+| **L3** | **外部提供** | 软件包通过第三方源或手动下载提供，未进入官方流程。 | 用户需要额外配置才能安装，通常作为过渡方案。 |
+
+`ruyi` 与各发行版支持情况如下：
+
+| 操作系统                  | 支持状态    | 支持版本             | 备注                                                       |
+| :------------------------ | :---------- | :------------------- | :------------------------------------------------------- |
+| **Arch Linux**      | ✅ 构建集成 | ruyi-0.16.0 ~ 0.49.0 | [AUR](https://aur.archlinux.org/packages/ruyi)                  |
+| **Gentoo**          | ✅ 外部提供 | ruyi-0.22.0 ~ 0.50.0 | [ruyisdk-overlay](https://github.com/ruyisdk/ruyisdk-overlay)   |
+| **Fedora Rawhide/45/44/43**  | ✅ 构建集成 | ruyi-0.47.0/0.44.0/0.42.0/0.41.0 | [Fedora](https://packages.fedoraproject.org/pkgs/ruyi/ruyi/) |
+| **Debian**          | ✅ 构建集成 | ruyi-0.49.0 | [Debian testing](https://packages.debian.org/testing/main/ruyi) |
+| **OpenRuyi**        | ✅ 构建集成 | ruyi-0.46.0 | [openRuyi Repository](https://boat.openruyi.cn/stable/rva23/) |
+| **openEuler**       | ✅ 仓库接纳推进中 | ruyi-0.47.0 | [ruyi](https://gitcode.com/src-openeuler/ruyi) |
+| **Ubuntu**          | ✅ 外部提供 | | |
+| **RevyOS sid(Debian sid)**         | ✅ 仓库接纳 | ruyi-0.41.0 | [revyos](https://fast-mirror.isrc.ac.cn/revyos/revyos-addons/pool/main/p/python-ruyi/) |
+| **RevyOS trixie(Debian 13 trixie)**| ✅ 仓库接纳 | ruyi-0.41.0 | [revyos/trixie](https://fast-mirror.isrc.ac.cn/revyos/trixie/revyos-addons/pool/main/p/python-ruyi/) |
+| **bianbu 2.2/3.0**  | ✅ 仓库接纳 | ruyi-0.41.0 | [link](https://archive.spacemit.com/bianbu/pool/main/p/python-ruyi/) |
+| **rockos 20250730** | ✅ 仓库接纳 | ruyi-0.41.0 | [link](https://fast-mirror.isrc.ac.cn/rockos/20250730/rockos-addons/pool/main/p/python-ruyi/) |
+
+> 💡 目前，**Arch Linux、Fedora、Debian、OpenRuyi** 等社区已将 `ruyi` 纳入官方或社区软件源仓库，并纳入到构建系统（每次发版都包含这个包，构建完后ruyi在官方软件源中）这是开源协作从“项目适配”走向“生态接纳”的生动体现。我们将继续努力，争取让 RuyiSDK 进入更多发行版的官方生态。
+
+
+## 社区参与指南
+
+RuyiSDK 是一个社区驱动的项目，我们欢迎每一位开发者的参与。无论您是个人开发者还是企业代表，RuyiSDK 社区都欢迎您的加入。我们维护了以下公共平台：
+
+### 参与渠道
+
+| 渠道                        | 用途                                    | 链接                                          |
+| :-------------------------- | :-------------------------------------- | :-------------------------------------------- |
+| **技术论坛**          | 技术讨论、问题答疑、经验分享            | [ruyisdk.cn](https://ruyisdk.cn/)                |
+| **官网**              | 产品信息、下载入口、社群二维码          | [ruyisdk.org](https://ruyisdk.org)               |
+| **GitHub 组织**       | 开源协作、源码托管、Issue 跟踪、PR 提交 | [github.com/ruyisdk](https://github.com/ruyisdk) |
+| **双周 Office Hours** | 每双周四下午 15:00 在线答疑             | 详见技术论坛或社群公告                            |
+
+### 核心仓库
+
+| 仓库                                                                               | 说明                               |
+| :--------------------------------------------------------------------------------- | :--------------------------------- |
+| [ruyisdk/ruyi](https://github.com/ruyisdk/ruyi)                                       | RuyiSDK 包管理器核心代码           |
+| [ruyisdk/packages-index](https://github.com/ruyisdk/packages-index)                   | 软件包索引仓库，定义所有资源元数据 |
+| [ruyisdk/ruyisdk-vscode-extension](https://github.com/ruyisdk/ruyisdk-vscode-extension) | VS Code 插件源码                   |
+| [ruyisdk/ruyisdk-eclipse-plugins](https://github.com/ruyisdk/ruyisdk-eclipse-plugins) | Eclipse 插件源码                   |
+| [ruyisdk/support-matrix](https://github.com/ruyisdk/support-matrix)                   | 开发板与操作系统支持矩阵数据       |
+| [ruyisdk/board-docs](https://github.com/ruyisdk/board-docs)                           | 设备应用示例库                     |
+
+更多 RuyiSDK 仓库信息详见[仓库介绍](repos.md)
+
+## 相关链接
+
+* [RuyiSDK 官网](https://ruyisdk.org)
+* [RuyiSDK 技术论坛](https://ruyisdk.cn)
+* [RuyiSDK 双周进展报告](https://github.com/ruyisdk/wechat-articles)
+* [GitHub 组织页面](https://github.com/ruyisdk)
+* [硬件与系统支持矩阵](https://matrix.ruyisdk.org)
+* [设备应用示例库](https://board-docs-frontend.pages.dev)
+* [生态资源接入指南](https://ruyisdk.org/docs/Other/partner-guide)
