@@ -63,13 +63,13 @@ npm install --save-dev markdownlint-cli2
 
 ### 2.4 配置 npm scripts
 
-在 `package.json` 中添加以下脚本：
+如需使用 npm scripts，可在 `package.json` 中添加以下脚本，并在运行时传入文件路径：
 
 ```json
 {
   "scripts": {
-    "lint:md": "markdownlint-cli2 \"docs/**/*.{md,mdx}\"",
-    "lint:md:fix": "markdownlint-cli2 --fix \"docs/**/*.{md,mdx}\""
+    "lint:md": "markdownlint-cli2",
+    "lint:md:fix": "markdownlint-cli2 --fix"
   }
 }
 ```
@@ -77,8 +77,8 @@ npm install --save-dev markdownlint-cli2
 使用方式：
 
 ```bash
-npm run lint:md        # 检查
-npm run lint:md:fix    # 检查并自动修复
+npm run lint:md -- "Package-Manager/example.md"        # 检查
+npm run lint:md:fix -- "Package-Manager/example.md"    # 检查并自动修复
 ```
 
 ## 3. 配置文件详解
@@ -113,20 +113,24 @@ npm run lint:md:fix    # 检查并自动修复
 
 ## 4. 本地使用方式
 
-### 4.1 检查所有文档
+以下命令均在 `ruyisdk/docs` 仓库根目录执行，文件路径不需要添加 `docs/` 前缀。示例中的 `Package-Manager/example.md` 为占位路径，请替换为本次新增或修改的实际文件路径。
+
+现有历史文档可能尚未全部符合新规范，日常贡献优先检查本次涉及的文件，不要默认对整个仓库执行 `--fix`。配置不设置默认 `globs`，运行命令时必须显式传入文件或目录匹配模式；不带参数的 `markdownlint-cli2` 不会检查任何文件。
+
+### 4.1 检查本次新增或修改的文件
 
 ```bash
 # 全局安装方式
-markdownlint-cli2 "docs/**/*.{md,mdx}"
+markdownlint-cli2 "Package-Manager/example.md"
 
 # 项目本地安装方式
-npx markdownlint-cli2 "docs/**/*.{md,mdx}"
+npx markdownlint-cli2 "Package-Manager/example.md"
 ```
 
 ### 4.2 检查并自动修复
 
 ```bash
-markdownlint-cli2 --fix "docs/**/*.{md,mdx}"
+markdownlint-cli2 --fix "Package-Manager/example.md"
 ```
 
 **`--fix` 可修复的常见问题：**
@@ -140,24 +144,27 @@ markdownlint-cli2 --fix "docs/**/*.{md,mdx}"
 | 行尾空格 | 删除行尾多余空格 |
 | 文件末尾换行 | 补充文件末尾换行 |
 
-### 4.3 检查单个文件
+### 4.3 按需检查目录
+
+如需检查整个目录，可显式指定匹配模式；结果可能包含该目录中已有的历史问题：
 
 ```bash
-markdownlint-cli2 "docs/intro/quick-start.md"
-markdownlint-cli2 --fix "docs/intro/quick-start.md"
+markdownlint-cli2 "Package-Manager/**/*.md"
 ```
+
+如需同时检查 `.mdx` 文件，使用 `"Package-Manager/**/*.{md,mdx}"`。
 
 ### 4.4 建议提交前执行
 
 ```bash
-# 1. 自动修复可修复的问题
-markdownlint-cli2 --fix "docs/**/*.{md,mdx}"
+# 1. 仅对本次涉及的文件自动修复可修复的问题
+markdownlint-cli2 --fix "Package-Manager/example.md"
 
 # 2. 检查是否还有残留问题
-markdownlint-cli2 "docs/**/*.{md,mdx}"
+markdownlint-cli2 "Package-Manager/example.md"
 
 # 3. 如有残留问题，手动修复后重新检查
-# 4. 全部通过后提交
+# 4. 本次涉及的文件检查通过后提交，并确认 diff 没有无关修改
 ```
 
 ## 5. 完整工作流总结
@@ -182,8 +189,8 @@ flowchart LR
 | 节点 | 执行方式 | 说明 |
 | ---- | ------- | ---- |
 | **IDE 实时提示** | VS Code 扩展自动完成 | 编写时即时发现格式问题 |
-| **本地检查** | `npm run lint:md` | 提交前完整检查所有文档 |
-| **自动修复** | `npm run lint:md:fix` | 自动修复可修复的格式问题 |
+| **本地检查** | `npm run lint:md -- "Package-Manager/example.md"` | 提交前检查本次新增或修改的文件 |
+| **自动修复** | `npm run lint:md:fix -- "Package-Manager/example.md"` | 仅修复指定文件中的可修复格式问题 |
 | **PR 自动检查** | CI 门禁自动触发 | 确保合并前所有格式合规 |
 
 ## 6. PR CI 门禁
@@ -206,7 +213,7 @@ CI 门禁通过 GitHub Actions 实现，工作流配置文件位于仓库的 `.g
 **检查失败时的处理流程：**
 
 1. 查看 CI 日志，定位具体文件及问题行号
-2. 本地执行 `markdownlint-cli2 --fix "docs/路径/文件.md"` 自动修复
+2. 本地执行 `markdownlint-cli2 --fix "Package-Manager/example.md"` 自动修复（替换为报错文件的实际路径）
 3. 如无法自动修复，根据错误提示手动修改
 4. 本地再次检查通过后 `git push` 更新 PR
 
