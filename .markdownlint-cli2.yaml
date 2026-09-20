@@ -2,8 +2,8 @@
 # RuyiSDK 文档 markdownlint-cli2 配置
 
 # 不设置默认 globs，避免追加到命令行参数后扩大检查范围。
-# 请显式指定本次新增或修改的文件或需要检查的目录，例如：
-# markdownlint-cli2 "Package-Manager/example.md"
+# 通过命令行参数指定检查范围，例如：markdownlint-cli2 "<file-path>"
+# <file-path> 为占位符，请替换为实际文件路径；也可传入目录或全仓匹配模式。
 
 # 忽略目录
 ignores:

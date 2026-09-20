@@ -63,7 +63,7 @@ npm install --save-dev markdownlint-cli2
 
 ### 2.4 配置 npm scripts
 
-如需使用 npm scripts，可在 `package.json` 中添加以下脚本，并在运行时传入文件路径：
+如需使用 npm scripts，可在 `package.json` 中添加以下脚本，并在运行时传入文件路径或 glob 匹配模式：
 
 ```json
 {
@@ -74,11 +74,18 @@ npm install --save-dev markdownlint-cli2
 }
 ```
 
-使用方式：
+使用方式（`<target>` 为占位符，请替换为实际文件路径或 glob 匹配模式，不保留尖括号）：
 
 ```bash
-npm run lint:md -- "Package-Manager/example.md"        # 检查
-npm run lint:md:fix -- "Package-Manager/example.md"    # 检查并自动修复
+npm run lint:md -- "<target>"        # 检查
+npm run lint:md:fix -- "<target>"    # 检查并自动修复
+
+# 全量检查
+npm run lint:md -- "**/*.{md,mdx}"
+# 目录检查
+npm run lint:md -- "Package-Manager/**/*.{md,mdx}"
+# 单文件检查
+npm run lint:md -- "Package-Manager/index.md"
 ```
 
 ## 3. 配置文件详解
@@ -113,24 +120,33 @@ npm run lint:md:fix -- "Package-Manager/example.md"    # 检查并自动修复
 
 ## 4. 本地使用方式
 
-以下命令均在 `ruyisdk/docs` 仓库根目录执行，文件路径不需要添加 `docs/` 前缀。示例中的 `Package-Manager/example.md` 为占位路径，请替换为本次新增或修改的实际文件路径。
+以下命令均在 `ruyisdk/docs` 仓库根目录执行，文件路径不需要添加 `docs/` 前缀。可以按需选择全量、目录或单文件检查。
 
-现有历史文档可能尚未全部符合新规范，日常贡献优先检查本次涉及的文件，不要默认对整个仓库执行 `--fix`。配置不设置默认 `globs`，运行命令时必须显式传入文件或目录匹配模式；不带参数的 `markdownlint-cli2` 不会检查任何文件。
+下文的 `<file-path>`、`<directory>` 和 `<target>` 均为占位符，请分别替换为实际文件路径、目录路径或检查范围（文件路径或 glob 匹配模式），不保留尖括号。glob 使用双引号包裹，交由工具展开。
 
-### 4.1 检查本次新增或修改的文件
+配置不设置默认 `globs`，以免与命令行参数叠加后扩大检查范围。不带参数的 `markdownlint-cli2` 不会检查任何文件。
+
+### 4.1 检查所有文档
 
 ```bash
 # 全局安装方式
-markdownlint-cli2 "Package-Manager/example.md"
+markdownlint-cli2 "**/*.{md,mdx}"
 
 # 项目本地安装方式
-npx markdownlint-cli2 "Package-Manager/example.md"
+npx markdownlint-cli2 "**/*.{md,mdx}"
 ```
+
+以上命令递归检查仓库内的 Markdown 和 MDX 文件，并遵循配置中的忽略规则。
 
 ### 4.2 检查并自动修复
 
+对所选检查范围添加 `--fix`，可自动修复支持的问题。修复后应查看 `git diff`，确认修改符合预期。
+
 ```bash
-markdownlint-cli2 --fix "Package-Manager/example.md"
+markdownlint-cli2 --fix "<target>"
+
+# 示例：修复指定文件
+markdownlint-cli2 --fix "Package-Manager/index.md"
 ```
 
 **`--fix` 可修复的常见问题：**
@@ -144,27 +160,38 @@ markdownlint-cli2 --fix "Package-Manager/example.md"
 | 行尾空格 | 删除行尾多余空格 |
 | 文件末尾换行 | 补充文件末尾换行 |
 
-### 4.3 按需检查目录
-
-如需检查整个目录，可显式指定匹配模式；结果可能包含该目录中已有的历史问题：
+### 4.3 检查指定文件或目录
 
 ```bash
-markdownlint-cli2 "Package-Manager/**/*.md"
+# 单文件检查
+markdownlint-cli2 "<file-path>"
+# 示例
+markdownlint-cli2 "Package-Manager/index.md"
+
+# 目录检查（包含子目录）
+markdownlint-cli2 "<directory>/**/*.{md,mdx}"
+# 示例
+markdownlint-cli2 "Package-Manager/**/*.{md,mdx}"
 ```
 
-如需同时检查 `.mdx` 文件，使用 `"Package-Manager/**/*.{md,mdx}"`。
+仅需检查 `.md` 文件时，可使用 `"<directory>/**/*.md"`。
 
 ### 4.4 建议提交前执行
 
+根据需要选择全量、目录或单文件检查范围，并将下列命令中的 `<target>` 替换为相应路径或 glob：
+
 ```bash
-# 1. 仅对本次涉及的文件自动修复可修复的问题
-markdownlint-cli2 --fix "Package-Manager/example.md"
+# 1. 检查所选范围
+markdownlint-cli2 "<target>"
 
-# 2. 检查是否还有残留问题
-markdownlint-cli2 "Package-Manager/example.md"
+# 2. 按需自动修复可修复的问题
+markdownlint-cli2 --fix "<target>"
 
-# 3. 如有残留问题，手动修复后重新检查
-# 4. 本次涉及的文件检查通过后提交，并确认 diff 没有无关修改
+# 3. 手动处理剩余问题后，重新检查
+markdownlint-cli2 "<target>"
+
+# 4. 查看修改，确认符合预期后提交
+git diff
 ```
 
 ## 5. 完整工作流总结
@@ -174,10 +201,11 @@ markdownlint-cli2 "Package-Manager/example.md"
 ```mermaid
 flowchart LR
     A[编写/修改文档] --> B[IDE 实时提示]
-    B --> C[本地检查]
-    C --> D[自动修复]
+    B --> C[选择范围并检查]
+    C --> D[按需修复]
     D --> C
-    C --> E[提交 PR]
+    C --> I[查看 diff]
+    I --> E[提交 PR]
     E --> F[CI 门禁]
     F --> G[✅ 可合并]
     F -->|失败| H[本地修复]
@@ -189,8 +217,8 @@ flowchart LR
 | 节点 | 执行方式 | 说明 |
 | ---- | ------- | ---- |
 | **IDE 实时提示** | VS Code 扩展自动完成 | 编写时即时发现格式问题 |
-| **本地检查** | `npm run lint:md -- "Package-Manager/example.md"` | 提交前检查本次新增或修改的文件 |
-| **自动修复** | `npm run lint:md:fix -- "Package-Manager/example.md"` | 仅修复指定文件中的可修复格式问题 |
+| **本地检查** | `npm run lint:md -- "<target>"` | 按需选择全量、目录或单文件检查 |
+| **自动修复** | `npm run lint:md:fix -- "<target>"` | 按需修复所选范围，修复后查看 diff |
 | **PR 自动检查** | CI 门禁自动触发 | 确保合并前所有格式合规 |
 
 ## 6. PR CI 门禁
@@ -213,7 +241,7 @@ CI 门禁通过 GitHub Actions 实现，工作流配置文件位于仓库的 `.g
 **检查失败时的处理流程：**
 
 1. 查看 CI 日志，定位具体文件及问题行号
-2. 本地执行 `markdownlint-cli2 --fix "Package-Manager/example.md"` 自动修复（替换为报错文件的实际路径）
+2. 本地执行 `markdownlint-cli2 --fix "<file-path>"` 自动修复（将占位符替换为报错文件的实际路径）
 3. 如无法自动修复，根据错误提示手动修改
 4. 本地再次检查通过后 `git push` 更新 PR
 
@@ -222,6 +250,7 @@ CI 门禁通过 GitHub Actions 实现，工作流配置文件位于仓库的 `.g
 | 问题 | 原因 | 解决方法 |
 | ---- | ----- | ------ |
 | `markdownlint-cli2: command not found` | 未全局安装 | 全局安装：`npm install -g markdownlint-cli2` |
+| 扫描到 0 个文件 | 未传入检查范围，或路径未匹配到文件 | 显式指定文件路径或 glob，并确认相对于当前工作目录的路径正确，参见第 4 节 |
 | VS Code 扩展不生效 | 未安装扩展或未重启 VS Code | 安装 `DavidAnson.vscode-markdownlint` 并重启 |
 | `--fix` 无法修复的问题 | 问题涉及内容语义判断 | 根据错误提示手动修改 |
 | CI 检查失败但本地检查通过 | 配置文件未同步 | 确保 `.markdownlint-cli2.yaml` 已提交 |
