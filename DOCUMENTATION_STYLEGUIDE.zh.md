@@ -606,7 +606,7 @@ Docusaurus 提供内置提示框语法，用于突出重要信息。**推荐使�
 
 - [ ] 大量或复杂修改已执行 `pnpm run build`，确认无构建错误和死链？
 
-> **自动化检查：** 本清单中的格式相关条目（表格风格、代码块、空行等）已纳入自动化检查，可通过 `markdownlint-cli2 "<target>"` 显式指定检查范围（将 `<target>` 替换为文件路径或 glob 匹配模式），按需选择全量、目录或单文件检查。配置方式及使用说明详见 [《RuyiSDK 文档规范检查方案》](./DOCUMENTATION_LINTING.zh.md)。
+> **自动化检查：** 本清单中的格式相关条目（表格风格、代码块、空行等）已纳入自动化检查，可运行 `markdownlint-cli2` 按配置检查所有文档，或通过 `markdownlint-cli2 --no-globs "<target>"` 仅检查指定范围（将 `<target>` 替换为文件路径、目录路径或 glob 匹配模式）。配置方式及使用说明详见 [《RuyiSDK 文档规范检查方案》](./DOCUMENTATION_LINTING.zh.md)。
 
 ## 9. 常见问题与避坑
 

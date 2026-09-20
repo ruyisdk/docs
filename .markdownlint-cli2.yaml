@@ -1,9 +1,11 @@
 # .markdownlint-cli2.yaml
 # RuyiSDK 文档 markdownlint-cli2 配置
 
-# 不设置默认 globs，避免追加到命令行参数后扩大检查范围。
-# 通过命令行参数指定检查范围，例如：markdownlint-cli2 "<file-path>"
-# <file-path> 为占位符，请替换为实际文件路径；也可传入目录或全仓匹配模式。
+# 扫描范围（相对于仓库根目录）
+globs:
+  - "**/*.md"
+  - "**/*.mdx"
+# 仅检查指定文件或目录时，使用 --no-globs 忽略以上默认范围。
 
 # 忽略目录
 ignores:
