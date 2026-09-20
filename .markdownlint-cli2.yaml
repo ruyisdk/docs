@@ -1,10 +1,11 @@
 # .markdownlint-cli2.yaml
 # RuyiSDK 文档 markdownlint-cli2 配置
 
-# 扫描范围
+# 扫描范围（相对于仓库根目录）
 globs:
-  - "docs/**/*.md"
-  - "docs/**/*.mdx"
+  - "**/*.md"
+  - "**/*.mdx"
+# 仅检查指定文件或目录时，使用 --no-globs 忽略以上默认范围。
 
 # 忽略目录
 ignores:
