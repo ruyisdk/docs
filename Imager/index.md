@@ -8,7 +8,7 @@ Ruyi Imager 是面向 RISC-V 开发板的图形化镜像刷写工具。
 
 ## 安装
 
-根据当前操作系统和处理器架构，从 [GitHub Releases](https://github.com/Glavo/ruyi-imager/releases/latest) 下载对应的安装包。
+根据当前操作系统和处理器架构，从 [GitHub Releases](https://github.com/ruyisdk/ruyi-imager/releases/latest) 下载对应的安装包。
 
 | 操作系统 | 处理器架构               | 安装包              |
 |----------|--------------------------|---------------------|
@@ -30,5 +30,5 @@ Windows 用户可运行 `.exe` 安装程序；Debian、Ubuntu 用户可安装 `.
 
 ## 相关资源
 
-- [项目源码与问题反馈](https://github.com/Glavo/ruyi-imager)
-- [下载页](https://github.com/Glavo/ruyi-imager/releases/latest)
+- [项目源码与问题反馈](https://github.com/ruyisdk/ruyi-imager)
+- [下载页](https://github.com/ruyisdk/ruyi-imager/releases/latest)
