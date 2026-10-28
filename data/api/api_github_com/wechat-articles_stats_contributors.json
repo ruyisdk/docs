@@ -1,15 +1,6 @@
 {
   "data": [
     {
-      "total": 1,
-      "author": {
-        "login": "mollybuild",
-        "id": 26591790,
-        "avatar_url": "https://avatars.githubusercontent.com/u/26591790?v=4",
-        "html_url": "https://github.com/mollybuild"
-      }
-    },
-    {
       "total": 2,
       "author": {
         "login": "YunxiangLuo",
@@ -19,21 +10,12 @@
       }
     },
     {
-      "total": 2,
+      "total": 3,
       "author": {
-        "login": "zhangyuxii",
-        "id": 282112564,
-        "avatar_url": "https://avatars.githubusercontent.com/u/282112564?v=4",
-        "html_url": "https://github.com/zhangyuxii"
-      }
-    },
-    {
-      "total": 2,
-      "author": {
-        "login": "DuoQilai",
-        "id": 101803232,
-        "avatar_url": "https://avatars.githubusercontent.com/u/101803232?v=4",
-        "html_url": "https://github.com/DuoQilai"
+        "login": "mollybuild",
+        "id": 26591790,
+        "avatar_url": "https://avatars.githubusercontent.com/u/26591790?v=4",
+        "html_url": "https://github.com/mollybuild"
       }
     },
     {
@@ -46,30 +28,21 @@
       }
     },
     {
-      "total": 8,
+      "total": 5,
       "author": {
-        "login": "mengzhuo",
-        "id": 885662,
-        "avatar_url": "https://avatars.githubusercontent.com/u/885662?v=4",
-        "html_url": "https://github.com/mengzhuo"
+        "login": "zhangyuxii",
+        "id": 282112564,
+        "avatar_url": "https://avatars.githubusercontent.com/u/282112564?v=4",
+        "html_url": "https://github.com/zhangyuxii"
       }
     },
     {
-      "total": 9,
+      "total": 5,
       "author": {
-        "login": "RealFYang",
-        "id": 70937056,
-        "avatar_url": "https://avatars.githubusercontent.com/u/70937056?v=4",
-        "html_url": "https://github.com/RealFYang"
-      }
-    },
-    {
-      "total": 9,
-      "author": {
-        "login": "zifeihan",
-        "id": 16839929,
-        "avatar_url": "https://avatars.githubusercontent.com/u/16839929?v=4",
-        "html_url": "https://github.com/zifeihan"
+        "login": "DuoQilai",
+        "id": 101803232,
+        "avatar_url": "https://avatars.githubusercontent.com/u/101803232?v=4",
+        "html_url": "https://github.com/DuoQilai"
       }
     },
     {
@@ -82,12 +55,21 @@
       }
     },
     {
+      "total": 9,
+      "author": {
+        "login": "zifeihan",
+        "id": 16839929,
+        "avatar_url": "https://avatars.githubusercontent.com/u/16839929?v=4",
+        "html_url": "https://github.com/zifeihan"
+      }
+    },
+    {
       "total": 11,
       "author": {
-        "login": "joy2myself",
-        "id": 43837589,
-        "avatar_url": "https://avatars.githubusercontent.com/u/43837589?v=4",
-        "html_url": "https://github.com/joy2myself"
+        "login": "mengzhuo",
+        "id": 885662,
+        "avatar_url": "https://avatars.githubusercontent.com/u/885662?v=4",
+        "html_url": "https://github.com/mengzhuo"
       }
     },
     {
@@ -100,6 +82,24 @@
       }
     },
     {
+      "total": 12,
+      "author": {
+        "login": "RealFYang",
+        "id": 70937056,
+        "avatar_url": "https://avatars.githubusercontent.com/u/70937056?v=4",
+        "html_url": "https://github.com/RealFYang"
+      }
+    },
+    {
+      "total": 14,
+      "author": {
+        "login": "joy2myself",
+        "id": 43837589,
+        "avatar_url": "https://avatars.githubusercontent.com/u/43837589?v=4",
+        "html_url": "https://github.com/joy2myself"
+      }
+    },
+    {
       "total": 14,
       "author": {
         "login": "weilinfox",
@@ -109,7 +109,7 @@
       }
     },
     {
-      "total": 21,
+      "total": 24,
       "author": {
         "login": "U2FsdGVkX1",
         "id": 11484206,
@@ -118,7 +118,7 @@
       }
     },
     {
-      "total": 24,
+      "total": 27,
       "author": {
         "login": "pzhlkj6612",
         "id": 29089388,
@@ -127,7 +127,7 @@
       }
     },
     {
-      "total": 29,
+      "total": 32,
       "author": {
         "login": "qjivy",
         "id": 24410810,
@@ -145,7 +145,7 @@
       }
     },
     {
-      "total": 43,
+      "total": 46,
       "author": {
         "login": "imkiva",
         "id": 9902643,
@@ -154,7 +154,7 @@
       }
     },
     {
-      "total": 71,
+      "total": 74,
       "author": {
         "login": "pz9115",
         "id": 43362020,
@@ -163,7 +163,7 @@
       }
     },
     {
-      "total": 76,
+      "total": 80,
       "author": {
         "login": "xen0n",
         "id": 1175567,
@@ -172,7 +172,7 @@
       }
     },
     {
-      "total": 277,
+      "total": 284,
       "author": {
         "login": "xijing21",
         "id": 84754181,
@@ -182,7 +182,7 @@
     }
   ],
   "ruyisdk_org_data": {
-    "generatedAt": "2026-09-17T21:49:53.188Z",
+    "generatedAt": "2026-10-22T22:02:35.089Z",
     "source": "https://api.github.com/repos/ruyisdk/wechat-articles/stats/contributors"
   }
 }
