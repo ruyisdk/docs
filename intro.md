@@ -110,6 +110,6 @@ $ ruyi device provision
 
 具体请参考 [dd 方式刷写开发板（以 MilkV Duo 为例）](/docs/Package-Manager/cases/case3) 和 [fastboot 方式刷写开发板（以 Licheepi 4A 为例）](/docs/Package-Manager/cases/case4)。
 
-#### 使用 Ruyi Imager
+#### 使用 Ruyi 镜像刷写工具
 
-使用 [Ruyi Imager](./Imager/index.md) 通过图形界面刷写系统镜像。
+使用 [Ruyi 镜像刷写工具](./Imager/index.md) 通过图形界面刷写系统镜像。
