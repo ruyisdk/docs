@@ -1,10 +1,10 @@
 ---
 sidebar_position: 1
-title: Ruyi Imager
-description: 使用 Ruyi Imager 为 RISC-V 开发板安装操作系统。
+title: Ruyi 镜像刷写工具
+description: 使用 Ruyi 镜像刷写工具为 RISC-V 开发板安装操作系统。
 ---
 
-Ruyi Imager 是面向 RISC-V 开发板的图形化镜像刷写工具。
+Ruyi 镜像刷写工具是面向 RISC-V 开发板的图形化镜像刷写工具。
 
 ## 安装
 
